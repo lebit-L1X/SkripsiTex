@@ -1,0 +1,23 @@
+\contentsline {chapter}{HALAMAN JUDUL}{i}{section*.2}%
+\contentsline {chapter}{HALAMAN PERNYATAAN ORISINALITAS}{ii}{figure.caption.3}%
+\contentsline {chapter}{HALAMAN PERNYATAAN PENGGUNAAN KECERDASAN ARTIFISIAL}{iii}{figure.caption.3}%
+\contentsline {chapter}{HALAMAN PENGESAHAN}{iv}{figure.caption.3}%
+\contentsline {chapter}{\uppercase {Kata Pengantar}}{v}{figure.caption.3}%
+\contentsline {chapter}{HALAMAN PERNYATAAN PERSETUJUAN PUBLIKASI}{vii}{Item.8}%
+\contentsline {chapter}{ABSTRAK}{viii}{Item.8}%
+\contentsline {chapter}{ABSTRACT}{ix}{Item.8}%
+\contentsline {chapter}{\uppercase {Daftar Isi}}{x}{section*.4}%
+\contentsline {chapter}{\uppercase {Daftar Tabel}}{xi}{section*.5}%
+\contentsline {chapter}{\uppercase {Daftar Gambar}}{xii}{section*.6}%
+\contentsline {chapter}{DAFTAR PERSAMAAN}{xiii}{section*.7}%
+\contentsline {chapter}{DAFTAR NOTASI}{xiv}{section*.8}%
+\contentsline {chapter}{\uppercase {Daftar Kode Program}}{xv}{section*.9}%
+\contentsline {chapter}{\uppercase {Daftar Singkatan}}{xvi}{section*.10}%
+\contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Tujuan Penelitian}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Manfaat Penelitian}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Ruang Lingkup Penelitian}{4}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Sistematika Penulisan}{5}{section.1.6}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{6}{Item.28}%
