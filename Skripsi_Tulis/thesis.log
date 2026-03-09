@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.7)  7 MAR 2026 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.7)  9 MAR 2026 16:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1757,12 +1757,20 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [5]
 
-Package natbib Warning: Citation `DTEUI:2025' on page 6 undefined on input line 84.
+Package natbib Warning: Citation `DTEUI:2025' on page 6 undefined on input line 82.
 
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 87.
+although it is yet undefined on input line 85.
 Package acronym Info: Label `acro:SIAK-NG' newly defined as it shall be overridden
-although it is yet undefined on input line 87.
+although it is yet undefined on input line 85.
+Package acronym Info: Label `acro:TSR' newly defined as it shall be overridden
+although it is yet undefined on input line 88.
+Package acronym Info: Label `acro:ToT' newly defined as it shall be overridden
+although it is yet undefined on input line 88.
+Package acronym Info: Label `acro:TTFB' newly defined as it shall be overridden
+although it is yet undefined on input line 89.
+Package acronym Info: Label `acro:SUS' newly defined as it shall be overridden
+although it is yet undefined on input line 91.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1771,15 +1779,6 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [6]
-Package acronym Info: Label `acro:TSR' newly defined as it shall be overridden
-although it is yet undefined on input line 90.
-Package acronym Info: Label `acro:ToT' newly defined as it shall be overridden
-although it is yet undefined on input line 90.
-Package acronym Info: Label `acro:TTFB' newly defined as it shall be overridden
-although it is yet undefined on input line 91.
-Package acronym Info: Label `acro:SUS' newly defined as it shall be overridden
-although it is yet undefined on input line 93.
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1819,7 +1818,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 [9
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260307161805 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260309164642 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -1840,9 +1839,9 @@ Here is how much of TeX's memory you used:
  75899 multiletter control sequences out of 15000+600000
  666583 words of font info for 97 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
- 125i,11n,130p,1526b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,11n,130p,1800b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (26 pages, 178714 bytes).
+Output written on thesis.pdf (26 pages, 178464 bytes).
 PDF statistics:
  422 PDF objects out of 1000 (max. 8388607)
  103 named destinations out of 1000 (max. 500000)
