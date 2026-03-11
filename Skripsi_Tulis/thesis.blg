@@ -12,7 +12,6 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: pustaka.bib
 Warning--I didn't find a database entry for "latex_vs_word"
 Warning--I didn't find a database entry for "microsoft_word"
-Warning--I didn't find a database entry for "DTEUI:2025"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -20,7 +19,7 @@ Warning--I didn't find a database entry for "DTEUI:2025"
 Done.
 You've used 0 entries,
             4087 wiz_defined-function locations,
-            825 strings with 7335 characters,
+            823 strings with 7315 characters,
 and the built_in function-call counts, 104 in all, are:
 = -- 0
 > -- 0
@@ -59,4 +58,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 22
-(There were 3 warnings)
+(There were 2 warnings)

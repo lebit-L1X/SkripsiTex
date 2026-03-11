@@ -19,5 +19,5 @@
 \contentsline {section}{\numberline {1.3}Tujuan Penelitian}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Manfaat Penelitian}{5}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Ruang Lingkup Penelitian}{6}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Sistematika Penulisan}{7}{section.1.6}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{9}{Item.26}%
+\contentsline {section}{\numberline {1.6}Sistematika Penulisan}{6}{section.1.6}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{8}{Item.26}%

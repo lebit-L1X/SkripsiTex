@@ -61,56 +61,51 @@ Selaras dengan rumusan masalah yang telah diuraikan, tujuan dari penelitian ini 
 Berdasarkan latar belakang, rumusan masalah, dan tujuan penelitian yang telah diuraikan, penelitian ini diharapkan memberikan manfaat sebagai berikut:
 
 \begin{enumerate}
-    \item \textbf{Bagi Mahasiswa dan Komunitas Akademik:} \\
-    Penelitian ini menyediakan templat penulisan tugas akhir (skripsi/tesis) yang terstandar dalam format \LaTeX{} dan \textit{Microsoft Word}. Manfaat utamanya adalah memungkinkan mahasiswa untuk lebih memfokuskan energi pada kualitas substansi penelitian, bukan pada teknis pemformatan. Secara lebih luas, model sistem dan metode evaluasi yang diusulkan dapat menjadi referensi bagi peneliti di bidang sistem informasi akademik.
+    \item \textbf{Bagi Peneliti di Bidang Terkait:} \\
+    Penelitian ini diharapkan dapat menjadi referensi bagi peneliti di bidang Artificial Intelligence dan analisis sinyal EEG, khususnya dalam pengembangan metode pembelajaran mesin untuk analisis data EEG pada studi Autism Spectrum Disorder (ASD). Hasil penelitian ini dapat digunakan sebagai dasar untuk penelitian lanjutan dalam pengembangan model analisis EEG yang lebih efektif.
 
-    \item \textbf{Bagi Institusi (Universitas dan Fakultas):} \\
-    Sistem "D'Office" yang dikembangkan memberikan manfaat praktis dan administratif dengan memusatkan dan mengotomatisasi seluruh alur kerja tugas akhir---mulai dari pengajuan judul, pencatatan bimbingan, hingga pendaftaran sidang. Hal ini secara langsung meningkatkan efisiensi operasional, mengurangi beban kerja administratif, dan meminimalkan kesalahan prosedural yang dapat menghambat kelancaran studi mahasiswa.
-
-    \item \textbf{Bagi Pengembangan di Masa Depan:} \\
-    Penelitian ini menghasilkan data evaluasi kuantitatif dan kualitatif mengenai efektivitas sistem dan pengalaman pengguna (UI/UX). Data tersebut menjadi landasan faktual untuk iterasi dan pengembangan sistem lebih lanjut, serta dapat dijadikan model acuan (\textit{benchmark}) bagi fakultas atau universitas lain yang hendak mengimplementasikan solusi serupa.
+    \item \textbf{Bagi Tenaga Medis dan Profesional Kesehatan} \\
+    Penelitian ini diharapkan dapat memberikan gambaran mengenai potensi pemanfaatan teknologi Artificial Intelligence dalam analisis data EEG pada studi Autism Spectrum Disorder (ASD), sehingga dapat mendukung penelitian lanjutan maupun pengembangan alat bantu yang dapat membantu proses evaluasi klinis.
 \end{enumerate}
 
 %-----------------------------------------------------------------------------%
 \section{Ruang Lingkup Penelitian}
 \label{sec:ruang_lingkup}
 %-----------------------------------------------------------------------------%
-Pengembangan dan evaluasi solusi terpadu yang didokumentasikan dalam Tugas Akhir ini dibatasi pada ruang lingkup sebagai berikut:
+Agar penelitian ini tetap terfokus, maka ditetapkan beberapa batasan masalah sebagai
+berikut:
 \begin{enumerate}
-    \item \textbf{Keluaran Proyek:} Proyek ini menghasilkan dua artefak utama: (1) sebuah purwarupa fungsional sistem pengelolaan tugas akhir berbasis web bernama D'Office, dan (2) sebuah templat penulisan tugas akhir berbasis \LaTeX{} yang mengimplementasikan pedoman format resmi universitas.
-    
-    \item \textbf{Cakupan Alur Kerja Sistem D'Office:} Fungsionalitas yang diimplementasikan dalam sistem D'Office secara spesifik mencakup alur kerja dari Pengajuan Judul \ac{TA} hingga Mengunggah buku hasil revisi, sebagaimana dijelaskan dalam dokumen prosedur standar departemen \citep{DTEUI:2025}. 
-    Proses di luar rentang tersebut tidak diakomodasi oleh sistem ini.
-    
-    \item \textbf{Batasan Integrasi Sistem:} Pengembangan D'Office tidak mencakup pembangunan jembatan integrasi \ac{API} yang fungsional secara \textit{real-time} ke sistem eksternal seperti \ac{SIAK-NG}. Kebutuhan data dari sistem eksternal akan disimulasikan.
-    
-    \item \textbf{Fokus dan Domain Evaluasi:} Evaluasi penelitian ini dibatasi pada empat domain utama. 
-    Evaluasi efektivitas proses akan berfokus pada metrik berbasis pengguna seperti \ac{TSR}, atau tingkat keberhasilan tugas, dan \ac{ToT}, atau waktu yang dihabiskan untuk tugas. 
-    Evaluasi kinerja sistem akan berfokus pada metrik sisi server, seperti waktu respons kueri dan \ac{TTFB}, atau waktu untuk byte pertama. 
-    Evaluasi akurasi format akan berfokus pada dokumen yang dihasilkan menggunakan templat \LaTeX{}. 
-    Terakhir, evaluasi kualitatif akan berfokus pada persepsi pengguna melalui kuesioner \ac{SUS} atau skala kegunaan sistem, dan wawancara. 
-    Penelitian ini tidak akan menilai kualitas substansi keilmuan dari konten Tugas Akhir.
+    \item \textbf{Arsitektur Dasar dan Implementasi Model:} Penelitian ini akan merekonstruksi pendekatan analisis EEG yang diusulkan pada penelitian rujukan, yaitu metode analisis EEG yang memanfaatkan seleksi fitur \textit{mRMR} serta model klasifikasi \textit{XGBoost}. Penelitian ini bertujuan untuk mengimplementasikan kembali pendekatan tersebut sebagai dasar eksperimen.
+
+\item \textbf{Dataset dan Variasi Data:} Penelitian ini menggunakan dataset EEG yang sama dengan penelitian rujukan. Variasi dalam penelitian ini terletak pada keterlibatan teknik \textit{data augmentasi}, yang dihasilkan berdasarkan data asli dan akan digunakan untuk dianalisis pengaruhnya terhadap performa model dalam proses klasifikasi.
+
+\item \textbf{Proses Training Model:} Model akan dilatih menggunakan prosedur pelatihan yang mengikuti pendekatan pada penelitian rujukan tanpa melakukan modifikasi terhadap struktur model maupun proses \textit{fine-tuning} tambahan di luar skenario eksperimen yang dirancang.
+
+\item \textbf{Evaluasi dan Analisis Hasil:} Evaluasi penelitian difokuskan pada perbandingan performa model yang dilatih dengan dan tanpa penerapan \textit{data augmentasi}. Analisis akan mencakup pengamatan terhadap metrik performa klasifikasi untuk menilai pengaruh variasi data terhadap hasil model.
+
+\item \textbf{Platform Eksekusi:} Seluruh proses pelatihan, pengujian, dan analisis model akan dijalankan menggunakan komputasi klasik dengan memanfaatkan CPU dan/atau GPU.
 \end{enumerate}
 
 %-----------------------------------------------------------------------------%
 \section{Sistematika Penulisan}
 \label{sec:sistematika}
 %-----------------------------------------------------------------------------%
-Laporan \ac{TA} ini disusun secara sistematis ke dalam lima bab utama yang saling berkaitan, dengan rincian sebagai berikut:
+Laporan tesis ini disusun secara sistematis ke dalam lima bab utama, dengan rincian se-
+bagai berikut:
 
 \begin{enumerate}
     \item \textbf{Bab 1: Pendahuluan.} 
-    Bab ini menyajikan gambaran umum penelitian, meliputi latar belakang yang menjelaskan urgensi dan justifikasi pengembangan solusi terpadu, rumusan masalah, tujuan yang ingin dicapai, manfaat penelitian, ruang lingkup penelitian, serta sistematika penulisan laporan ini.
+    Bab ini menyajikan gambaran umum penelitian, meliputi latar belakang yang menjelaskan pentingnya analisis sinyal EEG dalam mendukung identifikasi Autism Spectrum Disorder (ASD), rumusan masalah yang menjadi dasar penelitian, tujuan yang ingin dicapai, manfaat penelitian, ruang lingkup penelitian, serta sistematika penulisan laporan ini.
     
     \item \textbf{Bab 2: Tinjauan Pustaka.} 
-    Bab ini menguraikan landasan teoretis dan kontekstual yang relevan, dimulai dari pemaparan alur kerja tugas akhir yang ada, landasan teori pengembangan sistem dan templat, rangkuman pedoman penulisan resmi, hingga analisis terhadap sistem sejenis yang berujung pada penentuan posisi penelitian.
+    Bab ini menguraikan landasan teoretis yang mendukung penelitian, meliputi konsep dasar sinyal EEG, metode ekstraksi dan seleksi fitur pada data EEG, metode \textit{Minimum Redundancy Maximum Relevance} (mRMR), algoritma klasifikasi \textit{XGBoost}, serta kajian terhadap penelitian-penelitian sebelumnya yang relevan.
     
-    \item \textbf{Bab 3: Perancangan dan Implementasi Sistem dan Templat.} 
-    Bab ini merupakan bagian inti teknis yang menjelaskan secara detail proses rekayasa untuk kedua keluaran penelitian. Pembahasan mencakup perancangan arsitektur, basis data, dan antarmuka untuk sistem D'Office, serta perancangan struktur dan perintah kustom untuk templat \LaTeX{}. Tahap implementasi dari kedua komponen tersebut juga dipaparkan.
+    \item \textbf{Bab 3: Metodologi Penelitian.} 
+    Bab ini menjelaskan metode yang digunakan dalam penelitian, mencakup deskripsi dataset EEG yang digunakan, tahapan pra-pemrosesan data, penerapan teknik \textit{data augmentasi}, proses seleksi fitur menggunakan metode \textit{mRMR}, serta proses pelatihan model klasifikasi menggunakan \textit{XGBoost}.
     
-    \item \textbf{Bab 4: Pengujian dan Analisis.} 
-    Bab ini memaparkan hasil dari serangkaian pengujian dan evaluasi. Cakupannya meliputi analisis kuantitatif terhadap efektivitas alur kerja menggunakan sistem D'Office, serta analisis komparatif terhadap akurasi format penulisan menggunakan templat \LaTeX{} yang telah dikembangkan.
+    \item \textbf{Bab 4: Hasil dan Analisis.} 
+    Bab ini memaparkan hasil eksperimen yang diperoleh dari proses pelatihan dan pengujian model. Analisis dilakukan untuk membandingkan performa model pada skenario dengan dan tanpa penerapan \textit{data augmentasi}, serta mengevaluasi pengaruhnya terhadap kemampuan model dalam melakukan klasifikasi data EEG.
     
     \item \textbf{Bab 5: Penutup.} 
-    Bab terakhir ini berisi kesimpulan dari seluruh rangkaian penelitian dan analisis, yang secara lugas menjawab setiap butir rumusan masalah. Selain itu, bab ini juga menyajikan saran untuk potensi pengembangan sistem D'Office dan templat \LaTeX{} di masa mendatang.
+    Bab terakhir ini berisi kesimpulan dari hasil penelitian yang telah dilakukan serta saran untuk pengembangan penelitian selanjutnya terkait analisis dan klasifikasi data EEG menggunakan metode pembelajaran mesin.
 \end{enumerate}
