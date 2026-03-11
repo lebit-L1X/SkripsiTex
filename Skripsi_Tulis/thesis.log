@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.7)  11 MAR 2026 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.7)  11 MAR 2026 19:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1354,7 +1354,7 @@ Package epstopdf Info: Source file: <_internals/makara.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=_internals/makara-eps-converted-to.pdf _internals/makara.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
-<_internals/makara-eps-converted-to.pdf, id=117, 219.82124pt x 219.82124pt>
+<_internals/makara-eps-converted-to.pdf, id=141, 219.82124pt x 219.82124pt>
 File: _internals/makara-eps-converted-to.pdf Graphic file (type pdf)
 <use _internals/makara-eps-converted-to.pdf>
 Package pdftex.def Info: _internals/makara-eps-converted-to.pdf  used on input line 15.
@@ -1497,6 +1497,12 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 
 ]
 
+Package fancyhdr Warning: \footskip is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.49998pt}.
+
+[11]
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 112.
 
@@ -1510,7 +1516,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[11
+[12
 
 
 ]
@@ -1528,7 +1534,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[12
+[13
 
 
 ] (thesis.loe)
@@ -1541,7 +1547,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[13
+[14
 
 
 ] (src/00-front_matter/daftar-notasi.tex
@@ -1555,7 +1561,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[14
+[15
 
 
 ]
@@ -1573,7 +1579,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[15
+[16
 
 
 ]
@@ -1583,142 +1589,118 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 (singkatan.tex
 
-LaTeX Warning: Hyper reference `acro:API' on page xvi undefined on input line 2.
+LaTeX Warning: Hyper reference `acro:API' on page xvii undefined on input line 2.
 
 
-LaTeX Warning: Hyper reference `acro:API' on page xvi undefined on input line 2.
+LaTeX Warning: Hyper reference `acro:API' on page xvii undefined on input line 2.
 
 
-LaTeX Warning: Hyper reference `acro:DTE' on page xvi undefined on input line 3.
+LaTeX Warning: Hyper reference `acro:DTE' on page xvii undefined on input line 3.
 
 
-LaTeX Warning: Hyper reference `acro:DTE' on page xvi undefined on input line 3.
+LaTeX Warning: Hyper reference `acro:DTE' on page xvii undefined on input line 3.
 
 
-LaTeX Warning: Hyper reference `acro:HCI' on page xvi undefined on input line 4.
+LaTeX Warning: Hyper reference `acro:HCI' on page xvii undefined on input line 4.
 
 
-LaTeX Warning: Hyper reference `acro:HCI' on page xvi undefined on input line 4.
+LaTeX Warning: Hyper reference `acro:HCI' on page xvii undefined on input line 4.
 
 
-LaTeX Warning: Hyper reference `acro:IMK' on page xvi undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:IMK' on page xvii undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:IMK' on page xvi undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:IMK' on page xvii undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:ITB' on page xvi undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:ITB' on page xvii undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:ITB' on page xvi undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:ITB' on page xvii undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:MVC' on page xvi undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:ORM' on page xvii undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:MVC' on page xvi undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:ORM' on page xvii undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:ORM' on page xvi undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:PDF' on page xvii undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:ORM' on page xvi undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:PDF' on page xvii undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:PDF' on page xvi undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:PRG' on page xvii undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:PDF' on page xvi undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:PRG' on page xvii undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:PRG' on page xvi undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:SKS' on page xvii undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:PRG' on page xvi undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:SKS' on page xvii undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:PSTK UI' on page xvi undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:SQL' on page xvii undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:PSTK UI' on page xvi undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:SQL' on page xvii undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:SDLC' on page xvi undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:SSD' on page xvii undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:SDLC' on page xvi undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:SSD' on page xvii undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:SIAK-NG' on page xvi undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:SUS' on page xvii undefined on input line 17.
 
 
-LaTeX Warning: Hyper reference `acro:SIAK-NG' on page xvi undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:SUS' on page xvii undefined on input line 17.
 
 
-LaTeX Warning: Hyper reference `acro:SKS' on page xvi undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:ToT' on page xvii undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `acro:SKS' on page xvi undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:ToT' on page xvii undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `acro:SQL' on page xvi undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:TSR' on page xvii undefined on input line 20.
 
 
-LaTeX Warning: Hyper reference `acro:SQL' on page xvi undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:TSR' on page xvii undefined on input line 20.
 
 
-LaTeX Warning: Hyper reference `acro:SSD' on page xvi undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:TTFB' on page xvii undefined on input line 21.
 
 
-LaTeX Warning: Hyper reference `acro:SSD' on page xvi undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:TTFB' on page xvii undefined on input line 21.
 
 
-LaTeX Warning: Hyper reference `acro:SUS' on page xvi undefined on input line 17.
+LaTeX Warning: Hyper reference `acro:UGM' on page xvii undefined on input line 22.
 
 
-LaTeX Warning: Hyper reference `acro:SUS' on page xvi undefined on input line 17.
+LaTeX Warning: Hyper reference `acro:UGM' on page xvii undefined on input line 22.
 
 
-LaTeX Warning: Hyper reference `acro:ToT' on page xvi undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:UI' on page xvii undefined on input line 23.
 
 
-LaTeX Warning: Hyper reference `acro:ToT' on page xvi undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:UI' on page xvii undefined on input line 23.
 
 
-LaTeX Warning: Hyper reference `acro:TSR' on page xvi undefined on input line 20.
+LaTeX Warning: Hyper reference `acro:UML' on page xvii undefined on input line 25.
 
 
-LaTeX Warning: Hyper reference `acro:TSR' on page xvi undefined on input line 20.
+LaTeX Warning: Hyper reference `acro:UML' on page xvii undefined on input line 25.
 
 
-LaTeX Warning: Hyper reference `acro:TTFB' on page xvi undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:UX' on page xvii undefined on input line 26.
 
 
-LaTeX Warning: Hyper reference `acro:TTFB' on page xvi undefined on input line 21.
-
-
-LaTeX Warning: Hyper reference `acro:UGM' on page xvi undefined on input line 22.
-
-
-LaTeX Warning: Hyper reference `acro:UGM' on page xvi undefined on input line 22.
-
-
-LaTeX Warning: Hyper reference `acro:UI/UX' on page xvi undefined on input line 24.
-
-
-LaTeX Warning: Hyper reference `acro:UI/UX' on page xvi undefined on input line 24.
-
-
-LaTeX Warning: Hyper reference `acro:UML' on page xvi undefined on input line 25.
-
-
-LaTeX Warning: Hyper reference `acro:UML' on page xvi undefined on input line 25.
-
-
-LaTeX Warning: Hyper reference `acro:UX' on page xvi undefined on input line 26.
-
-
-LaTeX Warning: Hyper reference `acro:UX' on page xvi undefined on input line 26.
+LaTeX Warning: Hyper reference `acro:UX' on page xvii undefined on input line 26.
 
 )
 
@@ -1726,7 +1708,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[16
+[17
 
 
 ] (src/01-body/01-bab1.tex
@@ -1736,16 +1718,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
 
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 2.
-Package acronym Info: Label `acro:TA' newly defined as it shall be overridden
-although it is yet undefined on input line 4.
-Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
-although it is yet undefined on input line 4.
-
-Package natbib Warning: Citation `latex_vs_word' on page 1 undefined on input line 4.
-
-
-Package natbib Warning: Citation `microsoft_word' on page 1 undefined on input line 4.
-
 
 Package fancyhdr Warning: \footskip is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1755,7 +1727,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 
+l.14 
       [1
 
 
@@ -1799,7 +1771,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[6]) (thesis.bbl
+[6]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1807,7 +1779,187 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[7]
+[7]) (src/01-body/02-bab2.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[8]
+BAB 2.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 2.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package acronym Info: Label `acro:TA' newly defined as it shall be overridden
+although it is yet undefined on input line 47.
+Package acronym Info: Label `acro:SIAK-NG' newly defined as it shall be overridden
+although it is yet undefined on input line 47.
+Package acronym Info: Label `acro:PSTK UI' newly defined as it shall be overridden
+although it is yet undefined on input line 48.
+
+Package fancyhdr Warning: \footskip is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.49998pt}.
+
+[9
+
+]
+
+Package natbib Warning: Citation `DTEUI:2025' on page 10 undefined on input line 60.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|\T1/ptm/m/n/12 Mengambil SKS Tu-gas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\T1/ptm/m/n/12 calon dosen pem-bim-bing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|\T1/ptm/m/n/12 Departemen mene-tap-kan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\T1/ptm/m/n/12 dosen pem-bim-bing un-tuk
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 90--90
+[]|\T1/ptm/m/n/12 Proses bim-bingan berlang-
+ []
+
+
+Underfull \hbox (badness 2809) in paragraph at lines 90--90
+\T1/ptm/m/n/12 sung, di mana ma-ha-siswa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|\T1/ptm/m/n/12 Mengunggah draf buku
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 90--90
+[][] \T1/ptm/m/n/12 yang siap sidang dan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\T1/ptm/m/n/12 catatan/log bim-bingan ke
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|\T1/ptm/m/n/12 Mengunggah buku hasil
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\T1/ptm/m/n/12 re-visi yang su-dah di-tan-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\T1/ptm/m/n/12 datan-gani lengkap be-serta
+ []
+
+
+Underfull \hbox (badness 5077) in paragraph at lines 90--90
+[]|\T1/ptm/m/n/12 Verifikasi akhir berkas di
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[10]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[11]
+Package acronym Info: Label `acro:SDLC' newly defined as it shall be overridden
+although it is yet undefined on input line 104.
+
+
+Package natbib Warning: Citation `Pressman:2019' on page 12 undefined on input line 142.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[12]
+
+Package natbib Warning: Citation `Fowler:2018' on page 13 undefined on input line 148.
+
+Package acronym Info: Label `acro:UI/UX' newly defined as it shall be overridden
+although it is yet undefined on input line 190.
+Package acronym Info: Label `acro:MVC' newly defined as it shall be overridden
+although it is yet undefined on input line 196.
+
+Package natbib Warning: Citation `gammadesign' on page 13 undefined on input line 196.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[13]
+
+Package natbib Warning: Citation `mysql' on page 14 undefined on input line 203.
+
+
+LaTeX Warning: Reference `tab:contoh-kueri' on page 14 undefined on input line 211.
+
+
+LaTeX Warning: Reference `tab:perbandingan-sistem' on page 14 undefined on input line 215.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[14]) (thesis.bbl
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[15]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
@@ -1828,10 +1980,10 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[8
+[16
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260311142449 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260311194541 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -1843,20 +1995,23 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FEBFD6B88C416BA2D45E2B69BC0C2F96;3415.
+(rerunfilecheck)             Checksum: B0A7198FC32A97B1129394BA0A0C1107;4647.
  ) 
 Here is how much of TeX's memory you used:
- 48095 strings out of 467871
- 1129403 string characters out of 5418377
- 1866030 words of memory out of 5000000
- 75875 multiletter control sequences out of 15000+600000
- 666583 words of font info for 97 fonts, out of 8000000 for 9000
+ 48461 strings out of 467871
+ 1135977 string characters out of 5418377
+ 1870030 words of memory out of 5000000
+ 76192 multiletter control sequences out of 15000+600000
+ 698774 words of font info for 144 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
- 125i,11n,130p,1800b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (25 pages, 171324 bytes).
+ 125i,13n,130p,1800b,996s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+<C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (34 pages, 215983 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 298 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 519 PDF objects out of 1000 (max. 8388607)
+ 128 named destinations out of 1000 (max. 500000)
+ 346 words of extra memory for PDF output out of 10000 (max. 10000000)
 
