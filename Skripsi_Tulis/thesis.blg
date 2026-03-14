@@ -10,8 +10,6 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: pustaka.bib
-Warning--I didn't find a database entry for "DTEUI:2025"
-Warning--I didn't find a database entry for "Pressman:2019"
 Warning--I didn't find a database entry for "Fowler:2018"
 Warning--I didn't find a database entry for "gammadesign"
 Warning--I didn't find a database entry for "mysql"
@@ -22,7 +20,7 @@ Warning--I didn't find a database entry for "mysql"
 Done.
 You've used 0 entries,
             4087 wiz_defined-function locations,
-            829 strings with 7372 characters,
+            825 strings with 7326 characters,
 and the built_in function-call counts, 104 in all, are:
 = -- 0
 > -- 0
@@ -61,4 +59,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 22
-(There were 5 warnings)
+(There were 3 warnings)

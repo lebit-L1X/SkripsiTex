@@ -2,145 +2,24 @@
 \chapter{\babDua}
 \label{cha:Tinjauan Pustaka}
 %-----------------------------------------------------------------------------%
-Bab ini menyajikan landasan teoretis dan kontekstual yang mendasari perancangan dan evaluasi sistem D'Office. 
-Pembahasan diawali dengan pemetaan Alur Kerja Pengelolaan Tugas Akhir yang berlaku saat ini untuk memberikan konteks permasalahan yang nyata. 
-Selanjutnya, dipaparkan Landasan Teori yang mencakup berbagai konsep teknis, mulai dari metodologi pengembangan perangkat lunak, sistem tata letak dokumen (\LaTeX), hingga kerangka kerja terperinci untuk evaluasi. 
-Bab ini juga merangkum Pedoman Penulisan Tugas Akhir resmi sebagai acuan. 
-Sebagai penutup, bab ini memposisikan penelitian dengan melakukan Studi Pustaka Sistem Sejenis yang kemudian mengerucut pada penegasan Posisi Penelitian yang menyoroti kebaruan dan kontribusi dari sistem D'Office.
-
-% Anda bisa meletakkan kode ini setelah \chapter{Tinjauan Pustaka}
-% atau \chapter{Landasan Teori} di file .tex utama Anda.
-
-\section{Alur Kerja Pengelolaan Tugas Akhir}
-\label{sec:alur_kerja}
-
-
-\begin{figure}[h!]
-    \centering
-    \resizebox{0.2\textwidth}{!}{
-    \begin{tikzpicture}[
-        node distance=1.5cm,
-        auto,
-        tahap/.style={rectangle, rounded corners, draw, fill=blue!10, text width=8em, text centered, minimum height=3em},
-        panah/.style={draw, -Latex, thick}
-    ]
-        % Mendefinisikan posisi node tahapan
-        \node [tahap] (prapengerjaan) {1. Pra-Pengerjaan \& Pengajuan Judul};
-        \node [tahap, below=of prapengerjaan] (bimbingan) {2. Pengerjaan \& Bimbingan};
-        \node [tahap, below=of bimbingan] (sidang) {3. Pendaftaran \& Pelaksanaan Sidang};
-        \node [tahap, below=of sidang] (pascSidang) {4. Revisi \& Pengumpulan Final};
-        \node [tahap, below=of pascSidang] (yudisium) {5. Yudisium \& Kelulusan};
-        
-        % Menggambar panah alur kerja
-        \draw [panah] (prapengerjaan) -- (bimbingan);
-        \draw [panah] (bimbingan) -- (sidang);
-        \draw [panah] (sidang) -- (pascSidang);
-        \draw [panah] (pascSidang) -- (yudisium);
-    \end{tikzpicture}
-    }
-    \caption{Diagram alur kerja tingkat tinggi untuk proses penyelesaian Tugas Akhir.}
-    \label{fig:alur-kerja-sst}
-\end{figure}
-
-Kelima tahapan tersebut dapat dirinci sebagai berikut:
-\begin{enumerate}
-    \item \textbf{Tahap Pra-Pengerjaan:} Tahap ini dimulai dengan mahasiswa mengambil SKS \ac{TA} di \ac{SIAK-NG}. 
-    Setelah itu, mahasiswa mengajukan judul dan calon dosen pembimbing melalui sistem D'Office, yang kemudian akan dibahas dan ditetapkan oleh pihak sekretariat \ac{PSTK UI}.
-    \item \textbf{Tahap Pengerjaan dan Bimbingan:} Merupakan fase inti di mana mahasiswa melakukan penelitian dan penyusunan naskah di bawah arahan dosen pembimbing. 
-    Selama tahap ini, mahasiswa diwajibkan untuk secara rutin mengisi catatan bimbingan di D'Office.
-    \item \textbf{Tahap Sidang:} Setelah naskah disetujui oleh pembimbing, mahasiswa mengunggah draf siap sidang ke D'Office untuk dijadwalkan sidangnya. 
-    Pelaksanaan sidang melibatkan dosen pembimbing dan penguji, yang kemudian akan memberikan nilai serta catatan revisi melalui D'Office.
-    \item \textbf{Tahap Pasca-Sidang:} Mahasiswa mengerjakan revisi berdasarkan catatan dari dewan penguji. 
-    Setelah disetujui, naskah final yang telah ditandatangani lengkap diunggah kembali ke D'Office dan juga ke repositori perpustakaan pusat UI.
-    \item \textbf{Tahap Yudisium:} Merupakan tahap administrasi akhir di mana sekretariat departemen melakukan verifikasi semua berkas dan nilai. 
-    Setelah rapat yudisium, status kelulusan mahasiswa akan diperbarui di SIAK-NG, yang menjadi syarat untuk pendaftaran wisuda.
-\end{enumerate}
-
-Kelima tahapan tersebut melibatkan serangkaian aktivitas spesifik yang harus dilakukan oleh berbagai pihak, mulai dari mahasiswa hingga bagian akademik. 
-Tabel~\ref{tab:aktivitas-sst} merangkum beberapa aktivitas paling krusial dalam siklus hidup tugas akhir yang menjadi fokus dalam pengembangan sistem D'Office berdasarkan dokumentasi resmi\citep{DTEUI:2025}.
-
-\begin{table}[h!]           
-    \captionsetup{justification=justified, singlelinecheck=false}
-    \caption{Rincian aktivitas kunci dalam alur kerja tugas akhir.}
-    \label{tab:aktivitas-sst}
-    \begin{tabularx}{\linewidth}{|c|X|l|}
-        \hline
-        \textbf{No.} & \textbf{Aktivitas} & \textbf{Pihak Terlibat Utama} \\
-        \hline
-        1 & Mengambil SKS Tugas Akhir di sistem SIAK-NG. & Mahasiswa \\
-        \hline
-        3 & Mengajukan judul SST dan calon dosen pembimbing melalui D'Office. & Mahasiswa \\
-        \hline
-        7 & Departemen menetapkan dosen pembimbing untuk setiap mahasiswa. & Ketua Program Studi melalui Sekretariat \\
-        \hline
-        9 & Proses bimbingan berlangsung, di mana mahasiswa wajib mengisi Catatan Bimbingan di D'Office. & Mahasiswa, Dosen Pembimbing \\
-        \hline
-        10 & Mengunggah draf buku \ac{TA} yang siap sidang dan catatan/log bimbingan ke D'Office. & Mahasiswa \\
-        \hline
-        13 & Menghadiri sidang sesuai peran masing-masing. & Mahasiswa, Dosen Pembimbing, Dosen Penguji \\
-        \hline
-        14 & Dewan penguji mengisi nilai dan memberikan catatan revisi melalui sistem D'Office. & Dosen Pembimbing, Dosen Penguji \\
-        \hline
-        17 & Mengunggah buku hasil revisi yang sudah ditandatangani lengkap beserta berkas pendukung lainnya ke D'Office. & Mahasiswa \\
-        \hline
-        21 & Mendaftar yudisium dan melengkapi berkas kelulusan. & Mahasiswa \\
-        \hline
-        22 & Verifikasi akhir berkas di D'Office dan data di SIAK-NG oleh \ac{DTE}. & Sekretariat Departemen \\
-        \hline
-    \end{tabularx}
-\end{table}
-
-Alur kerja yang kompleks dan melibatkan banyak aktivitas serta beberapa sistem inilah yang menjadi dasar justifikasi perlunya sebuah sistem terpusat seperti D'Office untuk menyederhanakan dan mengelola proses tersebut. 
-Sistem D'Office dirancang untuk mendigitalisasi dan memfasilitasi sebagian besar aktivitas yang tercantum di atas, terutama yang berkaitan dengan pengajuan, penjadwalan, dan pengunggahan dokumen.
+Bab ini menjelaskan konteks dan landasan teoretis yang mendasari penelitian mengenai analisis sinyal EEG untuk klasifikasi Autism Spectrum Disorder (ASD) menggunakan metode machine learning. Penjelasan diawali dengan pemaparan landasan teori yang mencakup konsep dasar sinyal EEG, tahapan pemrosesan dan analisis data EEG, serta metode klasifikasi yang digunakan dalam penelitian ini. Selanjutnya, bab ini membahas penelitian-penelitian terdahulu yang relevan dengan analisis EEG dan penerapan teknik data augmentation. Bab ini kemudian diakhiri dengan pembahasan mengenai celah penelitian yang menjadi dasar dilakukannya penelitian ini.
 
 \section{Landasan Teori}
 \label{sec:landasan_teori}
-Bagian ini menguraikan konsep-konsep teoretis yang menjadi dasar dalam perancangan dan implementasi sistem D'Office. 
-Landasan teori ini mencakup metodologi pengembangan perangkat lunak, arsitektur sistem, prinsip interaksi manusia dan komputer, hingga penggunaan Latex untuk membuat templat dokumen.
+Bagian ini menguraikan konsep-konsep teoretis yang menjadi dasar dalam penelitian analisis sinyal EEG untuk klasifikasi Autism Spectrum Disorder (ASD). Landasan teori ini mencakup konsep dasar EEG, tahapan pemrosesan sinyal EEG, metode pembelajaran mesin untuk klasifikasi, serta teknik seleksi fitur dan \textit{data augmentation} yang digunakan dalam penelitian ini.
 
-\subsection{Metodologi Pengembangan Perangkat Lunak}
-\label{subsec:metodologi_dev}
-Pengembangan sebuah sistem perangkat lunak yang kompleks seperti D'Office memerlukan sebuah kerangka kerja yang terstruktur untuk memastikan kualitas dan ketercapaian tujuan. 
-Kerangka kerja ini dikenal sebagai metodologi pengembangan perangkat lunak, yang secara umum mengikuti Siklus Hidup Pengembangan Sistem atau \ac{SDLC}.
+\subsection{Sinyal EEG}
+\label{Sinyal EEG}
+Sinyal electroencephalogram (EEG) dihasilkan oleh aktivitas listrik neuron di dalam otak. Neuron saling berkomunikasi melalui proses transmisi sinaptik yang menghasilkan impuls listrik kecil yang menyebar melalui jaringan otak. Ketika sekelompok besar neuron mengalami aktivasi secara sinkron, potensial listrik yang dihasilkan dapat dideteksi pada permukaan kulit kepala menggunakan elektroda. Sinyal EEG direkam sebagai perubahan tegangan terhadap waktu dengan rentang frekuensi yang umumnya berada pada kisaran 0,5 hingga 100 Hz. Aktivitas yang terekam pada sinyal EEG dipengaruhi oleh berbagai proses aktivitas otak, seperti proses kognitif, fungsi motorik, serta kondisi emosional, sehingga EEG banyak dimanfaatkan sebagai alat untuk mempelajari fungsi otak maupun berbagai gangguan neurologis.
 
-Dalam praktik rekayasa perangkat lunak, terdapat berbagai variasi model SDLC. 
-Untuk pengembangan D'Office, model yang diadopsi adalah model \textbf{\textit{prototyping}}. 
-Model ini, seperti diilustrasikan pada Gambar~\ref{fig:prototyping-model}, menekankan pada pembangunan versi awal dari sistem (purwarupa) yang kemudian dievaluasi oleh pengguna. 
-Umpan balik dari pengguna kemudian digunakan untuk menyempurnakan purwarupa secara iteratif.
+Dalam penelitian EEG, pengumpulan data umumnya dilakukan menggunakan desain eksperimen atau protokol stimulasi yang terstandarisasi untuk mengamati aktivitas listrik otak pada berbagai kondisi. Secara umum, pembangkitan sinyal EEG dalam penelitian dapat diklasifikasikan menjadi dua jenis utama berdasarkan sumber aktivasinya, yaitu stimulus eksogen dan aktivasi endogen. Stimulus eksogen berasal dari rangsangan eksternal dari lingkungan, seperti rangsangan visual, auditori, atau taktil, yang diterima oleh sistem sensorik dan memicu respons saraf yang kemudian terekam sebagai aktivitas listrik pada EEG. Sebaliknya, aktivasi endogen tidak bergantung pada rangsangan eksternal, melainkan muncul dari proses mental internal individu, seperti imajinasi gerakan (motor imagery), respons emosional, pemusatan perhatian, atau aktivitas kognitif lainnya yang menghasilkan sinyal EEG secara spontan.
 
-\begin{figure}[H]
-    \centering
-    \resizebox{0.6\textwidth}{!}{
-    \begin{tikzpicture}[
-        node distance=1.5cm and 2cm,
-        auto,
-        block/.style={rectangle, draw, fill=blue!10, text width=8em, text centered, minimum height=3em, rounded corners},
-        arrow/.style={thick,->,>=stealth}
-    ]
-        % Mendefinisikan posisi node
-        \node[block] (req) {Analisis Kebutuhan Awal};
-        \node[block, below=of req] (design) {Rancang \& Bangun Purwarupa};
-        \node[block, right=of design] (eval) {Evaluasi oleh Pengguna};
-        \node[block, above=of eval] (refine) {Penyempurnaan Kebutuhan};
+Dalam analisis sinyal EEG, aktivitas listrik otak yang terekam dapat dianalisis melalui beberapa pendekatan yang berbeda. Secara umum, analisis EEG dilakukan dalam dua domain utama, yaitu domain waktu (time domain) dan domain frekuensi (frequency domain). Analisis dalam domain waktu dilakukan dengan mengamati karakteristik sinyal terhadap waktu, seperti amplitudo puncak, latensi, serta perbedaan latensi antar komponen sinyal yang muncul pada kondisi tertentu. Sementara itu, analisis dalam domain frekuensi bertujuan untuk mengidentifikasi kandungan spektral sinyal dengan memeriksa distribusi energi atau daya pada berbagai rentang frekuensi menggunakan metode transformasi spektral, seperti Fast Fourier Transform (FFT) maupun teknik estimasi Power Spectral Density (PSD). Melalui analisis spektral tersebut, pola osilasi aktivitas otak pada rentang frekuensi tertentu dapat diidentifikasi. 
 
-        % Menggambar panah alur kerja
-        \draw[arrow] (req) -- (design);
-        \draw[arrow] (design) -- (eval);
-        \draw[arrow] (eval) -- node[above, sloped, font=\scriptsize] {Umpan Balik} (refine);
-        \draw[arrow] (refine) -- (req);
-        
-        % Panah menuju produk final
-        \draw[arrow] (eval.south) -- ++(0,-1cm) node[anchor=north, block, fill=green!20] (final) {Produk \textit{Final}};
-    \end{tikzpicture}
-    }
-    \captionsetup{font=small}
-    \caption{Diagram alur kerja model pengembangan \textit{prototyping}.}
-    \label{fig:prototyping-model}
-\end{figure}
+Dalam praktik analisis spektral EEG, sinyal yang telah direkam biasanya terlebih dahulu dibagi ke dalam beberapa segmen waktu atau epoch sebelum dilakukan perhitungan spektrum. Setiap epoch kemudian dianalisis untuk memperoleh nilai Power Spectral Density (PSD) yang menggambarkan distribusi daya sinyal pada setiap frekuensi. Nilai PSD yang dihasilkan dari seluruh epoch umumnya dirata-ratakan untuk setiap kanal dan subjek sehingga diperoleh representasi spektral yang lebih stabil. Setelah distribusi spektrum diperoleh, analisis selanjutnya dilakukan dengan membagi rentang frekuensi EEG ke dalam beberapa pita frekuensi tertentu. Secara umum, sinyal EEG diklasifikasikan ke dalam lima pita frekuensi utama, yaitu delta (±0,5–4 Hz), theta (±4–8 Hz), alpha (±8–13 Hz), beta (±13–30 Hz), dan gamma (di atas ±30 Hz). Setiap pita frekuensi tersebut dikaitkan dengan pola aktivitas saraf yang berbeda, sehingga melalui analisis distribusi daya pada setiap pita frekuensi tersebut, peneliti dapat mengidentifikasi pola aktivitas otak yang khas serta membandingkan perbedaan karakteristik sinyal EEG pada berbagai kondisi fisiologis maupun gangguan neurologis.
 
-Siklus iteratif antara perancangan, evaluasi, dan penyempurnaan terus berlanjut hingga purwarupa yang dihasilkan telah sesuai dengan kebutuhan pengguna dan siap menjadi produk \textit{final}. 
-Pendekatan ini sangat efektif untuk proyek yang berorientasi pada pengguna seperti D'Office, di mana kejelasan antarmuka dan kemudahan penggunaan menjadi prioritas utama \citep{Pressman:2019}. 
-Menurut Pressman\footnote{Roger S. Pressman (1947-2023) adalah seorang insinyur perangkat lunak Amerika dan penulis buku teks yang dianggap sebagai salah satu referensi utama dalam disiplin ilmu rekayasa perangkat lunak.}, penggunaan purwarupa dapat secara signifikan mengurangi risiko kesalahpahaman kebutuhan antara pengguna dan pengembang.
+--FOTO RENTANG FREKUENSI PSD--
+
 
 \subsection{Arsitektur Aplikasi Web}
 \label{subsec:arsitektur_aplikasi}
