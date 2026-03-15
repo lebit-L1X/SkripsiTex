@@ -23,6 +23,5 @@
 \contentsline {chapter}{\numberline {2}\uppercase {Tinjauan Pustaka}}{9}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Landasan Teori}{9}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Sinyal EEG}{9}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Arsitektur Aplikasi Web}{11}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Posisi Penelitian}{13}{section.2.2}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{14}{Item.29}%
+\contentsline {subsection}{\numberline {2.1.2}Analisis Sinyal EEG}{11}{subsection.2.1.2}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{15}{subsection.2.1.2}%
