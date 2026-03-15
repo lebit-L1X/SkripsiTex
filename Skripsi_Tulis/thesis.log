@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  15 MAR 2026 02:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  15 MAR 2026 11:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1252,11 +1252,7 @@ File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikzuml@AC@xbrc=\skip289
 \tikzuml@AC@ybrc=\skip290
 \tikzuml@AC@middleArm=\skip291
-) (_internals/hype.indonesia.tex) (settings.tex) (istilah.tex) (thesis.aux
-
-LaTeX Warning: Label `Sinyal EEG' multiply defined.
-
-)
+) (_internals/hype.indonesia.tex) (settings.tex) (istilah.tex) (thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1899,7 +1895,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 [15
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260315020513 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260315115755 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -1910,22 +1906,19 @@ L3 programming layer <2026-01-19>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A2E2A09078A90A2B3D235377BECA8165;4059.
+(rerunfilecheck)             Checksum: 9DCC7E3D312AA64C965EDBEF6076B1CE;4084.
  ) 
 Here is how much of TeX's memory you used:
- 48143 strings out of 467866
- 1130084 string characters out of 5418326
- 1868062 words of memory out of 5000000
- 75911 multiletter control sequences out of 15000+600000
+ 48144 strings out of 467866
+ 1130133 string characters out of 5418326
+ 1868063 words of memory out of 5000000
+ 75912 multiletter control sequences out of 15000+600000
  667208 words of font info for 99 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
  125i,12n,130p,1794b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (32 pages, 225261 bytes).
+Output written on thesis.pdf (32 pages, 225340 bytes).
 PDF statistics:
  431 PDF objects out of 1000 (max. 8388607)
  105 named destinations out of 1000 (max. 500000)
