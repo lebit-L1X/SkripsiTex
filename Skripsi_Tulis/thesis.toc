@@ -15,9 +15,9 @@
 \contentsline {chapter}{\uppercase {Daftar Singkatan}}{xvii}{section*.10}%
 \contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Rumusan Masalah}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{5}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Tujuan Penelitian}{5}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Manfaat Penelitian}{5}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Manfaat Penelitian}{6}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Ruang Lingkup Penelitian}{6}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Sistematika Penulisan}{7}{section.1.6}%
 \contentsline {chapter}{\numberline {2}\uppercase {Tinjauan Pustaka}}{9}{chapter.2}%
