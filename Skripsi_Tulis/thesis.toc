@@ -30,5 +30,9 @@
 \contentsline {subsection}{\numberline {2.1.6}Augmentasi Data EEG}{19}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}Variational Auto Encoder}{21}{subsection.2.1.7}%
 \contentsline {section}{\numberline {2.2}Penelitian Terdahulu}{23}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Penggunaan EEG dalam klasifikasi ASD}{23}{subsection.2.2.1}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{24}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}Klasifikasi ASD Berbasis EEG Menggunakan mRMR dan XGBoost}{23}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}{24}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Dataset yang Digunakan}{25}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Dataset yang Digunakan}{25}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Fokus pada Celah Penelitian}{27}{section.2.3}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{28}{section.2.3}%
