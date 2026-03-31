@@ -25,8 +25,13 @@ EEG biasanya direkam dalam bentuk sinyal multikanal yang diperoleh dari sejumlah
 
 Untuk memastikan konsistensi dan keterbandingan data antar penelitian, penempatan elektroda EEG umumnya mengikuti sistem standar yang dikenal sebagai International 10–20 System. Sistem ini merupakan protokol penempatan elektroda yang distandarisasi oleh International Federation of Clinical Neurophysiology (IFCN) untuk menentukan posisi elektroda pada kulit kepala secara sistematis. Dalam sistem ini, penentuan posisi elektroda didasarkan pada pengukuran jarak antara beberapa titik anatomi utama pada kepala, yaitu nasion, inion, serta titik preauricular pada kedua sisi kepala. Berdasarkan titik-titik referensi tersebut, permukaan kepala dibagi menjadi beberapa posisi proporsional untuk memastikan cakupan perekaman yang memadai terhadap berbagai wilayah otak. Setiap elektroda dalam sistem ini diberi nama yang terdiri dari huruf dan angka, di mana huruf menunjukkan wilayah anatomi relatif pada kulit kepala, seperti frontal (F), central (C), temporal (T), parietal (P), dan occipital (O), sedangkan angka menunjukkan hemisfer otak, dengan angka ganjil untuk hemisfer kiri dan angka genap untuk hemisfer kanan. Selain itu, angka yang lebih kecil menunjukkan posisi yang lebih dekat dengan garis tengah kepala, sedangkan angka yang lebih besar menunjukkan posisi yang lebih lateral. Elektroda yang terletak tepat pada garis tengah kepala ditandai dengan huruf ``z'' (\textit{zero}), seperti Fz, Cz, dan Pz. Standarisasi ini memungkinkan proses perekaman EEG dilakukan secara konsisten sehingga distribusi aktivitas listrik otak dapat dibandingkan secara lebih sistematis antar subjek maupun antar studi penelitian. [22][23]
 
---GAMBAR 10-20 System--
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/pics/10_20_system.jpg}
+    \caption{Sistem Internasional 10--20 untuk Penempatan Elektroda EEG}
+    \label{fig:2.1}
+\end{figure}
+ 
 Selain konfigurasi dan penempatan elektroda, proses akuisisi sinyal EEG juga melibatkan tahapan konversi sinyal analog menjadi sinyal digital agar dapat diproses oleh sistem komputer. Aktivitas listrik otak yang direkam oleh elektroda pada awalnya berupa sinyal analog dengan perubahan tegangan yang berlangsung secara kontinu terhadap waktu. Untuk memungkinkan penyimpanan dan analisis secara digital, sinyal analog tersebut dikonversi menjadi serangkaian nilai numerik melalui proses digitalisasi menggunakan konverter analog-ke-digital (\textit{analog-to-digital converter} atau ADC). Dalam proses ini, tegangan sinyal pada setiap kanal EEG diukur secara berkala dalam interval waktu yang sangat singkat yang dikenal sebagai \textit{time-frame} atau sampel, kemudian nilai tersebut disimpan sebagai data digital.[23]
 
 Frekuensi pengambilan sampel atau \textit{sampling frequency} menentukan seberapa sering tegangan sinyal diukur dalam satu detik. Resolusi temporal dari sinyal EEG yang direkam sangat bergantung pada frekuensi sampling yang digunakan. Berdasarkan prinsip teorema Nyquist, frekuensi sampling harus setidaknya dua kali lebih besar dari frekuensi tertinggi dari sinyal yang ingin direkam agar bentuk sinyal dapat direpresentasikan secara akurat. Dalam praktik klinis, aktivitas listrik otak yang relevan untuk interpretasi EEG umumnya berada pada rentang frekuensi sekitar 0,1 hingga 70 Hz. Oleh karena itu, standar minimal frekuensi sampling yang direkomendasikan untuk perekaman EEG klinis adalah sekitar 128 Hz. Meskipun demikian, penggunaan frekuensi sampling yang lebih tinggi seringkali lebih disukai karena dapat memberikan resolusi temporal yang lebih baik serta memungkinkan representasi sinyal yang lebih akurat. Perangkat EEG modern umumnya mampu melakukan perekaman dengan frekuensi sampling sebesar 256 Hz atau lebih tinggi.[23]
@@ -52,7 +57,13 @@ Dalam praktik analisis spektral EEG, sinyal yang telah direkam biasanya terlebih
 
 Melalui analisis distribusi daya pada setiap pita frekuensi tersebut, peneliti dapat mengidentifikasi pola aktivitas otak yang khas serta membandingkan karakteristik sinyal EEG pada berbagai kondisi fisiologis maupun gangguan neurologis tertentu. Oleh karena itu, representasi pita frekuensi EEG sering digunakan sebagai dasar dalam proses ekstraksi fitur pada analisis sinyal EEG, misalnya melalui perhitungan \textit{band power}, estimasi \textit{power spectral density} (PSD), maupun metode analisis spektral lainnya.
 
---FOTO RENTANG FREKUENSI PSD--
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/pics/frequency_band.png}
+    \caption{Pita Frekuensi EEG pada Rentang Frekuensi Tinggi dan Rendah}
+    \label{fig:2.2}
+\end{figure}
+ 
 
 Sebelum dilakukan proses ekstraksi fitur maupun klasifikasi, sinyal EEG umumnya melalui beberapa tahapan prapemrosesan (\textit{preprocessing}). Tahapan ini bertujuan untuk meningkatkan kualitas sinyal dengan mengurangi komponen gangguan yang tidak relevan serta menyiapkan data agar lebih sesuai untuk proses analisis komputasional. Dalam praktik analisis EEG, berbagai teknik prapemrosesan telah dikembangkan untuk memperbaiki kualitas sinyal yang direkam. Secara umum, teknik-teknik tersebut meliputi penyaringan sinyal (\textit{filtering}), penghapusan artefak (\textit{artifact removal}), koreksi baseline (\textit{baseline correction}), serta normalisasi atau standarisasi data. Setiap teknik memiliki tujuan yang berbeda dalam meningkatkan kualitas dan konsistensi data EEG sebelum dilakukan analisis lebih lanjut.[20]
 

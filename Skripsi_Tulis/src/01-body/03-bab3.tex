@@ -1,0 +1,18 @@
+%-----------------------------------------------------------------------------%
+\chapter{\babTiga}
+\label{cha:Perancangan Dan Implementasi Sistem}
+%-----------------------------------------------------------------------------%
+Bab ini menyajikan metodologi penelitian serta perancangan teknis yang dilakukan untuk mengembangkan dan mengevaluasi sistem klasifikasi \textit{Autism Spectrum Disorder} (ASD) berbasis sinyal EEG. Sistem yang dikembangkan dalam penelitian ini difokuskan sebagai sebuah lingkungan uji (\textit{testbed}) yang terkontrol untuk mengevaluasi efektivitas pendekatan yang diusulkan, khususnya integrasi antara augmentasi data berbasis \textit{Variational Autoencoder} (VAE), seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR), dan algoritma klasifikasi \textit{XGBoost}.
+
+Pembahasan pada bab ini diawali dengan Analisis Kebutuhan yang bertujuan untuk mendefinisikan batasan masalah serta spesifikasi sistem. Fokus utama bab ini terletak pada Perancangan Arsitektur dan Alur Kerja Sistem, yang menguraikan tahapan pengolahan sinyal EEG secara menyeluruh. Proses dimulai dari tahap prapemrosesan sinyal, dilanjutkan dengan dekomposisi frekuensi dan ekstraksi fitur statistik, kemudian dilakukan augmentasi data menggunakan model VAE. Model VAE yang digunakan diimplementasikan dalam bentuk \textit{encoder-decoder neural network} yang dilatih untuk merekonstruksi sinyal EEG melalui representasi laten, sehingga mampu menghasilkan data sintetis yang mempertahankan karakteristik distribusi data asli. Data hasil augmentasi selanjutnya digabungkan dengan data asli sebelum dilakukan seleksi fitur menggunakan mRMR dan klasifikasi menggunakan XGBoost. Alur ini divisualisasikan menggunakan diagram arsitektur dan flowchart untuk memberikan gambaran sistem secara komprehensif.
+
+Selanjutnya, bagian Detail Implementasi dan Teknologi menjelaskan realisasi arsitektur ke dalam bentuk implementasi kode. Model VAE dikembangkan menggunakan pustaka \textit{deep learning} (seperti TensorFlow atau PyTorch) dengan mekanisme \textit{reparameterization trick} untuk memungkinkan proses pelatihan berbasis \textit{backpropagation}. Selain itu, digunakan pustaka seperti \textit{NumPy} dan \textit{SciPy} untuk pengolahan sinyal, serta \textit{scikit-learn} dan \textit{XGBoost} untuk proses seleksi fitur dan klasifikasi. Bab ini kemudian ditutup dengan Perancangan Infrastruktur yang memaparkan konfigurasi lingkungan komputasi, dependensi perangkat lunak, serta spesifikasi perangkat keras yang digunakan dalam proses pelatihan dan evaluasi model.
+
+\section{Analisis Kebutuhan Sistem}
+\label{Analisis Kebutuhan Sistem}
+
+\section{Perancangan Arsitektur Sistem}
+\label{Perancangan Arsitektur Sistem}
+
+\section{Detail Implementasi dan Teknologi}
+\label{Detail Implementasi dan Teknologi}
