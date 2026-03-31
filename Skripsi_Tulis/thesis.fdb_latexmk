@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1774942311.77467 "thesis.aux" "thesis.bbl" "thesis" 1774942321.07233 0
+["bibtex thesis"] 1774943920.14727 "thesis.aux" "thesis.bbl" "thesis" 1774945026.14215 0
   "./pustaka.bib" 1772781952 444 1f44dda0858c13caa1bce58085ff769b ""
   "C:/Users/wndyd/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "thesis.aux" 1774942319 11643 c2b99ef32e12efc7d34a28167ab42f87 "pdflatex"
+  "thesis.aux" 1774945024 11541 2f5b309be185d69988a39a50dea8b2f9 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1774942312.32709 "c:/Users/wndyd/OneDrive/Documents/Code/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" "thesis.pdf" "thesis" 1774942321.07334 0
+["pdflatex"] 1774945020.06503 "c:/Users/wndyd/OneDrive/Documents/Code/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" "thesis.pdf" "thesis" 1774945026.1438 0
   "C:/Users/wndyd/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1773213516 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/wndyd/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1772868246 13333486 c99b5e3843d74dcbf8619b03e697117d ""
   "C:/Users/wndyd/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -349,17 +349,17 @@
   "src/00-front_matter/07-abstract.tex" 1772781952 3310 38727b416fd76cf6182ee877101c0d44 ""
   "src/00-front_matter/daftar-notasi.tex" 1772781952 508 541278148514c9745fbf74f6b425c2b4 ""
   "src/01-body/01-bab1.tex" 1774434288 18350 db3568152cbbfcf4d9a41dc9d9df08ec ""
-  "src/01-body/02-bab2.tex" 1774942307 46774 b8faa26da4a3a046b5b64e4dbaeb4594 ""
-  "src/01-body/03-bab3.tex" 1774936372 2827 9a098c95bb4ff17102c5e6cab115137a ""
-  "thesis.aux" 1774942319 11643 c2b99ef32e12efc7d34a28167ab42f87 "pdflatex"
-  "thesis.bbl" 1774942312 901 628a2a8c68e066122d1514411e0b8455 "bibtex thesis"
-  "thesis.loe" 1774942318 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "thesis.lof" 1774942319 289 d6d2cfeb63908c2906370aa77c29df5e "pdflatex"
-  "thesis.lol" 1774942319 60 35b3ba4c48b0bf046560cd0a3baa68f3 "pdflatex"
-  "thesis.lot" 1774942319 60 35b3ba4c48b0bf046560cd0a3baa68f3 "pdflatex"
-  "thesis.out" 1774942319 7998 02b5945401dfe393d24331e0c3f48824 "pdflatex"
+  "src/01-body/02-bab2.tex" 1774943910 46764 bcd965f3912c27269aacbd79c20bd7ea ""
+  "src/01-body/03-bab3.tex" 1774945019 5603 dd798063f454c9e63f3075944700dbf2 ""
+  "thesis.aux" 1774945024 11541 2f5b309be185d69988a39a50dea8b2f9 "pdflatex"
+  "thesis.bbl" 1774943920 901 628a2a8c68e066122d1514411e0b8455 "bibtex thesis"
+  "thesis.loe" 1774945023 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "thesis.lof" 1774945024 341 7b7dd77031616e163051976834b9d41b "pdflatex"
+  "thesis.lol" 1774945024 60 35b3ba4c48b0bf046560cd0a3baa68f3 "pdflatex"
+  "thesis.lot" 1774945024 60 35b3ba4c48b0bf046560cd0a3baa68f3 "pdflatex"
+  "thesis.out" 1774945024 7787 48651ed22803ff8e04d4109469ed3c4a "pdflatex"
   "thesis.tex" 1774935802 4917 f9994e6e60c28e6f050a38829bc64976 ""
-  "thesis.toc" 1774942319 3489 c42fe48829cdd95cf9a066f4220e9c26 "pdflatex"
+  "thesis.toc" 1774945024 3396 80533df4a76adcad90a933e5a62a79f2 "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.loe"

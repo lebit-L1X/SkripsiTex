@@ -11,6 +11,23 @@ Selanjutnya, bagian Detail Implementasi dan Teknologi menjelaskan realisasi arsi
 \section{Analisis Kebutuhan Sistem}
 \label{Analisis Kebutuhan Sistem}
 
+Sebelum memulai perancangan arsitektur, tahap pertama yang perlu dilakukan adalah menganalisis kebutuhan sistem. Untuk menjaga fokus penelitian dan tidak memperluas pembahasan, analisis kebutuhan ini difokuskan pada kebutuhan fungsional yang berkaitan dengan perancangan arsitektur sistem serta tujuan utama penelitian. Berbeda dengan penelitian yang berfokus pada pengembangan model klasifikasi, penelitian ini menitikberatkan pada integrasi proses augmentasi data ke dalam pipeline klasifikasi yang telah ada.
+
+Secara khusus, sistem yang dirancang harus mampu mengakomodasi alur pemrosesan data EEG secara terstruktur, mulai dari tahap preprocessing hingga sintesis data baru menggunakan model generatif, serta memastikan bahwa data yang dihasilkan tetap kompatibel dengan pipeline klasifikasi. Oleh karena itu, kebutuhan fungsional yang didefinisikan berfokus pada integrasi antar komponen dalam pipeline, bukan pada perancangan model klasifikasi itu sendiri.
+
+Berdasarkan penjabaran tersebut, didefinisikan beberapa kebutuhan fungsional utama yang harus dipenuhi dalam perancangan arsitektur sistem pada penelitian ini:
+
+\begin{enumerate}
+    \item \textbf{Arsitektur Pipeline Augmentasi EEG} \\
+    Sistem harus dirancang sebagai pipeline terstruktur yang mencakup tahapan preprocessing sinyal EEG, dekomposisi frekuensi, dan ekstraksi fitur sebagai representasi data. Tahapan ini harus mampu menghasilkan representasi data yang terstandarisasi dan siap digunakan sebagai masukan bagi modul augmentasi, sehingga proses \textit{training} distribusi data dapat dilakukan secara optimal.
+
+    \item \textbf{Karakteristik dan Mekanisme Model Generatif (VAE)} \\
+    Keseluruhan sistem harus mengimplementasikan modul augmentasi berbasis model generatif berupa \textit{Variational Autoencoder} (VAE) yang mampu mempelajari distribusi laten dari data EEG. Model ini harus mampu menghasilkan sampel data sintetik baru yang diharapkan tetap mempertahankan karakteristik penting dari data asli. Modul augmentasi ini harus dirancang secara modular sehingga dapat diintegrasikan maupun dilepas dari pipeline klasifikasi tanpa memerlukan perubahan signifikan pada struktur sistem utama.
+
+    \item \textbf{Kesesuaian dan Konsistensi dengan Pipeline Klasifikasi} \\
+    Sistem dan proses augmentasi harus mempertahankan kompatibilitas dengan pipeline klasifikasi yang digunakan, yaitu seleksi fitur berbasis \textit{minimum Redundancy Maximum Relevance} (mRMR) dan model klasifikasi XGBoost. Data asli dan data sintetis harus memiliki format serta representasi fitur yang konsisten setelah melalui tahapan preprocessing dan ekstraksi fitur, sehingga keduanya dapat diproses secara langsung tanpa memerlukan perubahan pada struktur arsitektur utama.
+\end{enumerate}
+
 \section{Perancangan Arsitektur Sistem}
 \label{Perancangan Arsitektur Sistem}
 
