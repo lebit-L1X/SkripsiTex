@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  4 APR 2026 14:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  5 APR 2026 23:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2002,7 +2002,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[27]
+[27]) (src/01-body/03-bab3.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2010,15 +2010,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[28]) (src/01-body/03-bab3.tex
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[29]
+[28]
 BAB 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2029,7 +2021,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[30
+[29
 
 ]
 
@@ -2039,7 +2031,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[31]
+[30]
 Underfull \hbox (badness 1253) in paragraph at lines 27--29
 \T1/ptm/m/n/12 Sistem dan proses aug-men-tasi harus mem-per-ta-hankan kom-pat-i-bil-i-tas de-ngan
  []
@@ -2052,7 +2044,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[32]
+[31]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
@@ -2070,10 +2062,10 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[33
+[32
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260404144942 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260405233731 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -2088,17 +2080,17 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 48651ED22803FF8E04D4109469ED3C4A;7787.
  ) 
 Here is how much of TeX's memory you used:
- 48266 strings out of 467866
- 1132602 string characters out of 5418326
+ 48265 strings out of 467866
+ 1132595 string characters out of 5418326
  1869070 words of memory out of 5000000
  75979 multiletter control sequences out of 15000+600000
  676635 words of font info for 111 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
  125i,12n,130p,2059b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (51 pages, 526272 bytes).
+Output written on thesis.pdf (50 pages, 525022 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 146 named destinations out of 1000 (max. 500000)
+ 646 PDF objects out of 1000 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

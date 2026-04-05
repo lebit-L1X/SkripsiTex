@@ -30,12 +30,12 @@
 \contentsline {subsection}{\numberline {2.1.6}Augmentasi Data EEG}{20}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}Variational Auto Encoder}{22}{subsection.2.1.7}%
 \contentsline {section}{\numberline {2.2}Penelitian Terdahulu}{24}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Klasifikasi ASD Berbasis EEG Menggunakan mRMR dan XGBoost}{25}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}{26}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Dataset yang Digunakan}{27}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.1}Klasifikasi ASD Berbasis EEG Menggunakan mRMR dan XGBoost}{24}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}{25}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Dataset yang Digunakan}{26}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}Fokus pada Celah Penelitian}{28}{section.2.3}%
-\contentsline {chapter}{\numberline {3}\uppercase {Perancangan dan Implementasi Sistem dan Templat}}{30}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Analisis Kebutuhan Sistem}{31}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Perancangan Arsitektur Sistem}{32}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{32}{section.3.3}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{33}{section.3.3}%
+\contentsline {chapter}{\numberline {3}\uppercase {Perancangan dan Implementasi Sistem dan Templat}}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Analisis Kebutuhan Sistem}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Perancangan Arsitektur Sistem}{31}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{31}{section.3.3}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{32}{section.3.3}%
