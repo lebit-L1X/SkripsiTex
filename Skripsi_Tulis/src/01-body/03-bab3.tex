@@ -79,6 +79,28 @@ Selanjutnya, dilakukan proses normalisasi terhadap setiap segmen sinyal mengguna
 \subsection{Arsitektur Model VAE}
 \label{Arsitektur Model VAE}
 
+Model \textit{Variational Autoencoder} (VAE) menjadi komponen utama dalam arsitektur sistem yang digunakan untuk melakukan augmentasi data sinyal EEG. Pada penelitian referensi~[XX], arsitektur VAE yang digunakan berbasis \textit{2D Convolutional Neural Network} (2D CNN), di mana data EEG direpresentasikan dalam bentuk dua dimensi dengan mempertimbangkan hubungan spasial antar kanal. Namun demikian, dalam penelitian ini dilakukan penyesuaian arsitektur menjadi berbasis \textit{1D Convolutional Neural Network} (1D CNN). Perubahan ini dilakukan untuk menyesuaikan dengan pendekatan klasifikasi yang digunakan, di mana sinyal EEG diproses sebagai deret waktu satu dimensi pada setiap kanal secara terpisah. Selain itu, dimensi ruang laten juga ditingkatkan untuk meningkatkan kapasitas model dalam menangkap variasi pola sinyal EEG.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/pdfs/diagram_vae.pdf}
+    \caption{Diagram arsitektur model Variational Autoencoder (VAE)}
+    \label{fig:diagram_vae}
+\end{figure}
+
+Pada prosesnya, data input berupa segmen sinyal EEG satu dimensi terlebih dahulu diproses oleh bagian \textit{encoder}. Bagian ini terdiri dari beberapa lapisan \textit{convolutional} satu dimensi yang diikuti oleh \textit{batch normalization} dan fungsi aktivasi \textit{LeakyReLU}. Setiap lapisan \textit{convolutional} menggunakan \textit{stride} tertentu untuk melakukan reduksi dimensi secara progresif, sehingga menghasilkan representasi fitur berdimensi lebih rendah. Representasi ini kemudian diratakan (\textit{flatten}) dan dipetakan ke dalam dua parameter distribusi laten, yaitu \textit{mean} ($z_{\mathrm{mean}}$) dan variansi logaritmik ($z_{\mathrm{log\_var}}$) menggunakan lapisan \textit{dense}. Selanjutnya, dilakukan proses \textit{reparameterization}, di mana vektor laten $z$ dihasilkan dengan mengombinasikan kedua parameter tersebut dengan variabel acak yang mengikuti distribusi normal standar. Mekanisme ini memungkinkan proses pelatihan model tetap dapat dilakukan melalui \textit{backpropagation} secara \textit{end-to-end}.
+
+Vektor laten yang dihasilkan kemudian menjadi input bagi bagian \textit{decoder}, yang bertugas untuk merekonstruksi kembali sinyal EEG. Proses rekonstruksi diawali dengan lapisan \textit{dense} yang diikuti dengan proses \textit{reshape} untuk membentuk kembali struktur data. Selanjutnya, digunakan serangkaian operasi \textit{upsampling} yang dikombinasikan dengan lapisan \textit{convolutional} satu dimensi dan fungsi aktivasi untuk meningkatkan dimensi data secara bertahap. Lapisan akhir berupa \textit{convolutional} satu dimensi menghasilkan sinyal output yang memiliki dimensi yang sama dengan input awal.
+
+Selain digunakan untuk rekonstruksi, model yang telah melalui tahap \textit{training} juga dimanfaatkan untuk menghasilkan data sintetis baru. Proses ini dilakukan dengan melakukan sampling secara acak pada ruang laten menggunakan distribusi normal standar, yang kemudian diberikan sebagai input ke bagian \textit{decoder}. Melalui mekanisme ini, \textit{decoder} dapat menghasilkan sinyal EEG sintetis yang memiliki karakteristik statistik yang menyerupai data asli, sehingga dapat digunakan sebagai data tambahan dalam proses augmentasi.
+
+Dalam proses \textit{training}, model VAE dioptimalkan menggunakan \textit{loss function} gabungan yang terdiri dari dua komponen utama, yaitu \textit{reconstruction loss} dan \textit{Kullback-Leibler} (KL) divergence. \textit{Reconstruction loss} mengukur perbedaan antara sinyal input dan hasil rekonstruksi, sedangkan KL divergence mengatur distribusi laten agar mendekati distribusi normal standar. Kedua komponen ini dihitung berdasarkan output dari \textit{decoder} serta parameter distribusi laten ($z_{\mathrm{mean}}$ dan $z_{\mathrm{log\_var}}$), kemudian digabungkan untuk menghasilkan total \textit{loss} yang digunakan dalam proses optimasi model.
+
+
+
+\subsection{Arsitektur Model Klasifikasi}
+\label{Arsitektur Model Klasifikasi}
+
 
 \section{Detail Implementasi dan Teknologi}
 \label{Detail Implementasi dan Teknologi}

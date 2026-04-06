@@ -39,5 +39,6 @@
 \contentsline {section}{\numberline {3.2}Perancangan Arsitektur Sistem}{31}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Pra-Pemrosesan Dataset}{33}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Arsitektur Model VAE}{34}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{34}{section.3.3}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{35}{section.3.3}%
+\contentsline {subsection}{\numberline {3.2.3}Arsitektur Model Klasifikasi}{36}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{36}{section.3.3}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{37}{section.3.3}%
