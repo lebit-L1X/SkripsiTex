@@ -33,7 +33,7 @@ Berdasarkan penjabaran tersebut, didefinisikan beberapa kebutuhan fungsional uta
 
 Setelah kebutuhan fungsional sistem diuraikan, tahap selanjutnya adalah merancang arsitektur sistem sebagai representasi konseptual dari alur pemrosesan data yang akan diimplementasikan. Perancangan ini bertujuan untuk menggambarkan integrasi antar komponen dalam pipeline, khususnya dalam menggabungkan proses augmentasi data berbasis \textit{Variational Autoencoder} (VAE) dengan pipeline klasifikasi yang telah ditentukan.
 
-Secara umum, arsitektur sistem yang dirancang mencakup keseluruhan alur pemrosesan sinyal EEG, mulai dari tahap prapemrosesan hingga klasifikasi. Untuk mempermudah pemahaman, sistem dibagi menjadi tiga komponen utama, yaitu tahap prapemrosesan dan ekstraksi fitur, modul augmentasi data berbasis VAE, serta tahap klasifikasi.
+Secara umum, arsitektur sistem yang dirancang mencakup keseluruhan alur pemrosesan sinyal EEG, mulai dari tahap prapemrosesan hingga klasifikasi. Untuk mempermudah pemahaman, sistem dibagi menjadi tiga komponen utama, yaitu tahap prapemrosesan dan ekstraksi fitur, model augmentasi data berbasis VAE, serta tahap klasifikasi.
 
 Pendekatan yang digunakan dalam penelitian ini mengadaptasi model \textit{EEG Data Augmentation using Variational Autoencoder} [XX], yaitu suatu model generatif berbasis VAE yang dirancang untuk menghasilkan data EEG sintetis yang menyerupai karakteristik data asli. Model ini pada dasarnya terdiri dari komponen \textit{encoder} dan \textit{decoder} yang dilatih secara end-to-end untuk merekonstruksi sinyal melalui representasi laten probabilistik.
 
@@ -53,16 +53,32 @@ Dalam implementasinya, arsitektur awal model tersebut mengalami penyesuaian untu
 Gambar 3.1 menunjukkan alur pemrosesan data pada sistem yang dikembangkan dalam penelitian ini. Proses dimulai dari data masukan berupa sinyal EEG yang terlebih dahulu melalui tahap pra-pemrosesan dan ekstraksi fitur untuk meningkatkan kualitas sinyal serta memperoleh representasi yang relevan. Data hasil pra-pemrosesan tersebut kemudian diproses pada tahap augmentasi menggunakan model \textit{Variational Autoencoder} (VAE), yang bertujuan untuk menghasilkan data sintetis yang memiliki karakteristik serupa dengan data asli.
 
 Selanjutnya, hasil dari tahap tersebut digunakan dalam dua skenario klasifikasi yang berbeda. Pada skenario pertama, proses klasifikasi dilakukan hanya menggunakan data asli, sedangkan pada skenario kedua, proses klasifikasi memanfaatkan kombinasi data asli dan data hasil augmentasi. Kedua skenario tersebut menggunakan metode seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR) serta algoritma klasifikasi XGBoost berdasarkan referensi penelitian sebelumnya [xx]. Perbandingan antara kedua skenario ini bertujuan untuk mengevaluasi pengaruh penggunaan data sintetis terhadap performa model klasifikasi yang dihasilkan.
+
 \subsection{Pra-Pemrosesan Dataset}
 \label{Pra-Pemrosesan Dataset}
 
 Tahap pra-pemrosesan data merupakan komponen penting dalam pengolahan sinyal EEG untuk memastikan bahwa data yang digunakan berada dalam kondisi yang representatif dan siap diproses oleh model. Pada penelitian ini, tahap pra-pemrosesan bertujuan untuk meningkatkan kualitas sinyal serta menyiapkan data dalam bentuk yang terstruktur untuk tahap selanjutnya.
 
-Sinyal EEG mentah terlebih dahulu dikombinasikan dari beberapa sesi perekaman dan dibersihkan dari nilai yang hilang. Selanjutnya, sinyal dibagi ke dalam segmen-segmen dengan durasi tertentu menggunakan pendekatan \textit{sliding window} dengan overlap, sehingga memungkinkan penangkapan karakteristik temporal dari aktivitas neural. Setiap segmen kemudian diproses menggunakan \textit{bandpass filter} berbasis Butterworth untuk mempertahankan komponen frekuensi yang relevan serta mengurangi gangguan seperti drift frekuensi rendah dan \textit{noise} frekuensi tinggi.
+\begin{figure}[H]
+    \hspace*{5.5cm} 
+    \includegraphics[
+        width=0.9\textwidth,
+        trim=1cm 10cm 1.5cm 1.5cm,
+        clip
+    ]{assets/pdfs/flowchart_preprocessing.pdf}
+    \caption{Diagram aliran proses prapemrosesan sistem}
+    \label{fig:flowchart_system}
+\end{figure}
+
+Selanjutnya, secara lebih rinci, Gambar~3.2 menggambarkan alur proses pada tahap pra-pemrosesan data. Sinyal EEG mentah terlebih dahulu dibersihkan dari nilai yang hilang. Selanjutnya, sinyal dibagi ke dalam segmen-segmen dengan durasi tertentu menggunakan pendekatan \textit{sliding window} dengan overlap, sehingga memungkinkan penangkapan karakteristik temporal dari aktivitas neural. Setiap segmen kemudian diproses menggunakan \textit{bandpass filter} berbasis Butterworth untuk mempertahankan komponen frekuensi yang relevan serta mengurangi gangguan seperti \textit{low-frequency drift} dan \textit{high-frequency noise}.
 
 Setelah proses penyaringan, dilakukan tahap seleksi segmen untuk mengidentifikasi dan mengeliminasi artefak berdasarkan kriteria amplitudo dan distribusi statistik, seperti nilai \textit{peak-to-peak} dan \textit{z-score}. Tahap ini bertujuan untuk memastikan bahwa hanya segmen sinyal yang berkualitas baik yang digunakan dalam proses selanjutnya.
 
 Selanjutnya, dilakukan proses normalisasi terhadap setiap segmen sinyal menggunakan metode \textit{z-score normalization}, yaitu dengan mengurangi nilai rata-rata dan membaginya dengan simpangan baku pada masing-masing sampel. Proses ini bertujuan untuk menyeragamkan distribusi data, mengurangi variasi antar sampel, serta meningkatkan stabilitas dalam proses pelatihan model, khususnya pada tahap augmentasi menggunakan VAE. Data yang telah dinormalisasi kemudian dipisahkan menjadi data pelatihan dan validasi, serta disusun ulang ke dalam bentuk tensor tiga dimensi agar sesuai dengan kebutuhan arsitektur \textit{1D Convolutional Neural Network}.
+
+\subsection{Arsitektur Model VAE}
+\label{Arsitektur Model VAE}
+
 
 \section{Detail Implementasi dan Teknologi}
 \label{Detail Implementasi dan Teknologi}
