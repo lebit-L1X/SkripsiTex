@@ -45,18 +45,19 @@ Dalam analisis sinyal EEG, aktivitas listrik otak yang terekam dapat dianalisis 
 
 Dalam praktik analisis spektral EEG, sinyal yang telah direkam biasanya terlebih dahulu dibagi ke dalam beberapa segmen waktu atau epoch sebelum dilakukan perhitungan spektrum. Setiap epoch kemudian dianalisis untuk memperoleh nilai \textit{Power Spectral Density} (PSD) yang menggambarkan distribusi daya sinyal pada setiap frekuensi. Rentang frekuensi spektrum sinyal EEG umumnya dibagi menjadi beberapa pita frekuensi (\textit{frequency bands}). Pembagian ini didasarkan pada keterkaitannya dengan kondisi fisiologis dan kognitif yang berbeda. Secara umum, sinyal EEG diklasifikasikan ke dalam lima pita frekuensi utama sebagai berikut:
 
-\begin{itemize}
-\item \textbf{Delta (±0,5–4 Hz)}: Dominan pada kondisi \textit{deep sleep} dan berperan dalam proses pemulihan fisiologis serta regulasi fungsi tubuh selama tidur.
-
-\item \textbf{Theta (±4–8 Hz)}: Berkaitan dengan proses pembentukan memori dan aktivitas pada sistem limbik serta hipokampus, serta muncul pada kondisi mengantuk atau relaksasi mendalam.
-
-\item \textbf{Alpha (±8–13 Hz)}: Muncul pada kondisi rileks saat mata tertutup, dengan dominasi pada wilayah oksipital dan berhubungan dengan penurunan aktivitas pemrosesan sensorik.
-
-\item \textbf{Beta (±13–30 Hz)}: Berkaitan dengan aktivitas kognitif aktif seperti konsentrasi, pemecahan masalah, serta aktivitas motorik.
-
-\item \textbf{Gamma (>±30 Hz)}: Berhubungan dengan proses kognitif tingkat tinggi, termasuk perhatian, integrasi informasi sensorik, dan persepsi.
-\end{itemize}
-
+\begin{table}[H]
+\centering
+\caption{Pita frekuensi EEG dan karakteristiknya}
+\begin{tabular}{|c|c|p{8cm}|}
+\hline
+\textbf{Pita} & \textbf{Frekuensi (Hz)} & \textbf{Karakteristik} \\ \hline
+Delta & 0,5--4 & Dominan pada kondisi \textit{deep sleep} dan berperan dalam proses pemulihan fisiologis serta regulasi fungsi tubuh selama tidur. \\ \hline
+Theta & 4--8 & Berkaitan dengan proses pembentukan memori dan aktivitas pada sistem limbik serta hipokampus, serta muncul pada kondisi mengantuk atau relaksasi mendalam. \\ \hline
+Alpha & 8--13 & Muncul pada kondisi rileks saat mata tertutup, dengan dominasi pada wilayah oksipital dan berhubungan dengan penurunan aktivitas pemrosesan sensorik. \\ \hline
+Beta & 13--30 & Berkaitan dengan aktivitas kognitif aktif seperti konsentrasi, pemecahan masalah, serta aktivitas motorik. \\ \hline
+Gamma & >30 & Berhubungan dengan proses kognitif tingkat tinggi, termasuk perhatian, integrasi informasi sensorik, dan persepsi. \\ \hline
+\end{tabular}
+\end{table}
 Melalui analisis distribusi daya pada pita frekuensi, dapat dilakukan identifikasi pola aktivitas otak yang khas serta membandingkan karakteristik sinyal EEG pada berbagai kondisi fisiologis maupun gangguan neurologis tertentu. Representasi pita frekuensi EEG sering digunakan sebagai dasar dalam proses ekstraksi fitur pada analisis sinyal EEG, misalnya melalui perhitungan \textit{band power}, estimasi \textit{power spectral density} (PSD), maupun metode analisis spektral lainnya [20].
 
 \begin{figure}[H]
@@ -98,9 +99,9 @@ Penggunaan seluruh fitur tidak selalu menghasilkan performa optimal karena adany
 \subsection{Machine Learning untuk Klasifikasi ASD Berdasarkan Sinyal EEG}
 \label{Klasifikasi Sinyal EEG dengan Machine Learning}
 
-Dalam \textit{machine learning}, klasifikasi merupakan proses pemetaan data masukan ke dalam kategori atau kelas tertentu berdasarkan pola yang dipelajari dari data \textit{training}. Pada analisis EEG, proses klasifikasi umumnya dilakukan dengan menggunakan fitur-fitur yang diekstraksi dari sinyal EEG, seperti fitur dalam domain waktu, domain frekuensi, maupun domain waktu-frekuensi. Fitur-fitur tersebut merepresentasikan karakteristik aktivitas otak yang relevan terhadap kondisi fisiologis atau kognitif tertentu. Melalui proses klasifikasi, model diharapkan mampu mengidentifikasi pola tersebut secara akurat pada data baru.
+Dalam \textit{machine learning}, klasifikasi merupakan proses pemetaan data ke dalam kategori atau kelas tertentu berdasarkan pola yang dipelajari dari data \textit{training}. Pada analisis EEG, proses klasifikasi umumnya dilakukan dengan menggunakan fitur-fitur yang diekstraksi dari sinyal EEG, seperti fitur dalam domain waktu, domain frekuensi, maupun domain waktu-frekuensi. Fitur-fitur tersebut merepresentasikan karakteristik aktivitas otak yang relevan terhadap kondisi fisiologis atau kognitif tertentu. Melalui proses klasifikasi, model diharapkan mampu mengidentifikasi pola tersebut secara akurat pada data baru. Sinyal EEG digunakan dalam berbagai tugas klasifikasi untuk mengidentifikasi kondisi kognitif dan neurologis, seperti tugas motorik, deteksi kejang epilepsi, dan sistem \textit{brain–computer interface} (BCI) [26]. EEG juga dimanfaatkan untuk mengidentifikasi pola aktivitas otak pada Autism Spectrum Disorder (ASD), karena perbedaan karakteristik neurofisiologis antara individu ASD dan individu dengan perkembangan tipikal [10].
 
-Sinyal EEG telah banyak digunakan dalam berbagai tugas klasifikasi untuk mengidentifikasi kondisi kognitif dan neurologis berdasarkan pola aktivitas otak, diantaranya dalam tugas motorik, deteksi kejang epilepsi, dan penerapan dalam sistem \textit{brain–computer interface} (BCI) [26]. Sinyal EEG juga dimanfaatkan untuk mengidentifikasi pola aktivitas otak yang berkaitan dengan \textit{Autism Spectrum Disorder} (ASD), dimana perbedaan karakteristik aktivitas neurofisiologis antara individu ASD dan individu dengan perkembangan tipikal memungkinkan penggunaan EEG sebagai data dalam proses klasifikasi kondisi tersebut [10]. 
+Sinyal EEG digunakan dalam berbagai tugas klasifikasi untuk mengidentifikasi kondisi kognitif dan neurologis, seperti tugas motorik, deteksi kejang epilepsi, dan sistem \textit{brain–computer interface} (BCI) [26]. EEG juga dimanfaatkan untuk mengidentifikasi pola aktivitas otak pada Autism Spectrum Disorder (ASD), dengan memanfaatkan perbedaan karakteristik neurofisiologis antara individu ASD dan individu dengan perkembangan tipikal [10].
 
 Analisis sinyal EEG dalam domain frekuensi merupakan pendekatan yang umum digunakan dalam studi EEG untuk mengkaji gangguan \textit{Autism Spectrum Disorder} (ASD), karena aktivitas otak dapat direpresentasikan sebagai pola osilasi yang terdistribusi pada pita frekuensi tertentu. Pita frekuensi EEG diketahui memiliki keterkaitan erat dengan berbagai proses kognitif dan fungsi neural, sehingga analisis spektral menjadi pendekatan yang informatif dalam mengungkap karakteristik aktivitas neurofisiologis. Pendekatan ini juga memungkinkan pengukuran distribusi daya sinyal pada setiap pita frekuensi, sehingga aktivitas neural dapat dianalisis secara lebih terstruktur.
 
