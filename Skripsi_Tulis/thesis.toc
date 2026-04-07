@@ -40,5 +40,12 @@
 \contentsline {subsection}{\numberline {3.2.1}Pra-Pemrosesan Dataset}{33}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Arsitektur Model VAE}{34}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Arsitektur Model Klasifikasi}{36}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{36}{section.3.3}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{37}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{38}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Teknologi dan Library}{38}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Implementasi Model Generatif Variational Autoencoder (VAE)}{39}{subsection.3.3.2}%
+\contentsline {paragraph}{Arsitektur Encoder}{39}{section*.18}%
+\contentsline {paragraph}{Lapisan Reparameterization}{40}{section*.19}%
+\contentsline {paragraph}{Arsitektur Decoder}{40}{section*.20}%
+\contentsline {paragraph}{Fungsi Loss dan Training}{41}{section*.21}%
+\contentsline {paragraph}{Generasi Data Sintetis}{42}{section*.22}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{43}{section*.22}%
