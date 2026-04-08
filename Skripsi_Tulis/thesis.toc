@@ -28,24 +28,24 @@
 \contentsline {subsection}{\numberline {2.1.4}Feature Selection mRMR}{17}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {2.1.5}Machine Learning untuk Klasifikasi ASD Berdasarkan Sinyal EEG}{17}{subsection.2.1.5}%
 \contentsline {subsection}{\numberline {2.1.6}Augmentasi Data EEG}{19}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Variational Auto Encoder}{21}{subsection.2.1.7}%
-\contentsline {section}{\numberline {2.2}Penelitian Terdahulu}{23}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Klasifikasi ASD Berbasis EEG Menggunakan mRMR dan XGBoost}{24}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}{25}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Dataset yang Digunakan}{26}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Fokus pada Celah Penelitian}{27}{section.2.3}%
-\contentsline {chapter}{\numberline {3}\uppercase {Perancangan dan Implementasi Sistem dan Templat}}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Analisis Kebutuhan Sistem}{30}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Perancangan Arsitektur Sistem}{31}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Pra-Pemrosesan Dataset}{33}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Arsitektur Model VAE}{34}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Arsitektur Model Klasifikasi}{36}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{38}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Teknologi dan Library}{38}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Implementasi Model Generatif Variational Autoencoder (VAE)}{39}{subsection.3.3.2}%
-\contentsline {paragraph}{Arsitektur Encoder}{39}{section*.19}%
-\contentsline {paragraph}{Lapisan Reparameterization}{40}{section*.20}%
-\contentsline {paragraph}{Arsitektur Decoder}{40}{section*.21}%
-\contentsline {paragraph}{Fungsi Loss dan Training}{41}{section*.22}%
-\contentsline {paragraph}{Generasi Data Sintetis}{42}{section*.23}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{43}{section*.23}%
+\contentsline {subsection}{\numberline {2.1.7}Variational Auto Encoder}{20}{subsection.2.1.7}%
+\contentsline {section}{\numberline {2.2}Penelitian Terdahulu}{22}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Klasifikasi ASD Berbasis EEG Menggunakan mRMR dan XGBoost}{22}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}{23}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Dataset yang Digunakan}{24}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Fokus pada Celah Penelitian}{26}{section.2.3}%
+\contentsline {chapter}{\numberline {3}\uppercase {Perancangan dan Implementasi Sistem dan Templat}}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Analisis Kebutuhan Sistem}{28}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Perancangan Arsitektur Sistem}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Pra-Pemrosesan Dataset}{31}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Arsitektur Model VAE}{32}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Arsitektur Model Klasifikasi}{34}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{36}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Teknologi dan Library}{36}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Implementasi Model Generatif Variational Autoencoder (VAE)}{37}{subsection.3.3.2}%
+\contentsline {paragraph}{Arsitektur Encoder}{37}{section*.19}%
+\contentsline {paragraph}{Lapisan Reparameterization}{38}{section*.20}%
+\contentsline {paragraph}{Arsitektur Decoder}{38}{section*.21}%
+\contentsline {paragraph}{Fungsi Loss dan Training}{39}{section*.22}%
+\contentsline {paragraph}{Generasi Data Sintetis}{40}{section*.23}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{41}{section*.23}%
