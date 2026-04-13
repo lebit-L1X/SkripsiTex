@@ -4,9 +4,9 @@
 %-----------------------------------------------------------------------------%
 Bab ini menyajikan metodologi penelitian serta perancangan teknis yang dilakukan untuk mengembangkan dan mengevaluasi sistem klasifikasi \textit{Autism Spectrum Disorder} (ASD) berbasis sinyal EEG. Sistem yang dikembangkan dalam penelitian ini difokuskan sebagai sebuah lingkungan uji (\textit{testbed}) yang terkontrol untuk mengevaluasi efektivitas pendekatan yang diusulkan, khususnya integrasi antara augmentasi data berbasis \textit{Variational Autoencoder} (VAE), seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR), dan algoritma klasifikasi \textit{XGBoost}.
 
-Pembahasan pada bab ini diawali dengan Analisis Kebutuhan yang bertujuan untuk mendefinisikan batasan masalah serta spesifikasi sistem. Fokus utama bab ini terletak pada Perancangan Arsitektur dan Alur Kerja Sistem, yang menguraikan tahapan pengolahan sinyal EEG secara menyeluruh. Proses dimulai dari tahap prapemrosesan sinyal, dilanjutkan dengan dekomposisi frekuensi dan ekstraksi fitur statistik, kemudian dilakukan augmentasi data menggunakan model VAE. Model VAE yang digunakan diimplementasikan dalam bentuk \textit{encoder-decoder neural network} yang dilatih untuk merekonstruksi sinyal EEG melalui representasi laten, sehingga mampu menghasilkan data sintetis yang mempertahankan karakteristik distribusi data asli. Data hasil augmentasi selanjutnya digabungkan dengan data asli sebelum dilakukan seleksi fitur menggunakan mRMR dan klasifikasi menggunakan XGBoost. Alur ini divisualisasikan menggunakan diagram arsitektur dan flowchart untuk memberikan gambaran sistem secara komprehensif.
+Pembahasan pada bab ini diawali dengan Analisis Kebutuhan yang bertujuan untuk mendefinisikan batasan masalah serta spesifikasi sistem. Fokus utama bab ini terletak pada Perancangan Arsitektur dan Alur Kerja Sistem, yang menguraikan tahapan pengolahan sinyal EEG secara menyeluruh. Proses dimulai dari tahap prapemrosesan sinyal, dilanjutkan dengan dekomposisi frekuensi dan ekstraksi fitur statistik, kemudian dilakukan augmentasi data menggunakan model VAE. Model VAE yang digunakan diimplementasikan dalam bentuk \textit{\textit{Encoder}-\textit{Decoder} neural network} yang dilatih untuk merekonstruksi sinyal EEG melalui representasi laten, sehingga mampu menghasilkan data sintetis yang mempertahankan karakteristik distribusi data asli. Data hasil augmentasi selanjutnya digabungkan dengan data asli sebelum dilakukan seleksi fitur menggunakan mRMR dan klasifikasi menggunakan XGBoost. Alur ini divisualisasikan menggunakan diagram arsitektur dan flowchart untuk memberikan gambaran sistem secara komprehensif.
 
-Selanjutnya, bagian Detail Implementasi dan Teknologi menjelaskan realisasi arsitektur ke dalam bentuk implementasi kode. Model VAE dikembangkan menggunakan pustaka \textit{deep learning} (seperti TensorFlow atau PyTorch) dengan mekanisme \textit{reparameterization trick} untuk memungkinkan proses \textit{training} berbasis \textit{backpropagation}. Selain itu, digunakan pustaka seperti \textit{NumPy} dan \textit{SciPy} untuk pengolahan sinyal, serta \textit{scikit-learn} dan \textit{XGBoost} untuk proses seleksi fitur dan klasifikasi. Bab ini kemudian ditutup dengan Perancangan Infrastruktur yang memaparkan konfigurasi lingkungan komputasi, dependensi perangkat lunak, serta spesifikasi perangkat keras yang digunakan dalam proses \textit{training} dan evaluasi model.
+Selanjutnya, bagian Detail Implementasi dan Teknologi menjelaskan realisasi arsitektur ke dalam bentuk implementasi kode. Model VAE dikembangkan menggunakan \textit{library} \textit{deep learning} (seperti TensorFlow atau PyTorch) dengan mekanisme \textit{reparameterization trick} untuk memungkinkan proses \textit{training} berbasis \textit{backpropagation}. Selain itu, digunakan \textit{library} seperti \textit{NumPy} dan \textit{SciPy} untuk pengolahan sinyal, serta \textit{scikit-learn} dan \textit{XGBoost} untuk proses seleksi fitur dan klasifikasi. 
 
 \section{Analisis Kebutuhan Sistem}
 \label{Analisis Kebutuhan Sistem}
@@ -37,33 +37,32 @@ Secara umum, arsitektur sistem yang dirancang mencakup keseluruhan alur pemroses
 
 Pendekatan yang digunakan dalam penelitian ini mengadaptasi model \textit{EEG Data Augmentation using Variational Autoencoder} [XX], yaitu suatu model generatif berbasis VAE yang dirancang untuk menghasilkan data EEG sintetis yang menyerupai karakteristik data asli. Model ini pada dasarnya terdiri dari komponen \textit{encoder} dan \textit{decoder} yang dilatih secara end-to-end untuk merekonstruksi sinyal melalui representasi laten probabilistik.
 
-Dalam implementasinya, arsitektur awal model tersebut mengalami penyesuaian untuk menyesuaikan dengan kebutuhan penelitian. Secara khusus, dimensi data dan struktur jaringan dimodifikasi dari pendekatan awal menjadi berbasis \textit{1D Convolutional Neural Network} (1D CNN). Ketetapan didasarkan pada penelitian referensi [XX] yang memproses sinyal EEG sebagai kanal terpisah dalam domain satu dimensi, sehingga lebih sesuai dengan karakteristik data serta kompatibel dengan \textit{pipeline} klasifikasi yang digunakan. Dengan demikian, arsitektur yang diusulkan tetap mempertahankan prinsip dasar VAE, namun diadaptasi agar selaras dengan representasi data dan kebutuhan integrasi sistem dalam penelitian ini.
+Dalam implementasinya, arsitektur awal model tersebut mengalami penyesuaian untuk menyesuaikan dengan kebutuhan penelitian. Secara khusus, dimensi data dan struktur jaringan dimodifikasi dari pendekatan awal menjadi berbasis \textit{1D Convolutional Neural Network} (1D CNN). Ketetapan didasarkan pada penelitian referensi [XX] yang memproses sinyal EEG sebagai kanal terpisah dalam domain satu dimensi, sehingga lebih sesuai dengan karakteristik data serta kompatibel dengan \textit{pipeline} klasifikasi yang digunakan. Dengan demikian, arsitektur yang diusulkan tetap mempertahankan prinsip dasar VAE, namun diadaptasi agar selaras dengan representasi data yang digunakan.
 
 \begin{figure}[H]
     \centering
-    \hspace{1cm}
     \includegraphics[
-  width=0.9\textwidth,
-  trim=1cm 12.5cm 1.5cm 1.5cm,
-  clip]{assets/pdfs/flowchart_system.pdf}
+        width=0.8\textwidth,
+        trim=0cm 7.5cm 0cm 0cm,
+        clip
+    ]{assets/pdfs/flowchart_system.pdf}
     \caption{Diagram aliran data pada sistem}
     \label{fig:flowchart_system}
 \end{figure}
 
-Gambar 3.1 menunjukkan alur pemrosesan data pada sistem yang dikembangkan dalam penelitian ini. Proses dimulai dari data masukan berupa sinyal EEG yang terlebih dahulu melalui tahap pra-pemrosesan dan ekstraksi fitur untuk meningkatkan kualitas sinyal serta memperoleh representasi yang relevan. Data hasil pra-pemrosesan tersebut kemudian diproses pada tahap augmentasi menggunakan model \textit{Variational Autoencoder} (VAE), yang bertujuan untuk menghasilkan data sintetis yang memiliki karakteristik serupa dengan data asli.
+Gambar 3.1 menunjukkan alur pemrosesan data pada sistem yang dikembangkan dalam penelitian ini. Proses dimulai dari data input berupa sinyal EEG yang terlebih dahulu melalui tahap pra-pemrosesan dan ekstraksi fitur yang kemudian diproses pada tahap augmentasi menggunakan model \textit{Variational Autoencoder} (VAE), dengan tujuan untuk menghasilkan data sintetis yang memiliki karakteristik serupa dengan data asli.
 
-Selanjutnya, hasil dari tahap tersebut digunakan dalam dua skenario klasifikasi yang berbeda. Pada skenario pertama, proses klasifikasi dilakukan hanya menggunakan data asli, sedangkan pada skenario kedua, proses klasifikasi memanfaatkan kombinasi data asli dan data hasil augmentasi. Kedua skenario tersebut menggunakan metode seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR) serta algoritma klasifikasi XGBoost berdasarkan referensi penelitian sebelumnya [xx]. Perbandingan antara kedua skenario ini bertujuan untuk mengevaluasi pengaruh penggunaan data sintetis terhadap performa model klasifikasi yang dihasilkan.
+Hasil tahap tersebut digunakan dalam dua skenario klasifikasi yang berbeda. Pada skenario pertama, proses klasifikasi dilakukan hanya menggunakan data asli, sedangkan pada skenario kedua, proses klasifikasi memanfaatkan kombinasi data asli dan data hasil augmentasi. Kedua skenario tersebut menggunakan metode seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR) serta algoritma klasifikasi XGBoost berdasarkan referensi penelitian sebelumnya [xx]. Perbandingan antara kedua skenario ini bertujuan untuk mengevaluasi pengaruh penggunaan data sintetis terhadap performa model klasifikasi yang dihasilkan.
 
 \subsection{Pra-Pemrosesan Dataset}
 \label{Pra-Pemrosesan Dataset}
 
-Tahap pra-pemrosesan data merupakan komponen penting dalam pengolahan sinyal EEG untuk memastikan bahwa data yang digunakan berada dalam kondisi yang representatif dan siap diproses oleh model. Pada penelitian ini, tahap pra-pemrosesan bertujuan untuk meningkatkan kualitas sinyal serta menyiapkan data dalam bentuk yang terstruktur untuk tahap selanjutnya.
-
+Tahap pra-pemrosesan dalam pengolahan sinyal EEG untuk memastikan bahwa data yang digunakan berada dalam kondisi yang representatif dan siap diproses oleh model. Tahap ini bertujuan untuk meningkatkan kualitas sinyal serta menyiapkan data dalam bentuk yang terstruktur untuk tahap selanjutnya.
 \begin{figure}[H]
-    \hspace*{5.5cm} 
+    \hspace*{3.1cm} 
     \includegraphics[
-        width=0.9\textwidth,
-        trim=1cm 10cm 1.5cm 1.5cm,
+        width=0.75\textwidth,
+        trim=0cm 1cm 0cm 1.2cm,
         clip
     ]{assets/pdfs/flowchart_preprocessing.pdf}
     \caption{Diagram aliran proses prapemrosesan sistem}
@@ -76,35 +75,53 @@ Setelah proses penyaringan, dilakukan tahap seleksi segmen untuk mengidentifikas
 
 Selanjutnya, dilakukan proses normalisasi terhadap setiap segmen sinyal menggunakan metode \textit{z-score normalization}, yaitu dengan mengurangi nilai rata-rata dan membaginya dengan simpangan baku pada masing-masing sampel. Proses ini bertujuan untuk menyeragamkan distribusi data, mengurangi variasi antar sampel, serta meningkatkan stabilitas dalam proses \textit{training} model, khususnya pada tahap augmentasi menggunakan VAE. Data yang telah dinormalisasi kemudian dipisahkan menjadi data \textit{training} dan validasi, serta disusun ulang ke dalam bentuk tensor tiga dimensi agar sesuai dengan kebutuhan arsitektur \textit{1D Convolutional Neural Network}.
 
-\subsection{Arsitektur Model VAE}
+\subsection{Arsitektur Model VAE untuk Augmentasi Data}
 \label{Arsitektur Model VAE}
 
-Model \textit{Variational Autoencoder} (VAE) menjadi komponen utama dalam arsitektur sistem yang digunakan untuk melakukan augmentasi data sinyal EEG. Pada penelitian referensi~[XX], arsitektur VAE yang digunakan berbasis \textit{2D Convolutional Neural Network} (2D CNN), yaitu data EEG direpresentasikan dalam bentuk dua dimensi dengan mempertimbangkan hubungan spasial antar kanal. Namun demikian, dalam penelitian ini dilakukan penyesuaian arsitektur menjadi berbasis \textit{1D Convolutional Neural Network} (1D CNN). Perubahan ini dilakukan untuk menyesuaikan dengan pendekatan klasifikasi yang digunakan, di mana sinyal EEG diproses sebagai deret waktu satu dimensi pada setiap kanal secara terpisah. Selain itu, dimensi ruang laten juga ditingkatkan untuk meningkatkan kapasitas model dalam menangkap variasi pola sinyal EEG.
+Model \textit{Variational Autoencoder} (VAE)  digunakan untuk melakukan augmentasi data sinyal EEG. Pada penelitian referensi~[XX], arsitektur VAE yang digunakan berbasis \textit{2D Convolutional Neural Network}, yaitu data EEG direpresentasikan dalam bentuk dua dimensi dengan mempertimbangkan hubungan spasial antar kanal. Namun demikian, dalam penelitian ini dilakukan penyesuaian arsitektur menjadi berbasis \textit{1D Convolutional Neural Network} (1D CNN). Perubahan ini dilakukan untuk menyesuaikan dengan pendekatan klasifikasi yang digunakan, di mana sinyal EEG diproses sebagai deret waktu satu dimensi pada setiap kanal secara terpisah. Selain itu, dimensi ruang laten juga ditingkatkan untuk meningkatkan kapasitas model dalam menangkap variasi pola sinyal EEG.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{assets/pdfs/diagram_vae.pdf}
-    \caption{Diagram arsitektur model Variational Autoencoder (VAE)}
-    \label{fig:diagram_vae}
+    \hspace*{3.5cm}
+    \includegraphics[
+        width=\textwidth,
+        trim=0cm 0cm 3cm 0cm,
+        clip
+    ]{assets/pdfs/diagram_vae.pdf}
+    \caption{Diagram Model VAE untuk Augmentasi EEG}
+    \label{fig:vae}
 \end{figure}
 
 Pada prosesnya, data input berupa segmen sinyal EEG satu dimensi terlebih dahulu diproses oleh bagian \textit{encoder}. Bagian ini terdiri dari beberapa lapisan \textit{convolutional} satu dimensi yang diikuti oleh \textit{batch normalization} dan fungsi aktivasi \textit{LeakyReLU}. Setiap lapisan \textit{convolutional} menggunakan \textit{stride} tertentu untuk melakukan reduksi dimensi secara progresif, sehingga menghasilkan representasi fitur berdimensi lebih rendah. Representasi ini kemudian diratakan (\textit{flatten}) dan dipetakan ke dalam dua parameter distribusi laten, yaitu \textit{mean} ($z_{\mathrm{mean}}$) dan variansi logaritmik ($z_{\mathrm{log\_var}}$) menggunakan lapisan \textit{dense}. Selanjutnya, dilakukan proses \textit{reparameterization}, di mana vektor laten $z$ dihasilkan dengan mengombinasikan kedua parameter tersebut dengan variabel acak yang mengikuti distribusi normal standar. Mekanisme ini memungkinkan proses \textit{training} model tetap dapat dilakukan melalui \textit{backpropagation} secara \textit{end-to-end}.
 
 Vektor laten yang dihasilkan kemudian menjadi input bagi bagian \textit{decoder}, yang bertugas untuk merekonstruksi kembali sinyal EEG. Proses rekonstruksi diawali dengan lapisan \textit{dense} yang diikuti dengan proses \textit{reshape} untuk membentuk kembali struktur data. Selanjutnya, digunakan serangkaian operasi \textit{upsampling} yang dikombinasikan dengan lapisan \textit{convolutional} satu dimensi dan fungsi aktivasi untuk meningkatkan dimensi data secara bertahap. Lapisan akhir berupa \textit{convolutional} satu dimensi menghasilkan sinyal output yang memiliki dimensi yang sama dengan input awal.
 
-Selain digunakan untuk rekonstruksi, model yang telah melalui tahap \textit{training} juga dimanfaatkan untuk menghasilkan data sintetis baru. Proses ini dilakukan dengan melakukan sampling secara acak pada ruang laten menggunakan distribusi normal standar, yang kemudian diberikan sebagai input ke bagian \textit{decoder}. Melalui mekanisme ini, \textit{decoder} dapat menghasilkan sinyal EEG sintetis yang memiliki karakteristik statistik yang menyerupai data asli, sehingga dapat digunakan sebagai data tambahan dalam proses augmentasi.
+Model yang telah melalui tahap \textit{training} juga dimanfaatkan untuk menghasilkan data sintetis baru. Proses ini dilakukan dengan melakukan sampling secara acak pada ruang laten menggunakan distribusi normal standar, yang kemudian diberikan sebagai input ke bagian \textit{decoder}. Melalui mekanisme ini, \textit{decoder} dapat menghasilkan sinyal EEG sintetis yang memiliki karakteristik statistik yang menyerupai data asli, sehingga dapat digunakan sebagai data tambahan dalam proses augmentasi.
 
 Dalam proses \textit{training}, model VAE dioptimalkan menggunakan \textit{loss function} gabungan yang terdiri dari dua komponen utama, yaitu \textit{reconstruction loss} dan \textit{Kullback-Leibler} (KL) divergence. \textit{Reconstruction loss} mengukur perbedaan antara sinyal input dan hasil rekonstruksi, sedangkan KL divergence mengatur distribusi laten agar mendekati distribusi normal standar. Kedua komponen ini dihitung berdasarkan output dari \textit{decoder} serta parameter distribusi laten ($z_{\mathrm{mean}}$ dan $z_{\mathrm{log\_var}}$), kemudian digabungkan untuk menghasilkan total \textit{loss} yang digunakan dalam proses optimasi model.
 
 \subsection{Arsitektur Model Klasifikasi}
 \label{Arsitektur Model Klasifikasi}
+
+\begin{figure}[htbp]
+    \centering
+    \hspace*{4.5cm}
+    \includegraphics[
+        width=0.9\textwidth,
+        trim=0cm 0cm 4cm 0cm,
+        clip
+    ]{assets/pdfs/flowchart_klasifikasi.pdf}
+    \caption{Diagram Model Klasifikasi}
+    \label{fig:vae}
+\end{figure}
+
 \textit{Pipeline} klasifikasi yang digunakan terdiri dari beberapa tahapan utama, yaitu dekomposisi frekuensi, standardisasi data, ekstraksi fitur statistik, seleksi fitur, serta klasifikasi. Tahapan awal dilakukan dengan memisahkan sinyal EEG ke dalam lima pita frekuensi utama, yaitu delta, theta, alpha, beta, dan gamma. Pemisahan ini bertujuan untuk menangkap karakteristik aktivitas otak pada rentang frekuensi yang berbeda, sehingga informasi yang diperoleh menjadi lebih representatif terhadap kondisi neurologis yang diamati dan lebih mudah dianalisis pada tahap selanjutnya.
 
-Setelah proses dekomposisi, setiap pita frekuensi distandardisasi menggunakan transformasi \textit{z-score}. Tahapan ini bertujuan untuk menormalkan distribusi data sehingga memiliki skala yang sebanding antar pita frekuensi, serta mencegah dominasi fitur tertentu dalam proses pembelajaran model. Dengan demikian, representasi data yang dihasilkan menjadi lebih seimbang, sehingga setiap pita frekuensi dapat berkontribusi secara proporsional dalam pembentukan fitur.
+Setelah proses dekomposisi, setiap pita frekuensi distandardisasi menggunakan transformasi \textit{z-score}. Tahapan ini bertujuan untuk menormalkan distribusi data sehingga memiliki skala yang sebanding antar pita frekuensi, serta mencegah dominasi fitur tertentu dalam proses pembelajaran model sehingga setiap pita frekuensi dapat berkontribusi secara proporsional dalam pembentukan fitur.
 
 Tahap berikutnya adalah ekstraksi fitur statistik, yang bertujuan untuk mengubah sinyal EEG yang bersifat kontinu menjadi representasi numerik yang terstruktur. Fitur yang dihasilkan mencerminkan karakteristik distribusi, variabilitas, dan kompleksitas sinyal pada masing-masing pita frekuensi. Proses ini menghasilkan himpunan fitur berdimensi tinggi yang mampu merepresentasikan pola sinyal secara komprehensif, sehingga menjadi dasar penting dalam proses klasifikasi.
 
-Seleksi fitur dilakukan menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR), yang bertujuan untuk memilih fitur yang paling relevan terhadap label kelas sekaligus meminimalkan redundansi antar fitur. Dengan pendekatan ini, fitur yang dipilih tidak hanya memiliki hubungan kuat dengan target klasifikasi, tetapi juga saling melengkapi satu sama lain. Hasilnya adalah subset fitur yang lebih ringkas, efisien, dan tetap informatif untuk digunakan pada tahap klasifikasi.
+Seleksi fitur dilakukan menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR), yang bertujuan untuk memilih fitur yang paling relevan terhadap label kelas sekaligus meminimalkan redundansi antar fitur. Pendekatan ini mgenhasilkan subset fitur yang lebih ringkas, efisien, dan tetap informatif untuk digunakan pada tahap klasifikasi.
 
 Tahap akhir dari \textit{pipeline} adalah proses klasifikasi menggunakan algoritma XGBoost. Model ini membangun ensemble pohon keputusan secara bertahap untuk menangkap hubungan non-linear antar fitur secara efektif. Dalam penelitian ini, proses klasifikasi dilakukan dalam dua skenario, yaitu menggunakan data asli serta menggunakan kombinasi data asli dan data sintetis yang diperoleh dari model augmentasi. Kedua skenario diproses menggunakan \textit{pipeline} yang sama, sehingga perbedaan performa yang dihasilkan dapat secara langsung dianalisis sebagai dampak dari penggunaan data hasil augmentasi.
 
@@ -127,115 +144,156 @@ Dalam implementasi pipeline klasifikasi, beberapa library juga berperan dalam ta
 \subsection{Implementasi Model Generatif Variational Autoencoder (VAE)}
 \label{Implementasi Model Generatif Variational Autoencoder (VAE)}
 
-Perancangan model generatif pada penelitian ini dilakukan menggunakan pendekatan \textit{Variational Autoencoder} (VAE) yang bertujuan untuk mempelajari distribusi laten dari sinyal EEG serta menghasilkan data sintetis yang menyerupai data asli. Arsitektur model secara umum terdiri dari dua bagian utama, yaitu encoder dan decoder.
-
-
-\begin{figure}[H]
-    \centering
-    \fbox{\parbox{0.8\textwidth}{\centering TEMP FILL IN THE BLOCK DIAGRAM}}
-    \caption{Arsitektur model Variational Autoencoder (VAE)}
-    \label{fig:vae_architecture}
-\end{figure}
+Perancangan model generatif pada penelitian ini dilakukan menggunakan pendekatan \textit{Variational Autoencoder} (VAE) yang bertujuan untuk mempelajari distribusi laten dari sinyal EEG serta menghasilkan data sintetis yang menyerupai data asli. Arsitektur model secara umum terdiri dari dua bagian utama, yaitu \textit{encoder} dan \textit{decoder}.
 
 Model menerima input berupa sinyal EEG satu dimensi dengan panjang 512 sampel dan satu kanal, sehingga berbentuk $(512, 1)$. Panjang sinyal ini diperoleh dari proses segmentasi dengan durasi 4 detik pada frekuensi sampling 128 Hz.
 
-\paragraph{Arsitektur Encoder}
+\paragraph{Arsitektur Layer \textit{Encoder}}
 
-Encoder dirancang menggunakan beberapa lapisan \textit{Conv1D} untuk mengekstraksi pola temporal dari sinyal EEG. Setiap lapisan menggunakan \textit{stride} sebesar 2 untuk melakukan downsampling secara bertahap.
 
-\begin{verbatim}
-inputs = Input(shape=(512, 1))
-x = Conv1D(32, 25, strides=2, padding='same')(inputs)
-x = BatchNormalization()(x)
-x = LeakyReLU(0.2)(x)
+dirancang menggunakan beberapa lapisan \textit{Conv1D} untuk mengekstraksi pola temporal dari sinyal EEG. Setiap lapisan menggunakan \textit{stride} sebesar 2 untuk melakukan downsampling secara bertahap.
 
-x = Conv1D(64, 25, strides=2, padding='same')(x)
-x = BatchNormalization()(x)
-x = LeakyReLU(0.2)(x)
+\begin{figure}[H]
+    \hspace*{2cm} 
+    \includegraphics[
+        width=0.75\textwidth,
+        trim=0cm 10cm 0cm 0cm,
+        clip
+    ]{assets/pdfs/Encoder.pdf}
+    \caption{Diagram Aliran Layer \textit{Encoder} pada Model VAE}
+    \label{fig:flowchart_system}
+\end{figure}
 
-x = Conv1D(128, 15, strides=2, padding='same')(x)
-x = BatchNormalization()(x)
-x = LeakyReLU(0.2)(x)
 
-x = Flatten()(x)
-x = Dense(64, activation='relu')(x)
+\textit{Encoder} menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15–25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling dilakukan melalui stride pada setiap lapisan konvolusi, sehingga menghasilkan reduksi dimensi bertahap dari 512 menjadi 64, yang membuat representasi semakin ringkas dan informatif.
 
-z_mean = Dense(16)(x)
-z_log_var = Dense(16)(x)
-\end{verbatim}
+Setiap blok konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi aktivasi selama pelatihan, mempercepat konvergensi, serta mengurangi masalah internal covariate shift. Setelah normalisasi, digunakan fungsi aktivasi LeakyReLU dengan parameter 0.2, yang berarti gradien kecil sebesar 0.2 tetap dipertahankan untuk nilai negatif, sehingga mencegah masalah “dying ReLU” dan menjaga aliran gradien tetap stabil.
 
-Encoder menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15--25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling menghasilkan reduksi dimensi bertahap dari 512 menjadi 64, sehingga representasi menjadi lebih ringkas.
+Padding yang digunakan adalah “same”, yang menjaga ukuran temporal output tetap proporsional dengan input sebelum proses downsampling oleh stride dilakukan, sehingga informasi di tepi sinyal tetap dipertahankan secara optimal.
 
-Dimensi laten ditetapkan sebesar 16 sebagai kompromi antara kapasitas representasi dan stabilitas pelatihan.
+Dimensi laten ditetapkan sebesar 16 sebagai kompromi antara kapasitas representasi dan stabilitas pelatihan, sehingga model mampu menangkap struktur penting data tanpa menyebabkan overfitting atau kehilangan informasi yang signifikan.
 
-\paragraph{Lapisan Reparameterization}
+\paragraph{Reparameterization Layer} digunakan untuk memungkinkan proses pelatihan berbasis gradien.
 
-Untuk memungkinkan proses pelatihan berbasis gradien, digunakan teknik \textit{reparameterization trick}.
+\begin{figure}[H]
+    \hspace*{2cm} 
+    \includegraphics[
+        width=0.75\textwidth,
+        trim=0cm 20cm 0cm 0cm,
+        clip
+    ]{assets/pdfs/reparameterization.pdf}
+    \caption{Diagram aliran Reparameterization Layer}
+    \label{fig:flowchart_system}
+\end{figure}
 
-\begin{verbatim}
-class Sampling(layers.Layer):
-    def call(self, inputs):
-        z_mean, z_log_var = inputs
-        epsilon = tf.random.normal(shape=tf.shape(z_mean))
-        return z_mean + tf.exp(0.5 * z_log_var) * epsilon
 
-z = Sampling()([z_mean, z_log_var])
-\end{verbatim}
 
-Lapisan ini menghasilkan vektor laten $z$ dengan menambahkan noise acak terhadap distribusi yang dipelajari, sehingga model tetap bersifat probabilistik.
+Lapisan Sampling menghasilkan vektor laten $z$ dengan menggabungkan dua parameter yang dipelajari oleh \textit{encoder}, yaitu $z_{\text{mean}}$ dan $z_{\text{log var}}$. Proses ini digunakan untuk membuat representasi laten bersifat probabilistik, sehingga model tidak hanya menghasilkan satu nilai tetap, tetapi sebuah distribusi.
+
+Pada tahap ini digunakan variabel acak $\epsilon$ (epsilon), yang diambil dari distribusi normal standar dengan mean 0 dan variansi 1. Noise ini berfungsi untuk memperkenalkan unsur stochastic dalam proses sampling, sehingga setiap forward pass dapat menghasilkan representasi $z$ yang sedikit berbeda meskipun input sama.
+
+Nilai $z$ dihitung menggunakan teknik reparameterization trick, yaitu:
+$z = z_{\text{mean}} + \exp(0.5 \cdot z_{\text{log var}}) \cdot \epsilon$
+
+Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi dari distribusi yang dipelajari, sehingga noise $\epsilon$ diskalakan sesuai dengan tingkat ketidakpastian data. Pendekatan ini memungkinkan proses sampling tetap dapat dioptimalkan menggunakan backpropagation, karena operasi acak dipisahkan dari parameter yang dipelajari.
 
 \paragraph{Arsitektur Decoder}
 
-Decoder berfungsi untuk merekonstruksi kembali sinyal EEG dari representasi laten.
+menggunakan tiga tahap \textit{upsampling} dengan jumlah filter 128, 64, dan 32.
+Ukuran kernel yang relatif besar (15–25) dipilih untuk mempertahankan pola temporal EEG
+yang memiliki karakteristik frekuensi rendah hingga menengah. Proses \textit{upsampling}
+dilakukan pada setiap tahap untuk meningkatkan dimensi sinyal secara bertahap dari 64
+menjadi 512, sehingga memungkinkan rekonstruksi struktur temporal secara progresif.
 
-\begin{verbatim}
-latent_inputs = Input(shape=(16,))
-x = Dense(64 * 128, activation='relu')(latent_inputs)
-x = Reshape((64, 128))(x)
+Setiap tahap \textit{upsampling} diikuti oleh lapisan konvolusi yang berfungsi untuk
+memperhalus dan membentuk kembali fitur hasil interpolasi, sehingga informasi yang
+dihasilkan tidak bersifat kasar atau terdistorsi. Struktur jumlah filter disusun secara
+terbalik dari encoder, sehingga representasi fitur secara bertahap dikurangi kompleksitasnya
+seiring dengan peningkatan resolusi sinyal.
 
-x = UpSampling1D(2)(x)
-x = Conv1D(128, 15, padding='same', activation='relu')(x)
-x = BatchNormalization()(x)
+Setiap lapisan konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi
+aktivasi selama proses rekonstruksi, membantu menjaga konsistensi output, serta
+mengurangi potensi ketidakstabilan selama propagasi. Setelah normalisasi, digunakan
+fungsi aktivasi ReLU yang memberikan non-linearitas yang cukup untuk memodelkan
+hubungan kompleks tanpa menghambat proses generasi sinyal.
 
-x = UpSampling1D(2)(x)
-x = Conv1D(64, 25, padding='same', activation='relu')(x)
-x = BatchNormalization()(x)
+Padding yang digunakan adalah “same”, yang menjaga ukuran temporal output tetap
+proporsional setelah setiap operasi konvolusi, sehingga perubahan dimensi hanya
+dipengaruhi oleh proses \textit{upsampling}. Hal ini memastikan bahwa informasi pada
+bagian tepi sinyal tetap dipertahankan selama proses rekonstruksi.
 
-x = UpSampling1D(2)(x)
-x = Conv1D(32, 25, padding='same', activation='relu')(x)
-x = BatchNormalization()(x)
+Lapisan akhir menggunakan konvolusi dengan satu filter untuk menghasilkan sinyal
+output dengan jumlah kanal yang sesuai dengan data asli, sehingga hasil rekonstruksi
+dapat langsung dibandingkan dengan input awal dalam proses pembelajaran.
 
-outputs = Conv1D(1, 3, padding='same')(x)
-\end{verbatim}
+\begin{figure}[H]
+    \hspace*{4cm} 
+    \includegraphics[
+        width=0.75\textwidth,
+        trim=0cm 0cm 0cm 0cm,
+        clip
+    ]{assets/pdfs/decoder.pdf}
+    \caption{Diagram aliran Decoder Layer}
+    \label{fig:flowchart_system}
+\end{figure}
 
-Decoder menggunakan tiga tahap \textit{upsampling} untuk mengembalikan dimensi sinyal ke ukuran awal. Struktur filter disusun secara terbalik dari encoder untuk menjaga konsistensi representasi.
 
-\paragraph{Fungsi Loss dan Training}
+\paragraph{Fungsi Loss dan Proses Training}
 
-Model dilatih menggunakan kombinasi \textit{reconstruction loss} dan \textit{Kullback-Leibler divergence}.
+didasarkan pada kombinasi \textit{reconstruction loss} dan \textit{Kullback-Leibler (KL) divergence}, yang merupakan komponen utama dalam \textit{Variational Autoencoder (VAE)}.
 
-\begin{verbatim}
-reconstruction_loss = mse(K.flatten(inputs), K.flatten(outputs))
-reconstruction_loss *= 512
+\textit{Reconstruction loss} dihitung menggunakan \textit{Mean Squared Error (MSE)} antara input dan output rekonstruksi. Sebelum perhitungan, kedua tensor diubah menjadi vektor satu dimensi (\textit{flatten}) untuk menyederhanakan komputasi. Nilai loss kemudian dikalikan dengan faktor 512 untuk menyesuaikan skala kontribusinya terhadap total loss, sehingga model lebih fokus dalam mempertahankan kemiripan antara data asli dan hasil rekonstruksi.
 
-kl_loss = 1 + z_log_var - K.square(z_mean) - K.exp(z_log_var)
-kl_loss = -0.5 * K.sum(kl_loss, axis=-1)
+\textit{KL divergence} digunakan untuk mengukur perbedaan antara distribusi laten yang dipelajari dengan distribusi normal standar $\mathcal{N}(0,1)$. Perhitungan dilakukan menggunakan parameter $\mu$ (\textit{z\_mean}) dan $\log \sigma^2$ (\textit{z\_log\_var}), kemudian dijumlahkan pada setiap dimensi laten dan dikalikan dengan faktor $-0.5$. Komponen ini berfungsi sebagai regularisasi agar ruang laten tetap terstruktur dan tidak menyimpang.
 
-vae_loss = K.mean(reconstruction_loss + kl_loss)
-vae.add_loss(vae_loss)
-\end{verbatim}
+Total loss diperoleh dengan menjumlahkan kedua komponen tersebut, kemudian dirata-ratakan terhadap batch dan ditambahkan sebagai \textit{custom loss} pada model.
 
-\textit{Reconstruction loss} memastikan hasil rekonstruksi mendekati data asli, sedangkan \textit{KL divergence} menjaga distribusi laten tetap mendekati distribusi normal.
-
-Pelatihan dilakukan menggunakan optimizer Adam dengan \textit{learning rate} sebesar 0.001, batch size 32, dan maksimum 1000 epoch.
+Pelatihan dilakukan menggunakan optimizer Adam dengan \textit{learning rate} 0.001, \textit{batch size} 32, dan maksimum 1000 epoch.
 
 \paragraph{Generasi Data Sintetis}
 
-Setelah model dilatih, data sintetis dihasilkan dengan melakukan sampling dari distribusi laten.
+dilakukan melalui proses sampling pada ruang laten. Secara prinsip, karena distribusi laten telah dipaksa mendekati distribusi normal standar selama training, maka sampling dapat dilakukan dengan menghasilkan vektor acak dari distribusi Gaussian $\mathcal{N}(0,1)$ dengan dimensi yang sesuai (misalnya 16 dimensi laten).
 
-\begin{verbatim}
-z = np.random.normal(size=(N, 16))
-synthetic_data = decoder.predict(z)
-\end{verbatim}
+Vektor laten acak ini kemudian diberikan sebagai input ke bagian \textit{decoder} dari model. Decoder akan memetakan representasi laten tersebut kembali ke ruang data asli, sehingga menghasilkan sampel baru yang secara statistik menyerupai data pelatihan. Proses ini memungkinkan model untuk menghasilkan variasi data yang tidak identik dengan data asli, namun tetap mempertahankan karakteristik distribusinya.
 
-Data sintetis yang dihasilkan kemudian digunakan sebagai tambahan data pelatihan dalam pipeline klasifikasi untuk mengevaluasi pengaruh augmentasi terhadap performa model.
+Data sintetis yang dihasilkan selanjutnya digunakan sebagai bentuk \textit{data augmentation} dalam pipeline klasifikasi. Dengan menambahkan sampel sintetis ke dalam data pelatihan, diharapkan model klasifikasi dapat meningkatkan kemampuan generalisasi, terutama dalam kondisi keterbatasan jumlah data asli.
+\\
+\\
+
+
+\subsection{Implementasi Model Klasifikasi}
+\paragraph{\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR})} diimplementasikan melalui \textit{library} \textit{feature\_engine.selection} melalui kelas \textit{MRMR}. Label kelas terlebih dahulu dikonversi ke bentuk numerik menggunakan \textit{LabelEncoder} dari \textit{sklearn.preprocessing} melalui operasi \textit{fit\_transform}, sehingga menghasilkan representasi biner yang dapat digunakan dalam proses seleksi fitur.
+
+Fitur yang digunakan berasal dari kombinasi kanal EEG dan jenis fitur hasil ekstraksi \textit{Discrete Wavelet Transform} (DWT). Penamaan kolom dibentuk secara eksplisit melalui iterasi terhadap daftar kanal (\textit{ch\_names}) dan jenis fitur (\textit{DWT\_FEAT}), sehingga setiap fitur memiliki format \textit{channel\_feature}. Seluruh fitur kemudian dikonversi ke dalam struktur \textit{pandas DataFrame} (\textit{dfX}) untuk memastikan kompatibilitas dengan metode \textit{MRMR}.
+\paragraph{Model \textit{XGBoost}}
+\begin{table}[h]
+\centering
+\caption{Konfigurasi Parameter \textit{XGBoost}}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Parameter} & \textbf{Nilai} \\
+\hline
+use\_label\_encoder & False \\
+\hline
+eval\_metric & logloss \\
+\hline
+n\_estimators & 100 \\
+\hline
+learning\_rate & 0.3 \\
+\hline
+max\_depth & 6 \\
+\hline
+subsample & 1.0 \\
+\hline
+colsample\_bylevel & 1.0 \\
+\hline
+reg\_alpha & 0 \\
+\hline
+reg\_lambda & 1 \\
+\hline
+\end{tabular}
+\end{table}
+
+Model \textit{XGBoost} pada penelitian ini menggunakan konfigurasi parameter sebagaimana ditunjukkan pada Tabel di atas. Parameter tersebut digunakan dalam proses \textit{training} model untuk menghasilkan prediksi pada data uji.
+
+Pembagian data dilakukan menggunakan \textit{train\_test\_split} dengan parameter \textit{test\_size=0.2}, \textit{stratify=y\_enc}, dan \textit{random\_state=42}. Model kemudian dilakukan \textit{training} menggunakan data \textit{training} dan digunakan untuk menghasilkan prediksi label serta probabilitas pada data \textit{testing}. Hasil prediksi selanjutnya dievaluasi menggunakan \textit{confusion matrix}, \textit{classification report}, serta \textit{ROC curve} dan \textit{AUC score}.

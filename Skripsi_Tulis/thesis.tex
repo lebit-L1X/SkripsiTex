@@ -20,6 +20,7 @@
 \usepackage{_internals/tikz-uml}
 \usepackage{listings}
 
+
 % Daftar pemenggalan suku kata dan istilah dalam LaTeX
 \input{_internals/hype.indonesia}
 
@@ -115,20 +116,12 @@
 \phantomsection
 \listoffigures
 \clearpage
-\phantomsection
-\addcontentsline{toc}{chapter}{DAFTAR PERSAMAAN}
-\listofequs
-\clearpage
-\phantomsection
-\input{src/00-front_matter/daftar-notasi}%Jika diperlukan
-\clearpage
 %\phantomsection
 %\addcontentsline{toc}{chapter}{DAFTAR ISTILAH}
 %\printnomenclature%Jika diperlukan
 %\clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\listlistingname}
-\listoflistings%Jika diperlukan
 \clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\listabbreviationname}
@@ -160,6 +153,7 @@
 \setstretch{1.5} % <-- double spacing
 \setlength{\parindent}{1.5em}
 
+
 \input{src/01-body/01-bab1}
 \input{src/01-body/02-bab2}
 \input{src/01-body/03-bab3}
@@ -168,7 +162,13 @@
 % Daftar Pustaka
 %\input{pustaka}
 
-% Alternatif manajemen daftar pustaka dengan \bibliography
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+\renewcommand{\bibname}{DAFTAR PUSTAKA}
+
+\nocite{*} % optional but recommended for now
+
 \bibliographystyle{IEEEtran}
 \bibliography{pustaka}
 

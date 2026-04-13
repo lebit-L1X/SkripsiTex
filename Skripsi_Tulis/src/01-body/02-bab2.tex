@@ -171,7 +171,7 @@ Penelitian menggunakan pendekatan seleksi fitur berbasis \textit{minimum Redunda
 
 Hasil eksperimen menunjukkan bahwa pendekatan yang diusulkan mampu menghasilkan performa klasifikasi yang cukup baik dalam membedakan individu dengan ASD dan individu dengan perkembangan tipikal. Penggunaan mRMR terbukti dapat meningkatkan kualitas fitur yang digunakan, sementara XGBoost memberikan kemampuan klasifikasi yang robust terhadap kompleksitas data EEG. Temuan ini menunjukkan bahwa kombinasi seleksi fitur dan algoritma \textit{ensemble} memiliki potensi yang signifikan dalam meningkatkan akurasi serta kemampuan generalisasi model dalam klasifikasi ASD berbasis sinyal EEG.
 
-\subsection{Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}
+\subsection{MetodeAugmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}
 \label{Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}
 
 Pada penelitian referensi [XX], diusulkan pendekatan augmentasi data untuk sinyal EEG menggunakan model generatif berbasis \textit{Variational Autoencoder} (VAE). Implementasi yang digunakan dalam penelitian ini mengadaptasi metode yang diperkenalkan dalam studi referensi [XX], yang memanfaatkan VAE untuk mempelajari distribusi laten dari sinyal EEG dan menghasilkan sampel sintetis yang menyerupai data asli. Dataset yang digunakan berasal dari BCI Competition IV Dataset 2a, yang terdiri dari data EEG 22 kanal dari 9 subjek dengan empat kelas tugas \textit{motor imagery}, sehingga digunakan dalam tugas klasifikasi \textit{motor imagery}. Dalam implementasinya, data EEG diolah dalam bentuk yang sesuai untuk pemanfaatan arsitektur \textit{2D Convolutional Neural Network} (2D CNN), sehingga direpresentasikan dalam bentuk matriks dua dimensi.
