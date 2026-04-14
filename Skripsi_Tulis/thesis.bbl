@@ -141,11 +141,17 @@ D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' 2014.
 \bibitem{eeg_asd_systematic}
 ``Systematic review on eeg analysis for autism diagnosis.''
 
-\bibitem{paper_prima}
-``Paper bu prima.''
+\bibitem{paper_ref}
+``Enhancing clinical transparency in asd detection: An eeg analysis approach
+  with mrmr and xgboost.''
 
 \bibitem{eeg_augmentasi}
-``Eeg augmentasi.''
+``Data augmentation for eeg-based emotion recognition using generative
+  adversarial networks.''
+
+\bibitem{eeg_augmentasi2}
+``Harnessing few-shot learning for eeg signal classification: a survey of
+  state-of-the-art techniques and future directions.''
 
 \bibitem{tsmrmr_sleep}
 ``Tsmrmr feature selection method for detecting sleep apnea using eeg.''

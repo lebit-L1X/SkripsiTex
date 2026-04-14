@@ -92,45 +92,45 @@ Warning--empty journal in tsmrmr_sleep
 Warning--empty year in tsmrmr_sleep
 
 Done.
-You've used 33 entries,
+You've used 34 entries,
             4087 wiz_defined-function locations,
-            906 strings with 10669 characters,
-and the built_in function-call counts, 8622 in all, are:
-= -- 454
-> -- 56
+            908 strings with 10960 characters,
+and the built_in function-call counts, 8858 in all, are:
+= -- 464
+> -- 57
 < -- 0
-+ -- 42
++ -- 43
 - -- 6
-* -- 453
-:= -- 1363
-add.period$ -- 66
-call.type$ -- 33
-change.case$ -- 33
+* -- 457
+:= -- 1393
+add.period$ -- 68
+call.type$ -- 34
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 110
-duplicate$ -- 919
-empty$ -- 1001
+cite$ -- 111
+duplicate$ -- 946
+empty$ -- 1034
 format.name$ -- 8
-if$ -- 1848
+if$ -- 1903
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 146
-newline$ -- 130
+int.to.str$ -- 34
+missing$ -- 152
+newline$ -- 133
 num.names$ -- 3
-pop$ -- 562
+pop$ -- 582
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 631
+skip$ -- 653
 stack$ -- 0
-substring$ -- 35
-swap$ -- 320
+substring$ -- 36
+swap$ -- 330
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 33
+type$ -- 34
 warning$ -- 77
 while$ -- 3
-width$ -- 35
-write$ -- 214
+width$ -- 36
+write$ -- 219
 (There were 77 warnings)
