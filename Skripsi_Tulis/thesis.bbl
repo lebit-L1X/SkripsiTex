@@ -126,54 +126,86 @@ G.~Bao, B.~Yan, L.~Tong, J.~Shu, L.~Wang, K.~Yang, and Y.~Zeng, ``Data
   \url{https://doi.org/10.3389/fncom.2021.723843}.
 
 \bibitem{eeg_basics}
-``Basics of eeg signals.''
+W.~Kong and X.~Jin, ``Basics of eeg signals,'' in \emph{Brain Fingerprint
+  Identification}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, Singapore,
+  2025, [Online]. Available: \url{https://doi.org/10.1007/978-981-96-4512-1_2}.
 
 \bibitem{eeg_feature_review}
-``Feature extraction and classification techniques in eeg signal analysis: A
-  review.''
+S.~Savadi, ``A comprehensive review of feature extraction and classification
+  techniques in eeg signal analysis,'' 2025, [Online]. Available:
+  \url{http://www.ijceronline.com/}.
 
 \bibitem{auditory_eeg}
-``Frequency and time domain analysis of eeg-based auditory evoked potentials.''
+E.~Ignatious, S.~Azam, M.~Jonkman, and F.~D. Boer, ``Frequency and time domain
+  analysis of eeg-based auditory evoked potentials to detect binaural hearing
+  in noise,'' 2023, [Online]. Available:
+  \url{https://doi.org/10.3390/jcm12134487}.
 
 \bibitem{eeg_connectivity}
-``Study of resting-state functional connectivity using eeg.''
+G.~M. Rojas, C.~Alvarez, C.~E. Montoya, M.~de~la Iglesia-Vayá, J.~E.
+  Cisternas, and M.~Gálvez, ``Study of resting-state functional connectivity
+  networks using eeg electrodes position as seed,'' 2018, [Online]. Available:
+  \url{https://doi.org/10.3389/fnins.2018.00235}.
 
 \bibitem{eeg_biophysics}
-``Electroencephalography: Biophysical and technological aspects for clinical
-  applications.''
+S.~Beniczky and D.~L. Schomer, ``Electroencephalography: Basic biophysical and
+  technological aspects important for clinical applications,'' 2020, [Online].
+  Available: \url{https://doi.org/10.1684/epd.2020.1217}.
 
 \bibitem{mrmr_original}
-H.~Peng, F.~Long, and C.~Ding, ``Feature selection based on mutual information:
-  Max-dependency, max-relevance, and min-redundancy,'' \emph{IEEE Transactions
-  on Pattern Analysis and Machine Intelligence}, 2005.
+H.~Peng, F.~Long, and C.~Ding, ``Feature selection based on mutual information
+  criteria of max-dependency, max-relevance, and min-redundancy,'' 2005,
+  [Online]. Available: \url{https://doi.org/10.1109/TPAMI.2005.159}.
 
 \bibitem{sleep_apnea_eeg}
-``Diagnosis of sleep apnea syndrome from eeg signals using entropy measures.''
-
-\bibitem{asd_eeg_abnormalities}
-``Resting-state eeg abnormalities in autism spectrum disorders.''
-
-\bibitem{ml_eeg_classification}
-``Evaluation of machine learning algorithms for eeg classification.''
-
-\bibitem{cvae_gan_eeg}
-``Trans-cvae-gan for high-fidelity eeg signal generation.''
-
-\bibitem{vae_original}
-D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' 2014.
-
-\bibitem{eeg_asd_systematic}
-``Systematic review on eeg analysis for autism diagnosis.''
-
-\bibitem{eeg_augmentasi}
-``Data augmentation for eeg-based emotion recognition using generative
-  adversarial networks.''
-
-\bibitem{eeg_augmentasi2}
-``Harnessing few-shot learning for eeg signal classification: a survey of
-  state-of-the-art techniques and future directions.''
+B.~Gholami, M.~H. Behboudi, M.~G. Mahjani, and A.~Khadem, ``Diagnosis of sleep
+  apnea syndrome from eeg signals using different entropy measures,'' in
+  \emph{2021 7th International Conference on Signal Processing and Intelligent
+  Systems (ICSPIS)}, 2021, [Online]. Available:
+  \url{https://doi.org/10.1109/ICSPIS54653.2021.9729367}.
 
 \bibitem{tsmrmr_sleep}
-``Tsmrmr feature selection method for detecting sleep apnea using eeg.''
+C.-T. Hsieh and Y.-H. Huang, ``Tsmrmr feature selection method for detecting
+  sleep apnea episodes based on eeg signals,'' in \emph{2024 IEEE-EMBS
+  Conference on Biomedical Engineering and Sciences (IECBES)}, 2024, [Online].
+  Available: \url{https://doi.org/10.1109/IECBES61011.2024.10991314}.
+
+\bibitem{asd_eeg_abnormalities}
+J.~Wang, J.~Barstein, L.~E. Ethridge, M.~W. Mosconi, Y.~Takarae, and J.~A.
+  Sweeney, ``Resting-state eeg abnormalities in autism spectrum disorders,''
+  2013, [Online]. Available: \url{https://doi.org/10.1186/1866-1955-5-24}.
+
+\bibitem{eeg_asd_systematic}
+L.~B. Ribeiro and M.~da~Silva~Filho, ``Systematic review on eeg analysis to
+  diagnose and treat autism by evaluating functional connectivity and spectral
+  power,'' 2023, [Online]. Available:
+  \url{https://doi.org/10.2147/NDT.S394363}.
+
+\bibitem{ml_eeg_classification}
+F.~J. Ramírez-Arias, E.~E. García-Guerrero, E.~Tlelo-Cuautle, J.~M.
+  Colores-Vargas, E.~García-Canseco, O.~R. López-Bonilla, G.~M.
+  Galindo-Aldana, and E.~Inzunza-González, ``Evaluation of machine learning
+  algorithms for classification of eeg signals,'' 2022, [Online]. Available:
+  \url{https://doi.org/10.3390/technologies10040079}.
+
+\bibitem{cvae_gan_eeg}
+Y.~Yao, X.~Wang, X.~Hao, H.~Sun, R.~Dong, and Y.~Li, ``Trans-cvae-gan:
+  Transformer-based cvae-gan for high-fidelity eeg signal generation,'' 2025,
+  [Online]. Available: \url{https://doi.org/10.3390/bioengineering12101028}.
+
+\bibitem{vae_original}
+D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' 2014,
+  [Online]. Available: \url{https://doi.org/10.48550/arXiv.1312.6114}.
+
+\bibitem{eeg_augmentasi}
+C.~Ahuja and D.~Sethia, ``Harnessing few-shot learning for eeg signal
+  classification: A survey of state-of-the-art techniques and future
+  directions,'' 2024, [Online]. Available:
+  \url{https://doi.org/10.3389/fnhum.2024.1421922}.
+
+\bibitem{vae_github}
+A.~Vasarkar, ``Eeg data augmentation using variational autoencoder,'' [Online].
+  Available:
+  \url{https://github.com/arkanivasarkar/EEG-Data-Augmentation-using-Variational-Autoencoder}.
 
 \end{thebibliography}

@@ -26,81 +26,58 @@ Warning--empty journal in cross_dataset_eeg
 Warning--empty journal in eeg_variability_review
 Warning--empty journal in artifact_removal_eeg
 Warning--empty journal in gan_eeg_emotion
-Warning--empty author in eeg_basics
-Warning--empty journal in eeg_basics
-Warning--empty year in eeg_basics
-Warning--empty author in eeg_feature_review
 Warning--empty journal in eeg_feature_review
-Warning--empty year in eeg_feature_review
-Warning--empty author in auditory_eeg
 Warning--empty journal in auditory_eeg
-Warning--empty year in auditory_eeg
-Warning--empty author in eeg_connectivity
 Warning--empty journal in eeg_connectivity
-Warning--empty year in eeg_connectivity
-Warning--empty author in eeg_biophysics
 Warning--empty journal in eeg_biophysics
-Warning--empty year in eeg_biophysics
-Warning--empty author in sleep_apnea_eeg
-Warning--empty journal in sleep_apnea_eeg
-Warning--empty year in sleep_apnea_eeg
-Warning--empty author in asd_eeg_abnormalities
+Warning--empty journal in mrmr_original
 Warning--empty journal in asd_eeg_abnormalities
-Warning--empty year in asd_eeg_abnormalities
-Warning--empty author in ml_eeg_classification
-Warning--empty journal in ml_eeg_classification
-Warning--empty year in ml_eeg_classification
-Warning--empty author in cvae_gan_eeg
-Warning--empty journal in cvae_gan_eeg
-Warning--empty year in cvae_gan_eeg
-Warning--empty journal in vae_original
-Warning--empty author in eeg_asd_systematic
 Warning--empty journal in eeg_asd_systematic
-Warning--empty year in eeg_asd_systematic
-Warning--empty author in tsmrmr_sleep
-Warning--empty journal in tsmrmr_sleep
-Warning--empty year in tsmrmr_sleep
+Warning--empty journal in ml_eeg_classification
+Warning--empty journal in cvae_gan_eeg
+Warning--empty journal in vae_original
+Warning--empty journal in eeg_augmentasi
 
 Done.
 You've used 34 entries,
             4087 wiz_defined-function locations,
-            944 strings with 13270 characters,
-and the built_in function-call counts, 12898 in all, are:
-= -- 840
-> -- 340
+            977 strings with 15499 characters,
+and the built_in function-call counts, 16125 in all, are:
+= -- 1174
+> -- 522
 < -- 3
-+ -- 168
-- -- 77
-* -- 608
-:= -- 2071
-add.period$ -- 68
++ -- 247
+- -- 123
+* -- 746
+:= -- 2676
+add.period$ -- 69
 call.type$ -- 34
-change.case$ -- 52
+change.case$ -- 67
 chr.to.int$ -- 9
-cite$ -- 81
-duplicate$ -- 1183
-empty$ -- 1230
-format.name$ -- 92
-if$ -- 2843
+cite$ -- 58
+duplicate$ -- 1362
+empty$ -- 1410
+format.name$ -- 149
+if$ -- 3592
 int.to.chr$ -- 0
 int.to.str$ -- 34
-missing$ -- 247
+missing$ -- 311
 newline$ -- 125
-num.names$ -- 20
-pop$ -- 766
+num.names$ -- 33
+pop$ -- 867
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 944
+skip$ -- 1196
 stack$ -- 0
-substring$ -- 78
-swap$ -- 585
+substring$ -- 108
+swap$ -- 778
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 34
-warning$ -- 47
-while$ -- 21
+warning$ -- 24
+while$ -- 34
 width$ -- 36
-write$ -- 254
-(There were 47 warnings)
+write$ -- 296
+(There were 24 warnings)
