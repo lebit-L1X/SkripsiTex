@@ -22,84 +22,108 @@
 \BIBdecl
 
 \bibitem{nih_autism}
-\BIBentryALTinterwordspacing
-\emph{Autism Spectrum Disorder}.\hskip 1em plus 0.5em minus 0.4em\relax
-  National Center for Biotechnology Information, 2023. [Online]. Available:
-  \url{https://www.ncbi.nlm.nih.gov/books/NBK525976/}
-\BIBentrySTDinterwordspacing
+{National Center for Biotechnology Information}, ``Autism spectrum disorder,''
+  [Online]. Available: https://www.ncbi.nlm.nih.gov/books/NBK525976/, 2023.
 
 \bibitem{dsm5}
-\BIBentryALTinterwordspacing
-\emph{Diagnostic and Statistical Manual of Mental Disorders (DSM-5)}.\hskip 1em
-  plus 0.5em minus 0.4em\relax American Psychiatric Association, 2013.
-  [Online]. Available:
-  \url{https://www.physio-pedia.com/images/1/1b/Diagnostic_and_statistical_manual_of_mental_disorders_DSM-5_%28_PDFDrive.com_%29.pdf}
-\BIBentrySTDinterwordspacing
+{American Psychiatric Association}, \emph{Diagnostic and Statistical Manual of
+  Mental Disorders (DSM-5)}, 5th~ed.\hskip 1em plus 0.5em minus 0.4em\relax
+  Arlington, VA, USA: American Psychiatric Association, 2013, [Online].
+  Available: \url{https://www.psychiatry.org/psychiatrists/practice/dsm}.
 
 \bibitem{kertapati2023}
-\BIBentryALTinterwordspacing
-D.~T. Kertapati, ``Anak-anak luar biasa,'' 2023, mediakom, Ministry of Health
-  Indonesia, ed. 152, Mar. [Online]. Available:
-  \url{https://kemkes.go.id/app_asset/file_content_download/171090786265fa61d67ff2e9.83516065.pdf}
-\BIBentrySTDinterwordspacing
+D.~T. Kertapati, ``Anak-anak luar biasa,'' 2023, [Online]. Available:
+  \url{https://kemkes.go.id/app_asset/file_content_download/171090786265fa61d67ff2e9.83516065.pdf}.
 
 \bibitem{gbd2021_autism}
-\BIBentryALTinterwordspacing
 ``Burden and inequality of autism spectrum disorders in global, east asian, and
-  southeast asian regions, 1990--2021,'' 2021, global Burden of Disease Study.
-  [Online]. Available: \url{https://pubmed.ncbi.nlm.nih.gov/40819035/}
-\BIBentrySTDinterwordspacing
+  southeast asian regions, 1990--2021,'' 2021, [Online]. Available:
+  \url{https://pubmed.ncbi.nlm.nih.gov/40819035/}.
 
 \bibitem{autism_diagnosis_challenges}
-``Challenges surrounding the diagnosis of autism in children,'' 2021.
+Y.~Hus and O.~Segal, ``Challenges surrounding the diagnosis of autism in
+  children,'' 2021, [Online]. Available:
+  \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC8654688/}.
 
-\bibitem{ml_dsm5_autism}
-``Screening of autism spectrum disorder using machine learning in accordance
-  with dsm-5.''
+\bibitem{10423494}
+S.~Bose and P.~Seth, ``Screening of autism spectrum disorder using machine
+  learning approach in accordance with dsm-5,'' in \emph{2023 7th International
+  Conference on Electronics, Materials Engineering \& Nano-Technology
+  (IEMENTech)}, 2023, [Online]. Available:
+  \url{https://doi.org/10.1109/IEMENTech60402.2023.10423494}.
 
 \bibitem{cnn_neuroimaging_asd}
-``Identification of novel diagnostic neuroimaging biomarkers for autism
-  spectrum disorder using cnn.''
+A.~Adhikary, ``Identification of novel diagnostic neuroimaging biomarkers for
+  autism spectrum disorder through convolutional neural network-based analysis
+  of functional, structural, and diffusion tensor imaging data towards enhanced
+  autism diagnosis,'' 2024, [Online]. Available:
+  \url{https://doi.org/10.48550/arXiv.2305.18841}.
 
 \bibitem{brain_imaging_asd_review}
-``The value of brain imaging and electrophysiological testing for early asd
-  screening: A systematic review.''
+C.~Clairmont, J.~Wang, S.~Tariq, H.~T. Sherman, M.~Zhao, and X.-J. Kong, ``The
+  value of brain imaging and electrophysiological testing for early screening
+  of autism spectrum disorder: A systematic review,'' 2022, [Online].
+  Available: \url{https://doi.org/10.3389/fnins.2021.812946}.
 
 \bibitem{eeg_dataset_asd}
-``A comprehensive eeg dataset and performance assessment for autism spectrum
-  disorder.''
+M.~Melinda, P.~D. Purnamasari, F.~Fahmi, E.~P. Sinulingga, M.~Muliyadi,
+  Y.~Away, Y.~Yunidar, and F.~H. Juwono, ``A comprehensive eeg dataset and
+  performance assessment for autism spectrum disorder,'' 2025, [Online].
+  Available: \url{https://doi.org/10.1038/s41598-025-34981}.
 
 \bibitem{ml_eeg_fnirs_review}
-``Machine learning and deep learning applied to eeg and fnirs for asd
-  diagnosis: A systematic review.''
+A.~D. Giacomo, R.~Palmieri, E.~F. Russo, I.~Pizzolorusso, R.~Brandi,
+  F.~Magistro, M.~G.~D. Cesare, S.~Quattrocelli, D.~Cardone, D.~Perpetuini, and
+  A.~Merla, ``Machine learning and deep learning applied to eeg and fnirs for
+  early autism spectrum disorder diagnosis: A systematic review,'' 2026,
+  [Online]. Available: \url{https://doi.org/10.3389/fpsyt.2026.1668914}.
 
 \bibitem{eeg_autism_review}
-``How useful is eeg in the diagnosis of autism spectrum disorders: A systematic
-  review.''
+O.~Gurau, W.~J. Bosl, and C.~R. Newton, ``How useful is electroencephalography
+  in the diagnosis of autism spectrum disorders and the delineation of
+  subtypes: A systematic review,'' 2017, [Online]. Available:
+  \url{https://doi.org/10.3389/fpsyt.2017.00121}.
+
+\bibitem{paper_ref}
+P.~D. Purnamasari, A.~A.~P. Ratna, M.~Melinda, F.~Fahmi, F.~H. Juwono, Y.~Away,
+  N.~Li, R.~Yan, and S.~Gazali, ``Enhancing clinical transparency in asd
+  detection: An eeg analysis approach with mrmr and xgboost,'' 2025, under
+  review.
 
 \bibitem{dl_eeg_review}
-``Deep learning approaches for eeg-based healthcare applications: A
-  comprehensive review,'' \emph{Frontiers in Human Neuroscience}.
+R.~Lyu, ``Deep learning approaches for eeg-based healthcare applications: A
+  comprehensive review,'' 2026, [Online]. Available:
+  \url{https://doi.org/10.3389/fnhum.2025.1689073}.
 
 \bibitem{eeg_limited_data}
-``Eeg classification with limited data: A deep clustering approach.''
+M.~Tabejamaat, H.~Mohammadzade, F.~Negin, and F.~Bremond, ``Eeg classification
+  with limited data: A deep clustering approach,'' 2025, [Online]. Available:
+  \url{https://doi.org/10.1016/j.patcog.2024.110934}.
 
 \bibitem{cross_dataset_eeg}
-``Cross-dataset variability problem in eeg decoding with deep learning.''
+L.~Xu, M.~Xu, Y.~Ke, X.~An, S.~Liu, and D.~Ming, ``Cross-dataset variability
+  problem in eeg decoding with deep learning,'' 2020, [Online]. Available:
+  \url{https://doi.org/10.3389/fnhum.2020.00103}.
 
 \bibitem{eeg_variability_review}
-``Intra- and inter-subject variability in eeg-based brain computer interface: A
-  review,'' \emph{Frontiers in Computational Neuroscience}.
+S.~Saha and M.~Baumert, ``Intra- and inter-subject variability in eeg-based
+  sensorimotor brain computer interface: A review,'' 2020, [Online]. Available:
+  \url{https://doi.org/10.3389/fncom.2019.00087}.
 
 \bibitem{artifact_removal_eeg}
-``Removal of artifacts from eeg signals: A review.''
+X.~Jiang, G.~B. Bian, and Z.~Tian, ``Removal of artifacts from eeg signals: A
+  review,'' 2019, [Online]. Available: \url{https://doi.org/10.3390/s19050987}.
 
 \bibitem{eeg_augmentation_review}
-``Data augmentation for learning predictive models on eeg: A systematic
-  comparison.''
+C.~Rommel, J.~Paillard, T.~Moreau, and A.~Gramfort, ``Data augmentation for
+  learning predictive models on eeg: A systematic comparison,'' 2022, [Online].
+  Available: \url{https://doi.org/10.48550/arXiv.2206.14483}.
 
 \bibitem{gan_eeg_emotion}
-``Data augmentation for eeg-based emotion recognition using gan.''
+G.~Bao, B.~Yan, L.~Tong, J.~Shu, L.~Wang, K.~Yang, and Y.~Zeng, ``Data
+  augmentation for eeg-based emotion recognition using generative adversarial
+  networks,'' 2021, [Online]. Available:
+  \url{https://doi.org/10.3389/fncom.2021.723843}.
 
 \bibitem{eeg_basics}
 ``Basics of eeg signals.''
@@ -140,10 +164,6 @@ D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' 2014.
 
 \bibitem{eeg_asd_systematic}
 ``Systematic review on eeg analysis for autism diagnosis.''
-
-\bibitem{paper_ref}
-``Enhancing clinical transparency in asd detection: An eeg analysis approach
-  with mrmr and xgboost.''
 
 \bibitem{eeg_augmentasi}
 ``Data augmentation for eeg-based emotion recognition using generative
