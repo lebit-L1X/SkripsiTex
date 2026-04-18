@@ -203,6 +203,11 @@ C.~Ahuja and D.~Sethia, ``Harnessing few-shot learning for eeg signal
   directions,'' 2024, [Online]. Available:
   \url{https://doi.org/10.3389/fnhum.2024.1421922}.
 
+\bibitem{eeg_gan}
+K.~G. Hartmann, R.~T. Schirrmeister, and T.~Ball, ``Eeg-gan: Generative
+  adversarial networks for electroencephalographic (eeg) brain signals,'' 2018,
+  [Online]. Available: \url{https://doi.org/10.48550/arXiv.1806.01875}.
+
 \bibitem{vae_github}
 A.~Vasarkar, ``Eeg data augmentation using variational autoencoder,'' [Online].
   Available:

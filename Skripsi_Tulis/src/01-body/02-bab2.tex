@@ -180,9 +180,24 @@ Dari sisi arsitektur, model yang digunakan terdiri dari dua komponen utama, yait
 
 Hasil penelitian menunjukkan bahwa penggunaan data sintetis yang dihasilkan oleh VAE mampu meningkatkan performa model klasifikasi \textit{motor imagery} secara signifikan. Model yang dilatih menggunakan data asli memperoleh akurasi sebesar 0.73, sedangkan model yang dilatih menggunakan data hasil augmentasi mencapai akurasi sebesar 0.88. Peningkatan ini juga tercermin pada metrik \textit{precision}, \textit{recall}, dan \textit{f1-score} pada sebagian besar kelas, yang menunjukkan bahwa data sintetis mampu memperkaya variasi data \textit{training} dan membantu model dalam menangkap pola yang lebih representatif. Temuan ini menunjukkan bahwa pendekatan generatif berbasis VAE memiliki potensi yang signifikan dalam meningkatkan kinerja sistem klasifikasi berbasis sinyal EEG, yang dalam kasus ini berfokus pada klasifikasi \textit{motor imagery}.
 
-\subsection{Dataset yang Digunakan}
-\label{Dataset yang Digunakan}
-Dataset yang digunakan dalam penelitian ini berupa sinyal \textit{electroencephalogram} (EEG) yang diperoleh dari studi rujukan\cite{eeg_dataset_asd}, berupa data subjek dengan dan tanpa diagnosis \textit{Autism Spectrum Disorder} (ASD). Data ini dipilih karena mampu merepresentasikan aktivitas neural yang berkaitan dengan kondisi ASD, sehingga relevan untuk digunakan dalam pengembangan dan evaluasi model klasifikasi berbasis \textit{machine learning}. 
+\subsection{Metode Evaluasi Data Sintetis Sinyal EEG}
+\label{Metode Evaluasi Data Sintetis}
+
+Dalam penelitian referensi \cite{eeg_gan}, evaluasi kualitas data sintetis dilakukan untuk menilai kesamaan distribusi dan keberagaman sampel yang dihasilkan oleh model generatif. Pendekatan yang digunakan dalam penelitian memanfaatkan beberapa metrik kuantitatif yang umum digunakan dalam evaluasi model generatif, yaitu \textit{Inception Score} (IS), \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD).
+
+Dalam implementasinya, \textit{Inception Score} dihitung dengan menggunakan model klasifikasi EEG yang telah dilatih sebelumnya sebagai pengganti model \textit{Inception} pada domain citra. Metrik ini digunakan untuk mengevaluasi kualitas dan keberagaman sinyal sintetis berdasarkan distribusi prediksi model, di mana distribusi yang tajam dan beragam menunjukkan kualitas generasi yang baik.
+
+Selanjutnya, \textit{Frechet Inception Distance} digunakan untuk mengukur kesamaan distribusi antara data EEG asli dan sintetis pada ruang fitur yang diperoleh dari lapisan representasi model klasifikasi. Berbeda dengan IS, metrik ini mempertimbangkan statistik distribusi secara langsung, sehingga lebih sensitif terhadap perbedaan struktur data dan variasi sampel.
+
+Untuk mengevaluasi kemiripan secara langsung antara sampel, digunakan \textit{Euclidean Distance} dengan membandingkan jarak minimum antara data sintetis dan data asli. Pendekatan ini bertujuan untuk mengidentifikasi apakah model hanya mereplikasi data pelatihan atau mampu menghasilkan variasi baru yang tetap realistis.
+
+Selain itu, \textit{Sliced Wasserstein Distance} digunakan untuk membandingkan distribusi global antara data asli dan sintetis melalui proyeksi satu dimensi. Metrik ini memberikan estimasi kesamaan distribusi secara efisien dan sensitif terhadap perbedaan bentuk distribusi.
+
+Hasil evaluasi pada penelitian referensi menunjukkan bahwa kombinasi metrik tersebut mampu memberikan penilaian yang lebih komprehensif terhadap kualitas data sintetis, mencakup aspek kesamaan distribusi, keberagaman sampel, serta kemampuan model dalam menghasilkan data yang tidak hanya meniru data pelatihan. Oleh karena itu, pendekatan evaluasi ini digunakan sebagai acuan dalam menilai kualitas sinyal EEG sintetis yang dihasilkan pada penelitian ini.
+
+\subsection{Dataset EEG yang Digunakan}
+\label{Dataset EEG yang Digunakan}
+Dataset yang digunakan dalam penelitian ini berupa sinyal \textit{electroencephalogram} (EEG) yang diperoleh dari studi rujukan \cite{eeg_dataset_asd}, berupa data subjek dengan dan tanpa diagnosis \textit{Autism Spectrum Disorder} (ASD). Data ini dipilih karena mampu merepresentasikan aktivitas neural yang berkaitan dengan kondisi ASD, sehingga relevan untuk digunakan dalam pengembangan dan evaluasi model klasifikasi berbasis \textit{machine learning}. 
 
 Data EEG dikumpulkan dari sepuluh partisipan yang terdiri dari lima anak dengan diagnosis ASD berusia 6–10 tahun serta lima subjek kontrol sehat berusia di atas 17 tahun. Proses akuisisi dilakukan menggunakan 16 kanal EEG yang ditempatkan berdasarkan sistem standar \textit{International 10–20 System}, yaitu pada posisi Fp1, Fp2, F3, F4, F7, F8, C3, C4, T3, T4, T5, T6, P3, P4, O1, dan O2. Setiap sesi perekaman berlangsung sekitar 15 menit untuk delapan kanal dan diulang hingga mencakup seluruh 16 kanal, sehingga total durasi perekaman mencapai sekitar 40 menit. Perekaman dilakukan tanpa adanya stimulan eksternal dan dengan upaya meminimalkan distraksi partisipan.
 

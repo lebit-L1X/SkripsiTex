@@ -39,45 +39,45 @@ Warning--empty journal in vae_original
 Warning--empty journal in eeg_augmentasi
 
 Done.
-You've used 34 entries,
+You've used 35 entries,
             4087 wiz_defined-function locations,
-            977 strings with 15499 characters,
-and the built_in function-call counts, 16125 in all, are:
-= -- 1174
-> -- 522
+            981 strings with 15726 characters,
+and the built_in function-call counts, 16577 in all, are:
+= -- 1208
+> -- 535
 < -- 3
-+ -- 247
-- -- 123
-* -- 746
-:= -- 2676
-add.period$ -- 69
-call.type$ -- 34
-change.case$ -- 67
++ -- 253
+- -- 126
+* -- 764
+:= -- 2748
+add.period$ -- 71
+call.type$ -- 35
+change.case$ -- 69
 chr.to.int$ -- 9
-cite$ -- 58
-duplicate$ -- 1362
-empty$ -- 1410
-format.name$ -- 149
-if$ -- 3592
+cite$ -- 59
+duplicate$ -- 1400
+empty$ -- 1451
+format.name$ -- 153
+if$ -- 3694
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 311
-newline$ -- 125
-num.names$ -- 33
-pop$ -- 867
+int.to.str$ -- 35
+missing$ -- 321
+newline$ -- 128
+num.names$ -- 34
+pop$ -- 896
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1196
+skip$ -- 1230
 stack$ -- 0
-substring$ -- 108
-swap$ -- 778
+substring$ -- 111
+swap$ -- 801
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 34
+type$ -- 35
 warning$ -- 24
-while$ -- 34
-width$ -- 36
-write$ -- 296
+while$ -- 35
+width$ -- 37
+write$ -- 304
 (There were 24 warnings)
