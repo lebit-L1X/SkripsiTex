@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  20 APR 2026 04:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  20 APR 2026 08:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1814,7 +1814,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [10]
-<assets/pics/10_20_system.jpg, id=575, 441.90094pt x 377.91188pt>
+<assets/pics/10_20_system.jpg, id=583, 441.90094pt x 377.91188pt>
 File: assets/pics/10_20_system.jpg Graphic file (type jpg)
 <use assets/pics/10_20_system.jpg>
 Package pdftex.def Info: assets/pics/10_20_system.jpg  used on input line 32.
@@ -1844,7 +1844,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [13]
-<assets/pics/frequency_band.png, id=594, 270.25969pt x 175.40532pt>
+<assets/pics/frequency_band.png, id=602, 270.25969pt x 175.40532pt>
 File: assets/pics/frequency_band.png Graphic file (type png)
 <use assets/pics/frequency_band.png>
 Package pdftex.def Info: assets/pics/frequency_band.png  used on input line 65.
@@ -1866,7 +1866,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [15 <./assets/pics/frequency_band.png>]
-<assets/pics/artifact_eeg.png, id=608, 284.7438pt x 116.1138pt>
+<assets/pics/artifact_eeg.png, id=616, 284.7438pt x 116.1138pt>
 File: assets/pics/artifact_eeg.png Graphic file (type png)
 <use assets/pics/artifact_eeg.png>
 Package pdftex.def Info: assets/pics/artifact_eeg.png  used on input line 79.
@@ -1995,7 +1995,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [29]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_system.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_system.pdf, id=718, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_system.pdf, id=726, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_system.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_system.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_system.pdf  used on input line 48.
@@ -2010,7 +2010,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [30]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_preprocessing.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_preprocessing.pdf, id=726, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_preprocessing.pdf, id=734, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_preprocessing.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_preprocessing.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_preprocessing.pdf  used on input line 67.
@@ -2033,7 +2033,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [32 <./assets/pdfs/flowchart_preprocessing.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/diagram_vae.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/diagram_vae.pdf, id=757, 614.295pt x 794.97pt>
+<assets/pdfs/diagram_vae.pdf, id=765, 614.295pt x 794.97pt>
 File: assets/pdfs/diagram_vae.pdf Graphic file (type pdf)
 <use assets/pdfs/diagram_vae.pdf>
 Package pdftex.def Info: assets/pdfs/diagram_vae.pdf  used on input line 90.
@@ -2061,7 +2061,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [34 <./assets/pdfs/diagram_vae.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_klasifikasi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_klasifikasi.pdf, id=783, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_klasifikasi.pdf, id=791, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_klasifikasi.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_klasifikasi.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_klasifikasi.pdf  used on input line 113.
@@ -2105,7 +2105,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [38]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/Encoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/Encoder.pdf, id=811, 614.295pt x 794.97pt>
+<assets/pdfs/Encoder.pdf, id=819, 614.295pt x 794.97pt>
 File: assets/pdfs/Encoder.pdf Graphic file (type pdf)
 <use assets/pdfs/Encoder.pdf>
 Package pdftex.def Info: assets/pdfs/Encoder.pdf  used on input line 162.
@@ -2120,7 +2120,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [39 <./assets/pdfs/Encoder.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/reparameterization.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/reparameterization.pdf, id=828, 614.295pt x 794.97pt>
+<assets/pdfs/reparameterization.pdf, id=836, 614.295pt x 794.97pt>
 File: assets/pdfs/reparameterization.pdf Graphic file (type pdf)
 <use assets/pdfs/reparameterization.pdf>
 Package pdftex.def Info: assets/pdfs/reparameterization.pdf  used on input line 184.
@@ -2143,7 +2143,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [41]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/decoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/decoder.pdf, id=851, 614.295pt x 794.97pt>
+<assets/pdfs/decoder.pdf, id=859, 614.295pt x 794.97pt>
 File: assets/pdfs/decoder.pdf Graphic file (type pdf)
 <use assets/pdfs/decoder.pdf>
 Package pdftex.def Info: assets/pdfs/decoder.pdf  used on input line 235.
@@ -2208,6 +2208,12 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 [45
 
 ]
+<assets/pics/time_domain.png, id=897, 721.9773pt x 284.0211pt>
+File: assets/pics/time_domain.png Graphic file (type png)
+<use assets/pics/time_domain.png>
+Package pdftex.def Info: assets/pics/time_domain.png  used on input line 22.
+(pdftex.def)             Requested size: 384.1096pt x 151.10686pt.
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2215,7 +2221,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[46])
+[46]
+<assets/pics/psd.png, id=906, 735.7086pt x 450.9648pt>
+File: assets/pics/psd.png Graphic file (type png)
+<use assets/pics/psd.png>
+Package pdftex.def Info: assets/pics/psd.png  used on input line 27.
+(pdftex.def)             Requested size: 384.1096pt x 235.44576pt.
+)
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2223,13 +2235,21 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[47] (thesis.bbl
+[47 <./assets/pics/time_domain.png> <./assets/pics/psd.png>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[48] (thesis.bbl
 
 Package fancyhdr Warning: \footskip is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[48
+[49
 
 
 ]
@@ -2240,7 +2260,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[49]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 129--132
 []\T1/ptm/m/n/12 A. Vasarkar, ``Eeg data aug-men-ta-tion us-ing vari-a-tional au-toen-
  []
@@ -2257,7 +2277,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[50]
+[51]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2265,7 +2285,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[51])
+[52])
 
 Package caption Warning: Unused \captionsetup[listing] on input line 150.
 See the caption package documentation for explanation.
@@ -2277,8 +2297,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[52]
-runsystem(latexminted cleantemp  --timestamp 20260420040913 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+[53]
+runsystem(latexminted cleantemp  --timestamp 20260420084607 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -2293,20 +2313,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B192A85038B6B234ABE2AC5CF640E015;9997.
+(rerunfilecheck)             Checksum: 830A60371DE5CBF3252C2994FD637A26;9997.
  ) 
 Here is how much of TeX's memory you used:
- 49811 strings out of 467866
- 1157647 string characters out of 5418326
- 1890308 words of memory out of 5000000
- 77446 multiletter control sequences out of 15000+600000
+ 49828 strings out of 467866
+ 1158106 string characters out of 5418326
+ 1890309 words of memory out of 5000000
+ 77460 multiletter control sequences out of 15000+600000
  683270 words of font info for 114 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
  125i,12n,130p,1520b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (67 pages, 1388554 bytes).
+Output written on thesis.pdf (68 pages, 1553104 bytes).
 PDF statistics:
- 1068 PDF objects out of 1200 (max. 8388607)
- 221 named destinations out of 1000 (max. 500000)
- 606 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1085 PDF objects out of 1200 (max. 8388607)
+ 224 named destinations out of 1000 (max. 500000)
+ 616 words of extra memory for PDF output out of 10000 (max. 10000000)
 

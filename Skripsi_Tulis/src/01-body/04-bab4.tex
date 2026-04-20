@@ -17,5 +17,14 @@ Berdasarkan pemaparan teori serta perancangan metode yang telah dilakukan, dapat
 \section{Pengembangan Lanjutan}
 
 Pada tahap saat ini, model generatif yang dikembangkan telah mampu menghasilkan data sintetis dengan tingkat kesesuaian yang baik terhadap data asli. Hal ini ditunjukkan melalui hasil evaluasi menggunakan metrik yang telah dibahas sebelumnya, yaitu \textit{Inception Score} (IS), \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD), di mana nilai yang diperoleh menunjukkan kualitas distribusi dan keberagaman sampel yang memadai.
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/pics/time_domain.png}
+    \caption{Perbandingan sampel sinyal EEG asli dan sintetis pada channel Fp1 dalam domain waktu}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/pics/psd.png}
+    \caption{Perbandingan PSD antara sampel sinyal asli dan sintetis pada channel Fp1}
+\end{figure}
 Meskipun demikian, pengembangan lebih lanjut masih diperlukan, khususnya dalam mengintegrasikan hasil augmentasi secara optimal ke dalam pipeline klasifikasi serta melakukan evaluasi eksperimental terhadap peningkatan performa model. Selain itu, eksplorasi terhadap variasi arsitektur model generatif, tuning hiperparameter, serta pengujian pada dataset yang lebih beragam dapat dilakukan untuk meningkatkan kualitas data sintetis dan stabilitas model secara keseluruhan.

@@ -53,5 +53,5 @@
 \contentsline {chapter}{\numberline {4}\uppercase {Penutup}}{45}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Kesimpulan }{45}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Pengembangan Lanjutan}{47}{section.4.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{48}{section*.28}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{48}{section*.28}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.30}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.30}%

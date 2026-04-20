@@ -12,3 +12,5 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{40}{figure.caption.20}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran Decoder Layer}}{42}{figure.caption.22}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Perbandingan sampel sinyal EEG asli dan sintetis pada channel Fp1 dalam domain waktu}}{47}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Perbandingan PSD antara sampel sinyal asli dan sintetis pada channel Fp1}}{47}{figure.caption.29}%
