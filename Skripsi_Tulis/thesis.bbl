@@ -86,6 +86,11 @@ C.~Rommel, J.~Paillard, T.~Moreau, and A.~Gramfort, ``Data augmentation for
   learning predictive models on eeg: A systematic comparison,'' 2022, [Online].
   Available: \url{https://doi.org/10.48550/arXiv.2206.14483}.
 
+\bibitem{eeg_feature_review}
+S.~Savadi, ``A comprehensive review of feature extraction and classification
+  techniques in eeg signal analysis,'' 2025, [Online]. Available:
+  \url{http://www.ijceronline.com/}.
+
 \bibitem{gan_eeg_emotion}
 G.~Bao, B.~Yan, L.~Tong, J.~Shu, L.~Wang, K.~Yang, and Y.~Zeng, ``Data
   augmentation for eeg-based emotion recognition using generative adversarial
@@ -101,11 +106,6 @@ K.~G. Hartmann, R.~T. Schirrmeister, and T.~Ball, ``Eeg-gan: Generative
 W.~Kong and X.~Jin, ``Basics of eeg signals,'' in \emph{Brain Fingerprint
   Identification}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, Singapore,
   2025, [Online]. Available: \url{https://doi.org/10.1007/978-981-96-4512-1_2}.
-
-\bibitem{eeg_feature_review}
-S.~Savadi, ``A comprehensive review of feature extraction and classification
-  techniques in eeg signal analysis,'' 2025, [Online]. Available:
-  \url{http://www.ijceronline.com/}.
 
 \bibitem{auditory_eeg}
 E.~Ignatious, S.~Azam, M.~Jonkman, and F.~D. Boer, ``Frequency and time domain
