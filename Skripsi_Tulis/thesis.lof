@@ -1,16 +1,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistem Internasional 10--20 untuk Penempatan Elektroda EEG}}{11}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Pita Frekuensi EEG pada Rentang Frekuensi Tinggi dan Rendah}}{14}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Bentuk-Bentuk Artefak pada Sinyal EEG}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistem Internasional 10--20 untuk Penempatan Elektroda EEG}}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Pita Frekuensi EEG pada Rentang Frekuensi Tinggi dan Rendah}}{11}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ilustrasi pengaruh berbagai jenis filter terhadap sinyal EEG}}{12}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Bentuk-Bentuk Artefak pada Sinyal EEG}}{12}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram aliran data pada sistem}}{30}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{31}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram Model VAE untuk Augmentasi EEG}}{33}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram Model Klasifikasi}}{36}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{38}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{39}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran Decoder Layer}}{41}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram aliran data pada sistem}}{29}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{30}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram Model VAE untuk Augmentasi EEG}}{32}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram Model Klasifikasi}}{35}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{37}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{38}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran Decoder Layer}}{40}{figure.caption.23}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Perbandingan sampel sinyal EEG asli dan sintetis pada channel Fp1 dalam domain waktu}}{46}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Perbandingan PSD antara sampel sinyal asli dan sintetis pada channel Fp1}}{46}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Perbandingan sampel sinyal EEG asli dan sintetis pada channel Fp1 dalam domain waktu}}{45}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Perbandingan PSD antara sampel sinyal asli dan sintetis pada channel Fp1}}{45}{figure.caption.30}%

@@ -22,9 +22,8 @@ Warning--empty journal in eeg_limited_data
 Warning--empty journal in artifact_removal_eeg
 Warning--empty journal in eeg_feature_review
 Warning--empty journal in gan_eeg_emotion
-Warning--empty journal in auditory_eeg
-Warning--empty journal in eeg_connectivity
 Warning--empty journal in eeg_biophysics
+Warning--empty journal in auditory_eeg
 Warning--empty journal in mrmr_original
 Warning--empty journal in asd_eeg_abnormalities
 Warning--empty journal in ml_eeg_fnirs_review
@@ -37,6 +36,7 @@ Warning--empty journal in eeg_augmentasi
 Warning--empty author in gbd2021_autism
 Warning--empty journal in gbd2021_autism
 Warning--empty journal in eeg_variability_review
+Warning--empty journal in eeg_connectivity
 
 Done.
 You've used 35 entries,

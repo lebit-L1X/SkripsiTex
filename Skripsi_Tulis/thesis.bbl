@@ -107,22 +107,16 @@ W.~Kong and X.~Jin, ``Basics of eeg signals,'' in \emph{Brain Fingerprint
   Identification}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, Singapore,
   2025, [Online]. Available: \url{https://doi.org/10.1007/978-981-96-4512-1_2}.
 
+\bibitem{eeg_biophysics}
+S.~Beniczky and D.~L. Schomer, ``Electroencephalography: Basic biophysical and
+  technological aspects important for clinical applications,'' 2020, [Online].
+  Available: \url{https://doi.org/10.1684/epd.2020.1217}.
+
 \bibitem{auditory_eeg}
 E.~Ignatious, S.~Azam, M.~Jonkman, and F.~D. Boer, ``Frequency and time domain
   analysis of eeg-based auditory evoked potentials to detect binaural hearing
   in noise,'' 2023, [Online]. Available:
   \url{https://doi.org/10.3390/jcm12134487}.
-
-\bibitem{eeg_connectivity}
-G.~M. Rojas, C.~Alvarez, C.~E. Montoya, M.~de~la Iglesia-Vayá, J.~E.
-  Cisternas, and M.~Gálvez, ``Study of resting-state functional connectivity
-  networks using eeg electrodes position as seed,'' 2018, [Online]. Available:
-  \url{https://doi.org/10.3389/fnins.2018.00235}.
-
-\bibitem{eeg_biophysics}
-S.~Beniczky and D.~L. Schomer, ``Electroencephalography: Basic biophysical and
-  technological aspects important for clinical applications,'' 2020, [Online].
-  Available: \url{https://doi.org/10.1684/epd.2020.1217}.
 
 \bibitem{mrmr_original}
 H.~Peng, F.~Long, and C.~Ding, ``Feature selection based on mutual information
@@ -212,5 +206,11 @@ A.~Adhikary, ``Identification of novel diagnostic neuroimaging biomarkers for
 S.~Saha and M.~Baumert, ``Intra- and inter-subject variability in eeg-based
   sensorimotor brain computer interface: A review,'' 2020, [Online]. Available:
   \url{https://doi.org/10.3389/fncom.2019.00087}.
+
+\bibitem{eeg_connectivity}
+G.~M. Rojas, C.~Alvarez, C.~E. Montoya, M.~de~la Iglesia-Vayá, J.~E.
+  Cisternas, and M.~Gálvez, ``Study of resting-state functional connectivity
+  networks using eeg electrodes position as seed,'' 2018, [Online]. Available:
+  \url{https://doi.org/10.3389/fnins.2018.00235}.
 
 \end{thebibliography}

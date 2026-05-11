@@ -19,7 +19,30 @@
 \usepackage{_internals/uithesis}
 \usepackage{_internals/tikz-uml}
 \usepackage{listings}
+\usepackage{xcolor}
 
+\definecolor{codegray}{RGB}{240,240,240}
+\definecolor{keywordblue}{RGB}{0,70,160}
+\definecolor{commentgreen}{RGB}{0,130,0}
+\definecolor{stringred}{RGB}{170,0,0}
+
+\lstdefinestyle{modernpython}{
+    backgroundcolor=\color{codegray},
+    basicstyle=\linespread{1}\footnotesize\ttfamily,
+    frame=single,
+    rulecolor=\color{black!30},
+    frameround=ffff,
+    keywordstyle=\color{keywordblue}\bfseries,
+    commentstyle=\color{commentgreen},
+    stringstyle=\color{stringred},
+    showstringspaces=false,
+    tabsize=4,
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny\color{black!50},
+    xleftmargin=1.2em,
+    framexleftmargin=1.2em
+}
 
 % Daftar pemenggalan suku kata dan istilah dalam LaTeX
 \input{_internals/hype.indonesia}
