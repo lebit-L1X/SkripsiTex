@@ -41,16 +41,16 @@
 \contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{38}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Teknologi dan Library}{38}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Implementasi Model Generatif Variational Autoencoder (VAE)}{39}{subsection.3.3.2}%
-\contentsline {paragraph}{Arsitektur Layer \textit {Encoder}}{39}{section*.23}%
-\contentsline {paragraph}{Reparameterization Layer}{40}{section*.25}%
-\contentsline {paragraph}{Arsitektur Decoder}{41}{section*.27}%
-\contentsline {paragraph}{Fungsi Loss dan Proses Training}{42}{section*.29}%
-\contentsline {paragraph}{Generasi Data Sintetis}{43}{section*.30}%
+\contentsline {paragraph}{Arsitektur Layer \textit {Encoder}}{39}{section*.25}%
+\contentsline {paragraph}{Reparameterization Layer}{40}{section*.27}%
+\contentsline {paragraph}{Arsitektur Decoder}{41}{section*.29}%
+\contentsline {paragraph}{Fungsi Loss dan Proses Training}{42}{section*.31}%
+\contentsline {paragraph}{Generasi Data Sintetis}{43}{section*.32}%
 \contentsline {subsection}{\numberline {3.3.3}Implementasi Model Klasifikasi}{44}{subsection.3.3.3}%
-\contentsline {paragraph}{\textit {Minimum Redundancy Maximum Relevance} (\textit {mRMR})}{44}{section*.31}%
-\contentsline {paragraph}{Model \textit {XGBoost}}{44}{table.caption.33}%
+\contentsline {paragraph}{\textit {Minimum Redundancy Maximum Relevance} (\textit {mRMR})}{44}{section*.33}%
+\contentsline {paragraph}{Model \textit {XGBoost}}{44}{table.caption.35}%
 \contentsline {chapter}{\numberline {4}\uppercase {Penutup}}{45}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Kesimpulan }{45}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Pengembangan Lanjutan}{47}{section.4.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.36}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.36}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.38}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.38}%

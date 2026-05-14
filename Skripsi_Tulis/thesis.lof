@@ -7,14 +7,15 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustrasi \textit {U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD}}{15}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG}}{16}{figure.caption.15}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi Metode Augmentasi Konvensional pada Data \textit {Time-Series}}}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Arsitektur umum \textit {Variational Autoencoder} (VAE)}}{20}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram aliran data pada sistem}}{31}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{32}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram Model VAE untuk Augmentasi EEG}}{34}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram Model Klasifikasi}}{37}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{39}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{40}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran Decoder Layer}}{42}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram aliran data pada sistem}}{31}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{32}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram Model VAE untuk Augmentasi EEG}}{34}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram Model Klasifikasi}}{37}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{39}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{40}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran Decoder Layer}}{42}{figure.caption.30}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Perbandingan sampel sinyal EEG asli dan sintetis pada channel Fp1 dalam domain waktu}}{47}{figure.caption.34}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Perbandingan PSD antara sampel sinyal asli dan sintetis pada channel Fp1}}{47}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Perbandingan sampel sinyal EEG asli dan sintetis pada channel Fp1 dalam domain waktu}}{47}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Perbandingan PSD antara sampel sinyal asli dan sintetis pada channel Fp1}}{47}{figure.caption.37}%

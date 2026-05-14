@@ -177,6 +177,11 @@ M.~Goyal and Q.~H. Mahmoud, ``A systematic review of synthetic data generation
   techniques using generative ai,'' 2024, [Online]. Available:
   \url{https://www.mdpi.com/2079-9292/13/17/3509}.
 
+\bibitem{cvae_gan_eeg}
+Y.~Yao, X.~Wang, X.~Hao, H.~Sun, R.~Dong, and Y.~Li, ``Trans-cvae-gan:
+  Transformer-based cvae-gan for high-fidelity eeg signal generation,'' 2025,
+  [Online]. Available: \url{https://doi.org/10.3390/bioengineering12101028}.
+
 \bibitem{vae_original}
 D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' 2014,
   [Online]. Available: \url{https://doi.org/10.48550/arXiv.1312.6114}.
@@ -218,10 +223,5 @@ G.~M. Rojas, C.~Alvarez, C.~E. Montoya, M.~de~la Iglesia-Vayá, J.~E.
   Cisternas, and M.~Gálvez, ``Study of resting-state functional connectivity
   networks using eeg electrodes position as seed,'' 2018, [Online]. Available:
   \url{https://doi.org/10.3389/fnins.2018.00235}.
-
-\bibitem{cvae_gan_eeg}
-Y.~Yao, X.~Wang, X.~Hao, H.~Sun, R.~Dong, and Y.~Li, ``Trans-cvae-gan:
-  Transformer-based cvae-gan for high-fidelity eeg signal generation,'' 2025,
-  [Online]. Available: \url{https://doi.org/10.3390/bioengineering12101028}.
 
 \end{thebibliography}

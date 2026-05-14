@@ -32,13 +32,13 @@ Warning--empty journal in ml_eeg_classification
 Warning--empty journal in cross_dataset_eeg
 Warning--empty journal in traditional_timeseries_aug
 Warning--empty journal in generative_models_survey
+Warning--empty journal in cvae_gan_eeg
 Warning--empty journal in vae_original
 Warning--empty journal in eeg_augmentasi
 Warning--empty author in gbd2021_autism
 Warning--empty journal in gbd2021_autism
 Warning--empty journal in eeg_variability_review
 Warning--empty journal in eeg_connectivity
-Warning--empty journal in cvae_gan_eeg
 
 Done.
 You've used 37 entries,
