@@ -136,17 +136,17 @@ C.-T. Hsieh and Y.-H. Huang, ``Tsmrmr feature selection method for detecting
   Conference on Biomedical Engineering and Sciences (IECBES)}, 2024, [Online].
   Available: \url{https://doi.org/10.1109/IECBES61011.2024.10991314}.
 
-\bibitem{asd_eeg_abnormalities}
-J.~Wang, J.~Barstein, L.~E. Ethridge, M.~W. Mosconi, Y.~Takarae, and J.~A.
-  Sweeney, ``Resting-state eeg abnormalities in autism spectrum disorders,''
-  2013, [Online]. Available: \url{https://doi.org/10.1186/1866-1955-5-24}.
-
 \bibitem{ml_eeg_fnirs_review}
 A.~D. Giacomo, R.~Palmieri, E.~F. Russo, I.~Pizzolorusso, R.~Brandi,
   F.~Magistro, M.~G.~D. Cesare, S.~Quattrocelli, D.~Cardone, D.~Perpetuini, and
   A.~Merla, ``Machine learning and deep learning applied to eeg and fnirs for
   early autism spectrum disorder diagnosis: A systematic review,'' 2026,
   [Online]. Available: \url{https://doi.org/10.3389/fpsyt.2026.1668914}.
+
+\bibitem{asd_eeg_abnormalities}
+J.~Wang, J.~Barstein, L.~E. Ethridge, M.~W. Mosconi, Y.~Takarae, and J.~A.
+  Sweeney, ``Resting-state eeg abnormalities in autism spectrum disorders,''
+  2013, [Online]. Available: \url{https://doi.org/10.1186/1866-1955-5-24}.
 
 \bibitem{eeg_asd_systematic}
 L.~B. Ribeiro and M.~da~Silva~Filho, ``Systematic review on eeg analysis to
@@ -166,10 +166,16 @@ L.~Xu, M.~Xu, Y.~Ke, X.~An, S.~Liu, and D.~Ming, ``Cross-dataset variability
   problem in eeg decoding with deep learning,'' 2020, [Online]. Available:
   \url{https://doi.org/10.3389/fnhum.2020.00103}.
 
-\bibitem{cvae_gan_eeg}
-Y.~Yao, X.~Wang, X.~Hao, H.~Sun, R.~Dong, and Y.~Li, ``Trans-cvae-gan:
-  Transformer-based cvae-gan for high-fidelity eeg signal generation,'' 2025,
-  [Online]. Available: \url{https://doi.org/10.3390/bioengineering12101028}.
+\bibitem{traditional_timeseries_aug}
+W.-H. Kim, G.-W. Kim, J.~Ahn, and K.~Chung, ``Time-series data augmentation for
+  improving multi-class classification performance,'' 2024, [Online].
+  Available:
+  \url{https://ijaseit.insightsociety.org/index.php?option=com_content&view=article&id=9&Itemid=1&article_id=20546}.
+
+\bibitem{generative_models_survey}
+M.~Goyal and Q.~H. Mahmoud, ``A systematic review of synthetic data generation
+  techniques using generative ai,'' 2024, [Online]. Available:
+  \url{https://www.mdpi.com/2079-9292/13/17/3509}.
 
 \bibitem{vae_original}
 D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' 2014,
@@ -212,5 +218,10 @@ G.~M. Rojas, C.~Alvarez, C.~E. Montoya, M.~de~la Iglesia-Vayá, J.~E.
   Cisternas, and M.~Gálvez, ``Study of resting-state functional connectivity
   networks using eeg electrodes position as seed,'' 2018, [Online]. Available:
   \url{https://doi.org/10.3389/fnins.2018.00235}.
+
+\bibitem{cvae_gan_eeg}
+Y.~Yao, X.~Wang, X.~Hao, H.~Sun, R.~Dong, and Y.~Li, ``Trans-cvae-gan:
+  Transformer-based cvae-gan for high-fidelity eeg signal generation,'' 2025,
+  [Online]. Available: \url{https://doi.org/10.3390/bioengineering12101028}.
 
 \end{thebibliography}

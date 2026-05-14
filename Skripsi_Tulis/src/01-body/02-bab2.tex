@@ -134,50 +134,116 @@ def mrmr_feature_selection(X, c, m):
 
 Kode \ref{code:mrmr-pseudocode} menjelaskan proses seleksi fitur menggunakan metode \textit{Minimum Redundancy Maximum Relevance} (mRMR). Algoritma dimulai dengan memilih fitur yang memiliki nilai \textit{mutual information} tertinggi terhadap kelas target sebagai fitur awal. Selanjutnya, fitur lain dipilih secara iteratif berdasarkan nilai \textit{mRMR score}, yaitu selisih antara relevansi fitur terhadap target dan redundansinya terhadap fitur yang dipilih sebelumnya. Proses ini dilakukan hingga jumlah fitur terpilih mencapai jumlah yang diinginkan.
 
-
 \subsection{Machine Learning untuk Klasifikasi ASD Berdasarkan Sinyal EEG}
 \label{Klasifikasi Sinyal EEG dengan Machine Learning}
 
-Dalam \textit{machine learning}, klasifikasi merupakan proses pemetaan data ke dalam kategori atau kelas tertentu berdasarkan pola yang dipelajari dari data \textit{training}. Pada analisis EEG, proses klasifikasi umumnya dilakukan dengan menggunakan fitur-fitur yang diekstraksi dari sinyal EEG, seperti fitur dalam domain waktu, domain frekuensi, maupun domain waktu-frekuensi. Fitur-fitur tersebut merepresentasikan karakteristik aktivitas otak yang relevan terhadap kondisi fisiologis atau kognitif tertentu. Melalui proses klasifikasi, model diharapkan mampu mengidentifikasi pola tersebut secara akurat pada data baru. Sinyal EEG digunakan dalam berbagai tugas klasifikasi untuk mengidentifikasi kondisi kognitif dan neurologis, seperti tugas motorik, deteksi kejang epilepsi, dan sistem \textit{brain–computer interface} (BCI) \cite{asd_eeg_abnormalities}. EEG juga dimanfaatkan untuk mengidentifikasi pola aktivitas otak pada Autism Spectrum Disorder (ASD), karena perbedaan karakteristik neurofisiologis antara individu ASD dan individu dengan perkembangan tipikal \cite{ml_eeg_fnirs_review}.
+Dalam analisis EEG, \textit{machine learning} digunakan untuk mengklasifikasikan pola aktivitas otak berdasarkan fitur yang diekstraksi dari sinyal EEG. Fitur tersebut dapat berasal dari domain waktu, domain frekuensi, maupun domain waktu-frekuensi, dan digunakan untuk merepresentasikan karakteristik aktivitas neural yang berkaitan dengan kondisi fisiologis atau neurologis tertentu \cite{ml_eeg_fnirs_review}. Pendekatan ini telah digunakan pada berbagai aplikasi seperti deteksi kejang epilepsi, sistem \textit{brain-computer interface} (BCI), serta identifikasi pola aktivitas otak pada \textit{Autism Spectrum Disorder} (ASD) \cite{asd_eeg_abnormalities}.
 
-Sinyal EEG digunakan dalam berbagai tugas klasifikasi untuk mengidentifikasi kondisi kognitif dan neurologis, seperti tugas motorik, deteksi kejang epilepsi, dan sistem \textit{brain–computer interface} (BCI) \cite{asd_eeg_abnormalities}. EEG juga dimanfaatkan untuk mengidentifikasi pola aktivitas otak pada Autism Spectrum Disorder (ASD), dengan memanfaatkan perbedaan karakteristik neurofisiologis antara individu ASD dan individu dengan perkembangan tipikal \cite{ml_eeg_fnirs_review}.
+Pada studi ASD, analisis EEG dalam domain frekuensi menjadi salah satu pendekatan yang umum digunakan karena aktivitas otak dapat direpresentasikan sebagai pola osilasi pada pita frekuensi tertentu \cite{eeg_asd_systematic}. Beberapa penelitian menunjukkan bahwa individu dengan ASD cenderung memiliki peningkatan daya pada pita delta, theta, beta, dan gamma, serta penurunan pada pita alpha. Pola ini dikenal sebagai \textit{U-shaped spectral profile} dan digunakan untuk merepresentasikan abnormalitas aktivitas neural pada ASD \cite{asd_eeg_abnormalities}.
 
-Analisis sinyal EEG dalam domain frekuensi merupakan pendekatan yang umum digunakan dalam studi EEG untuk mengkaji gangguan \textit{Autism Spectrum Disorder} (ASD), karena aktivitas otak dapat direpresentasikan sebagai pola osilasi yang terdistribusi pada pita frekuensi tertentu. Pita frekuensi EEG diketahui memiliki keterkaitan dengan proses kognitif dan fungsi neural, sehingga analisis spektral menjadi pendekatan yang informatif dalam mengungkap karakteristik aktivitas neurofisiologis secara terstruktur\cite{eeg_asd_systematic}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{assets/pics/ushaped.png}
+    \caption{Ilustrasi \textit{U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD}
+    \label{fig:traditional_augmentation_example}
+\end{figure}
 
-Pada kasus ASD, studi EEG berbasis analisis spektral menunjukkan adanya pola abnormalitas yang relatif konsisten pada berbagai pita frekuensi. Individu dengan ASD cenderung menunjukkan peningkatan daya pada pita frekuensi rendah (delta dan theta) serta frekuensi tinggi (beta dan gamma), disertai dengan penurunan daya pada pita frekuensi menengah (alpha). Pola ini membentuk karakteristik profil spektral berbentuk U (\textit{U-shaped profile}) yang mencerminkan adanya gangguan dalam mekanisme neurofisiologis yang mendasari aktivitas otak. Representasi ini relevan dalam analisis ASD karena mampu menyoroti perbedaan distribusi aktivitas neural yang tidak mudah diamati dalam domain waktu \cite{asd_eeg_abnormalities}.
+Berdasarkan fitur yang diperoleh, proses klasifikasi dilakukan menggunakan algoritma \textit{machine learning} untuk membangun model prediksi. Berbagai metode seperti \textit{support vector machine} (SVM), \textit{k-nearest neighbor} (KNN), dan \textit{random forest} telah banyak digunakan dalam klasifikasi EEG dan menunjukkan performa yang baik dalam mengenali pola aktivitas neural yang kompleks \cite{ml_eeg_fnirs_review}. Meskipun pendekatan \textit{deep learning} berkembang pesat, metode \textit{machine learning} konvensional masih relevan terutama pada kondisi data terbatas dan kebutuhan interpretabilitas model \cite{ml_eeg_classification}.
 
-Berdasarkan representasi fitur yang diperoleh, proses klasifikasi selanjutnya dilakukan menggunakan algoritma \textit{machine learning} untuk membangun model prediksi. Berbagai metode klasifikasi, seperti \textit{support vector machine} (SVM), \textit{k-nearest neighbor} (KNN), dan \textit{random forest}, telah banyak digunakan dalam analisis sinyal EEG dan menunjukkan kinerja yang baik dalam mengidentifikasi pola aktivitas neural yang kompleks\cite{ml_eeg_fnirs_review}. Meskipun pendekatan \textit{deep learning} juga berkembang pesat dalam beberapa tahun terakhir, metode \textit{machine learning} konvensional tetap menjadi pilihan yang efektif, khususnya pada kondisi data yang terbatas dan kebutuhan interpretabilitas model\cite{ml_eeg_classification}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/pics/general_pipeline.jpg}
+  \caption{Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG}
+    \label{fig:traditional_augmentation_example}
+\end{figure}
 
-\subsection{Generative Machine Learning}
-\label{Metode Evaluasi Data Sintetis}
-
-\subsection{Metode Evaluasi Data Sintetis Sinyal EEG}
-\label{Metode Evaluasi Data Sintetis}
-
-Dalam penelitian referensi \cite{eeg_gan}, evaluasi kualitas data sintetis dilakukan untuk menilai kesamaan distribusi dan keberagaman sampel yang dihasilkan oleh model generatif. Pendekatan yang digunakan dalam penelitian memanfaatkan beberapa metrik kuantitatif yang umum digunakan dalam evaluasi model generatif, yaitu \textit{Inception Score} (IS), \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD).
-
-Dalam implementasinya, \textit{Inception Score} dihitung dengan menggunakan model klasifikasi EEG yang telah dilatih sebelumnya sebagai pengganti model \textit{Inception} pada domain citra. Metrik ini digunakan untuk mengevaluasi kualitas dan keberagaman sinyal sintetis berdasarkan distribusi prediksi model, di mana distribusi yang tajam dan beragam menunjukkan kualitas generasi yang baik.
-
-Selanjutnya, \textit{Frechet Inception Distance} digunakan untuk mengukur kesamaan distribusi antara data EEG asli dan sintetis pada ruang fitur yang diperoleh dari lapisan representasi model klasifikasi. Berbeda dengan IS, metrik ini mempertimbangkan statistik distribusi secara langsung, sehingga lebih sensitif terhadap perbedaan struktur data dan variasi sampel.
-
-Untuk mengevaluasi kemiripan secara langsung antara sampel, digunakan \textit{Euclidean Distance} dengan membandingkan jarak minimum antara data sintetis dan data asli. Pendekatan ini bertujuan untuk mengidentifikasi apakah model hanya mereplikasi data pelatihan atau mampu menghasilkan variasi baru yang tetap realistis.
-
-Selain itu, \textit{Sliced Wasserstein Distance} digunakan untuk membandingkan distribusi global antara data asli dan sintetis melalui proyeksi satu dimensi. Metrik ini memberikan estimasi kesamaan distribusi secara efisien dan sensitif terhadap perbedaan bentuk distribusi.
-
-Hasil evaluasi pada penelitian referensi menunjukkan bahwa kombinasi metrik tersebut mampu memberikan penilaian yang lebih komprehensif terhadap kualitas data sintetis, mencakup aspek kesamaan distribusi, keberagaman sampel, serta kemampuan model dalam menghasilkan data yang tidak hanya meniru data pelatihan. Oleh karena itu, pendekatan evaluasi ini digunakan sebagai acuan dalam menilai kualitas sinyal EEG sintetis yang dihasilkan pada penelitian ini.
+Gambar \ref{fig:pipeline_asd_classification} menunjukkan proses klasifikasi berbasis sinyal EEG pada umumnya. Pipeline diawali akuisisi sinyal EEG, dilanjutkan dengan tahap \textit{preprocessing} untuk meningkatkan kualitas sinyal sebelum dianalisis lebih lanjut. Setelah itu, dilakukan proses ekstraksi fitur untuk memperoleh representasi informasi dari sinyal EEG yang relevan terhadap proses klasifikasi. Fitur yang telah diperoleh kemudian digunakan sebagai input bagi model \textit{machine learning} untuk mempelajari pola aktivitas otak dan melakukan klasifikasi antara individu ASD dan non-ASD. Secara umum, pipeline ini bertujuan untuk mengubah sinyal EEG mentah menjadi representasi data yang dapat diproses oleh model klasifikasi dalam mendeteksi pola neurofisiologis yang berkaitan dengan ASD.
 
 \subsection{Augmentasi Data EEG}
 \label{Augmentasi Data EEG}
+Performa model \textit{machine learning} sangat dipengaruhi oleh jumlah, kualitas, dan keragaman data \textit{training}. Pada analisis sinyal EEG, keterbatasan data menjadi tantangan karena proses akuisisi relatif mahal, memakan waktu, serta menghasilkan data dengan variabilitas tinggi antar individu maupun sesi \cite{cross_dataset_eeg}. Variabilitas tersebut dipengaruhi oleh perbedaan perangkat, konfigurasi kanal, kondisi eksperimen, aktivitas fisiologis, dan artefak non-neural, sehingga distribusi data EEG menjadi kompleks dan tidak konsisten antar dataset. Kondisi ini dapat menyebabkan model mengalami \textit{overfitting} dan memiliki kemampuan generalisasi yang rendah terhadap data baru.
 
-Dalam penelitian \textit{machine learning}, ketersediaan data yang memadai penting untuk proses \textit{training}, namun pada analisis EEG hal ini sering menjadi kendala. Perekaman EEG relatif mahal, memakan waktu, dan menghasilkan data dengan variabilitas tinggi antar individu maupun sesi, akibat perbedaan perangkat, konfigurasi kanal, kondisi eksperimen, serta artefak non-neural. Variabilitas ini menyebabkan distribusi data menjadi kompleks dan tidak konsisten antar dataset \cite{cross_dataset_eeg}. Keterbatasan ini serta kompleksitas karakteristik sinyal EEG dapat menyebabkan model \textit{machine learning} mengalami masalah \textit{overfitting}, di mana model mampu mempelajari pola yang sangat spesifik terhadap data \textit{training} namun memiliki kemampuan generalisasi yang rendah terhadap data baru. Berbagai penelitian mengusulkan penggunaan teknik \textit{data augmentation} sebagai solusi untuk meningkatkan jumlah dan keragaman data \textit{training} tanpa harus melakukan perekaman sinyal EEG tambahan. 
+Untuk mengatasi permasalahan tersebut, berbagai penelitian mengusulkan penggunaan teknik \textit{data augmentation} untuk meningkatkan jumlah dan variasi data \textit{training} tanpa memerlukan proses perekaman tambahan \cite{eeg_augmentation_review}. Secara umum, \textit{data augmentation} bertujuan menghasilkan sampel data baru yang tetap mempertahankan karakteristik utama data asli sehingga model dapat mempelajari representasi pola yang lebih stabil.
 
-Secara umum, \textit{data augmentation} bertujuan untuk menghasilkan sampel data baru yang memiliki karakteristik statistik yang serupa dengan data asli, sehingga model \textit{machine learning} dapat mempelajari representasi pola yang lebih stabil \cite{eeg_augmentation_review}. Untuk sinyal EEG, teknik \textit{data augmentation} dapat dilakukan melalui berbagai pendekatan. Beberapa metode sederhana meliputi manipulasi sinyal dalam domain waktu atau frekuensi, seperti \textit{noise injection}, \textit{time shifting}, maupun transformasi spektral. Pendekatan-pendekatan ini umumnya dilakukan dengan mentransformasikan data asli untuk menghasilkan sampel baru yang memiliki distribusi yang serupa dengan data awal. 
+Pada sinyal \textit{time-series} seperti sinyal EEG, augmentasi konvensional umumnya dilakukan melalui manipulasi langsung terhadap sinyal dalam domain waktu maupun frekuensi \cite{traditional_timeseries_aug}. Pendekatan ini menghasilkan sampel baru dengan memodifikasi data asli menggunakan aturan transformasi tertentu tanpa mempelajari distribusi data secara eksplisit. Beberapa metode yang umum digunakan meliputi \textit{Noise Injection}, \textit{Smoothing}, \textit{Time Warping}, dan \textit{Trend Shifting}. Ilustrasi penerapan metode-metode tersebut dapat dilihat pada Gambar \ref{fig:traditional_augmentation_example}.
 
-Metode augmentasi konvensional memiliki keterbatasan pada sinyal EEG. Penambahan \textit{noise} dapat mengubah amplitudo dan distribusi data, sedangkan \textit{time shifting} berpotensi mengganggu informasi temporal yang berkaitan dengan aktivitas fisiologis. Beberapa penelitian juga menunjukkan bahwa augmentasi sederhana tidak selalu meningkatkan performa model, bahkan dapat menurunkannya. Oleh karena itu, pendekatan berbasis model generatif digunakan untuk menghasilkan data sintetis yang lebih mampu mempertahankan karakteristik kompleks sinyal, termasuk dependensi spasial dan temporal, sehingga menghasilkan representasi yang lebih realistis dan informatif \cite{gan_eeg_emotion}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{assets/pics/traditional_augmentation.png}
+    \caption{Ilustrasi Metode Augmentasi Konvensional pada Data \textit{Time-Series}}
+    \label{fig:traditional_augmentation_example}
+\end{figure}
 
-Model generatif berbasis \textit{deep learning}, seperti \textit{Generative Adversarial Networks} (GAN) dan \textit{Variational Autoencoders} (VAE), telah banyak digunakan untuk menghasilkan sinyal EEG sintetis yang mengikuti distribusi statistik dari data asli. Pendekatan ini memungkinkan model untuk mempelajari struktur laten dari sinyal EEG dan kemudian menghasilkan sampel baru yang memiliki karakteristik yang serupa dengan data \textit{training}. Beberapa penelitian menunjukkan bahwa penggunaan data sintetis yang dihasilkan oleh model generatif dapat meningkatkan performa model klasifikasi EEG, terutama pada kondisi di mana jumlah data \textit{training} terbatas \cite{gan_eeg_emotion}.
 
-Salah satu model yang dapat digunakan adalah \textit{Variational Autoencoder} (VAE), yang merupakan model generatif probabilistik yang mampu memodelkan distribusi laten dan menghasilkan sampel data secara terkontrol. Pendekatan ini memungkinkan pembelajaran representasi laten yang kontinu dan terstruktur, sehingga sesuai untuk data berdimensi tinggi seperti sinyal EEG serta mampu mempertahankan karakteristik statistik data untuk keperluan augmentasi dan peningkatan kualitas data \textit{training} \cite{cvae_gan_eeg}.
+Karakteristik umum dari masing-masing metode augmentasi konvensional dapat dijelaskan pada Tabel \ref{tab:traditional_augmentation_methods}.
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Metode augmentasi konvensional pada data \textit{time-series}}
+\label{tab:traditional_augmentation_methods}
+\begin{tabular}{|c|c|p{8cm}|}
+\hline
+\textbf{Metode} & \textbf{Formula} & \textbf{Pengaruh terhadap Data} \\ \hline
+
+\textit{Noise Injection} &
+$x'(t) = x(t) + \epsilon$ &
+Menambahkan \textit{noise} acak untuk meningkatkan variasi data. \\ \hline
+
+\textit{Smoothing} &
+$x'(t) = \frac{1}{k}\sum_{i=0}^{k-1} x(t-i)$ &
+Menghaluskan sinyal dengan mengurangi fluktuasi frekuensi tinggi. \\ \hline
+
+\textit{Time Warping} &
+$x'(t) = x(\phi(t))$ &
+Mengubah skala waktu sinyal untuk menghasilkan variasi temporal data. \\ \hline
+
+\textit{Trend Shifting} &
+$x'(t) = x(t) + \alpha t$ &
+Menambahkan perubahan tren gradual pada sinyal untuk memperkaya variasi distribusi data. \\ \hline
+
+\end{tabular}
+\end{table}
+
+
+Meskipun relatif sederhana dan mudah diterapkan, metode augmentasi konvensional memiliki keterbatasan dalam mempertahankan karakteristik kompleks sinyal EEG secara menyeluruh. Transformasi langsung terhadap sinyal berpotensi mengubah dependensi spasial maupun temporal yang penting dalam representasi aktivitas fisiologis. Selain itu, beberapa penelitian menunjukkan bahwa augmentasi sederhana tidak selalu meningkatkan performa model klasifikasi EEG secara konsisten. Oleh karena itu, penelitian lain mulai menggunakan pendekatan berbasis model generatif yang mampu mempelajari distribusi data untuk menghasilkan sampel sintetis yang lebih representatif terhadap karakteristik sinyal EEG.
+
+\subsection{Model Generatif untuk Augmentasi Data}
+\label{sec:model_generatif}
+
+Model generatif merupakan pendekatan dalam \textit{machine learning} yang mempelajari distribusi dan pola suatu dataset untuk menghasilkan sampel data baru yang memiliki karakteristik serupa dengan data asli, berbeda dengan model diskriminatif yang digunakan pada proses klasifikasi atau prediksi label \cite{generative_models_survey}. Model generatif digunakan dalam berbagai aplikasi seperti sintesis gambar, rekonstruksi data (\textit{data reconstruction}), pemrosesan suara, hingga pembuatan data sintetis untuk kebutuhan pelatihan model.
+
+Data sintetis yang dihasilkan model generatif menjadi salah satu solusi terhadap berbagai permasalahan pada proses pengolahan data, seperti keterbatasan jumlah data, ketidakseimbangan kelas (\textit{class imbalance}), serta kendala privasi dan akuisisi data \cite{generative_models_survey}. Dalam konteks \textit{machine learning}, data sintetis yang dihasilkan oleh model generatif dapat digunakan sebagai bentuk \textit{data augmentation} untuk meningkatkan jumlah dan keragaman data \textit{training} tanpa memerlukan proses pengumpulan data baru secara langsung. Pendekatan ini memungkinkan model mempelajari representasi data yang lebih beragam sehingga dapat membantu meningkatkan kemampuan generalisasi model.
+
+Berbagai arsitektur model generatif telah dikembangkan dalam penelitian \textit{deep learning}. Beberapa pendekatan yang umum digunakan meliputi \textit{Generative Adversarial Networks} (GAN), \textit{Variational Autoencoders} (VAE), serta model berbasis difusi (\textit{diffusion models}). Masing-masing pendekatan memiliki mekanisme pembelajaran dan karakteristik yang berbeda dalam menghasilkan data sintetis.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Perbandingan beberapa model generatif}
+\label{tab:generative_models}
+\begin{tabular}{|c|p{4cm}|p{5cm}|}
+\hline
+\textbf{Model} & \textbf{Karakteristik Utama} & \textbf{Kelebihan dan Keterbatasan} \\ \hline
+
+GAN &
+Menggunakan mekanisme kompetitif antara generator dan discriminator untuk menghasilkan data sintetis. &
+Mampu menghasilkan data yang realistis, namun proses \textit{training} cenderung tidak stabil dan rentan terhadap \textit{mode collapse}. \\ \hline
+
+VAE &
+Mempelajari distribusi laten probabilistik melalui arsitektur encoder-decoder. &
+Memiliki proses \textit{training} yang lebih stabil dan mampu menghasilkan representasi laten yang terstruktur, namun kualitas data sintetis dapat lebih halus dibanding GAN. \\ \hline
+
+Diffusion Model &
+Menghasilkan data melalui proses denoising bertahap dari distribusi acak. &
+Mampu menghasilkan kualitas data yang tinggi, namun memerlukan kompleksitas komputasi dan waktu \textit{training} yang lebih besar. \\ \hline
+
+\end{tabular}
+\end{table}
+
+Dalam analisis sinyal EEG, model generatif digunakan untuk menghasilkan data sintetis yang mengikuti distribusi statistik data asli. Pendekatan ini memungkinkan model mempelajari struktur laten dari sinyal EEG sehingga data sintetis yang dihasilkan dapat mempertahankan karakteristik temporal maupun spasial yang penting dalam proses klasifikasi. Beberapa penelitian menunjukkan bahwa penggunaan data sintetis dari model generatif dapat membantu meningkatkan performa dan kemampuan generalisasi model klasifikasi EEG, terutama pada kondisi jumlah data \textit{training} yang terbatas \cite{gan_eeg_emotion}.
+
+Salah satu model generatif yang banyak digunakan dalam augmentasi data EEG adalah \textit{Variational Autoencoder} (VAE). Dibandingkan GAN, VAE memiliki proses \textit{training} yang lebih stabil dan tidak bergantung pada mekanisme adversarial yang rentan terhadap \textit{mode collapse}. Selain itu, dibandingkan \textit{diffusion model}, VAE umumnya memerlukan kompleksitas komputasi dan jumlah data \textit{training} yang lebih rendah. Karakteristik tersebut menjadikan VAE lebih sesuai untuk penelitian ini yang menggunakan dataset EEG dengan jumlah data terbatas. 
+
 
 \subsection{Variational Auto Encoder}
 \label{Variational AutoEncoder}
@@ -209,6 +275,23 @@ z = \mu + \sigma \cdot \epsilon
 di mana $\epsilon$ merupakan variabel acak yang diambil dari distribusi normal standar $\mathcal{N}(0,1)$. Dengan pendekatan ini, proses \textit{sampling} dapat ditransformasikan menjadi operasi deterministik yang memungkinkan gradien tetap dapat dihitung selama proses \textit{training} neural network \cite{vae_original}.
 
 Kemampuan VAE dalam mempelajari representasi laten dari data menjadikannya sesuai dalam tugas augmentasi data. Penggunaan VAE pada EEG memungkinkan model untuk mempelajari pola spasial dan temporal dari sinyal EEG secara lebih komprehensif sehingga dapat digunakan untuk menghasilkan sinyal EEG sintetis yang tetap mempertahankan karakteristik distribusi dari data asli. Model VAE menjadi salah satu pendekatan yang banyak digunakan dalam penelitian augmentasi data EEG untuk meningkatkan performa sistem klasifikasi berbasis \textit{machine learning}\cite{eeg_augmentation_review}.
+
+
+\subsection{Metode Evaluasi Data Sintetis Sinyal EEG}
+\label{Metode Evaluasi Data Sintetis}
+
+Dalam penelitian referensi \cite{eeg_gan}, evaluasi kualitas data sintetis dilakukan untuk menilai kesamaan distribusi dan keberagaman sampel yang dihasilkan oleh model generatif. Pendekatan yang digunakan dalam penelitian memanfaatkan beberapa metrik kuantitatif yang umum digunakan dalam evaluasi model generatif, yaitu \textit{Inception Score} (IS), \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD).
+
+Dalam implementasinya, \textit{Inception Score} dihitung dengan menggunakan model klasifikasi EEG yang telah dilatih sebelumnya sebagai pengganti model \textit{Inception} pada domain citra. Metrik ini digunakan untuk mengevaluasi kualitas dan keberagaman sinyal sintetis berdasarkan distribusi prediksi model, di mana distribusi yang tajam dan beragam menunjukkan kualitas generasi yang baik.
+
+Selanjutnya, \textit{Frechet Inception Distance} digunakan untuk mengukur kesamaan distribusi antara data EEG asli dan sintetis pada ruang fitur yang diperoleh dari lapisan representasi model klasifikasi. Berbeda dengan IS, metrik ini mempertimbangkan statistik distribusi secara langsung, sehingga lebih sensitif terhadap perbedaan struktur data dan variasi sampel.
+
+Untuk mengevaluasi kemiripan secara langsung antara sampel, digunakan \textit{Euclidean Distance} dengan membandingkan jarak minimum antara data sintetis dan data asli. Pendekatan ini bertujuan untuk mengidentifikasi apakah model hanya mereplikasi data pelatihan atau mampu menghasilkan variasi baru yang tetap realistis.
+
+Selain itu, \textit{Sliced Wasserstein Distance} digunakan untuk membandingkan distribusi global antara data asli dan sintetis melalui proyeksi satu dimensi. Metrik ini memberikan estimasi kesamaan distribusi secara efisien dan sensitif terhadap perbedaan bentuk distribusi.
+
+Hasil evaluasi pada penelitian referensi menunjukkan bahwa kombinasi metrik tersebut mampu memberikan penilaian yang lebih komprehensif terhadap kualitas data sintetis, mencakup aspek kesamaan distribusi, keberagaman sampel, serta kemampuan model dalam menghasilkan data yang tidak hanya meniru data pelatihan. Oleh karena itu, pendekatan evaluasi ini digunakan sebagai acuan dalam menilai kualitas sinyal EEG sintetis yang dihasilkan pada penelitian ini.
+
 
 \section{Penelitian Terdahulu}
 \label{Penelitian Terdahulu}

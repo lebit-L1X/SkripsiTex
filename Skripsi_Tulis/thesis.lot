@@ -1,6 +1,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Pita frekuensi EEG dan karakteristiknya}}{10}{table.caption.10}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Metode augmentasi konvensional pada data \textit {time-series}}}{18}{table.caption.17}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Perbandingan beberapa model generatif}}{19}{table.caption.18}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Konfigurasi Parameter \textit {XGBoost}}}{42}{table.caption.28}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Konfigurasi Parameter \textit {XGBoost}}}{44}{table.caption.33}%
 \addvspace {10\p@ }
