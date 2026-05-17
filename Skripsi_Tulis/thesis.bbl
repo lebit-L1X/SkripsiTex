@@ -186,12 +186,6 @@ Y.~Yao, X.~Wang, X.~Hao, H.~Sun, R.~Dong, and Y.~Li, ``Trans-cvae-gan:
 D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' 2014,
   [Online]. Available: \url{https://doi.org/10.48550/arXiv.1312.6114}.
 
-\bibitem{eeg_augmentasi}
-C.~Ahuja and D.~Sethia, ``Harnessing few-shot learning for eeg signal
-  classification: A survey of state-of-the-art techniques and future
-  directions,'' 2024, [Online]. Available:
-  \url{https://doi.org/10.3389/fnhum.2024.1421922}.
-
 \bibitem{vae_github}
 A.~Vasarkar, ``Eeg data augmentation using variational autoencoder,'' [Online].
   Available:
@@ -223,5 +217,11 @@ G.~M. Rojas, C.~Alvarez, C.~E. Montoya, M.~de~la Iglesia-Vayá, J.~E.
   Cisternas, and M.~Gálvez, ``Study of resting-state functional connectivity
   networks using eeg electrodes position as seed,'' 2018, [Online]. Available:
   \url{https://doi.org/10.3389/fnins.2018.00235}.
+
+\bibitem{eeg_augmentasi}
+C.~Ahuja and D.~Sethia, ``Harnessing few-shot learning for eeg signal
+  classification: A survey of state-of-the-art techniques and future
+  directions,'' 2024, [Online]. Available:
+  \url{https://doi.org/10.3389/fnhum.2024.1421922}.
 
 \end{thebibliography}
