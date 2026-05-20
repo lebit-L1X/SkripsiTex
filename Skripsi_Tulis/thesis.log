@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  20 MAY 2026 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  20 MAY 2026 17:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1420,7 +1420,7 @@ Package epstopdf Info: Source file: <_internals/makara.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=_internals/makara-eps-converted-to.pdf _internals/makara.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
-<_internals/makara-eps-converted-to.pdf, id=260, 219.82124pt x 219.82124pt>
+<_internals/makara-eps-converted-to.pdf, id=264, 219.82124pt x 219.82124pt>
 File: _internals/makara-eps-converted-to.pdf Graphic file (type pdf)
 <use _internals/makara-eps-converted-to.pdf>
 Package pdftex.def Info: _internals/makara-eps-converted-to.pdf  used on input line 15.
@@ -1805,7 +1805,7 @@ BAB 2.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
 
-<assets/pics/10_20_system.jpg, id=631, 441.90094pt x 377.91188pt>
+<assets/pics/10_20_system.jpg, id=637, 441.90094pt x 377.91188pt>
 File: assets/pics/10_20_system.jpg Graphic file (type jpg)
 <use assets/pics/10_20_system.jpg>
 Package pdftex.def Info: assets/pics/10_20_system.jpg  used on input line 18.
@@ -1837,7 +1837,7 @@ Underfull \hbox (badness 2495) in paragraph at lines 40--40
 []|\T1/ptm/m/n/10 Berhubungan de-ngan proses kog-ni-tif tingkat tinggi,
  []
 
-<assets/pics/frequency_band.png, id=645, 270.25969pt x 175.40532pt>
+<assets/pics/frequency_band.png, id=651, 270.25969pt x 175.40532pt>
 File: assets/pics/frequency_band.png Graphic file (type png)
 <use assets/pics/frequency_band.png>
 Package pdftex.def Info: assets/pics/frequency_band.png  used on input line 47.
@@ -1850,7 +1850,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [10]
-<assets/pics/four_major_filters.png, id=655, 1674.255pt x 860.21375pt>
+<assets/pics/four_major_filters.png, id=661, 1674.255pt x 860.21375pt>
 File: assets/pics/four_major_filters.png Graphic file (type png)
 <use assets/pics/four_major_filters.png>
 Package pdftex.def Info: assets/pics/four_major_filters.png  used on input line 61.
@@ -1864,7 +1864,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [11 <./assets/pics/frequency_band.png>]
-<assets/pics/artifact_eeg.png, id=662, 284.7438pt x 116.1138pt>
+<assets/pics/artifact_eeg.png, id=668, 284.7438pt x 116.1138pt>
 File: assets/pics/artifact_eeg.png Graphic file (type png)
 <use assets/pics/artifact_eeg.png>
 Package pdftex.def Info: assets/pics/artifact_eeg.png  used on input line 70.
@@ -1896,12 +1896,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [14]
-<assets/pics/ushaped.png, id=731, 309.40594pt x 249.18094pt>
+<assets/pics/ushaped.png, id=737, 309.40594pt x 249.18094pt>
 File: assets/pics/ushaped.png Graphic file (type png)
 <use assets/pics/ushaped.png>
 Package pdftex.def Info: assets/pics/ushaped.png  used on input line 146.
 (pdftex.def)             Requested size: 213.39568pt x 171.86658pt.
-<assets/pics/general_pipeline.jpg, id=734, 456.45732pt x 415.40796pt>
+<assets/pics/general_pipeline.jpg, id=740, 456.45732pt x 415.40796pt>
 File: assets/pics/general_pipeline.jpg Graphic file (type jpg)
 <use assets/pics/general_pipeline.jpg>
 Package pdftex.def Info: assets/pics/general_pipeline.jpg  used on input line 155.
@@ -1926,7 +1926,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [16 <./assets/pics/general_pipeline.jpg>]
-<assets/pics/traditional_augmentation.png, id=754, 479.54156pt x 440.39531pt>
+<assets/pics/traditional_augmentation.png, id=760, 479.54156pt x 440.39531pt>
 File: assets/pics/traditional_augmentation.png Graphic file (type png)
 <use assets/pics/traditional_augmentation.png>
 Package pdftex.def Info: assets/pics/traditional_augmentation.png  used on input line 172.
@@ -1994,7 +1994,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [19]
-<assets/pics/vae-architecture.jpg, id=777, 1027.84pt x 565.11125pt>
+<assets/pics/vae-architecture.jpg, id=783, 1027.84pt x 565.11125pt>
 File: assets/pics/vae-architecture.jpg Graphic file (type jpg)
 <use assets/pics/vae-architecture.jpg>
 Package pdftex.def Info: assets/pics/vae-architecture.jpg  used on input line 254.
@@ -2120,7 +2120,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [28]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_system.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_system.pdf, id=837, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_system.pdf, id=843, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_system.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_system.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_system.pdf  used on input line 62.
@@ -2135,7 +2135,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [29]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_preprocessing.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_preprocessing.pdf, id=849, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_preprocessing.pdf, id=855, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_preprocessing.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_preprocessing.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_preprocessing.pdf  used on input line 81.
@@ -2158,7 +2158,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [31 <./assets/pdfs/flowchart_preprocessing.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/diagram_vae.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/diagram_vae.pdf, id=881, 614.295pt x 794.97pt>
+<assets/pdfs/diagram_vae.pdf, id=887, 614.295pt x 794.97pt>
 File: assets/pdfs/diagram_vae.pdf Graphic file (type pdf)
 <use assets/pdfs/diagram_vae.pdf>
 Package pdftex.def Info: assets/pdfs/diagram_vae.pdf  used on input line 104.
@@ -2194,7 +2194,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [34]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_klasifikasi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_klasifikasi.pdf, id=912, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_klasifikasi.pdf, id=918, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_klasifikasi.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_klasifikasi.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_klasifikasi.pdf  used on input line 126.
@@ -2230,7 +2230,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [37]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/Encoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/Encoder.pdf, id=936, 614.295pt x 794.97pt>
+<assets/pdfs/Encoder.pdf, id=942, 614.295pt x 794.97pt>
 File: assets/pdfs/Encoder.pdf Graphic file (type pdf)
 <use assets/pdfs/Encoder.pdf>
 Package pdftex.def Info: assets/pdfs/Encoder.pdf  used on input line 172.
@@ -2245,7 +2245,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [38 <./assets/pdfs/Encoder.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/reparameterization.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/reparameterization.pdf, id=953, 614.295pt x 794.97pt>
+<assets/pdfs/reparameterization.pdf, id=959, 614.295pt x 794.97pt>
 File: assets/pdfs/reparameterization.pdf Graphic file (type pdf)
 <use assets/pdfs/reparameterization.pdf>
 Package pdftex.def Info: assets/pdfs/reparameterization.pdf  used on input line 228.
@@ -2284,7 +2284,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [42]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_augment.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_augment.pdf, id=1057, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_augment.pdf, id=1063, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_augment.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_augment.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_augment.pdf  used on input line 351.
@@ -2310,12 +2310,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [44]) (src/01-body/04-bab4.tex
-Underfull \hbox (badness 10000) in paragraph at lines 399--2
+Underfull \hbox (badness 10000) in paragraph at lines 409--2
 []\T1/ptm/m/n/12 Pembagian data di-lakukan meng-gu-nakan \T1/ptm/m/it/12 train_test_split \T1/ptm/m/n/12 de-ngan pa-ram-e-ter
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 399--2
+Underfull \hbox (badness 1331) in paragraph at lines 409--2
 \T1/ptm/m/it/12 test_size=0.2\T1/ptm/m/n/12 , \T1/ptm/m/it/12 strat-ify=y_enc\T1/ptm/m/n/12 , dan \T1/ptm/m/it/12 ran-dom_state=42\T1/ptm/m/n/12 . Model ke-mu-dian di-lakukan
  []
 
@@ -2340,7 +2340,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 [46
 
 ]
-<assets/pics/time_domain.png, id=1090, 721.9773pt x 284.0211pt>
+<assets/pics/time_domain.png, id=1097, 721.9773pt x 284.0211pt>
 File: assets/pics/time_domain.png Graphic file (type png)
 <use assets/pics/time_domain.png>
 Package pdftex.def Info: assets/pics/time_domain.png  used on input line 22.
@@ -2354,7 +2354,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [47]
-<assets/pics/psd.png, id=1098, 735.7086pt x 450.9648pt>
+<assets/pics/psd.png, id=1105, 735.7086pt x 450.9648pt>
 File: assets/pics/psd.png Graphic file (type png)
 <use assets/pics/psd.png>
 Package pdftex.def Info: assets/pics/psd.png  used on input line 27.
@@ -2435,7 +2435,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [54]
-runsystem(latexminted cleantemp  --timestamp 20260520164707 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260520170309 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -2450,20 +2450,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4B48EDFD995330A5BD608EFBFAC713C9;12163.
+(rerunfilecheck)             Checksum: 3F9FCD7B08956E4517935103D27776F3;12523.
  ) 
 Here is how much of TeX's memory you used:
- 50602 strings out of 467866
- 1168079 string characters out of 5418326
+ 50604 strings out of 467866
+ 1168123 string characters out of 5418326
  2192732 words of memory out of 5000000
- 78059 multiletter control sequences out of 15000+600000
+ 78060 multiletter control sequences out of 15000+600000
  726527 words of font info for 203 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
  125i,15n,130p,1520b,1432s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (69 pages, 2929128 bytes).
+Output written on thesis.pdf (69 pages, 2932434 bytes).
 PDF statistics:
- 1328 PDF objects out of 1440 (max. 8388607)
- 355 named destinations out of 1000 (max. 500000)
- 713 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1335 PDF objects out of 1440 (max. 8388607)
+ 356 named destinations out of 1000 (max. 500000)
+ 721 words of extra memory for PDF output out of 10000 (max. 10000000)
 

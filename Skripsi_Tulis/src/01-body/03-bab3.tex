@@ -358,6 +358,16 @@ Dalam penelitian ini, proses generasi data sintetis dilakukan secara terpisah un
 Data sintetis yang dihasilkan selanjutnya digunakan sebagai bentuk \textit{data augmentation} dalam pipeline klasifikasi. Dengan menambahkan sampel sintetis ke dalam data pelatihan, diharapkan model klasifikasi dapat meningkatkan kemampuan generalisasi, terutama dalam kondisi keterbatasan jumlah data asli.
 \subsection{Implementasi Model Klasifikasi}
 
+\subsubsection{Integrasi Data Sintetis pada Model Klasifikasi}
+
+Berdasarkan diagram pada Gambar \ref{fig:flowchart_system}, proses dimulai dari dataset EEG mentah yang terlebih dahulu melalui tahap preprocessing meliputi segmentasi sinyal dengan overlap, \textit{bandpass filtering}, serta \textit{artifact rejection}. Tahap ini bertujuan untuk menghasilkan segmen EEG bersih yang digunakan sebagai data asli dalam proses klasifikasi.
+
+Pada cabang generasi data sintetis, sebanyak 32 model VAE independen digunakan untuk menghasilkan sinyal EEG sintetis berdasarkan kombinasi 16 kanal EEG dan dua kelas data (\textit{normal} dan ASD). Setiap model menghasilkan sinyal sintetis untuk satu kanal tertentu, kemudian seluruh kanal hasil generasi digabungkan kembali menjadi sampel EEG multikanal lengkap.
+
+Data sintetis yang dihasilkan kemudian digabungkan dengan data EEG asli sebagai bentuk \textit{data augmentation}. Dataset gabungan selanjutnya melalui proses dekomposisi pita frekuensi EEG meliputi delta, theta, alpha, beta, dan gamma menggunakan \textit{bandpass filter}.
+
+Setelah proses dekomposisi frekuensi, setiap kanal distandardisasi menggunakan \textit{StandardScaler} untuk menjaga konsistensi distribusi data antar kanal dan pita frekuensi. Tahap berikutnya dilakukan ekstraksi fitur statistik untuk menghasilkan representasi fitur berdimensi tinggi yang kemudian digunakan dalam proses seleksi fitur menggunakan \textit{mRMR} serta klasifikasi menggunakan \textit{XGBoost}.
+
 \subsubsection{\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR})}
 
 \textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR}) diimplementasikan melalui \textit{library} \textit{feature\_engine.selection} menggunakan kelas \textit{MRMR}. Label kelas terlebih dahulu dikonversi ke bentuk numerik menggunakan \textit{LabelEncoder} dari \textit{sklearn.preprocessing} melalui operasi \textit{fit\_transform}, sehingga menghasilkan representasi biner yang dapat digunakan dalam proses seleksi fitur.

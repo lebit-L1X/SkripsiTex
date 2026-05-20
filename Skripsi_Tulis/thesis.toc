@@ -50,8 +50,9 @@
 \contentsline {subsubsection}{\numberline {3.3.2.4}\textit {Loss Function} dan Proses Training}{42}{subsubsection.3.3.2.4}%
 \contentsline {subsubsection}{\numberline {3.3.2.5}Generasi Data Sintetis}{43}{subsubsection.3.3.2.5}%
 \contentsline {subsection}{\numberline {3.3.3}Implementasi Model Klasifikasi}{44}{subsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.3.1}\textit {Minimum Redundancy Maximum Relevance} (\textit {mRMR})}{44}{subsubsection.3.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.3.2}Model \textit {XGBoost}}{44}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}Integrasi Data Sintetis pada Model Klasifikasi}{44}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}\textit {Minimum Redundancy Maximum Relevance} (\textit {mRMR})}{45}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}Model \textit {XGBoost}}{45}{subsubsection.3.3.3.3}%
 \contentsline {chapter}{\numberline {4}\uppercase {Penutup}}{46}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Kesimpulan }{46}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Pengembangan Lanjutan}{48}{section.4.2}%
