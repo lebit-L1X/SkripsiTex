@@ -157,12 +157,9 @@ Dalam implementasi \textit{pipeline} klasifikasi, SciPy digunakan untuk proses d
 \subsection{Implementasi Model Generatif Variational Autoencoder (VAE)}
 \label{Implementasi Model Generatif Variational Autoencoder (VAE)}
 
-Perancangan model generatif pada penelitian ini dilakukan menggunakan pendekatan \textit{Variational Autoencoder} (VAE) yang bertujuan untuk mempelajari distribusi laten dari sinyal EEG serta menghasilkan data sintetis yang menyerupai data asli. Arsitektur model secara umum terdiri dari dua bagian utama, yaitu \textit{encoder} dan \textit{decoder}.
+Perancangan model generatif pada penelitian ini dilakukan menggunakan pendekatan \textit{Variational Autoencoder} (VAE) yang bertujuan untuk mempelajari distribusi laten dari sinyal EEG serta menghasilkan data sintetis yang menyerupai data asli. Arsitektur model secara umum terdiri dari dua bagian utama, yaitu \textit{encoder} dan \textit{decoder}. Model menerima input berupa sinyal EEG satu dimensi dengan panjang 512 sampel dan satu kanal, sehingga berbentuk $(512, 1)$.Jumlah sampel tersebut diperoleh dari proses segmentasi dengan durasi 4 detik pada frekuensi sampling 128 Hz $(4 \times 128 = 512)$.
 
-Model menerima input berupa sinyal EEG satu dimensi dengan panjang 512 sampel dan satu kanal, sehingga berbentuk $(512, 1)$. Panjang sinyal ini diperoleh dari proses segmentasi dengan durasi 4 detik pada frekuensi sampling 128 Hz.
-
-\paragraph{Arsitektur Layer \textit{Encoder}}
-
+\subsubsection{Arsitektur Layer \textit{Encoder}}
 
 dirancang menggunakan beberapa lapisan \textit{Conv1D} untuk mengekstraksi pola temporal dari sinyal EEG. Setiap lapisan menggunakan \textit{stride} sebesar 2 untuk melakukan downsampling secara bertahap.
 
@@ -185,14 +182,48 @@ Setiap blok konvolusi diikuti oleh Batch Normalization untuk menstabilkan distri
 Padding yang digunakan adalah “same”, yang menjaga ukuran temporal output tetap proporsional dengan input sebelum proses downsampling oleh stride dilakukan, sehingga informasi di tepi sinyal tetap dipertahankan secara optimal.
 
 Dimensi laten ditetapkan sebesar 16 sebagai kompromi antara kapasitas representasi dan stabilitas pelatihan, sehingga model mampu menangkap struktur penting data tanpa menyebabkan overfitting atau kehilangan informasi yang signifikan.
+\begin{lstlisting}[
+    style=modernpython,
+    language=Python,
+    caption={Pseudocode proses konvolusi pada encoder 1D CNN-VAE.},
+    label={code:encoder-process}
+]
+# ====================================
+# Convolution Encoder Blocks
+# ====================================
 
-\paragraph{Reparameterization Layer} digunakan untuk memungkinkan proses pelatihan berbasis gradien.
+for each encoder block:
 
+    for each convolution filter:
+
+        for each temporal position in feature map:
+
+            extract signal segment
+
+            multiply segment with kernel weights
+
+            sum multiplication results
+
+            store output into feature map
+
+    reduce temporal dimension using stride = 2
+
+    normalize feature map distribution
+
+    apply LeakyReLU activation
+\end{lstlisting}
+
+Berdasarkan pseudocode pada Kode \ref{code:encoder-process}, setiap \textit{encoder block} memproses sinyal EEG melalui operasi konvolusi menggunakan sejumlah filter untuk mengekstraksi pola temporal dari sinyal masukan. Kernel konvolusi digeser sepanjang dimensi temporal sinyal untuk menghasilkan \textit{feature map} yang merepresentasikan karakteristik penting pada setiap rentang waktu.
+
+Setelah proses konvolusi, dilakukan reduksi dimensi temporal menggunakan \textit{stride} sebesar 2 sehingga ukuran representasi fitur menjadi lebih kecil pada setiap blok. Hasil konvolusi kemudian dinormalisasi menggunakan Batch Normalization sebelum diterapkan fungsi aktivasi LeakyReLU untuk menjaga stabilitas distribusi aktivasi dan mempertahankan aliran gradien selama pelatihan.
+
+
+\subsubsection{\textit{Reparameterization Layer}}
 \begin{figure}[H]
-    \hspace*{2cm} 
+    \hspace*{0.5cm} 
     \includegraphics[
-        width=0.75\textwidth,
-        trim=0cm 20cm 0cm 0cm,
+        width=0.9\textwidth,
+        trim=0cm 21cm 0cm 0cm,
         clip
     ]{assets/pdfs/reparameterization.pdf}
     \caption{Diagram aliran Reparameterization Layer}
@@ -203,57 +234,98 @@ Dimensi laten ditetapkan sebesar 16 sebagai kompromi antara kapasitas representa
 
 Lapisan Sampling menghasilkan vektor laten $z$ dengan menggabungkan dua parameter yang dipelajari oleh \textit{encoder}, yaitu $z_{\text{mean}}$ dan $z_{\text{log var}}$. Proses ini digunakan untuk membuat representasi laten bersifat probabilistik, sehingga model tidak hanya menghasilkan satu nilai tetap, tetapi sebuah distribusi.
 
-Pada tahap ini digunakan variabel acak $\epsilon$ (epsilon), yang diambil dari distribusi normal standar dengan mean 0 dan variansi 1. Noise ini berfungsi untuk memperkenalkan unsur stochastic dalam proses sampling, sehingga setiap forward pass dapat menghasilkan representasi $z$ yang sedikit berbeda meskipun input sama.
+Pada tahap ini digunakan variabel acak $\epsilon$ (\textit{epsilon}), yang diambil dari distribusi normal standar dengan mean 0 dan variansi 1. Noise ini berfungsi untuk memperkenalkan unsur \textit{stochastic} dalam proses \textit{sampling}, sehingga setiap \textit{forward pass} dapat menghasilkan representasi $z$ yang sedikit berbeda meskipun input sama.
 
-Nilai $z$ dihitung menggunakan teknik reparameterization trick, yaitu:
-$z = z_{\text{mean}} + \exp(0.5 \cdot z_{\text{log var}}) \cdot \epsilon$
+Nilai $z$ dihitung menggunakan teknik \textit{reparameterization trick}, yaitu:
+\[
+z = z_{\text{mean}} + \exp(0.5 \cdot z_{\text{log var}}) \cdot \epsilon
+\]
 
-Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi dari distribusi yang dipelajari, sehingga noise $\epsilon$ diskalakan sesuai dengan tingkat ketidakpastian data. Pendekatan ini memungkinkan proses sampling tetap dapat dioptimalkan menggunakan backpropagation, karena operasi acak dipisahkan dari parameter yang dipelajari.
+Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi dari distribusi yang dipelajari, sehingga noise $\epsilon$ diskalakan sesuai dengan tingkat ketidakpastian data. Pendekatan ini memungkinkan proses \textit{sampling} tetap dapat dioptimalkan menggunakan \textit{backpropagation}.
 
-\paragraph{Arsitektur Decoder}
+\newpage
+\subsubsection{Arsitektur Layer \textit{Decoder}}
 
-menggunakan tiga tahap \textit{upsampling} dengan jumlah filter 128, 64, dan 32.
-Ukuran kernel yang relatif besar (15–25) dipilih untuk mempertahankan pola temporal EEG
-yang memiliki karakteristik frekuensi rendah hingga menengah. Proses \textit{upsampling}
-dilakukan pada setiap tahap untuk meningkatkan dimensi sinyal secara bertahap dari 64
-menjadi 512, sehingga memungkinkan rekonstruksi struktur temporal secara progresif.
+\begin{lstlisting}[
+    style=modernpython,
+    language=Python,
+    caption={Pseudocode ekspansi representasi laten pada decoder 1D CNN-VAE.},
+    label={code:latent-expansion}
+]
+# ====================================
+# Latent Feature Expansion
+# ====================================
 
-Setiap tahap \textit{upsampling} diikuti oleh lapisan konvolusi yang berfungsi untuk
-memperhalus dan membentuk kembali fitur hasil interpolasi, sehingga informasi yang
-dihasilkan tidak bersifat kasar atau terdistorsi. Struktur jumlah filter disusun secara
-terbalik dari encoder, sehingga representasi fitur secara bertahap dikurangi kompleksitasnya
-seiring dengan peningkatan resolusi sinyal.
+receive latent vector z
 
-Setiap lapisan konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi
-aktivasi selama proses rekonstruksi, membantu menjaga konsistensi output, serta
-mengurangi potensi ketidakstabilan selama propagasi. Setelah normalisasi, digunakan
-fungsi aktivasi ReLU yang memberikan non-linearitas yang cukup untuk memodelkan
-hubungan kompleks tanpa menghambat proses generasi sinyal.
+map latent vector into higher-dimensional representation
 
-Padding yang digunakan adalah “same”, yang menjaga ukuran temporal output tetap
-proporsional setelah setiap operasi konvolusi, sehingga perubahan dimensi hanya
-dipengaruhi oleh proses \textit{upsampling}. Hal ini memastikan bahwa informasi pada
-bagian tepi sinyal tetap dipertahankan selama proses rekonstruksi.
+generate dense feature representation
 
-Lapisan akhir menggunakan konvolusi dengan satu filter untuk menghasilkan sinyal
-output dengan jumlah kanal yang sesuai dengan data asli, sehingga hasil rekonstruksi
-dapat langsung dibandingkan dengan input awal dalam proses pembelajaran.
+reshape dense representation into feature map
 
-\begin{figure}[H]
-    \hspace*{4cm} 
-    \includegraphics[
-        width=0.75\textwidth,
-        trim=0cm 0cm 0cm 0cm,
-        clip
-    ]{assets/pdfs/decoder.pdf}
-    \caption{Diagram aliran Decoder Layer}
-    \label{fig:flowchart_system}
-\end{figure}
+prepare feature map for reconstruction process
+\end{lstlisting}
+
+Berdasarkan pseudocode pada Kode \ref{code:latent-expansion}, proses decoder dimulai dengan mengubah vektor laten menjadi representasi berdimensi lebih tinggi menggunakan lapisan \textit{dense}. Representasi tersebut kemudian diubah kembali ke bentuk \textit{feature map} sehingga dapat diproses pada tahap rekonstruksi sinyal oleh blok konvolusi decoder.
 
 
-\paragraph{Fungsi Loss dan Proses Training}
+\begin{lstlisting}[
+    style=modernpython,
+    language=Python,
+    caption={Pseudocode proses rekonstruksi sinyal pada decoder 1D CNN-VAE.},
+    label={code:decoder-process}
+]
+# ====================================
+# Decoder Convolution Blocks
+# ====================================
 
-didasarkan pada kombinasi \textit{reconstruction loss} dan \textit{Kullback-Leibler (KL) divergence}, yang merupakan komponen utama dalam \textit{Variational Autoencoder (VAE)}.
+for each decoder block:
+
+    increase temporal dimension using upsampling
+
+    for each convolution filter:
+
+        for each temporal position in feature map:
+
+            extract signal segment
+
+            multiply segment with kernel weights
+
+            sum multiplication results
+
+            store output into feature map
+
+    normalize feature map distribution
+
+    apply activation function
+
+
+\end{lstlisting}
+
+Berdasarkan pseudocode pada Kode \ref{code:decoder-process}, setiap \textit{decoder block} meningkatkan dimensi temporal menggunakan proses \textit{upsampling} sebelum dilakukan operasi konvolusi untuk membentuk kembali pola temporal sinyal EEG. Kernel konvolusi digeser sepanjang \textit{feature map} untuk menghasilkan representasi sinyal yang semakin mendekati bentuk asli.
+
+\begin{lstlisting}[
+    style=modernpython,
+    language=Python,
+    caption={Pseudocode proses rekonstruksi sinyal pada decoder 1D CNN-VAE.},
+    label={code:decoder-process}
+]
+
+# ====================================
+# Signal Reconstruction
+# ====================================
+
+for each temporal position in feature map:
+
+    apply final convolution operation
+
+generate reconstructed EEG signal
+\end{lstlisting}
+
+Hasil konvolusi pada setiap tahap kemudian dinormalisasi menggunakan Batch Normalization sebelum diterapkan fungsi aktivasi untuk menjaga stabilitas distribusi aktivasi selama proses rekonstruksi. Pada tahap \textit{signal reconstruction}, dilakukan konvolusi akhir pada setiap posisi temporal \textit{feature map} untuk menghasilkan kembali sinyal EEG rekonstruksi dengan jumlah kanal yang sama seperti data masukan.
+
+\subsubsection{\textit{Loss Function} dan Proses Training}
 
 \textit{Reconstruction loss} dihitung menggunakan \textit{Mean Squared Error (MSE)} antara input dan output rekonstruksi. Sebelum perhitungan, kedua tensor diubah menjadi vektor satu dimensi (\textit{flatten}) untuk menyederhanakan komputasi. Nilai loss kemudian dikalikan dengan faktor 512 untuk menyesuaikan skala kontribusinya terhadap total loss, sehingga model lebih fokus dalam mempertahankan kemiripan antara data asli dan hasil rekonstruksi.
 
@@ -263,22 +335,37 @@ Total loss diperoleh dengan menjumlahkan kedua komponen tersebut, kemudian dirat
 
 Pelatihan dilakukan menggunakan optimizer Adam dengan \textit{learning rate} 0.001, \textit{batch size} 32, dan maksimum 1000 epoch.
 
-\paragraph{Generasi Data Sintetis}
+\subsubsection{Generasi Data Sintetis}
 
-dilakukan melalui proses sampling pada ruang laten. Secara prinsip, karena distribusi laten telah dipaksa mendekati distribusi normal standar selama training, maka sampling dapat dilakukan dengan menghasilkan vektor acak dari distribusi Gaussian $\mathcal{N}(0,1)$ dengan dimensi yang sesuai (misalnya 16 dimensi laten).
+Proses generasi data sintetis dilakukan melalui proses sampling pada ruang laten. Secara prinsip, karena distribusi laten telah dipaksa mendekati distribusi normal standar selama training, maka sampling dapat dilakukan dengan menghasilkan vektor acak dari distribusi Gaussian $\mathcal{N}(0,1)$ dengan dimensi yang sesuai (misalnya 16 dimensi laten). Proses sampling ini dapat dilakukan secara berulang sehingga model mampu menghasilkan jumlah sampel sintetis sesuai kebutuhan proses augmentasi.
 
 Vektor laten acak ini kemudian diberikan sebagai input ke bagian \textit{decoder} dari model. Decoder akan memetakan representasi laten tersebut kembali ke ruang data asli, sehingga menghasilkan sampel baru yang secara statistik menyerupai data pelatihan. Proses ini memungkinkan model untuk menghasilkan variasi data yang tidak identik dengan data asli, namun tetap mempertahankan karakteristik distribusinya.
 
+\begin{figure}[H]
+    \centering
+    \hspace*{2cm} 
+    \includegraphics[
+        width=\textwidth,
+        trim=0cm 1cm 0cm 12cm,
+        clip
+    ]{assets/pdfs/flowchart_augment.pdf}
+ \caption{Diagram aliran generasi data sintetis}
+    \label{fig:flowchart_system}
+\end{figure}
+
+Dalam penelitian ini, proses generasi data sintetis dilakukan secara terpisah untuk setiap kanal EEG dan setiap kelas data. Dengan menggunakan 16 kanal EEG serta dua kategori kelas (\textit{normal} dan ASD), maka dibangun sebanyak 32 model VAE yang masing-masing dilatih secara spesifik terhadap distribusi data pada kanal dan kelas tertentu.
+
 Data sintetis yang dihasilkan selanjutnya digunakan sebagai bentuk \textit{data augmentation} dalam pipeline klasifikasi. Dengan menambahkan sampel sintetis ke dalam data pelatihan, diharapkan model klasifikasi dapat meningkatkan kemampuan generalisasi, terutama dalam kondisi keterbatasan jumlah data asli.
-\\
-\\
-
-
 \subsection{Implementasi Model Klasifikasi}
-\paragraph{\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR})} diimplementasikan melalui \textit{library} \textit{feature\_engine.selection} melalui kelas \textit{MRMR}. Label kelas terlebih dahulu dikonversi ke bentuk numerik menggunakan \textit{LabelEncoder} dari \textit{sklearn.preprocessing} melalui operasi \textit{fit\_transform}, sehingga menghasilkan representasi biner yang dapat digunakan dalam proses seleksi fitur.
+
+\subsubsection{\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR})}
+
+\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR}) diimplementasikan melalui \textit{library} \textit{feature\_engine.selection} menggunakan kelas \textit{MRMR}. Label kelas terlebih dahulu dikonversi ke bentuk numerik menggunakan \textit{LabelEncoder} dari \textit{sklearn.preprocessing} melalui operasi \textit{fit\_transform}, sehingga menghasilkan representasi biner yang dapat digunakan dalam proses seleksi fitur.
 
 Fitur yang digunakan berasal dari kombinasi kanal EEG dan jenis fitur hasil ekstraksi \textit{Discrete Wavelet Transform} (DWT). Penamaan kolom dibentuk secara eksplisit melalui iterasi terhadap daftar kanal (\textit{ch\_names}) dan jenis fitur (\textit{DWT\_FEAT}), sehingga setiap fitur memiliki format \textit{channel\_feature}. Seluruh fitur kemudian dikonversi ke dalam struktur \textit{pandas DataFrame} (\textit{dfX}) untuk memastikan kompatibilitas dengan metode \textit{MRMR}.
-\paragraph{Model \textit{XGBoost}}
+
+\subsubsection{Model \textit{XGBoost}}
+
 \begin{table}[h]
 \centering
 \caption{Konfigurasi Parameter \textit{XGBoost}}
@@ -307,6 +394,6 @@ reg\_lambda & 1 \\
 \end{tabular}
 \end{table}
 
-Model \textit{XGBoost} pada penelitian ini menggunakan konfigurasi parameter sebagaimana ditunjukkan pada Tabel di atas. Parameter tersebut digunakan dalam proses \textit{training} model untuk menghasilkan prediksi pada data uji.
+Model \textit{XGBoost} pada penelitian ini menggunakan konfigurasi parameter sebagaimana ditunjukkan pada tabel di atas. Parameter tersebut digunakan dalam proses \textit{training} model untuk menghasilkan prediksi pada data uji.
 
 Pembagian data dilakukan menggunakan \textit{train\_test\_split} dengan parameter \textit{test\_size=0.2}, \textit{stratify=y\_enc}, dan \textit{random\_state=42}. Model kemudian dilakukan \textit{training} menggunakan data \textit{training} dan digunakan untuk menghasilkan prediksi label serta probabilitas pada data \textit{testing}. Hasil prediksi selanjutnya dievaluasi menggunakan \textit{confusion matrix}, \textit{classification report}, serta \textit{ROC curve} dan \textit{AUC score}.

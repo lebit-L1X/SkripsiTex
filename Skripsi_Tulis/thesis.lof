@@ -13,9 +13,9 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{31}{figure.caption.22}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram Model VAE untuk Augmentasi EEG}}{33}{figure.caption.23}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram Model Klasifikasi}}{35}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{38}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{39}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran Decoder Layer}}{41}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{38}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{40}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran generasi data sintetis}}{43}{figure.caption.27}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Perbandingan sampel sinyal EEG asli dan sintetis pada channel Fp1 dalam domain waktu}}{46}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Perbandingan PSD antara sampel sinyal asli dan sintetis pada channel Fp1}}{46}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Perbandingan sampel sinyal EEG asli dan sintetis pada channel Fp1 dalam domain waktu}}{48}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Perbandingan PSD antara sampel sinyal asli dan sintetis pada channel Fp1}}{48}{figure.caption.30}%
