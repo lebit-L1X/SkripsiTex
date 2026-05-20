@@ -40,7 +40,7 @@
 \contentsline {section}{\numberline {3.2}Perancangan Arsitektur Sistem}{29}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Pra-Pemrosesan Dataset}{31}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Arsitektur Model VAE untuk Augmentasi Data}{32}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Arsitektur Model Klasifikasi}{34}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Arsitektur Model Klasifikasi}{35}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Detail Implementasi dan Teknologi}{36}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Teknologi dan Library}{37}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Implementasi Model Generatif Variational Autoencoder (VAE)}{37}{subsection.3.3.2}%

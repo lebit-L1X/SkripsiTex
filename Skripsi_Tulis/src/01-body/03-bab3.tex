@@ -51,9 +51,7 @@ Untuk menjaga fokus penelitian, sistem yang dikembangkan memiliki beberapa batas
 
 Setelah kebutuhan fungsional sistem diuraikan, tahap selanjutnya adalah merancang arsitektur sistem sebagai representasi konseptual dari alur pemrosesan data yang akan diimplementasikan. Perancangan ini bertujuan untuk menggambarkan integrasi antar komponen dalam \textit{pipeline}, khususnya dalam menggabungkan proses augmentasi data berbasis \textit{Variational Autoencoder} (VAE) dengan \textit{pipeline} klasifikasi yang telah ditentukan.
 
-Pendekatan yang digunakan dalam penelitian ini mengadaptasi model \textit{EEG Data Augmentation using Variational Autoencoder} \cite{vae_github} dengan beberapa penyesuaian pada arsitektur dan representasi data. Berbeda dengan implementasi awal yang memproses sinyal EEG dalam bentuk multikanal dua dimensi, penelitian ini menggunakan pendekatan berbasis \textit{1D Convolutional Neural Network} (1D CNN) dengan pemrosesan setiap kanal EEG secara terpisah.
-
-Penyesuaian ini dilakukan berdasarkan hasil pengujian awal yang menunjukkan bahwa pendekatan multikanal belum mampu merekonstruksi detail karakteristik sinyal EEG secara optimal, khususnya pada pola temporal tiap kanal. Oleh karena itu, sinyal EEG direpresentasikan sebagai deret waktu satu dimensi agar model dapat mempelajari karakteristik sinyal secara lebih spesifik pada masing-masing kanal. Pendekatan ini juga mengacu pada penelitian referensi \cite{paper_ref} yang memproses sinyal EEG per kanal, sehingga lebih sesuai dengan karakteristik data dan kompatibel dengan \textit{pipeline} klasifikasi yang digunakan dalam penelitian ini.
+Pendekatan yang digunakan dalam penelitian ini mengadaptasi model EEG Data Augmentation using Variational Autoencoder \cite{vae_github} dengan melakukan penyesuaian dari implementasi berbasis representasi 2D menjadi pendekatan berbasis 1D Convolutional Neural Network (1D CNN), sehingga proses pelatihan model dilakukan pada setiap kanal EEG secara terpisah.
 
 \begin{figure}[H]
     \centering
@@ -94,7 +92,7 @@ Selanjutnya, dilakukan normalisasi menggunakan metode \textit{z-score normalizat
 \subsection{Arsitektur Model VAE untuk Augmentasi Data}
 \label{Arsitektur Model VAE}
 
-Model \textit{Variational Autoencoder} (VAE) digunakan sebagai metode augmentasi untuk menghasilkan sinyal EEG sintetis yang memiliki karakteristik statistik serupa dengan data asli. Penelitian ini mengadaptasi arsitektur dari penelitian \cite{vae_github} dengan beberapa penyesuaian pada representasi data dan struktur model. Berbeda dengan pendekatan awal yang menggunakan representasi multikanal dua dimensi berbasis \textit{2D Convolutional Neural Network}, penelitian ini menggunakan pendekatan \textit{1D Convolutional Neural Network} (1D CNN) dengan pemrosesan setiap kanal EEG secara terpisah. Penyesuaian ini dilakukan berdasarkan hasil pengujian awal yang menunjukkan bahwa pendekatan multikanal belum mampu merekonstruksi detail pola temporal sinyal EEG secara optimal. Selain itu, dimensi ruang laten juga ditingkatkan untuk memperbesar kapasitas model dalam menangkap variasi pola sinyal EEG.
+Model \textit{Variational Autoencoder} (VAE) digunakan sebagai metode augmentasi untuk menghasilkan sinyal EEG sintetis yang memiliki karakteristik statistik serupa dengan data asli. Penelitian ini mengadaptasi arsitektur dari penelitian \cite{vae_github} dengan beberapa penyesuaian pada representasi data dan struktur model. Representasi data EEG dilakukan menggunakan pendekatan \textit{1D Convolutional Neural Network} (1D CNN) dengan pemrosesan setiap kanal EEG secara terpisah. Penyesuaian ini dilakukan berdasarkan hasil pengujian awal yang menunjukkan bahwa pendekatan multikanal belum mampu merekonstruksi detail pola temporal sinyal EEG secara optimal. Melalui pendekatan tersebut, sinyal EEG direpresentasikan sebagai deret waktu satu dimensi sehingga diharapkan model dapat mempelajari karakteristik sinyal secara lebih spesifik pada masing-masing kanal. Pendekatan ini juga mengacu pada penelitian referensi \cite{paper_ref} yang memproses sinyal EEG per kanal, sehingga lebih sesuai dengan karakteristik data dan kompatibel dengan \textit{pipeline} klasifikasi yang digunakan dalam penelitian ini.
 
 \begin{figure}[H]
 \centering
@@ -113,31 +111,32 @@ Seperti ditunjukkan pada Gambar \ref{fig:vae}, model terdiri dari dua komponen u
 Vektor laten yang dihasilkan kemudian digunakan sebagai input bagi bagian \textit{decoder} untuk merekonstruksi kembali sinyal EEG. Decoder terdiri dari beberapa lapisan \textit{upsampling} dan \textit{Conv1D} yang secara bertahap mengembalikan dimensi sinyal hingga sesuai dengan bentuk input awal. Setelah proses \textit{training}, model dimanfaatkan untuk menghasilkan data sintetis baru dengan melakukan \textit{sampling} acak pada ruang laten menggunakan distribusi normal standar. Vektor laten hasil \textit{sampling} tersebut diberikan ke \textit{decoder} untuk menghasilkan sinyal EEG sintetis yang tidak identik dengan data asli, namun tetap mempertahankan karakteristik distribusi statistiknya.
 
 Dalam proses \textit{training}, model dioptimalkan menggunakan kombinasi \textit{reconstruction loss} dan \textit{Kullback-Leibler} (KL) divergence. \textit{Reconstruction loss} digunakan untuk mengukur perbedaan antara sinyal input dan hasil rekonstruksi, sedangkan KL divergence berfungsi untuk menjaga distribusi ruang laten tetap mendekati distribusi normal standar. Kombinasi kedua komponen tersebut digunakan sebagai fungsi objektif dalam proses optimasi model.
-
+\newpage
 \subsection{Arsitektur Model Klasifikasi}
 \label{Arsitektur Model Klasifikasi}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \hspace*{4.5cm}
     \includegraphics[
-        width=0.9\textwidth,
+        width=0.85
+        \textwidth,
         trim=0cm 0cm 4cm 0cm,
         clip
     ]{assets/pdfs/flowchart_klasifikasi.pdf}
     \caption{Diagram Model Klasifikasi}
     \label{fig:vae}
 \end{figure}
+\newpage
+Berdasarkan Gambar 3.4, \textit{pipeline} klasifikasi yang digunakan terdiri dari beberapa tahapan utama, yaitu dekomposisi frekuensi, standardisasi data, ekstraksi fitur statistik, seleksi fitur, dan klasifikasi. Pada tahap awal, sinyal EEG dipisahkan ke dalam lima pita frekuensi utama, yaitu delta, theta, alpha, beta, dan gamma untuk menangkap karakteristik aktivitas otak pada rentang frekuensi yang berbeda.
 
-\textit{Pipeline} klasifikasi yang digunakan terdiri dari beberapa tahapan utama, yaitu dekomposisi frekuensi, standardisasi data, ekstraksi fitur statistik, seleksi fitur, serta klasifikasi. Tahapan awal dilakukan dengan memisahkan sinyal EEG ke dalam lima pita frekuensi utama, yaitu delta, theta, alpha, beta, dan gamma. Pemisahan ini bertujuan untuk menangkap karakteristik aktivitas otak pada rentang frekuensi yang berbeda, sehingga informasi yang diperoleh menjadi lebih representatif terhadap kondisi neurologis yang diamati dan lebih mudah dianalisis pada tahap selanjutnya.
+Setelah proses dekomposisi, setiap pita frekuensi distandardisasi menggunakan transformasi \textit{z-score}. Tahapan ini bertujuan untuk menyamakan skala data antar pita frekuensi sehingga distribusi data menjadi lebih stabil dan seimbang pada proses pembelajaran model.
 
-Setelah proses dekomposisi, setiap pita frekuensi distandardisasi menggunakan transformasi \textit{z-score}. Tahapan ini bertujuan untuk menormalkan distribusi data sehingga memiliki skala yang sebanding antar pita frekuensi, serta mencegah dominasi fitur tertentu dalam proses pembelajaran model sehingga setiap pita frekuensi dapat berkontribusi secara proporsional dalam pembentukan fitur.
+Tahap berikutnya adalah ekstraksi fitur statistik untuk mengubah sinyal EEG menjadi representasi numerik yang lebih terstruktur. Fitur yang dihasilkan merepresentasikan karakteristik sinyal pada masing-masing pita frekuensi dan digunakan sebagai masukan pada tahap klasifikasi.
 
-Tahap berikutnya adalah ekstraksi fitur statistik, yang bertujuan untuk mengubah sinyal EEG yang bersifat kontinu menjadi representasi numerik yang terstruktur. Fitur yang dihasilkan mencerminkan karakteristik distribusi, variabilitas, dan kompleksitas sinyal pada masing-masing pita frekuensi. Proses ini menghasilkan himpunan fitur berdimensi tinggi yang mampu merepresentasikan pola sinyal secara komprehensif, sehingga menjadi dasar penting dalam proses klasifikasi.
+Seleksi fitur dilakukan menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) untuk memilih fitur yang paling relevan terhadap kelas sekaligus mengurangi redundansi antar fitur. Hasil seleksi menghasilkan subset fitur yang lebih ringkas dan informatif.
 
-Seleksi fitur dilakukan menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR), yang bertujuan untuk memilih fitur yang paling relevan terhadap label kelas sekaligus meminimalkan redundansi antar fitur. Pendekatan ini mgenhasilkan subset fitur yang lebih ringkas, efisien, dan tetap informatif untuk digunakan pada tahap klasifikasi.
-
-Tahap akhir dari \textit{pipeline} adalah proses klasifikasi menggunakan algoritma XGBoost. Model ini membangun ensemble pohon keputusan secara bertahap untuk menangkap hubungan non-linear antar fitur secara efektif. Dalam penelitian ini, proses klasifikasi dilakukan dalam dua skenario, yaitu menggunakan data asli serta menggunakan kombinasi data asli dan data sintetis yang diperoleh dari model augmentasi. Kedua skenario diproses menggunakan \textit{pipeline} yang sama, sehingga perbedaan performa yang dihasilkan dapat secara langsung dianalisis sebagai dampak dari penggunaan data hasil augmentasi.
+Tahap akhir dilakukan menggunakan algoritma XGBoost sebagai model klasifikasi. Proses klasifikasi dilakukan pada dua skenario, yaitu menggunakan data asli dan kombinasi data asli dengan data sintetis hasil augmentasi. Kedua skenario menggunakan \textit{pipeline} yang sama sehingga pengaruh penggunaan data sintetis dapat dianalisis secara langsung.
 
 \section{Detail Implementasi dan Teknologi}
 \label{Detail Implementasi dan Teknologi}
@@ -147,13 +146,13 @@ Bagian ini menjelaskan bagaimana perancangan sistem yang telah dijabarkan sebelu
 \subsection{Teknologi dan Library}
 \label{Teknologi dan Library}
 
-Dalam penelitian ini, seluruh proses pengolahan data, \textit{training}, dan evaluasi model dilakukan menggunakan bahasa pemrograman Python. Pemilihan Python didasarkan pada ekosistem library yang luas serta kemampuannya dalam mendukung pengembangan sistem berbasis \textit{machine learning} dan pemrosesan sinyal secara efisien. Untuk mempercepat komputasi, sistem ini memanfaatkan akselerasi GPU dengan bantuan CUDA Toolkit dari NVIDIA, sehingga operasi numerik berskala besar seperti \textit{training} model dan komputasi matriks dapat dilakukan dengan lebih efisien.
+Dalam penelitian ini, seluruh proses pengolahan data, pelatihan, dan evaluasi model dilakukan menggunakan bahasa pemrograman Python karena didukung oleh ekosistem \textit{library} yang luas untuk kebutuhan \textit{machine learning} dan pemrosesan sinyal. Untuk meningkatkan efisiensi komputasi, sistem memanfaatkan akselerasi GPU menggunakan CUDA Toolkit dari NVIDIA sehingga proses \textit{training} model dan operasi numerik berskala besar dapat dilakukan dengan lebih cepat.
 
-Library utama yang digunakan dalam pengembangan sistem ini meliputi NumPy, Pandas, SciPy, dan scikit-learn. NumPy berperan sebagai backend komputasi numerik untuk operasi berbasis array dan matriks, sementara Pandas digunakan untuk pengelolaan dan manipulasi dataset. SciPy menyediakan fungsi \textit{signal processing} yang mendukung proses pemrosesan sinyal EEG, sedangkan scikit-learn digunakan untuk kebutuhan preprocessing data, ekstraksi fitur, serta evaluasi model melalui berbagai metrik yang tersedia.
+\textit{Library} utama yang digunakan meliputi NumPy, Pandas, SciPy, dan scikit-learn. NumPy digunakan untuk komputasi numerik berbasis array dan matriks, Pandas untuk pengelolaan dataset, SciPy untuk pemrosesan sinyal EEG, sedangkan scikit-learn digunakan pada tahap \textit{preprocessing}, ekstraksi fitur, seleksi fitur, dan evaluasi model.
 
-Untuk tahap pemodelan, digunakan XGBoost sebagai algoritma klasifikasi berbasis \textit{gradient boosting} yang efisien dan mampu menangani data berdimensi tinggi serta hubungan non-linear. Selain itu, PyTorch digunakan sebagai framework \textit{deep learning} untuk membangun model generatif berbasis Variational Autoencoder (VAE), yang memungkinkan proses augmentasi data dilakukan secara fleksibel dengan dukungan akselerasi GPU.
+Pada tahap pemodelan, digunakan XGBoost sebagai algoritma klasifikasi berbasis \textit{gradient boosting} yang mampu menangani data berdimensi tinggi dan hubungan non-linear. Selain itu, PyTorch digunakan untuk membangun model generatif berbasis \textit{Variational Autoencoder} (VAE) pada proses augmentasi data dengan dukungan akselerasi GPU.
 
-Dalam implementasi pipeline klasifikasi, beberapa library juga berperan dalam tahap ekstraksi dan pemrosesan fitur. SciPy digunakan untuk pemrosesan sinyal dan dekomposisi frekuensi, sementara NumPy dan Pandas mendukung perhitungan serta pengelolaan fitur statistik. Untuk seleksi fitur, digunakan scikit-learn sebagai dasar implementasi metode mRMR, sebelum fitur terpilih digunakan dalam proses pelatihan dan prediksi menggunakan XGBoost.
+Dalam implementasi \textit{pipeline} klasifikasi, SciPy digunakan untuk proses dekomposisi frekuensi dan pemrosesan sinyal, sementara NumPy dan Pandas mendukung pengelolaan serta perhitungan fitur statistik. Fitur yang dihasilkan kemudian diseleksi menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) sebelum digunakan dalam proses pelatihan dan prediksi menggunakan XGBoost.
 
 \subsection{Implementasi Model Generatif Variational Autoencoder (VAE)}
 \label{Implementasi Model Generatif Variational Autoencoder (VAE)}
