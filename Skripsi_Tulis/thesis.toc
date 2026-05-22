@@ -53,8 +53,11 @@
 \contentsline {subsubsection}{\numberline {3.3.3.1}Integrasi Data Sintetis pada Model Klasifikasi}{44}{subsubsection.3.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.3.2}\textit {Minimum Redundancy Maximum Relevance} (\textit {mRMR})}{45}{subsubsection.3.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3.3}Model \textit {XGBoost}}{45}{subsubsection.3.3.3.3}%
-\contentsline {chapter}{\numberline {4}\uppercase {Penutup}}{46}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Kesimpulan }{46}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Pengembangan Lanjutan}{48}{section.4.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{50}{section*.31}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{50}{section*.31}%
+\contentsline {chapter}{\numberline {4}\uppercase {Eksperimen dan Analisis}}{46}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lingkungan Training}{46}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Spesifikasi Perangkat Keras}{46}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Spesifikasi Perangkat Lunak}{47}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Standarisasi Pengujian Eksperimen}{47}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Konfigurasi Eksperimen}{48}{subsection.4.2.1}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.31}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.31}%

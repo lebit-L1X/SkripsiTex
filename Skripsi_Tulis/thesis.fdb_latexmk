@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1779271389.25518 "thesis.aux" "thesis.bbl" "thesis" 1779271396.66649 0
+["bibtex thesis"] 1779455831.34782 "thesis.aux" "thesis.bbl" "thesis" 1779455838.56511 0
   "./pustaka.bib" 1778764765 12203 9454bb522151c345bb9d762c67351358 ""
   "C:/Users/Wendy/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "thesis.aux" 1779271394 24776 ce9e3cfd89f56967d4be82cc3ec241dc "pdflatex"
+  "thesis.aux" 1779455836 25265 159d1af1dafb544ad3124216a26e6490 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1779271389.60971 "c:/Users/Wendy/Documents/College/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" "thesis.pdf" "thesis" 1779271396.66818 0
+["pdflatex"] 1779455831.78518 "c:/Users/Wendy/Documents/College/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" "thesis.pdf" "thesis" 1779455838.5665 0
   "C:/Users/Wendy/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771950667 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Wendy/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1769941181 13333861 7c51f79a864dce43060416066c7ebdaa ""
   "C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -366,14 +366,12 @@
   "assets/pics/four_major_filters.png" 1778527717 287995 cdeccf02a5e82db7f907913e3c582699 ""
   "assets/pics/frequency_band.png" 1775100110 65975 b73141f5b8090395cd9cf214510f4ee3 ""
   "assets/pics/general_pipeline.jpg" 1775100110 1007209 2489f5025636c9c8fe9650184e331b5c ""
-  "assets/pics/psd.png" 1776649146 65538 bf42092923fea18856104233505552f0 ""
-  "assets/pics/time_domain.png" 1776649211 116454 c02b33f03e83872dbd1e6f67cf9b4d60 ""
   "assets/pics/traditional_augmentation.png" 1778761879 173138 5eaece2d2f6fbca1c2da156144dccb51 ""
   "assets/pics/ushaped.png" 1778765748 51952 88b7ea52d3d6ceb75f86deb28da5eacb ""
   "assets/pics/vae-architecture.jpg" 1778767343 23951 9586593cf490945b9bdddab3c4b00226 ""
   "c:/Users/Wendy/Documents/College/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" 1778525241 5559 d94d49ab347889de30a1762e6e2b290d ""
   "istilah.tex" 1773468223 269 4c6836601dfe7ff1adaf6b41a66ce544 ""
-  "settings.tex" 1776619762 2914 0a6635f380defa97939c3f5399115715 ""
+  "settings.tex" 1779452442 2887 afdc63ccc0d5178304af8a372db79be7 ""
   "singkatan.tex" 1776054305 971 0748273c02b1bb7c2d77255a02558522 ""
   "src/00-front_matter/02-orisinalitas.tex" 1773468223 570 a81dfd56eec44f7c8420d82fbe7e6365 ""
   "src/00-front_matter/02-penggunaan AI.tex" 1773468223 754 75954452bdc7eed048e33e5653608613 ""
@@ -385,14 +383,14 @@
   "src/01-body/01-bab1.tex" 1777898780 15028 1e6808b6d3c8ea0056f934a7ac0dae83 ""
   "src/01-body/02-bab2.tex" 1778992638 38330 a0a242375ca3e5f59d83914b975b6de7 ""
   "src/01-body/03-bab3.tex" 1779271381 32166 b843d3c917adcb0122fc050a33287653 ""
-  "src/01-body/04-bab4.tex" 1776649574 5703 dedf887621e9290fc17b8b69d6b80b0f ""
-  "thesis.aux" 1779271394 24776 ce9e3cfd89f56967d4be82cc3ec241dc "pdflatex"
-  "thesis.bbl" 1779271389 10957 4c678fa8888edb7f7dc722ff1aa7c244 "bibtex thesis"
-  "thesis.lof" 1779271394 2387 b30dcdeeca4eb25811873fe4d4c8e288 "pdflatex"
-  "thesis.lot" 1779271394 690 6e837c31a0b54545595324284962a0b1 "pdflatex"
-  "thesis.out" 1779271394 12523 3f9fcd7b08956e4517935103d27776f3 "pdflatex"
+  "src/01-body/04-bab4.tex" 1779455823 3896 693069a495e1b81a213ac8c0302ca55a ""
+  "thesis.aux" 1779455836 25265 159d1af1dafb544ad3124216a26e6490 "pdflatex"
+  "thesis.bbl" 1779455831 10957 4c678fa8888edb7f7dc722ff1aa7c244 "bibtex thesis"
+  "thesis.lof" 1779455836 2067 66c7b822e6b08024e29e6bf762dc8b9b "pdflatex"
+  "thesis.lot" 1779455836 926 fe3b862639bfb5b5ff4d9d3d43d1c06c "pdflatex"
+  "thesis.out" 1779455836 13392 d7416c0a353853929e08f8e3fd25230b "pdflatex"
   "thesis.tex" 1778525241 5559 d94d49ab347889de30a1762e6e2b290d ""
-  "thesis.toc" 1779271394 5415 d43ae0e549cf039362477cbdd60810cb "pdflatex"
+  "thesis.toc" 1779455836 5740 4f71daa2096a51ebf56fe472817ffdec "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.lof"
