@@ -65,3 +65,18 @@ Matplotlib & 3.7.3 \\
 Bagian ini menjelaskan metrik evaluasi yang digunakan untuk menilai performa model klasifikasi serta kualitas data sintetis yang dihasilkan dalam eksperimen. Variabel kontrol diterapkan untuk menjaga konsistensi proses preprocessing, konfigurasi model, dan parameter pelatihan pada seluruh skenario pengujian. Variabel bebas pada penelitian ini adalah penggunaan data sintetis hasil augmentasi berbasis \textit{Variational Autoencoder} (VAE), sedangkan variabel terikat berupa performa klasifikasi dan kualitas data sintetis yang dihasilkan.
 
 \subsection{Konfigurasi Eksperimen}
+
+Untuk menguji performa model klasifikasi EEG dengan augmentasi data berbasis \textit{Variational Autoencoder} (VAE), dilakukan serangkaian eksperimen dengan skenario pengujian yang telah dirancang. Bagian ini menjelaskan konfigurasi eksperimen pada proses pelatihan model VAE untuk generasi data sintetis maupun proses klasifikasi data EEG. Selain itu, dijelaskan pula proses augmentasi data serta metrik evaluasi yang digunakan dalam eksperimen. Demi menjaga validitas hasil eksperimen, serangkaian variabel kontrol diterapkan secara konsisten pada seluruh skenario pengujian sebagai berikut:
+\subsubsection{Konfigurasi Eksperimen Augmentasi}
+\begin{enumerate}
+    \item \textbf{Dataset:}
+    \item \textbf{Hyperparameter:}
+    \item \textbf{Jumlah Pengulangan Eksperimen:}
+\end{enumerate}
+\subsubsection{Konfigurasi Eksperimen Klasifikasi}
+\begin{enumerate}
+\item \textbf{Dataset:} 
+Eksperimen klasifikasi menggunakan dataset EEG ASD sebagaimana dijelaskan pada Subbab \ref{Dataset EEG yang Digunakan}. Dua skenario dataset digunakan pada penelitian ini, yaitu dataset yang hanya terdiri dari data EEG asli (\textit{real data}) dan dataset hasil augmentasi yang terdiri dari kombinasi data EEG asli dengan data sintetis hasil generasi model \textit{Variational Autoencoder} (VAE). Data sintetis dihasilkan secara independen untuk setiap kanal EEG dan setiap kelas (\textit{NORMAL} dan \textit{ASD}), kemudian digabungkan kembali menjadi sinyal multikanal untuk digunakan pada proses klasifikasi.
+    \item \textbf{Hyperparameter:}
+    \item \textbf{Jumlah Pengulangan Eksperimen:}
+\end{enumerate}

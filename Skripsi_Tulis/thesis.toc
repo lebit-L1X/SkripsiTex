@@ -59,5 +59,7 @@
 \contentsline {subsection}{\numberline {4.1.2}Spesifikasi Perangkat Lunak}{47}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Standarisasi Pengujian Eksperimen}{47}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Konfigurasi Eksperimen}{48}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Konfigurasi Eksperimen Augmentasi}{48}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Konfigurasi Eksperimen Klasifikasi}{48}{subsubsection.4.2.1.2}%
 \contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.31}%
 \contentsline {chapter}{DAFTAR PUSTAKA}{49}{section*.31}%
