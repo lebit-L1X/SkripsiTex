@@ -2,7 +2,7 @@
 \chapter{\babTiga}
 \label{cha:Perancangan Dan Implementasi Sistem}
 %-----------------------------------------------------------------------------%
-Bab ini menyajikan metodologi penelitian dan perancangan teknis yang dilakukan untuk mengembangkan dan mengevaluasi sistem klasifikasi \textit{Autism Spectrum Disorder} (ASD) berbasis sinyal EEG. Sistem yang dikembangkan pada penelitian ini bukan ditujukan untuk diimplementasikan secara langsung pada platform tertentu, melainkan sebagai sebuah lingkungan uji (\textit{testbed}) yang terkontrol untuk mengevaluasi efektivitas pendekatan augmentasi data berbasis \textit{Variational Autoencoder} (VAE), seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR), serta algoritma klasifikasi XGBoost pada data EEG ASD.
+Bab ini menyajikan metodologi penelitian dan perancangan teknis yang dilakukan untuk mengembangkan dan mengevaluasi sistem klasifikasi \textit{Autism Spectrum Disorder} (ASD) berbasis sinyal EEG. Sistem yang dikembangkan pada penelitian ini bukan ditujukan untuk diimplementasikan secara langsung pada platform tertentu, melainkan sebagai sebuah lingkungan uji (\textit{testbed}) yang terkontrol untuk mengevaluasi efektivitas pendekatan augmentasi data berbasis \textit{Variational Autoencoder} (VAE), seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR), serta algoritma klasifikasi pada data EEG ASD.
 
 Pembahasan pada bab ini dimulai dari Analisis Kebutuhan untuk mendefinisikan batasan masalah dan kebutuhan sistem. Fokus utama bab ini terletak pada Perancangan Arsitektur dan Alur Kerja Sistem yang menjelaskan tahapan pengolahan sinyal EEG, mulai dari prapemrosesan, augmentasi data menggunakan VAE, hingga proses klasifikasi. Arsitektur sistem divisualisasikan menggunakan diagram arsitektur dan \textit{flowchart} untuk memberikan gambaran alur pemrosesan secara menyeluruh. Selanjutnya, bagian Detail Implementasi dan Teknologi menjabarkan realisasi arsitektur ke dalam bentuk implementasi kode dengan memanfaatkan beberapa library untuk pengolahan sinyal, pengembangan model generatif, serta proses klasifikasi. Bab ini kemudian ditutup dengan Perancangan Infrastruktur yang menjelaskan lingkungan komputasi dan \textit{software dependencies} yang digunakan selama proses pengembangan dan pengujian model.
 
@@ -25,7 +25,7 @@ Berdasarkan tujuan penelitian, sistem yang dirancang harus memenuhi beberapa keb
 
     \item Sistem harus mengimplementasikan model generatif berbasis \textit{Variational Autoencoder} (VAE) untuk mempelajari distribusi laten data EEG dan menghasilkan data sintetis baru.
 
-    \item Data sintetis yang dihasilkan harus tetap kompatibel dengan \textit{pipeline} klasifikasi berbasis ekstraksi fitur, seleksi fitur mRMR, dan klasifikasi menggunakan XGBoost.
+    \item Data sintetis yang dihasilkan harus tetap kompatibel dengan \textit{pipeline} klasifikasi berbasis ekstraksi fitur, seleksi fitur mRMR, dan klasifikasi menggunakan XGBoost maupun \textit{Deep Neural Network}.
 
     \item Sistem harus mampu melakukan evaluasi kualitas data sintetis menggunakan beberapa metrik evaluasi distribusi dan kemiripan data.
 \end{enumerate}
@@ -66,7 +66,7 @@ Pendekatan yang digunakan dalam penelitian ini mengadaptasi model EEG Data Augme
 
 Gambar 3.1 menunjukkan alur pemrosesan data pada sistem yang dikembangkan dalam penelitian ini, yang mencakup tahap pra-pemrosesan dan ekstraksi fitur, augmentasi data menggunakan model \textit{Variational Autoencoder} (VAE), serta proses klasifikasi. Proses dimulai dari data input berupa sinyal EEG yang melalui tahap pra-pemrosesan dan ekstraksi fitur sebelum diproses oleh model VAE untuk menghasilkan data sintetis yang memiliki karakteristik serupa dengan data asli.
 
-Hasil tahap tersebut digunakan dalam dua skenario klasifikasi yang berbeda. Pada skenario pertama, proses klasifikasi dilakukan hanya menggunakan data asli, sedangkan pada skenario kedua, proses klasifikasi memanfaatkan kombinasi data asli dan data hasil augmentasi. Kedua skenario menggunakan metode seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR) dan algoritma klasifikasi XGBoost berdasarkan referensi penelitian sebelumnya \cite{paper_ref}. Perbandingan kedua skenario bertujuan untuk mengevaluasi pengaruh penggunaan data sintetis terhadap performa model klasifikasi yang dihasilkan.
+Hasil tahap tersebut digunakan dalam dua skenario klasifikasi yang berbeda. Pada skenario pertama, proses klasifikasi dilakukan hanya menggunakan data asli, sedangkan pada skenario kedua, proses klasifikasi memanfaatkan kombinasi data asli dan data hasil augmentasi. Kedua skenario menggunakan kombinasi metode seleksi fitur \textit{minimum Redundancy Maximum Relevance} (mRMR) algoritma klasifikasi XGBoost serta \textit{Deep Neural Network} berdasarkan referensi penelitian sebelumnya \cite{paper_ref}. Perbandingan kedua skenario bertujuan untuk mengevaluasi pengaruh penggunaan data sintetis terhadap performa model klasifikasi yang dihasilkan.
 
 \subsection{Pra-Pemrosesan Dataset}
 \label{Pra-Pemrosesan Dataset}
@@ -136,7 +136,7 @@ Tahap berikutnya adalah ekstraksi fitur statistik untuk mengubah sinyal EEG menj
 
 Seleksi fitur dilakukan menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) untuk memilih fitur yang paling relevan terhadap kelas sekaligus mengurangi redundansi antar fitur. Hasil seleksi menghasilkan subset fitur yang lebih ringkas dan informatif.
 
-Tahap akhir dilakukan menggunakan algoritma XGBoost sebagai model klasifikasi. Proses klasifikasi dilakukan pada dua skenario, yaitu menggunakan data asli dan kombinasi data asli dengan data sintetis hasil augmentasi. Kedua skenario menggunakan \textit{pipeline} yang sama sehingga pengaruh penggunaan data sintetis dapat dianalisis secara langsung.
+Tahap akhir dilakukan menggunakan algoritma XGBoost dan \textit{Deep Neural Network} sebagai model klasifikasi. Proses klasifikasi dilakukan pada dua skenario, yaitu menggunakan data asli dan kombinasi data asli dengan data sintetis hasil augmentasi. Kedua skenario menggunakan \textit{pipeline} yang sama sehingga pengaruh penggunaan data sintetis dapat dianalisis secara langsung.
 
 \section{Detail Implementasi dan Teknologi}
 \label{Detail Implementasi dan Teknologi}
@@ -150,9 +150,9 @@ Dalam penelitian ini, seluruh proses pengolahan data, pelatihan, dan evaluasi mo
 
 \textit{Library} utama yang digunakan meliputi NumPy, Pandas, SciPy, dan scikit-learn. NumPy digunakan untuk komputasi numerik berbasis array dan matriks, Pandas untuk pengelolaan dataset, SciPy untuk pemrosesan sinyal EEG, sedangkan scikit-learn digunakan pada tahap \textit{preprocessing}, ekstraksi fitur, seleksi fitur, dan evaluasi model.
 
-Pada tahap pemodelan, digunakan XGBoost sebagai algoritma klasifikasi berbasis \textit{gradient boosting} yang mampu menangani data berdimensi tinggi dan hubungan non-linear. Selain itu, PyTorch digunakan untuk membangun model generatif berbasis \textit{Variational Autoencoder} (VAE) pada proses augmentasi data dengan dukungan akselerasi GPU.
+Pada tahap pemodelan, digunakan XGBoost dan \textit{Deep Neural Network} (DNN) sebagai model klasifikasi dalam penelitian ini. Implementasi model DNN serta model augmentasi \textit{Variational Autoencoder} (VAE) dilakukan menggunakan TensorFlow dan Keras dengan dukungan akselerasi GPU untuk proses augmentasi data, sedangkan implementasi XGBoost dilakukan menggunakan library \textit{scikit-learn} dan \textit{XGBoost}.
 
-Dalam implementasi \textit{pipeline} klasifikasi, SciPy digunakan untuk proses dekomposisi frekuensi dan pemrosesan sinyal, sementara NumPy dan Pandas mendukung pengelolaan serta perhitungan fitur statistik. Fitur yang dihasilkan kemudian diseleksi menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) sebelum digunakan dalam proses pelatihan dan prediksi menggunakan XGBoost.
+Dalam implementasi \textit{pipeline} klasifikasi, SciPy digunakan untuk proses dekomposisi frekuensi dan pemrosesan sinyal, sementara NumPy dan Pandas digunakan untuk pengelolaan data serta perhitungan fitur statistik. Fitur yang dihasilkan kemudian diseleksi menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) sebelum digunakan dalam proses pelatihan dan evaluasi menggunakan model XGBoost dan DNN.
 
 \subsection{Implementasi Model Generatif Variational Autoencoder (VAE)}
 \label{Implementasi Model Generatif Variational Autoencoder (VAE)}
@@ -366,7 +366,7 @@ Pada cabang generasi data sintetis, sebanyak 32 model VAE independen digunakan u
 
 Data sintetis yang dihasilkan kemudian digabungkan dengan data EEG asli sebagai bentuk \textit{data augmentation}. Dataset gabungan selanjutnya melalui proses dekomposisi pita frekuensi EEG meliputi delta, theta, alpha, beta, dan gamma menggunakan \textit{bandpass filter}.
 
-Setelah proses dekomposisi frekuensi, setiap kanal distandardisasi menggunakan \textit{StandardScaler} untuk menjaga konsistensi distribusi data antar kanal dan pita frekuensi. Tahap berikutnya dilakukan ekstraksi fitur statistik untuk menghasilkan representasi fitur berdimensi tinggi yang kemudian digunakan dalam proses seleksi fitur menggunakan \textit{mRMR} serta klasifikasi menggunakan \textit{XGBoost}.
+Setelah proses dekomposisi frekuensi, setiap kanal distandardisasi menggunakan \textit{StandardScaler} untuk menjaga konsistensi distribusi data antar kanal dan pita frekuensi. Tahap berikutnya dilakukan ekstraksi fitur statistik untuk menghasilkan representasi fitur berdimensi tinggi yang kemudian digunakan dalam proses seleksi fitur menggunakan \textit{mRMR} serta klasifikasi menggunakan \textit{XGBoost} dan \textit{Deep Neural Network}.
 
 \subsubsection{\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR})}
 
@@ -407,3 +407,23 @@ reg\_lambda & 1 \\
 Model \textit{XGBoost} pada penelitian ini menggunakan konfigurasi parameter sebagaimana ditunjukkan pada tabel di atas. Parameter tersebut digunakan dalam proses \textit{training} model untuk menghasilkan prediksi pada data uji.
 
 Pembagian data dilakukan menggunakan \textit{train\_test\_split} dengan parameter \textit{test\_size=0.2}, \textit{stratify=y\_enc}, dan \textit{random\_state=42}. Model kemudian dilakukan \textit{training} menggunakan data \textit{training} dan digunakan untuk menghasilkan prediksi label serta probabilitas pada data \textit{testing}. Hasil prediksi selanjutnya dievaluasi menggunakan \textit{confusion matrix}, \textit{classification report}, serta \textit{ROC curve} dan \textit{AUC score}.
+
+\subsubsection{Model \textit{Deep Neural Network}}
+
+Model \textit{Deep Neural Network} (DNN) yang digunakan dalam penelitian ini merupakan model \textit{feedforward neural network} sederhana yang terdiri dari tiga lapisan utama, yaitu lapisan masukan, satu lapisan tersembunyi, dan lapisan keluaran. Lapisan tersembunyi terdiri dari 5 neuron dengan fungsi aktivasi \textit{log-sigmoid} yang digunakan untuk memperkenalkan non-linearitas serta membatasi keluaran neuron pada rentang (0,1). Lapisan keluaran menggunakan fungsi aktivasi \textit{softmax} yang menghasilkan distribusi probabilitas untuk masing-masing kelas sesuai dengan jumlah kelas (\textit{n\_classes}).
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[
+        width=\textwidth,
+        clip
+    ]{assets/pics/ann.png}
+ \caption{Arsitektur model \textit{Deep Neural Network} (DNN) yang digunakan dalam penelitian}
+    \label{fig:dnn_architecture}
+\end{figure}
+
+Gambar \ref{fig:dnn_architecture} menunjukkan arsitektur model DNN yang digunakan dalam penelitian ini, yang terdiri dari lapisan input, satu hidden layer dengan 5 neuron, serta lapisan output dengan fungsi aktivasi softmax. Struktur ini digunakan sebagai model klasifikasi berbasis \textit{supervised learning} untuk memetakan fitur EEG yang telah diekstraksi ke dalam kelas target.
+
+Proses pelatihan model dilakukan menggunakan algoritma optimasi Adam dengan laju pembelajaran sebesar $10^{-3}$ dan \textit{loss function} \textit{binary crossentropy}. Model dilatih selama 100 \textit{epoch} dengan ukuran \textit{batch} sebesar 32, serta dilengkapi dengan mekanisme \textit{early stopping} dan \textit{model checkpoint} untuk mengurangi risiko \textit{overfitting} dan mempertahankan model dengan performa terbaik selama proses pelatihan.
+
+Evaluasi kinerja model dilakukan menggunakan data uji dengan metrik akurasi dan \textit{Area Under Curve} (AUC). Probabilitas keluaran model kemudian dikonversi menjadi label kelas menggunakan operasi argmax. Selanjutnya, performa model dianalisis lebih lanjut menggunakan confusion matrix serta \textit{classification report} yang mencakup nilai precision, recall, dan F1-score.

@@ -280,31 +280,20 @@ di mana $\epsilon$ merupakan variabel acak yang diambil dari distribusi normal s
 
 \subsection{Metode Evaluasi Data Sintetis Sinyal EEG}
 
-Evaluasi kualitas data sintetis diperlukan untuk menilai sejauh mana sinyal EEG yang dihasilkan model generatif mampu mempertahankan karakteristik data asli. Dalam penelitian referensi \cite{eeg_gan}, evaluasi dilakukan menggunakan beberapa metrik kuantitatif yang umum digunakan pada model generatif, yaitu \textit{Inception Score} (IS), \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD). Masing-masing metrik digunakan untuk mengevaluasi aspek yang berbeda, seperti kualitas distribusi, keberagaman sampel, serta kemiripan antara data sintetis dan data asli.
+Evaluasi kualitas data sintetis diperlukan untuk menilai sejauh mana sinyal EEG yang dihasilkan model generatif mampu mempertahankan karakteristik data asli. Dalam penelitian referensi \cite{eeg_gan}, evaluasi dilakukan menggunakan beberapa metrik kuantitatif yang umum digunakan pada model generatif, yaitu, \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD). Masing-masing metrik digunakan untuk mengevaluasi aspek yang berbeda, seperti kualitas distribusi, keberagaman sampel, serta kemiripan antara data sintetis dan data asli.
 
 \begin{table}[H]
 \centering
-\small
+\footnotesize
 \caption{Metrik evaluasi data sintetis EEG}
 \label{tab:evaluation_metrics}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|c|p{7cm}|p{5cm}|}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|p{6cm}|p{5cm}|}
 \hline
 \textbf{Metrik} & \textbf{Formula} & \textbf{Aspek yang Dievaluasi} \\ \hline
 
-IS &
-$\displaystyle
-\exp\left(
-\mathbb{E}_{x}
-\left[
-D_{KL}(p(y|x)\parallel p(y))
-\right]
-\right)
-$
-&
-Mengukur kualitas dan keberagaman sampel sintetis berdasarkan distribusi prediksi model klasifikasi. \\ \hline
-
-FID &
+\textit{Frechet Inception Distance} (FID) &
 $\displaystyle
 \|\mu_r-\mu_g\|^2 +
 Tr(\Sigma_r+\Sigma_g
@@ -313,7 +302,7 @@ $
 &
 Mengukur kesamaan distribusi fitur antara data asli dan sintetis. \\ \hline
 
-ED &
+\textit{Euclidean Distance} (ED) &
 $\displaystyle
 d(x,y)=
 \sqrt{
@@ -323,7 +312,7 @@ $
 &
 Mengukur kemiripan langsung antar sampel data asli dan sintetis. \\ \hline
 
-SWD &
+\textit{Sliced Wasserstein Distance} (SWD) &
 $\displaystyle
 SWD(P,Q)=
 \int_{\theta}
@@ -334,9 +323,10 @@ $
 Mengukur kesamaan distribusi global melalui proyeksi satu dimensi. \\ \hline
 
 \end{tabular}
+}
 \end{table}
 
-Namun demikian, penelitian referensi \cite{eeg_gan} menunjukkan bahwa tidak terdapat satu metrik yang mampu merepresentasikan seluruh karakteristik kualitas sinyal EEG sintetis secara menyeluruh. Pada penelitian tersebut, nilai FID yang rendah tidak selalu menunjukkan kesamaan karakteristik spasial dan spektral terhadap data asli, sedangkan SWD dinilai lebih mampu merepresentasikan distribusi sinyal yang natural. Oleh karena itu, penggunaan beberapa metrik evaluasi secara bersamaan diperlukan untuk memperoleh penilaian kualitas data sintetis yang lebih komprehensif.
+Penelitian referensi \cite{eeg_gan} menunjukkan bahwa tidak terdapat satu metrik yang mampu merepresentasikan seluruh karakteristik kualitas sinyal EEG sintetis secara menyeluruh. Pada penelitian tersebut, nilai FID yang rendah tidak selalu menunjukkan kesamaan karakteristik spasial dan spektral terhadap data asli, sedangkan SWD dinilai lebih mampu merepresentasikan distribusi sinyal yang natural. Oleh karena itu, penggunaan beberapa metrik evaluasi secara bersamaan diperlukan untuk memperoleh penilaian kualitas data sintetis yang lebih komprehensif.
 
 \section{Penelitian Terdahulu}
 \label{Penelitian Terdahulu}
@@ -345,14 +335,14 @@ Berbagai penelitian telah mengusulkan pendekatan \textit{machine learning} untuk
 
 Tinjauan terhadap penelitian terdahulu diperlukan untuk memahami perkembangan metode klasifikasi EEG, pendekatan augmentasi data yang telah digunakan, serta keterbatasan yang masih menjadi tantangan dalam pengembangan sistem klasifikasi ASD berbasis EEG.
 
-\subsection{Klasifikasi ASD Berbasis EEG Menggunakan mRMR dan XGBoost}
+\subsection{Klasifikasi ASD Berbasis EEG Menggunakan Kombinasi mRMR dan XGBoost}
 \label{Klasifikasi ASD Berbasis EEG Menggunakan mRMR dan XGBoost}
 
 Pada penelitian rujukan \cite{paper_ref}, klasifikasi \textit{Autism Spectrum Disorder} (ASD) dilakukan menggunakan sinyal EEG dengan memanfaatkan seleksi fitur dan algoritma \textit{machine learning}. Penelitian berfokus pada penggunaan fitur domain frekuensi untuk merepresentasikan karakteristik aktivitas neural yang berkaitan dengan ASD serta meningkatkan performa klasifikasi melalui pemilihan fitur yang optimal.
 
-Penelitian menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) untuk memilih fitur yang paling relevan dan memiliki redundansi minimum antar fitur. Sebelum proses seleksi fitur, sinyal EEG melalui tahap \textit{preprocessing} seperti segmentasi, \textit{filtering}, dan dekomposisi pita frekuensi. Fitur hasil seleksi kemudian digunakan sebagai masukan bagi model klasifikasi berbasis \textit{ensemble}, yaitu XGBoost.
+Penelitian menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) untuk memilih fitur yang paling relevan dan memiliki redundansi minimum antar fitur. Sebelum proses seleksi fitur, sinyal EEG melalui tahap \textit{preprocessing} seperti segmentasi, \textit{filtering}, dan dekomposisi pita frekuensi. Fitur hasil seleksi kemudian digunakan sebagai masukan bagi model klasifikasi berbasis \textit{ensemble}, yaitu XGBoost. Performa metode tersebut dibandingkan dengan model \textit{Deep Neural Network} (DNN) sebagai metode \textit{baseline}, sehingga peningkatan performa yang diperoleh dievaluasi berdasarkan hasil perbandingan terhadap model DNN.
 
-Hasil penelitian menunjukkan bahwa kombinasi mRMR dan XGBoost mampu memberikan performa klasifikasi yang baik dalam membedakan individu ASD dan non-ASD. Penggunaan mRMR membantu meningkatkan kualitas fitur, sementara XGBoost memberikan kemampuan klasifikasi yang robust terhadap kompleksitas data EEG. Namun, penelitian juga menunjukkan bahwa pendekatan tersebut memiliki waktu komputasi yang lebih tinggi dibandingkan model dasar yang digunakan sebagai pembanding. Selain itu, penelitian masih dilakukan pada jumlah dataset yang relatif terbatas, sehingga kemampuan generalisasi model masih menjadi tantangan dalam pengembangan sistem klasifikasi EEG berbasis ASD.
+Hasil penelitian menunjukkan bahwa kombinasi mRMR dan XGBoost mampu memberikan performa klasifikasi yang baik dalam membedakan individu ASD dan non-ASD. Penggunaan mRMR membantu meningkatkan kualitas fitur, sementara XGBoost memberikan kemampuan klasifikasi yang robust terhadap kompleksitas data EEG. Namun, penelitian juga menunjukkan bahwa pendekatan tersebut memiliki waktu komputasi yang lebih tinggi dibandingkan model dasar yang digunakan sebagai pembanding. Selain itu, penelitian masih dilakukan pada jumlah dataset yang relatif terbatas, sehingga kemampuan generalisasi model masih menjadi tantangan dalam pengembangan sistem klasifikasi EEG berbasis ASD. 
 
 \subsection{Metode Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}
 \label{Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}

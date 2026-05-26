@@ -77,12 +77,11 @@ Agar penelitian ini tetap terfokus, maka ruang lingkup penelitian ditetapkan seb
 
 \item \textbf{Metode Preprocessing Data:} Tahapan \textit{preprocessing} data EEG mengikuti prosedur yang digunakan pada penelitian rujukan \cite{paper_ref}. Proses ini mencakup tahapan pengolahan data yang diperlukan sebelum proses seleksi fitur, augmentasi data, dan klasifikasi dilakukan.
 
-\item \textbf{Metode Augmentasi dan Klasifikasi:} Penelitian ini menerapkan metode \textit{data augmentation} berbasis \textit{Variational Autoencoder} (VAE) untuk menghasilkan data EEG sintetis. Selanjutnya, proses klasifikasi dilakukan menggunakan pendekatan yang mengacu pada penelitian rujukan \cite{paper_ref}, yaitu kombinasi seleksi fitur \textit{mRMR} dan model klasifikasi \textit{XGBoost}.
+\item \textbf{Metode Augmentasi dan Klasifikasi:} Penelitian ini menerapkan metode \textit{data augmentation} berbasis \textit{Variational Autoencoder} (VAE) untuk menghasilkan data EEG sintetis. Selanjutnya, proses klasifikasi dilakukan menggunakan pendekatan yang mengacu pada penelitian rujukan \cite{paper_ref}, yaitu kombinasi seleksi fitur \textit{mRMR} dan model klasifikasi \textit{XGBoost} serta metode \textit{Deep Neural Network} yang digunakan sebagai baseline pada penelitian rujukan.
 
 \item \textbf{Metode Evaluasi:} Evaluasi penelitian dilakukan dengan membandingkan performa model klasifikasi pada data tanpa augmentasi dan dengan augmentasi. Penilaian kualitas data sintetis serta performa klasifikasi mengacu pada metode evaluasi yang digunakan dalam penelitian rujukan \cite{eeg_gan}.
 
 \item \textbf{Hasil Akhir Penelitian:} Penelitian ini menghasilkan model \textit{data augmentation} EEG berbasis \textit{Variational Autoencoder} (VAE) yang dapat digunakan untuk menghasilkan data EEG sintetis guna mendukung peningkatan performa model klasifikasi.
-
 
 \item \textbf{Batasan Penelitian:} Penelitian difokuskan pada analisis pengaruh penerapan \textit{data augmentation} EEG terhadap kualitas performa model klasifikasi. Penelitian ini tidak membahas aspek perangkat keras EEG, proses akuisisi data asli, maupun tahapan penghilangan \textit{noise} dan \textit{artifact removal} di luar prosedur \textit{preprocessing} yang telah ditetapkan pada penelitian rujukan.
 \end{enumerate}
@@ -101,7 +100,7 @@ bagai berikut:
     Bab ini menguraikan landasan teoretis yang mendukung penelitian, meliputi konsep dasar sinyal EEG, metode ekstraksi dan seleksi fitur pada data EEG, metode \textit{Minimum Redundancy Maximum Relevance} (mRMR), implementasi \textit{machine learning}  dalam klasifikasi berdasarkan EEG, metode augmentasi data EEG, model \textit{Variational AutoEncoder}, serta kajian terhadap penelitian-penelitian sebelumnya yang bersifat relevan.
     
     \item \textbf{Bab 3: Metodologi Penelitian.} 
-    Bab ini menjelaskan metode yang digunakan dalam penelitian, mencakup deskripsi dataset EEG yang digunakan, tahapan pra-pemrosesan data, penerapan teknik \textit{data augmentation}, proses seleksi fitur menggunakan metode \textit{mRMR}, arsitektur model augmentasi berbasis \textit{VAE}, serta konfigurasi \textit{training} model klasifikasi menggunakan \textit{XGBoost}.
+    Bab ini menjelaskan metode yang digunakan dalam penelitian, mencakup deskripsi dataset EEG yang digunakan, tahapan pra-pemrosesan data, penerapan teknik \textit{data augmentation}, proses seleksi fitur menggunakan metode \textit{mRMR}, arsitektur model augmentasi berbasis \textit{VAE}, serta integrasi sinyal sintetis dalam proses \textit{training} model klasifikasi.
     
     \item \textbf{Bab 4: Hasil dan Analisis.} 
     Bab ini memaparkan hasil eksperimen yang diperoleh dari proses \textit{training} dan pengujian model. Analisis dilakukan untuk membandingkan performa model pada skenario dengan dan tanpa penerapan \textit{data augmentasi}, serta mengevaluasi pengaruhnya terhadap kemampuan model dalam melakukan klasifikasi data EEG.

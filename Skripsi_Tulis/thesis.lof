@@ -16,4 +16,5 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{38}{figure.caption.25}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{40}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran generasi data sintetis}}{43}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{46}{figure.caption.29}%
 \addvspace {10\p@ }
