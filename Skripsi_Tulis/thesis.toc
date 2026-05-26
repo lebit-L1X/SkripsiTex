@@ -61,7 +61,7 @@
 \contentsline {subsection}{\numberline {4.2.1}Konfigurasi Eksperimen}{48}{subsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.1}Konfigurasi Eksperimen Augmentasi}{48}{subsubsection.4.2.1.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.2}Konfigurasi Eksperimen Klasifikasi}{49}{subsubsection.4.2.1.2}%
-\contentsline {subsection}{\numberline {4.2.2}Metrik Evaluasi}{49}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Metrik Evaluasi}{50}{subsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.2.1}Metrik Evaluasi Eksperimen Augmentasi}{50}{subsubsection.4.2.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2.2}Metrik Evaluasi Eksperimen Klasifikasi}{50}{subsubsection.4.2.2.2}%
 \contentsline {section}{\numberline {4.3}Skenario Pengujian}{51}{section.4.3}%

@@ -23,8 +23,7 @@ Penerapan augmentasi pada data EEG memiliki tantangan tersendiri karena sinyal E
 
 Seiring dengan perkembangan deep learning, pendekatan berbasis model generatif seperti Variational Autoencoder (VAE) mulai digunakan untuk menghasilkan data EEG sintetis yang lebih representatif. Model VAE mempelajari distribusi laten dari data EEG sehingga mampu menghasilkan sampel baru yang berbeda namun tetap mempertahankan karakteristik statistik dari data asli. Pendekatan generatif memiliki potensi untuk menghasilkan variasi data yang lebih realistis dibandingkan metode augmentasi konvensional \cite{gan_eeg_emotion}. Meskipun demikian, pemanfaatan data sintetis berbasis model generatif pada klasifikasi EEG, khususnya dalam konteks Autism Spectrum Disorder (ASD), masih memerlukan kajian lebih lanjut untuk memahami pengaruhnya terhadap performa dan kemampuan generalisasi model klasifikasi.
 
-Berdasarkan permasalahan tersebut, penelitian ini bertujuan untuk mengeksplorasi penggunaan teknik data augmentation berbasis Variational Autoencoder (VAE) untuk menghasilkan data EEG sintetis dan menganalisis pengaruhnya terhadap performa model klasifikasi ASD berbasis EEG. Penelitian dilakukan dengan mengimplementasikan pendekatan klasifikasi EEG menggunakan seleksi fitur mRMR dan algoritma XGBoost berdasarkan penelitian rujukan \cite{paper_ref}, kemudian mengevaluasi perbedaan performa model sebelum dan sesudah penerapan data augmentasi.
-%-----------------------------------------------------------------------------%%-----------------------------------------------------------------------------%
+Berdasarkan permasalahan tersebut, penelitian ini bertujuan untuk mengeksplorasi penggunaan teknik data augmentation berbasis Variational Autoencoder (VAE) untuk menghasilkan data EEG sintetis dan menganalisis pengaruhnya terhadap performa model klasifikasi ASD berbasis EEG. 
 \section{Rumusan Masalah}
 \label{sec:rumusan_masalah}
 %-----------------------------------------------------------------------------%
@@ -33,22 +32,24 @@ ini dirumuskan sebagai berikut:
 \begin{enumerate}
     \item Bagaimana pendekatan yang dapat digunakan untuk mengatasi keterbatasan jumlah dan variasi data pada sinyal EEG dalam konteks klasifikasi Autism Spectrum Disorder (ASD)?
     
-    \item Bagaimana pendekatan tersebut dapat dirancang dan diintegrasikan ke dalam pipeline pemrosesan data EEG untuk mendukung proses klasifikasi?
+    \item Sejauh mana data sintetis yang dihasilkan melalui proses augmentasi mampu mempertahankan karakteristik dan distribusi sinyal EEG asli?
     
-    \item Bagaimana pengaruh penambahan atau peningkatan variasi data terhadap performa dan kemampuan generalisasi model klasifikasi EEG dalam mendeteksi pola yang berkaitan dengan Autism Spectrum Disorder (ASD)?
+    \item Bagaimana pengaruh penggunaan data hasil augmentasi terhadap performa dan kemampuan generalisasi model klasifikasi EEG dalam mendeteksi pola yang berkaitan dengan Autism Spectrum Disorder (ASD)?
 \end{enumerate}
 
 %-----------------------------------------------------------------------------%
 \section{Tujuan Penelitian}
 \label{sec:tujuan_penelitian}
 %-----------------------------------------------------------------------------%
+
 Selaras dengan rumusan masalah yang telah diuraikan, tujuan dari penelitian ini mencakup sebagai berikut:
+
 \begin{enumerate}
-    \item Mengidentifikasi dan mengeksplorasi pendekatan yang dapat digunakan untuk mengatasi keterbatasan jumlah dan variasi data pada sinyal EEG dalam klasifikasi Autism Spectrum Disorder (ASD).
-    
-    \item Merancang dan mengintegrasikan pendekatan tersebut ke dalam pipeline pemrosesan data EEG untuk mendukung proses klasifikasi.
-    
-    \item Menganalisis pengaruh penambahan atau peningkatan variasi data terhadap performa dan kemampuan generalisasi model klasifikasi EEG dalam mendeteksi pola yang berkaitan dengan Autism Spectrum Disorder (ASD).
+    \item Mengkaji dan mengidentifikasi pendekatan yang dapat digunakan untuk mengatasi keterbatasan jumlah dan variasi data pada sinyal EEG dalam konteks klasifikasi Autism Spectrum Disorder (ASD).
+
+    \item Mengevaluasi sejauh mana data sintetis yang dihasilkan melalui proses augmentasi mampu mempertahankan karakteristik dan distribusi sinyal EEG asli.
+
+    \item Menganalisis pengaruh penggunaan data hasil augmentasi terhadap performa serta kemampuan generalisasi model klasifikasi EEG dalam mendeteksi pola yang berkaitan dengan Autism Spectrum Disorder (ASD).
 \end{enumerate}
 
 %-----------------------------------------------------------------------------%
