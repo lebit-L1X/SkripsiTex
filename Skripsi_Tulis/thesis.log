@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  26 MAY 2026 17:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  26 MAY 2026 18:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1420,7 +1420,7 @@ Package epstopdf Info: Source file: <_internals/makara.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=_internals/makara-eps-converted-to.pdf _internals/makara.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
-<_internals/makara-eps-converted-to.pdf, id=296, 219.82124pt x 219.82124pt>
+<_internals/makara-eps-converted-to.pdf, id=316, 219.82124pt x 219.82124pt>
 File: _internals/makara-eps-converted-to.pdf Graphic file (type pdf)
 <use _internals/makara-eps-converted-to.pdf>
 Package pdftex.def Info: _internals/makara-eps-converted-to.pdf  used on input line 15.
@@ -1557,7 +1557,13 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 
 [10
 
-])
+]
+
+Package fancyhdr Warning: \footskip is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.49998pt}.
+
+[11])
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1567,7 +1573,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[11]
+[12]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 137.
@@ -1582,7 +1588,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[12
+[13
 
 
 ]
@@ -1600,7 +1606,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[13
+[14
 
 
 ]
@@ -1614,112 +1620,112 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 (singkatan.tex
 
-LaTeX Warning: Hyper reference `acro:ASD' on page xiv undefined on input line 2.
+LaTeX Warning: Hyper reference `acro:ASD' on page xv undefined on input line 2.
 
 
-LaTeX Warning: Hyper reference `acro:ASD' on page xiv undefined on input line 2.
+LaTeX Warning: Hyper reference `acro:ASD' on page xv undefined on input line 2.
 
 
-LaTeX Warning: Hyper reference `acro:BCI' on page xiv undefined on input line 3.
+LaTeX Warning: Hyper reference `acro:BCI' on page xv undefined on input line 3.
 
 
-LaTeX Warning: Hyper reference `acro:BCI' on page xiv undefined on input line 3.
+LaTeX Warning: Hyper reference `acro:BCI' on page xv undefined on input line 3.
 
 
-LaTeX Warning: Hyper reference `acro:CNN' on page xiv undefined on input line 4.
+LaTeX Warning: Hyper reference `acro:CNN' on page xv undefined on input line 4.
 
 
-LaTeX Warning: Hyper reference `acro:CNN' on page xiv undefined on input line 4.
+LaTeX Warning: Hyper reference `acro:CNN' on page xv undefined on input line 4.
 
 
-LaTeX Warning: Hyper reference `acro:DWT' on page xiv undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:DWT' on page xv undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:DWT' on page xiv undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:DWT' on page xv undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:EEG' on page xiv undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:EEG' on page xv undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:EEG' on page xiv undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:EEG' on page xv undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:ELBO' on page xiv undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:ELBO' on page xv undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:ELBO' on page xiv undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:ELBO' on page xv undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:EMG' on page xiv undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:EMG' on page xv undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:EMG' on page xiv undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:EMG' on page xv undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:EOG' on page xiv undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:EOG' on page xv undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:EOG' on page xiv undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:EOG' on page xv undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:FFT' on page xiv undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:FFT' on page xv undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:FFT' on page xiv undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:FFT' on page xv undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:GAN' on page xiv undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:GAN' on page xv undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:GAN' on page xiv undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:GAN' on page xv undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:ICA' on page xiv undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:ICA' on page xv undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:ICA' on page xiv undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:ICA' on page xv undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:kNN' on page xiv undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:kNN' on page xv undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:kNN' on page xiv undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:kNN' on page xv undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:KL' on page xiv undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:KL' on page xv undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:KL' on page xiv undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:KL' on page xv undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:mRMR' on page xiv undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:mRMR' on page xv undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:mRMR' on page xiv undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:mRMR' on page xv undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:PSD' on page xiv undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:PSD' on page xv undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:PSD' on page xiv undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:PSD' on page xv undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:SNR' on page xiv undefined on input line 17.
+LaTeX Warning: Hyper reference `acro:SNR' on page xv undefined on input line 17.
 
 
-LaTeX Warning: Hyper reference `acro:SNR' on page xiv undefined on input line 17.
+LaTeX Warning: Hyper reference `acro:SNR' on page xv undefined on input line 17.
 
 
-LaTeX Warning: Hyper reference `acro:SVM' on page xiv undefined on input line 18.
+LaTeX Warning: Hyper reference `acro:SVM' on page xv undefined on input line 18.
 
 
-LaTeX Warning: Hyper reference `acro:SVM' on page xiv undefined on input line 18.
+LaTeX Warning: Hyper reference `acro:SVM' on page xv undefined on input line 18.
 
 
-LaTeX Warning: Hyper reference `acro:VAE' on page xiv undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:VAE' on page xv undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `acro:VAE' on page xiv undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:VAE' on page xv undefined on input line 19.
 
 )
 
@@ -1727,7 +1733,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[14
+[15
 
 
 
@@ -1805,7 +1811,7 @@ BAB 2.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
 
-<assets/pics/10_20_system.jpg, id=683, 441.90094pt x 377.91188pt>
+<assets/pics/10_20_system.jpg, id=720, 441.90094pt x 377.91188pt>
 File: assets/pics/10_20_system.jpg Graphic file (type jpg)
 <use assets/pics/10_20_system.jpg>
 Package pdftex.def Info: assets/pics/10_20_system.jpg  used on input line 18.
@@ -1837,7 +1843,7 @@ Underfull \hbox (badness 2495) in paragraph at lines 40--40
 []|\T1/ptm/m/n/10 Berhubungan de-ngan proses kog-ni-tif tingkat tinggi,
  []
 
-<assets/pics/frequency_band.png, id=697, 270.25969pt x 175.40532pt>
+<assets/pics/frequency_band.png, id=735, 270.25969pt x 175.40532pt>
 File: assets/pics/frequency_band.png Graphic file (type png)
 <use assets/pics/frequency_band.png>
 Package pdftex.def Info: assets/pics/frequency_band.png  used on input line 47.
@@ -1850,7 +1856,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [10]
-<assets/pics/four_major_filters.png, id=707, 1674.255pt x 860.21375pt>
+<assets/pics/four_major_filters.png, id=744, 1674.255pt x 860.21375pt>
 File: assets/pics/four_major_filters.png Graphic file (type png)
 <use assets/pics/four_major_filters.png>
 Package pdftex.def Info: assets/pics/four_major_filters.png  used on input line 61.
@@ -1864,7 +1870,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [11 <./assets/pics/frequency_band.png>]
-<assets/pics/artifact_eeg.png, id=714, 284.7438pt x 116.1138pt>
+<assets/pics/artifact_eeg.png, id=751, 284.7438pt x 116.1138pt>
 File: assets/pics/artifact_eeg.png Graphic file (type png)
 <use assets/pics/artifact_eeg.png>
 Package pdftex.def Info: assets/pics/artifact_eeg.png  used on input line 70.
@@ -1896,12 +1902,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [14]
-<assets/pics/ushaped.png, id=783, 309.40594pt x 249.18094pt>
+<assets/pics/ushaped.png, id=820, 309.40594pt x 249.18094pt>
 File: assets/pics/ushaped.png Graphic file (type png)
 <use assets/pics/ushaped.png>
 Package pdftex.def Info: assets/pics/ushaped.png  used on input line 146.
 (pdftex.def)             Requested size: 213.39568pt x 171.86658pt.
-<assets/pics/general_pipeline.jpg, id=786, 456.45732pt x 415.40796pt>
+<assets/pics/general_pipeline.jpg, id=823, 456.45732pt x 415.40796pt>
 File: assets/pics/general_pipeline.jpg Graphic file (type jpg)
 <use assets/pics/general_pipeline.jpg>
 Package pdftex.def Info: assets/pics/general_pipeline.jpg  used on input line 155.
@@ -1926,7 +1932,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [16 <./assets/pics/general_pipeline.jpg>]
-<assets/pics/traditional_augmentation.png, id=806, 479.54156pt x 440.39531pt>
+<assets/pics/traditional_augmentation.png, id=843, 479.54156pt x 440.39531pt>
 File: assets/pics/traditional_augmentation.png Graphic file (type png)
 <use assets/pics/traditional_augmentation.png>
 Package pdftex.def Info: assets/pics/traditional_augmentation.png  used on input line 172.
@@ -1994,7 +2000,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [19]
-<assets/pics/vae-architecture.jpg, id=829, 1027.84pt x 565.11125pt>
+<assets/pics/vae-architecture.jpg, id=866, 1027.84pt x 565.11125pt>
 File: assets/pics/vae-architecture.jpg Graphic file (type jpg)
 <use assets/pics/vae-architecture.jpg>
 Package pdftex.def Info: assets/pics/vae-architecture.jpg  used on input line 254.
@@ -2120,7 +2126,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [28]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_system.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_system.pdf, id=889, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_system.pdf, id=926, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_system.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_system.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_system.pdf  used on input line 62.
@@ -2135,7 +2141,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [29]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_preprocessing.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_preprocessing.pdf, id=901, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_preprocessing.pdf, id=938, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_preprocessing.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_preprocessing.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_preprocessing.pdf  used on input line 81.
@@ -2158,7 +2164,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [31 <./assets/pdfs/flowchart_preprocessing.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/diagram_vae.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/diagram_vae.pdf, id=933, 614.295pt x 794.97pt>
+<assets/pdfs/diagram_vae.pdf, id=970, 614.295pt x 794.97pt>
 File: assets/pdfs/diagram_vae.pdf Graphic file (type pdf)
 <use assets/pdfs/diagram_vae.pdf>
 Package pdftex.def Info: assets/pdfs/diagram_vae.pdf  used on input line 104.
@@ -2194,7 +2200,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [34]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_klasifikasi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_klasifikasi.pdf, id=964, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_klasifikasi.pdf, id=1001, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_klasifikasi.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_klasifikasi.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_klasifikasi.pdf  used on input line 126.
@@ -2230,7 +2236,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [37]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/Encoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/Encoder.pdf, id=988, 614.295pt x 794.97pt>
+<assets/pdfs/Encoder.pdf, id=1025, 614.295pt x 794.97pt>
 File: assets/pdfs/Encoder.pdf Graphic file (type pdf)
 <use assets/pdfs/Encoder.pdf>
 Package pdftex.def Info: assets/pdfs/Encoder.pdf  used on input line 172.
@@ -2245,7 +2251,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [38 <./assets/pdfs/Encoder.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/reparameterization.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/reparameterization.pdf, id=1005, 614.295pt x 794.97pt>
+<assets/pdfs/reparameterization.pdf, id=1042, 614.295pt x 794.97pt>
 File: assets/pdfs/reparameterization.pdf Graphic file (type pdf)
 <use assets/pdfs/reparameterization.pdf>
 Package pdftex.def Info: assets/pdfs/reparameterization.pdf  used on input line 228.
@@ -2284,7 +2290,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [42]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_augment.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_augment.pdf, id=1109, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_augment.pdf, id=1146, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_augment.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_augment.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_augment.pdf  used on input line 351.
@@ -2363,7 +2369,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[49])
+[49]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2371,13 +2377,37 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[50] (thesis.bbl
+[50]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[51]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[52])
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[53] (thesis.bbl
 
 Package fancyhdr Warning: \footskip is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[51
+[54
 
 
 ]
@@ -2388,7 +2418,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[52]
+[55]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2396,7 +2426,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[53]
+[56]
 Underfull \hbox (badness 1688) in paragraph at lines 170--174
 \T1/ptm/m/n/12 ta-tion for im-prov-ing multi-class clas-si-fi-ca-tion per-for-mance,'' 2024, [On-line].
  []
@@ -2418,7 +2448,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[54])
+[57])
 
 Package caption Warning: Unused \captionsetup[listing] on input line 150.
 See the caption package documentation for explanation.
@@ -2430,8 +2460,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[55]
-runsystem(latexminted cleantemp  --timestamp 20260526173447 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+[58]
+runsystem(latexminted cleantemp  --timestamp 20260526184307 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -2446,20 +2476,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8062C88FA4DAF23BC0E62DBEF459081F;14649.
+(rerunfilecheck)             Checksum: A02B961F3C0F2B7B0DB80F1921B9D558;16885.
  ) 
 Here is how much of TeX's memory you used:
- 50607 strings out of 467866
- 1168041 string characters out of 5418326
- 2192754 words of memory out of 5000000
- 78055 multiletter control sequences out of 15000+600000
+ 50627 strings out of 467866
+ 1168261 string characters out of 5418326
+ 2192931 words of memory out of 5000000
+ 78060 multiletter control sequences out of 15000+600000
  726527 words of font info for 203 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
  125i,15n,130p,1520b,1432s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (70 pages, 2782434 bytes).
+Output written on thesis.pdf (74 pages, 2805550 bytes).
 PDF statistics:
- 1386 PDF objects out of 1440 (max. 8388607)
- 364 named destinations out of 1000 (max. 500000)
- 775 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1447 PDF objects out of 1728 (max. 8388607)
+ 379 named destinations out of 1000 (max. 500000)
+ 815 words of extra memory for PDF output out of 10000 (max. 10000000)
 

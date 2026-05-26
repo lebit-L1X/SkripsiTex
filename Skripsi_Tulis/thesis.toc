@@ -7,10 +7,10 @@
 \contentsline {chapter}{ABSTRAK}{viii}{Item.8}%
 \contentsline {chapter}{ABSTRACT}{ix}{Item.8}%
 \contentsline {chapter}{\uppercase {Daftar Isi}}{x}{section*.4}%
-\contentsline {chapter}{\uppercase {Daftar Tabel}}{xii}{section*.5}%
-\contentsline {chapter}{\uppercase {Daftar Gambar}}{xiii}{section*.6}%
-\contentsline {chapter}{\uppercase {Daftar Kode Program}}{xiv}{section*.7}%
-\contentsline {chapter}{\uppercase {Daftar Singkatan}}{xiv}{section*.8}%
+\contentsline {chapter}{\uppercase {Daftar Tabel}}{xiii}{section*.5}%
+\contentsline {chapter}{\uppercase {Daftar Gambar}}{xiv}{section*.6}%
+\contentsline {chapter}{\uppercase {Daftar Kode Program}}{xv}{section*.7}%
+\contentsline {chapter}{\uppercase {Daftar Singkatan}}{xv}{section*.8}%
 \contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Rumusan Masalah}{3}{section.1.2}%
@@ -62,7 +62,12 @@
 \contentsline {subsubsection}{\numberline {4.2.1.1}Konfigurasi Eksperimen Augmentasi}{48}{subsubsection.4.2.1.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.2}Konfigurasi Eksperimen Klasifikasi}{49}{subsubsection.4.2.1.2}%
 \contentsline {subsection}{\numberline {4.2.2}Metrik Evaluasi}{49}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Metrik Evaluasi Augmentasi}{50}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Metrik Evaluasi Klasifikasi}{50}{subsubsection.4.2.2.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{51}{section*.31}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{51}{section*.31}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Metrik Evaluasi Eksperimen Augmentasi}{50}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Metrik Evaluasi Eksperimen Klasifikasi}{50}{subsubsection.4.2.2.2}%
+\contentsline {section}{\numberline {4.3}Skenario Pengujian}{51}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{51}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}{52}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}{52}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Hasil Eksperimen dan Analisis}{53}{section.4.4}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{54}{section*.31}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{54}{section*.31}%
