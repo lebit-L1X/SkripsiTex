@@ -73,5 +73,8 @@
 \contentsline {subsection}{\numberline {4.4.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{57}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Eksperimen 2: Evaluasi Model Klasifikasi Menggunakan Data EEG Asli}{59}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Eksperimen 3: Evaluasi Pengaruh Augmentasi Data EEG terhadap Performa Model Klasifikasi}{60}{subsection.4.4.3}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{63}{section*.34}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{63}{section*.34}%
+\contentsline {section}{\numberline {4.5}Pembahasan}{62}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Analisis Komparatif Keseluruhan}{62}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Keterbatasan Penelitian}{63}{subsection.4.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{65}{section*.34}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{65}{section*.34}%
