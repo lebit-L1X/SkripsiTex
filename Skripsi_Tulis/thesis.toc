@@ -70,5 +70,8 @@
 \contentsline {subsection}{\numberline {4.3.2}Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}{54}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}{54}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}Hasil Eksperimen dan Analisis}{55}{section.4.4}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{56}{section*.32}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{56}{section*.32}%
+\contentsline {subsection}{\numberline {4.4.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{57}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Eksperimen 2: Evaluasi Model Klasifikasi Menggunakan Data EEG Asli}{59}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Eksperimen 3: Evaluasi Pengaruh Augmentasi Data EEG terhadap Performa Model Klasifikasi}{60}{subsection.4.4.3}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{63}{section*.34}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{63}{section*.34}%

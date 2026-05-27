@@ -422,7 +422,7 @@ Model \textit{Deep Neural Network} (DNN) yang digunakan dalam penelitian ini mer
     \label{fig:dnn_architecture}
 \end{figure}
 
-Gambar \ref{fig:dnn_architecture} menunjukkan arsitektur model DNN yang digunakan dalam penelitian ini, yang terdiri dari lapisan input, satu hidden layer dengan 5 neuron, serta lapisan output dengan fungsi aktivasi softmax. Struktur ini digunakan sebagai model klasifikasi berbasis \textit{supervised learning} untuk memetakan fitur EEG yang telah diekstraksi ke dalam kelas target.
+Gambar \ref{fig:dnn_architecture} menunjukkan arsitektur model DNN yang digunakan dalam penelitian ini, yang terdiri dari lapisan masukan, satu \textit{hidden layer} dengan 5 neuron, serta lapisan keluaran dengan fungsi aktivasi \textit{softmax}. Struktur ini digunakan sebagai model klasifikasi berbasis \textit{supervised learning} untuk memetakan fitur EEG yang telah diekstraksi ke dalam kelas target.
 
 Proses pelatihan model dilakukan menggunakan algoritma optimasi Adam dengan laju pembelajaran sebesar $10^{-3}$ dan \textit{loss function} \textit{binary crossentropy}. Model dilatih selama 100 \textit{epoch} dengan ukuran \textit{batch} sebesar 32, serta dilengkapi dengan mekanisme \textit{early stopping} dan \textit{model checkpoint} untuk mengurangi risiko \textit{overfitting} dan mempertahankan model dengan performa terbaik selama proses pelatihan.
 
