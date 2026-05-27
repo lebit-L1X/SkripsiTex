@@ -76,5 +76,6 @@
 \contentsline {section}{\numberline {4.5}Pembahasan}{62}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Analisis Komparatif Keseluruhan}{62}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Keterbatasan Penelitian}{63}{subsection.4.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{65}{section*.34}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{65}{section*.34}%
+\contentsline {chapter}{\numberline {5}\uppercase {Penutup}}{65}{chapter.5}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{66}{section*.34}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{66}{section*.34}%
