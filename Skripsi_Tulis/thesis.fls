@@ -632,11 +632,8 @@ INPUT .\src\00-front_matter\06-abstrak.tex
 INPUT .\src\00-front_matter\06-abstrak.tex
 INPUT src\00-front_matter\06-abstrak.tex
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
-INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
-INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT .\src\00-front_matter\07-abstract.tex
@@ -752,6 +749,7 @@ INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tf
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zpzccmry.vf
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\zapfchan\pzcmi8r.tfm
+INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcmr.vf
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
@@ -874,6 +872,8 @@ INPUT .\assets\pdfs\reparameterization.pdf
 INPUT .\assets\pdfs\reparameterization.pdf
 INPUT .\assets\pdfs\reparameterization.pdf
 INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Users\Wendy\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT .\assets\pdfs\flowchart_augment.pdf
 INPUT .\assets\pdfs\flowchart_augment.pdf
 INPUT .\assets\pdfs\flowchart_augment.pdf

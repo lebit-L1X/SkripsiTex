@@ -43,37 +43,37 @@ Warning--empty journal in eeg_augmentasi
 Done.
 You've used 37 entries,
             4087 wiz_defined-function locations,
-            989 strings with 16245 characters,
-and the built_in function-call counts, 17451 in all, are:
-= -- 1276
-> -- 561
+            989 strings with 16179 characters,
+and the built_in function-call counts, 17553 in all, are:
+= -- 1279
+> -- 573
 < -- 3
-+ -- 265
-- -- 132
-* -- 805
-:= -- 2900
++ -- 271
+- -- 135
+* -- 811
+:= -- 2909
 add.period$ -- 75
 call.type$ -- 37
 change.case$ -- 73
 chr.to.int$ -- 9
 cite$ -- 63
-duplicate$ -- 1476
-empty$ -- 1523
-format.name$ -- 161
-if$ -- 3886
+duplicate$ -- 1482
+empty$ -- 1529
+format.name$ -- 164
+if$ -- 3910
 int.to.chr$ -- 0
 int.to.str$ -- 37
-missing$ -- 337
+missing$ -- 340
 newline$ -- 134
 num.names$ -- 36
-pop$ -- 940
+pop$ -- 949
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1295
+skip$ -- 1301
 stack$ -- 0
 substring$ -- 117
-swap$ -- 843
+swap$ -- 849
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5

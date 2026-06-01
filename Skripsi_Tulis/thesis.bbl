@@ -167,10 +167,9 @@ L.~Xu, M.~Xu, Y.~Ke, X.~An, S.~Liu, and D.~Ming, ``Cross-dataset variability
   \url{https://doi.org/10.3389/fnhum.2020.00103}.
 
 \bibitem{traditional_timeseries_aug}
-W.-H. Kim, G.-W. Kim, J.~Ahn, and K.~Chung, ``Time-series data augmentation for
-  improving multi-class classification performance,'' 2024, [Online].
-  Available:
-  \url{https://ijaseit.insightsociety.org/index.php?option=com_content&view=article&id=9&Itemid=1&article_id=20546}.
+Q.~Wen, L.~Sun, F.~Yang, X.~Song, J.~Gao, X.~Wang, and H.~Xu, ``Time series
+  data augmentation for deep learning: A survey,'' 2021, [Online]. Available:
+  \url{https://arxiv.org/abs/2002.12478}.
 
 \bibitem{generative_models_survey}
 M.~Goyal and Q.~H. Mahmoud, ``A systematic review of synthetic data generation
