@@ -16,6 +16,8 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{38}{figure.caption.25}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{40}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran generasi data sintetis}}{43}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{46}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram Alur Integrasi Data Sintetis pada Proses Klasifikasi}}{45}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{47}{figure.caption.30}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Time Domain Sampel Sinyal EEG Sintetis}}{59}{figure.caption.35}%
 \addvspace {10\p@ }

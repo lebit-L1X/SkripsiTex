@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {2.2}Penelitian Terdahulu}{23}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Klasifikasi ASD Berbasis EEG Menggunakan Kombinasi mRMR dan XGBoost}{23}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Metode Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}{24}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Dataset EEG yang Digunakan}{25}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Dataset EEG yang Digunakan dalam Penelitian}{25}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}Fokus pada Celah Penelitian}{26}{section.2.3}%
 \contentsline {chapter}{\numberline {3}\uppercase {Perancangan dan Implementasi Sistem}}{27}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Analisis Kebutuhan Sistem}{27}{section.3.1}%
@@ -52,31 +52,31 @@
 \contentsline {subsection}{\numberline {3.3.3}Implementasi Model Klasifikasi}{44}{subsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.3.1}Integrasi Data Sintetis pada Model Klasifikasi}{44}{subsubsection.3.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.3.2}\textit {Minimum Redundancy Maximum Relevance} (\textit {mRMR})}{45}{subsubsection.3.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3.3}Model \textit {XGBoost}}{45}{subsubsection.3.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}Model \textit {XGBoost}}{46}{subsubsection.3.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.3.4}Model \textit {Deep Neural Network}}{46}{subsubsection.3.3.3.4}%
-\contentsline {chapter}{\numberline {4}\uppercase {Eksperimen dan Analisis}}{47}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Lingkungan Training}{47}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Spesifikasi Perangkat Keras}{47}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Spesifikasi Perangkat Lunak}{48}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Standarisasi Pengujian Eksperimen}{48}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Konfigurasi Eksperimen}{49}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Konfigurasi Eksperimen Augmentasi}{49}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}Konfigurasi Eksperimen Klasifikasi}{50}{subsubsection.4.2.1.2}%
-\contentsline {subsection}{\numberline {4.2.2}Metrik Evaluasi}{51}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Metrik Evaluasi Eksperimen Augmentasi}{51}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Metrik Evaluasi Eksperimen Klasifikasi}{51}{subsubsection.4.2.2.2}%
-\contentsline {section}{\numberline {4.3}Skenario Pengujian}{52}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{52}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}{53}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}{53}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Hasil Eksperimen dan Analisis}{54}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{56}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Eksperimen 2: Evaluasi Model Klasifikasi Menggunakan Data EEG Asli}{58}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Eksperimen 3: Evaluasi Pengaruh Augmentasi Data EEG terhadap Performa Model Klasifikasi}{59}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Pembahasan}{61}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Analisis Komparatif Keseluruhan}{61}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Keterbatasan Penelitian}{62}{subsection.4.5.2}%
-\contentsline {chapter}{\numberline {5}\uppercase {Penutup}}{64}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{64}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{65}{section.5.2}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{67}{Item.58}%
+\contentsline {chapter}{\numberline {4}\uppercase {Eksperimen dan Analisis}}{48}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lingkungan Training}{48}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Spesifikasi Perangkat Keras}{48}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Spesifikasi Perangkat Lunak}{49}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Standarisasi Pengujian Eksperimen}{49}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Konfigurasi Eksperimen}{50}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Konfigurasi Eksperimen Augmentasi}{50}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Konfigurasi Eksperimen Klasifikasi}{51}{subsubsection.4.2.1.2}%
+\contentsline {subsection}{\numberline {4.2.2}Metrik Evaluasi}{52}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Metrik Evaluasi Eksperimen Augmentasi}{52}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Metrik Evaluasi Eksperimen Klasifikasi}{52}{subsubsection.4.2.2.2}%
+\contentsline {section}{\numberline {4.3}Skenario Pengujian}{53}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{53}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}{54}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}{54}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Hasil Eksperimen dan Analisis}{55}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{57}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Eksperimen 2: Evaluasi Model Klasifikasi Menggunakan Data EEG Asli}{60}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Eksperimen 3: Evaluasi Pengaruh Augmentasi Data EEG terhadap Performa Model Klasifikasi}{62}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Pembahasan}{63}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Analisis Komparatif Keseluruhan}{63}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Keterbatasan Penelitian}{65}{subsection.4.5.2}%
+\contentsline {chapter}{\numberline {5}\uppercase {Penutup}}{66}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{66}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{67}{section.5.2}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{69}{Item.58}%

@@ -5,10 +5,10 @@
 \contentsline {table}{\numberline {2.3}{\ignorespaces Perbandingan beberapa model generatif}}{20}{table.caption.18}%
 \contentsline {table}{\numberline {2.4}{\ignorespaces Metrik evaluasi data sintetis EEG}}{22}{table.caption.20}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Konfigurasi Parameter \textit {XGBoost}}}{45}{table.caption.28}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Konfigurasi Parameter \textit {XGBoost}}}{46}{table.caption.29}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Spesifikasi Perangkat Keras Eksperimen}}{47}{table.caption.30}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Spesifikasi Lingkungan Perangkat Lunak}}{48}{table.caption.31}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}}{56}{table.caption.32}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}}{57}{table.caption.33}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Spesifikasi Perangkat Keras Eksperimen}}{48}{table.caption.31}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Spesifikasi Lingkungan Perangkat Lunak}}{49}{table.caption.32}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}}{57}{table.caption.33}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}}{58}{table.caption.34}%
 \addvspace {10\p@ }

@@ -70,7 +70,7 @@ Bagian ini menjelaskan konfigurasi eksperimen yang digunakan pada proses augment
 \begin{enumerate}
 \item \textbf{Dataset:}
     Eksperimen augmentasi menggunakan dataset EEG ASD dari penelitian \cite{eeg_dataset_asd}. Data EEG asli digunakan sebagai data masukan untuk melatih model \textit{Variational Autoencoder} (VAE) dalam menghasilkan sinyal EEG sintetis. Sebelum digunakan pada proses pelatihan model VAE, sinyal EEG melalui tahapan \textit{preprocessing} yang mengacu pada penelitian referensi \cite{paper_ref}, meliputi \textit{filtering}, segmentasi sinyal, serta proses pengurangan artefak untuk meningkatkan kualitas sinyal EEG. Pada eksperimen augmentasi, data EEG dipisahkan berdasarkan kanal dan kelas data (NORMAL dan ASD) sebelum proses pelatihan model. Dengan demikian, proses augmentasi dilakukan pada 32 subset data yang berbeda yang merepresentasikan kombinasi setiap kanal dan kelas.
-    
+
     \item \textbf{Hyperparameter:}
     Pelatihan model \textit{Variational Autoencoder} (VAE) dilakukan menggunakan ukuran \textit{batch} sebesar 32 selama 70 \textit{epoch}. Dimensi ruang laten (\textit{latent dimension}) yang digunakan sebesar 16 dengan optimizer \textit{Adam} menggunakan \textit{learning rate} sebesar $0.001$, $\beta_1 = 0.5$, dan $\beta_2 = 0.999$. Fungsi \textit{loss} menggunakan kombinasi \textit{Mean Squared Error} (MSE) dan \textit{Kullback-Leibler Divergence} dengan parameter $\beta = 0.5$. Pembagian data dilakukan menggunakan rasio 70\% data pelatihan, 20\% data validasi, dan 10\% data pengujian.
 
@@ -96,7 +96,7 @@ Bagian ini menjelaskan konfigurasi eksperimen yang digunakan pada proses augment
 Dalam eksperimen, digunakan sejumlah metrik evaluasi untuk menilai performa model pada proses augmentasi maupun klasifikasi data EEG. Metrik evaluasi digunakan untuk menganalisis kualitas data sintetis yang dihasilkan oleh model \textit{Variational Autoencoder} (VAE) serta mengukur performa model klasifikasi dalam membedakan kelas ASD dan NORMAL.
 \subsubsection{Metrik Evaluasi Eksperimen Augmentasi}
 
-Evaluasi pada tahap augmentasi dilakukan untuk menilai kemampuan model \textit{Variational Autoencoder} (VAE) dalam menghasilkan sinyal EEG sintetis yang memiliki karakteristik serupa dengan data EEG asli. Selain memantau perubahan nilai \textit{validation loss} selama proses pelatihan model, evaluasi juga dilakukan menggunakan beberapa metrik kuantitatif yang umum digunakan pada evaluasi model generatif. Metrik evaluasi yang digunakan mengacu pada penelitian \cite{eeg_gan}, meliputi \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD). Ketiga metrik tersebut digunakan untuk mengukur tingkat kemiripan distribusi, karakteristik fitur, serta kedekatan sinyal EEG sintetis terhadap data EEG asli.
+Evaluasi pada tahap augmentasi dilakukan untuk menilai kemampuan model \textit{Variational Autoencoder} (VAE) dalam menghasilkan sinyal EEG sintetis yang memiliki karakteristik serupa dengan data EEG asli. Evaluasi dilakukan menggunakan beberapa metrik kuantitatif yang umum digunakan pada evaluasi model generatif. Metrik evaluasi yang digunakan mengacu pada penelitian \cite{eeg_gan}, meliputi \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD). Ketiga metrik tersebut digunakan untuk mengukur tingkat kemiripan distribusi, karakteristik fitur, serta kedekatan sinyal EEG sintetis terhadap data EEG asli.
 
 \subsubsection{Metrik Evaluasi Eksperimen Klasifikasi}
 
@@ -249,9 +249,16 @@ T6  & 0.120 & 51.330 & 0.108 \\
 \hline
 \end{tabular}
 \end{table}
-Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variational Autoencoder} (VAE) dalam mempelajari distribusi sinyal EEG dan menghasilkan data sintetis yang menyerupai data asli pada masing-masing kanal EEG sebelum digunakan pada tahap klasifikasi ASD.
+Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variational Autoencoder} (VAE) dalam mempelajari distribusi sinyal EEG dan menghasilkan data sintetis yang menyerupai data asli pada masing-masing kanal EEG sebelum digunakan pada tahap klasifikasi ASD. Berdasarkan hasil evaluasi pada Tabel \ref{tab:normal_generation_results} dan Tabel \ref{tab:asd_generation_results}, model VAE mampu menghasilkan sinyal sintetis yang mempertahankan pola umum sinyal EEG asli pada kedua kelas data. 
 
-Berdasarkan hasil evaluasi pada Tabel \ref{tab:normal_generation_results} dan Tabel \ref{tab:asd_generation_results}, model VAE mampu menghasilkan sinyal sintetis yang mempertahankan pola umum sinyal EEG asli pada kedua kelas data. Kemiripan tersebut juga terlihat pada visualisasi domain waktu dan domain frekuensi pada Gambar X.X dan Gambar X.X, di mana sinyal sintetis mampu mengikuti pola amplitudo utama serta distribusi spektral frekuensi dominan dari sinyal asli.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/pics/time_domain.png}
+    \caption{Visualisasi Time Domain Sampel Sinyal EEG Sintetis}
+    \label{fig:time_domain}
+\end{figure}
+
+Kemiripan tersebut juga terlihat pada visualisasi domain waktu dan domain frekuensi pada \ref{fig:time_domain} dan Gambar X.X, di mana sinyal sintetis mampu mengikuti pola amplitudo utama serta distribusi spektral frekuensi dominan dari sinyal asli.
 
 Secara umum, kualitas data sintetis pada kelas ASD menunjukkan hasil yang lebih baik dan lebih stabil dibandingkan kelas Normal. Hal ini ditunjukkan oleh nilai \textit{Fréchet Inception Distance} (FID), \textit{Sliced Wasserstein Distance} (SWD), dan normalisasi \textit{Euclidean Distance} (ED) yang relatif lebih rendah pada sebagian besar kanal EEG kelas ASD. Kanal frontal seperti Fp2, F7, dan F8 pada kelas ASD menghasilkan nilai FID yang rendah, menunjukkan tingkat kemiripan distribusi yang tinggi terhadap data asli.
 
