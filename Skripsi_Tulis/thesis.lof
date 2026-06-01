@@ -6,8 +6,8 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Bentuk-Bentuk Artefak pada Sinyal EEG}}{12}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustrasi \textit {U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD}}{15}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG}}{16}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi Metode Augmentasi Konvensional pada Data \textit {Time-Series}}}{17}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Arsitektur umum \textit {Variational Autoencoder} (VAE)}}{20}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi Metode Augmentasi pada Data \textit {Time-Series}}}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Arsitektur umum \textit {Variational Autoencoder} (VAE)}}{21}{figure.caption.19}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram aliran data pada sistem}}{30}{figure.caption.21}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{31}{figure.caption.22}%
