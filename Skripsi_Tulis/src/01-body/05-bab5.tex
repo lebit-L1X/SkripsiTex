@@ -1,4 +1,32 @@
 %-----------------------------------------------------------------------------%
 \chapter{\babLima}
 
-fml
+Bab ini menyajikan kesimpulan yang diperoleh berdasarkan hasil penelitian serta saran untuk pengembangan penelitian selanjutnya. Kesimpulan disusun untuk menjawab rumusan masalah yang telah ditetapkan, sedangkan saran diberikan berdasarkan keterbatasan dan temuan yang diperoleh selama penelitian.
+
+\section{Kesimpulan}
+Berdasarkan hasil perancangan, implementasi, dan analisis eksperimental terhadap penggunaan augmentasi data berbasis Variational Autoencoder (VAE) untuk klasifikasi Autism Spectrum Disorder (ASD) menggunakan sinyal EEG, dapat ditarik beberapa kesimpulan sebagai berikut:
+
+\begin{enumerate}
+    \item Penelitian ini menunjukkan bahwa pendekatan augmentasi data berbasis \textit{Variational Autoencoder} (VAE) dapat digunakan sebagai salah satu alternatif untuk mengatasi keterbatasan jumlah dan variasi data pada klasifikasi ASD berbasis EEG. Melalui proses pembelajaran distribusi data, VAE mampu menghasilkan sampel baru yang memperluas keragaman data pelatihan tanpa memerlukan proses akuisisi data EEG tambahan yang umumnya memerlukan biaya, waktu, dan keterlibatan tenaga ahli.
+
+    \item Kualitas data sintetis yang dihasilkan tidak sepenuhnya seragam pada seluruh kanal dan kelas data. Kanal serta kelas dengan distribusi sinyal yang lebih kompleks cenderung menghasilkan kualitas generasi yang lebih rendah dibandingkan distribusi yang lebih sederhana. Meskipun demikian, data sintetis yang dihasilkan masih mampu mempertahankan karakteristik utama sinyal EEG baik pada domain waktu maupun domain frekuensi, sehingga menunjukkan bahwa model generatif mampu menangkap pola penting yang terdapat pada data asli.
+
+    \item Pengaruh data sintetis terhadap performa klasifikasi tidak hanya ditentukan oleh kualitas hasil generasi, tetapi juga oleh karakteristik model klasifikasi yang digunakan. Model XGBoost mampu memanfaatkan tambahan variasi data yang diberikan oleh proses augmentasi secara lebih efektif dan menunjukkan peningkatan performa yang relatif konsisten. Sebaliknya, model DNN menunjukkan sensitivitas yang lebih tinggi terhadap perubahan distribusi data sehingga manfaat augmentasi tidak selalu muncul secara merata pada seluruh metrik evaluasi.
+
+\item Secara keseluruhan, hasil penelitian menunjukkan bahwa efektivitas augmentasi data EEG berbasis model generatif dipengaruhi oleh kualitas data asli, kemampuan model generatif dalam merepresentasikan distribusi data, serta karakteristik algoritma klasifikasi yang digunakan. Meskipun peningkatan performa belum terlihat secara konsisten pada seluruh model, pendekatan augmentasi berbasis VAE tetap menunjukkan potensi dalam mendukung pengembangan sistem klasifikasi ASD berbasis EEG yang lebih robust terhadap keterbatasan data.
+\end{enumerate}
+
+\section{Saran}
+
+Berdasarkan temuan dan keterbatasan yang dihadapi selama penelitian ini, beberapa saran untuk penelitian selanjutnya diajukan guna meningkatkan kualitas data sintetis yang dihasilkan serta efektivitas pemanfaatannya pada klasifikasi \textit{Autism Spectrum Disorder} (ASD) berbasis sinyal EEG:
+\begin{enumerate}
+    \item Penelitian selanjutnya dapat mengeksplorasi penggunaan model klasifikasi yang lebih kompleks dan memiliki kapasitas pembelajaran yang lebih tinggi, seperti Transformer atau arsitektur \textit{deep learning} lainnya. Model dengan kebutuhan data yang lebih besar berpotensi memperoleh manfaat yang lebih signifikan dari penambahan data sintetis sehingga efektivitas augmentasi dapat dievaluasi secara lebih komprehensif.
+
+    \item Penelitian selanjutnya dapat menganalisis pengaruh kualitas, karakteristik, dan jumlah data asli terhadap performa model VAE dalam menghasilkan data sintetis. Analisis tersebut dapat memberikan pemahaman yang lebih mendalam mengenai hubungan antara kualitas data masukan dan kualitas data sintetis yang dihasilkan sehingga faktor-faktor yang memengaruhi keberhasilan proses augmentasi dapat diidentifikasi dengan lebih baik.
+
+    \item Penelitian selanjutnya dapat mengevaluasi pengaruh rasio data sintetis terhadap data asli secara lebih sistematis. Pengujian dengan berbagai jumlah data sintetis diperlukan untuk mengetahui titik optimal penggunaan data augmentasi serta memahami hubungan antara jumlah data sintetis dan performa model klasifikasi.
+
+    \item Penelitian selanjutnya dapat membandingkan pendekatan augmentasi berbasis VAE dengan metode generatif lainnya, seperti \textit{Generative Adversarial Network} (GAN), \textit{Diffusion Model}, maupun variasi arsitektur VAE yang lebih kompleks. Perbandingan tersebut dapat memberikan gambaran yang lebih menyeluruh mengenai metode augmentasi yang paling efektif untuk menghasilkan data EEG sintetis dengan kualitas yang baik.
+
+    \item Penelitian selanjutnya dapat mengembangkan metode evaluasi kualitas data sintetis yang tidak hanya berfokus pada kemiripan distribusi statistik, tetapi juga mempertimbangkan karakteristik fisiologis dan relevansi klinis sinyal EEG. Pendekatan evaluasi yang lebih komprehensif diharapkan dapat memberikan gambaran yang lebih akurat mengenai kualitas dan kegunaan data sintetis pada aplikasi klasifikasi ASD berbasis EEG.
+\end{enumerate}
