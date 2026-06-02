@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1780347721.42019 "thesis.aux" "thesis.bbl" "thesis" 1780347732.50695 0
+["bibtex thesis"] 1780369211.29578 "thesis.aux" "thesis.bbl" "thesis" 1780369217.38545 0
   "./pustaka.bib" 1780327647 12137 0b1f4b405056e316747ee2e4ef38739f ""
   "C:/Users/Wendy/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "thesis.aux" 1780347730 30365 ee8f1ddece7624090e5ea922e67e5f52 "pdflatex"
+  "thesis.aux" 1780369216 31548 3963a96fc9963de5cb3259ff82caab1d "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1780347722.03139 "c:/Users/Wendy/Documents/College/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" "thesis.pdf" "thesis" 1780347732.50848 0
+["pdflatex"] 1780369211.71289 "c:/Users/Wendy/Documents/College/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" "thesis.pdf" "thesis" 1780369217.38691 0
   "C:/Users/Wendy/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771950667 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Wendy/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1769941181 13333861 7c51f79a864dce43060416066c7ebdaa ""
   "C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -362,9 +362,10 @@
   "assets/pics/10_20_system.jpg" 1775147900 63465 a1964524ded23dff196aa7d5902df02c ""
   "assets/pics/artifact_eeg.png" 1775149258 430388 6dcc8777f8ee69ec795b442ddc1d132e ""
   "assets/pics/four_major_filters.png" 1778527717 287995 cdeccf02a5e82db7f907913e3c582699 ""
+  "assets/pics/freq_domain.png" 1780368664 362589 91ace69a91ab2958007d6d75288ddf1d ""
   "assets/pics/frequency_band.png" 1780327080 85492 752b117749e6c775650544c2907bc80e ""
   "assets/pics/general_pipeline.png" 1780321645 34995 0f22f7f0311a283319893094c7d5395a ""
-  "assets/pics/time_domain.png" 1780347550 1138819 f9dada15cd79d1d2870cb326545fd8ee ""
+  "assets/pics/time_domain.png" 1780368434 720089 9281233ea9b5263a9cbfa14ecce99f3f ""
   "assets/pics/traditional_augmentation.png" 1780324855 181802 ebf4bd6430225a99100874d16b12978b ""
   "assets/pics/ushaped.png" 1780320993 44569 4f2e3f4d49ea36d2b507dd4b2059a9e8 ""
   "assets/pics/vae-architecture.jpg" 1780325889 41455 872f9f703900a4f8393c91a19ee6f871 ""
@@ -381,16 +382,16 @@
   "src/00-front_matter/07-abstract.tex" 1780329387 2299 63740e5a8be9eefd37c20f0e725a79f3 ""
   "src/01-body/01-bab1.tex" 1779797088 14695 c356cf8dbfe1fc3460d2192a3316a2b7 ""
   "src/01-body/02-bab2.tex" 1780346739 39194 7c14ac535259c53ff6b536ceb78faf85 ""
-  "src/01-body/03-bab3.tex" 1780345547 33815 c126fad99e242526299c393284d76d7a ""
-  "src/01-body/04-bab4.tex" 1780347710 34930 9f7f60aef2059d3860e3dc48d30fab54 ""
+  "src/01-body/03-bab3.tex" 1780369204 33913 44f9ec950514104c2cbee10ca4909442 ""
+  "src/01-body/04-bab4.tex" 1780369056 37007 f9497a36bad56bc4d43f3803bd61d224 ""
   "src/01-body/05-bab5.tex" 1780256546 5270 24d72a34068cf98e8d58a5c3a49f8ec5 ""
-  "thesis.aux" 1780347730 30365 ee8f1ddece7624090e5ea922e67e5f52 "pdflatex"
-  "thesis.bbl" 1780347721 10872 7a105ea62244576264cb7b5511bb9971 "bibtex thesis"
-  "thesis.lof" 1780347730 2514 bec47d666957bdf945b1fbb7d79df137 "pdflatex"
-  "thesis.lot" 1780347730 1208 5000d8733ddeeeae8bc35071c05fe317 "pdflatex"
-  "thesis.out" 1780347730 19604 140e1de44a3ceadc52f159e783725701 "pdflatex"
+  "thesis.aux" 1780369216 31548 3963a96fc9963de5cb3259ff82caab1d "pdflatex"
+  "thesis.bbl" 1780369211 10872 7a105ea62244576264cb7b5511bb9971 "bibtex thesis"
+  "thesis.lof" 1780369216 2652 3b1bc83abea89d5de14ec5dc00697258 "pdflatex"
+  "thesis.lot" 1780369216 1519 96abd8c35698cb164d3999663dd45348 "pdflatex"
+  "thesis.out" 1780369216 20136 eb7bdd523164208b1139416af2436353 "pdflatex"
   "thesis.tex" 1780327421 5470 37abc2af32b2fd890a6a56af12f06e60 ""
-  "thesis.toc" 1780347730 7958 6e9dfa3627551a2abe4f5ff0835d166f "pdflatex"
+  "thesis.toc" 1780369216 8056 4e07b661f4321fe28a79ecaf637750e4 "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.lof"

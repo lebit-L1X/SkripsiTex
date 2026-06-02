@@ -253,26 +253,54 @@ Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variatio
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{assets/pics/time_domain.png}
-    \caption{Visualisasi Time Domain Sampel Sinyal EEG Sintetis}
+    \includegraphics[width=0.9\textwidth]{assets/pics/time_domain.png}
+    \caption{Visualisasi Domain Waktu Sampel Sinyal EEG Sintetis}
     \label{fig:time_domain}
 \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/pics/freq_domain.png}
+    \caption{Visualisasi Domain Frekuensi Sampel Sinyal EEG Sintetis}
+    \label{fig:freq_domain}
+\end{figure}
 
-Kemiripan tersebut juga terlihat pada visualisasi domain waktu dan domain frekuensi pada \ref{fig:time_domain} dan Gambar X.X, di mana sinyal sintetis mampu mengikuti pola amplitudo utama serta distribusi spektral frekuensi dominan dari sinyal asli.
+Kemiripan tersebut juga terlihat pada visualisasi domain waktu dan domain frekuensi pada \ref{fig:time_domain} dan \ref{fig:freq_domain}, di mana sinyal sintetis mampu mengikuti pola amplitudo utama serta distribusi spektral frekuensi dominan dari sinyal asli.
 
 Secara umum, kualitas data sintetis pada kelas ASD menunjukkan hasil yang lebih baik dan lebih stabil dibandingkan kelas Normal. Hal ini ditunjukkan oleh nilai \textit{Fréchet Inception Distance} (FID), \textit{Sliced Wasserstein Distance} (SWD), dan normalisasi \textit{Euclidean Distance} (ED) yang relatif lebih rendah pada sebagian besar kanal EEG kelas ASD. Kanal frontal seperti Fp2, F7, dan F8 pada kelas ASD menghasilkan nilai FID yang rendah, menunjukkan tingkat kemiripan distribusi yang tinggi terhadap data asli.
 
 Sebaliknya, beberapa kanal pada kelas Normal, khususnya kanal temporal seperti T4, T5, dan T6, menunjukkan nilai FID dan normalisasi ED yang lebih tinggi dibandingkan kanal lainnya. Secara empiris, hal ini mengindikasikan bahwa distribusi sinyal pada kanal tersebut lebih sulit dipelajari oleh model generatif, kemungkinan akibat variasi pola sinyal dan kompleksitas distribusi yang lebih tinggi.
 
-Perbedaan kualitas hasil generasi juga terlihat selama proses pelatihan model. Berdasarkan grafik evolusi \textit{validation loss} pada Gambar X.X, model pada data ASD cenderung mencapai konvergensi yang lebih stabil dengan nilai loss yang lebih rendah, sedangkan model pada data Normal menunjukkan \textit{validation loss} yang lebih tinggi dan mengalami plateau lebih awal.
+Selain itu, pola yang konsisten juga terlihat pada visualisasi domain frekuensi. Berdasarkan grafik PSD, sinyal sintetis umumnya mampu mengikuti distribusi spektral utama dari sinyal EEG asli. Namun, hampir seluruh model menunjukkan peningkatan komponen frekuensi di atas 40 Hz yang tidak dominan pada data asli. Setelah penerapan \textit{low-pass filter} 40 Hz, distribusi spektral sinyal sintetis menjadi lebih mendekati data asli. Temuan ini menunjukkan bahwa model VAE berhasil mempertahankan karakteristik utama sinyal EEG, meskipun masih menghasilkan komponen frekuensi tinggi yang dapat diminimalkan melalui proses \textit{filtering} sinyal.
 
 Meskipun kualitas hasil generasi tidak sepenuhnya seragam pada seluruh kanal, hasil eksperimen menunjukkan bahwa model VAE tetap mampu mempertahankan karakteristik utama sinyal EEG pada domain waktu maupun domain frekuensi. Temuan ini menunjukkan bahwa pendekatan augmentasi berbasis model generatif memiliki potensi untuk meningkatkan jumlah dan variasi data EEG pada proses klasifikasi ASD.
 
 \subsection{Eksperimen 2: Evaluasi Model Klasifikasi Menggunakan Data EEG Asli}
 
+\begin{table}[H]
+\centering
+\caption{Perbandingan performa model ANN dan XGBoost Dengan Data EEG Asli}
+\label{tab:ann_xgb_comparison}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Metric} & \textbf{ANN} & \textbf{XGBoost} \\
+\midrule
+TP & $115.2 \pm 57.11$ & $141.1 \pm 1.43$ \\
+FP & $82.4 \pm 58.02$ & $3.0 \pm 1.37$ \\
+TN & $97.6 \pm 57.95$ & $139.9 \pm 1.46$ \\
+FN & $65.8 \pm 55.98$ & $4.1 \pm 1.52$ \\
+\midrule
+Precision & $0.5412 \pm 0.2384$ & $0.9786 \pm 0.0098$ \\
+Recall & $0.6347 \pm 0.3089$ & $0.9724 \pm 0.0101$ \\
+F1-Score & $0.5689 \pm 0.2423$ & $0.9751 \pm 0.0089$ \\
+AUC & $0.6204 \pm 0.1827$ & $0.9965 \pm 0.0025$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 Eksperimen kedua bertujuan untuk mengevaluasi performa model klasifikasi menggunakan data EEG asli tanpa melibatkan data sintetis hasil augmentasi. Eksperimen ini dilakukan untuk memperoleh nilai performa dasar (\textit{baseline}) yang akan digunakan sebagai acuan pembanding pada eksperimen klasifikasi dengan augmentasi data sintetis.
 
-Eksperimen melibatkan dua model klasifikasi, yaitu model \textit{Deep Neural Network} (DNN) sebagai model \textit{baseline} berdasarkan penelitian rujukan dan model \textit{Extreme Gradient Boosting} (XGBoost). Seluruh pengujian dilakukan menggunakan data EEG asli yang telah melalui tahap \textit{preprocessing} sebagaimana dijelaskan pada penelitian referensi. Evaluasi performa dilakukan menggunakan metrik akurasi, sensitivitas, spesifisitas, presisi, \textit{F1-score}, dan \textit{Area Under Curve} (AUC). Hasil eksperimen ditunjukkan pada Tabel X.X.
+Eksperimen melibatkan dua model klasifikasi, yaitu model \textit{Deep Neural Network} (DNN) sebagai model \textit{baseline} berdasarkan penelitian rujukan dan model \textit{Extreme Gradient Boosting} (XGBoost). Seluruh pengujian dilakukan menggunakan data EEG asli yang telah melalui tahap \textit{preprocessing} sebagaimana dijelaskan pada penelitian referensi. Evaluasi performa dilakukan menggunakan metrik akurasi, sensitivitas, spesifisitas, presisi, \textit{F1-score}, dan \textit{Area Under Curve} (AUC). Hasil eksperimen ditunjukkan pada \ref{tab:ann_xgb_comparison}.
 
 Berdasarkan hasil evaluasi, kedua model mampu melakukan klasifikasi sinyal EEG ASD dan Normal menggunakan data EEG asli. Namun, terdapat perbedaan performa yang cukup signifikan antara model DNN dan XGBoost. Model XGBoost secara konsisten menunjukkan performa yang lebih tinggi pada hampir seluruh metrik evaluasi dibandingkan model DNN. Nilai sensitivitas, spesifisitas, presisi, \textit{F1-score}, dan AUC yang diperoleh XGBoost menunjukkan bahwa model mampu melakukan pemisahan kelas dengan sangat baik dan stabil pada sebagian besar fold pengujian.
 
@@ -283,12 +311,35 @@ Perbedaan performa tersebut menunjukkan bahwa karakteristik data EEG pada peneli
 Secara keseluruhan, hasil eksperimen ini menunjukkan bahwa model DNN dan XGBoost memiliki karakteristik performa yang berbeda dalam melakukan klasifikasi sinyal EEG ASD menggunakan data asli. Oleh karena itu, kedua model selanjutnya digunakan pada eksperimen berikutnya untuk mengevaluasi bagaimana penggunaan data sintetis hasil augmentasi memengaruhi performa dan kemampuan generalisasi masing-masing model klasifikasi.
 
 \subsection{Eksperimen 3: Evaluasi Pengaruh Augmentasi Data EEG terhadap Performa Model Klasifikasi}
+\begin{table}[H]
+\centering
+\caption{Perbandingan performa model DNN dan XGBoost dengan kombinasi data EEG asli dan sintetis}
+\label{tab:dnn_xgb_comparison}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Metrik} & \textbf{DNN} & \textbf{XGBoost} \\
+\midrule
+TP          & $66.84 \pm 75.63$   & $221.98 \pm 1.49$ \\
+FP          & $8.76 \pm 24.24$    & $0.68 \pm 0.94$ \\
+TN          & $581.04 \pm 24.19$  & $471.12 \pm 0.92$ \\
+FN          & $214.06 \pm 75.59$  & $2.72 \pm 1.59$ \\
+\midrule
+Sensitivity & $0.2379 \pm 0.2664$ & $0.9879 \pm 0.0070$ \\
+Specificity & $0.9852 \pm 0.0407$ & $0.9986 \pm 0.0020$ \\
+Precision   & $0.9054 \pm 0.2024$ & $0.9970 \pm 0.0041$ \\
+Accuracy    & $0.7441 \pm 0.0675$ & $0.9951 \pm 0.0028$ \\
+F1-Score    & $0.3141 \pm 0.2458$ & $0.9924 \pm 0.0044$ \\
+AUC         & $0.6181 \pm 0.1474$ & $0.9996 \pm 0.0008$ \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 Hasil eksperimen menunjukkan bahwa penggunaan data sintetis memberikan pengaruh yang berbeda pada masing-masing model klasifikasi. Secara umum, augmentasi data memberikan peningkatan performa yang signifikan pada model XGBoost, namun menghasilkan perubahan karakteristik performa yang berbeda pada model DNN.
 
-Berdasarkan hasil evaluasi pada Tabel X.X, model XGBoost mengalami peningkatan performa pada hampir seluruh metrik evaluasi setelah penambahan data sintetis. Nilai sensitivitas meningkat dari 0.971 menjadi 0.987, sedangkan spesifisitas meningkat hingga mendekati sempurna yaitu dari 0.978 menjadi 0.999. Selain itu, akurasi model juga meningkat dari 0.974 menjadi 0.995 dengan nilai presisi yang sangat tinggi. Hasil tersebut menunjukkan bahwa data sintetis yang dihasilkan mampu membantu model XGBoost mempelajari distribusi data EEG dengan lebih baik serta meningkatkan kemampuan generalisasi model terhadap kedua kelas data.
+Berdasarkan hasil evaluasi pada \ref{tab:dnn_xgb_comparison}, model XGBoost mengalami peningkatan performa pada hampir seluruh metrik evaluasi setelah penambahan data sintetis. Nilai sensitivitas meningkat dari 0.9724 menjadi 0.9879, sedangkan nilai presisi meningkat dari 0.9786 menjadi 0.9970. Selain itu, nilai AUC juga meningkat dari 0.9965 menjadi 0.9996. Peningkatan tersebut menunjukkan bahwa data sintetis yang dihasilkan mampu membantu model XGBoost mempelajari distribusi data EEG dengan lebih baik serta meningkatkan kemampuan generalisasi model terhadap kedua kelas data.
 
-Sebaliknya, model DNN menunjukkan perubahan performa yang tidak sepenuhnya konsisten setelah penggunaan data sintetis. Meskipun akurasi meningkat dari 0.585 menjadi 0.724 dan nilai presisi meningkat secara signifikan dari 0.537 menjadi 0.833, nilai sensitivitas justru mengalami penurunan yang cukup besar dari 0.630 menjadi 0.212. Sementara itu, spesifisitas meningkat secara signifikan dari 0.539 menjadi 0.967. Pola ini menunjukkan bahwa model DNN cenderung menjadi lebih konservatif dalam melakukan prediksi kelas ASD setelah penambahan data sintetis.
+Sebaliknya, model DNN menunjukkan perubahan performa yang tidak sepenuhnya konsisten setelah penggunaan data sintetis. Meskipun nilai presisi meningkat secara signifikan dari 0.5412 menjadi 0.9054, nilai sensitivitas justru mengalami penurunan yang cukup besar dari 0.6347 menjadi 0.2379. Penurunan sensitivitas tersebut juga diikuti oleh penurunan nilai F1-score dari 0.5689 menjadi 0.3141, sementara nilai AUC relatif tidak mengalami perubahan yang signifikan, yaitu dari 0.6204 menjadi 0.6181.
 
 Secara empiris, kondisi tersebut mengindikasikan bahwa model DNN lebih sering memprediksi kelas Normal dibandingkan kelas ASD setelah proses augmentasi dilakukan. Akibatnya, jumlah \textit{false positive} berhasil ditekan sehingga nilai presisi dan spesifisitas meningkat, namun di sisi lain jumlah \textit{false negative} meningkat sehingga sensitivitas mengalami penurunan. Hal ini menunjukkan bahwa penambahan data sintetis tidak selalu meningkatkan kemampuan model DNN dalam mengenali pola ASD secara seimbang.
 

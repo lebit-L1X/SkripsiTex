@@ -6,7 +6,7 @@ Bab ini menyajikan metodologi penelitian dan perancangan teknis yang dilakukan u
 
 Pembahasan pada bab ini dimulai dari Analisis Kebutuhan untuk mendefinisikan batasan masalah dan kebutuhan sistem. Fokus utama bab ini terletak pada Perancangan Arsitektur dan Alur Kerja Sistem yang menjelaskan tahapan pengolahan sinyal EEG, mulai dari prapemrosesan, augmentasi data menggunakan VAE, hingga proses klasifikasi. Arsitektur sistem divisualisasikan menggunakan diagram arsitektur dan \textit{flowchart} untuk memberikan gambaran alur pemrosesan secara menyeluruh. Selanjutnya, bagian Detail Implementasi dan Teknologi menjabarkan realisasi arsitektur ke dalam bentuk implementasi kode dengan memanfaatkan beberapa library untuk pengolahan sinyal, pengembangan model generatif, serta proses klasifikasi. Bab ini kemudian ditutup dengan Perancangan Infrastruktur yang menjelaskan lingkungan komputasi dan \textit{software dependencies} yang digunakan selama proses pengembangan dan pengujian model.
 
-\section{Analisis Kebutuhan Sistem}
+\section{Analisis Kebutuhan Sistem VAE untuk Augmentasi EEG}
 
 Sebelum memulai perancangan arsitektur, tahap pertama yang dilakukan adalah menganalisis kebutuhan sistem. Analisis ini difokuskan pada kebutuhan penelitian yang berkaitan dengan pengembangan sistem klasifikasi ASD berbasis sinyal EEG dengan integrasi augmentasi data menggunakan \textit{Variational Autoencoder} (VAE). Sistem yang dikembangkan ditujukan sebagai lingkungan uji (\textit{testbed}) untuk mengevaluasi efektivitas augmentasi data sintetis terhadap performa model klasifikasi berbasis EEG.
 
@@ -46,7 +46,7 @@ Untuk menjaga fokus penelitian, sistem yang dikembangkan memiliki beberapa batas
     \item Proses \textit{denoising}, \textit{artifact removal}, dan teknik peningkatan kualitas sinyal lainnya tidak menjadi fokus utama penelitian dan mengikuti pendekatan prapemrosesan pada penelitian referensi yang digunakan.
 \end{enumerate}
 
-\section{Perancangan Arsitektur Sistem}
+\section{Perancangan Arsitektur Sistem Augmentasi dan Klasifikasi EEG}
 \label{Perancangan Arsitektur Sistem}
 
 Setelah kebutuhan fungsional sistem diuraikan, tahap selanjutnya adalah merancang arsitektur sistem sebagai representasi konseptual dari alur pemrosesan data yang akan diimplementasikan. Perancangan ini bertujuan untuk menggambarkan integrasi antar komponen dalam \textit{pipeline}, khususnya dalam menggabungkan proses augmentasi data berbasis \textit{Variational Autoencoder} (VAE) dengan \textit{pipeline} klasifikasi yang telah ditentukan.
@@ -138,7 +138,7 @@ Seleksi fitur dilakukan menggunakan metode \textit{minimum Redundancy Maximum Re
 
 Tahap akhir dilakukan menggunakan algoritma XGBoost dan \textit{Deep Neural Network} sebagai model klasifikasi. Proses klasifikasi dilakukan pada dua skenario, yaitu menggunakan data asli dan kombinasi data asli dengan data sintetis hasil augmentasi. Kedua skenario menggunakan \textit{pipeline} yang sama sehingga pengaruh penggunaan data sintetis dapat dianalisis secara langsung.
 
-\section{Detail Implementasi dan Teknologi}
+\section{Detail Implementasi dan Teknologi pada Model Augmentasi dan Klasifikasi EEG}
 \label{Detail Implementasi dan Teknologi}
 
 Bagian ini menjelaskan bagaimana perancangan sistem yang telah dijabarkan sebelumnya diterapkan ke dalam kode serta teknologi yang digunakan untuk mengimplementasikannya. Penjelasan pada bagian ini mencakup teknologi dan \textit{library} yang digunakan, serta gambaran umum implementasi dari komponen utama dalam \textit{pipeline}, termasuk pemrosesan sinyal EEG, ekstraksi dan seleksi fitur, modul augmentasi berbasis \textit{Variational Autoencoder} (VAE), serta model klasifikasi. 
