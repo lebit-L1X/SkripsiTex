@@ -104,149 +104,70 @@ Evaluasi pada tahap klasifikasi dilakukan untuk menilai performa model dalam mem
 
 Metrik evaluasi yang digunakan meliputi \textit{Precision}, \textit{Recall} (\textit{Sensitivity}), \textit{F1-Score}, \textit{Accuracy}, \textit{Specificity}, serta \textit{Area Under Curve} (AUC). Selain itu, evaluasi juga dilakukan menggunakan \textit{confusion matrix} untuk memperoleh nilai \textit{True Positive} (TP), \textit{True Negative} (TN), \textit{False Positive} (FP), dan \textit{False Negative} (FN) pada setiap fold pengujian. Seluruh metrik evaluasi diterapkan secara konsisten baik pada model DNN maupun model XGBoost untuk menjaga validitas komparasi performa antar model klasifikasi. Seluruh hasil evaluasi disajikan dalam bentuk rata-rata (\textit{mean}) dan standar deviasi (\textit{standard deviation}) dari seluruh fold untuk memberikan gambaran performa model yang lebih stabil dan representatif.
 
-\section{Skenario Pengujian}
-
-Bagian ini menjelaskan skenario pengujian eksperimen yang digunakan untuk mengevaluasi performa klasifikasi EEG dengan augmentasi data berbasis \textit{Variational Autoencoder} (VAE). Eksperimen melibatkan dua skenario utama, yaitu klasifikasi menggunakan data EEG asli (\textit{real data}) dan klasifikasi menggunakan kombinasi data EEG asli dengan data sintetis hasil augmentasi. Selain itu, penelitian juga membandingkan performa model \textit{Deep Neural Network} (DNN) sebagai model \textit{baseline} dan model \textit{Extreme Gradient Boosting} (XGBoost).
-
-\subsection{Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}
-
-Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variational Autoencoder} (VAE) dalam mempelajari distribusi data EEG dan menghasilkan sinyal EEG sintetis yang memiliki karakteristik serupa dengan data asli. Eksperimen ini berperan sebagai validasi awal bahwa model VAE mampu merepresentasikan pola sinyal EEG dari masing-masing kelas dan kanal EEG yang digunakan dalam penelitian.
-
-Selain itu, eksperimen ini juga bertujuan untuk menganalisis kualitas data sintetis yang dihasilkan menggunakan beberapa metrik evaluasi data generatif. Hasil dari eksperimen ini digunakan sebagai dasar untuk menentukan apakah data sintetis yang dihasilkan layak digunakan pada tahap augmentasi data untuk proses klasifikasi EEG.
-
-Berdasarkan tujuan tersebut, hipotesis yang diajukan pada eksperimen ini meliputi:
-
-\begin{enumerate}
-    \item Model \textit{Variational Autoencoder} (VAE) mampu mencapai konvergensi \textit{loss} selama proses pelatihan pada seluruh kanal EEG dan kelas data yang digunakan.
-    
-    \item Model VAE mampu menghasilkan sinyal EEG sintetis yang memiliki karakteristik distribusi yang mendekati data EEG asli berdasarkan metrik evaluasi data generatif yang digunakan.
-\end{enumerate}
-
-\subsection{Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}
-
-Eksperimen kedua bertujuan untuk mengevaluasi performa model klasifikasi menggunakan data EEG asli tanpa melibatkan data sintetis hasil augmentasi. Eksperimen ini dilakukan untuk memperoleh nilai performa dasar (\textit{baseline}) yang akan digunakan sebagai acuan pembanding pada eksperimen klasifikasi dengan augmentasi data sintetis.
-
-Eksperimen melibatkan dua model klasifikasi, yaitu model \textit{Deep Neural Network} (DNN) sebagai model \textit{baseline} berdasarkan penelitian rujukan dan model \textit{Extreme Gradient Boosting} (XGBoost). Evaluasi dilakukan menggunakan dataset EEG asli yang telah melalui tahap \textit{preprocessing} sebagaimana dijelaskan pada penelitian referensi.
-
-Berdasarkan tujuan tersebut, hipotesis yang diajukan pada eksperimen ini meliputi:
-
-\begin{enumerate}
-    \item Model DNN dan XGBoost mampu melakukan klasifikasi sinyal EEG ASD dan NORMAL menggunakan data EEG asli dengan performa yang stabil.
-    
-    \item Hasil evaluasi pada eksperimen ini dapat digunakan sebagai nilai \textit{baseline} untuk membandingkan pengaruh penggunaan data sintetis pada eksperimen klasifikasi berikutnya.
-\end{enumerate}
-
-\subsection{Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}
-
-Eksperimen ketiga bertujuan untuk mengevaluasi pengaruh penggunaan data sintetis hasil augmentasi \textit{Variational Autoencoder} (VAE) terhadap performa model klasifikasi EEG. Pada eksperimen ini, proses klasifikasi dilakukan menggunakan kombinasi data EEG asli dan data sintetis yang dihasilkan pada tahap augmentasi.
-
-Eksperimen melibatkan dua model klasifikasi, yaitu model \textit{Deep Neural Network} (DNN) dan model \textit{Extreme Gradient Boosting} (XGBoost). Performa kedua model kemudian dibandingkan dengan hasil pada eksperimen sebelumnya untuk menganalisis pengaruh augmentasi data sintetis terhadap kemampuan klasifikasi sinyal EEG ASD dan NORMAL.
-
-Berdasarkan tujuan tersebut, hipotesis yang diajukan pada eksperimen ini meliputi:
-
-\begin{enumerate}
-    \item Penggunaan data sintetis hasil augmentasi berpotensi meningkatkan performa model klasifikasi dibandingkan penggunaan data EEG asli saja.
-    
-    \item Pengaruh augmentasi data sintetis terhadap performa klasifikasi bergantung pada kemampuan masing-masing model dalam mempelajari pola tambahan dari data hasil augmentasi. Model tertentu dapat memperoleh peningkatan performa yang lebih baik dibandingkan model lainnya seiring bertambahnya jumlah data pelatihan.
-\end{enumerate}
-
-\section{Hasil Eksperimen dan Analisis}
-
-Eksperimen dilakukan sesuai dengan skenario pengujian yang telah dijelaskan pada bagian sebelumnya. Bagian ini menyajikan hasil eksperimen serta analisis terhadap performa model pada setiap skenario pengujian, meliputi proses augmentasi data menggunakan \textit{Variational Autoencoder} (VAE) dan proses klasifikasi EEG menggunakan model \textit{Deep Neural Network} (DNN) serta \textit{Extreme Gradient Boosting} (XGBoost). Untuk menjaga fokus pembahasan pada temuan utama penelitian, hanya hasil yang dianggap representatif yang disajikan pada bagian ini, sedangkan keseluruhan hasil eksperimen disertakan pada lampiran.
-
-Hasil eksperimen menunjukkan bahwa penggunaan augmentasi data sintetis memberikan pengaruh yang berbeda terhadap masing-masing model klasifikasi. Berdasarkan hasil evaluasi kualitas data sintetis, model generatif mampu menghasilkan data EEG yang memiliki tingkat kemiripan tertentu terhadap distribusi data asli, meskipun kualitas hasil generasi berbeda pada masing-masing kelas data. Perbedaan tersebut menunjukkan bahwa kualitas data sintetis yang dihasilkan turut dipengaruhi oleh karakteristik dan kualitas distribusi data asli yang digunakan selama proses pelatihan model generatif sehingga kualitas distribusi data EEG tidak sepenuhnya seragam pada seluruh kelas data.
-
-Pada tahap klasifikasi, model \textit{XGBoost} menunjukkan peningkatan performa yang konsisten setelah penambahan data hasil augmentasi. Hal ini mengindikasikan bahwa data sintetis yang dihasilkan masih mampu mempertahankan informasi diskriminatif yang relevan untuk membantu proses klasifikasi ASD. Sebaliknya, model \textit{Deep Neural Network} (DNN) menunjukkan perilaku yang berbeda setelah augmentasi dilakukan. Meskipun beberapa metrik seperti spesifisitas dan presisi mengalami peningkatan, sensitivitas model mengalami penurunan yang cukup signifikan. Hasil ini menunjukkan bahwa model DNN cenderung lebih sensitif terhadap perubahan distribusi data maupun kualitas data sintetis yang dihasilkan oleh model augmentasi.
-
-Perbedaan performa antara kedua model klasifikasi tersebut menunjukkan bahwa efektivitas augmentasi data tidak hanya bergantung pada kualitas data sintetis yang dihasilkan, tetapi juga dipengaruhi oleh karakteristik dan mekanisme pembelajaran dari masing-masing model klasifikasi. Model berbasis \textit{tree boosting} seperti XGBoost cenderung menunjukkan performa yang lebih stabil terhadap variasi distribusi data, sedangkan model berbasis \textit{neural network} lebih sensitif terhadap perubahan distribusi maupun ketidakseimbangan karakteristik data hasil augmentasi.
-
-Walaupun augmentasi data pada penelitian ini belum memberikan peningkatan performa yang konsisten pada seluruh model klasifikasi, hasil eksperimen menunjukkan bahwa pendekatan generatif dalam augmentasi memiliki potensi untuk meningkatkan kemampuan generalisasi model klasifikasi EEG pada kasus ASD. Pembahasan lebih mendalam mengenai hasil dari masing-masing eksperimen dijelaskan pada sub-bagian berikut.
+\section{Eksperimen dan Analisis}
+Bagian ini menyajikan rangkaian eksperimen yang dilakukan untuk mengevaluasi efektivitas augmentasi data berbasis \textit{Variational Autoencoder} (VAE) pada klasifikasi sinyal EEG untuk deteksi Autism Spectrum Disorder (ASD). Evaluasi dilakukan secara bertahap, dimulai dari analisis kemampuan model VAE dalam menghasilkan data EEG sintetis, dilanjutkan dengan pengujian performa model klasifikasi menggunakan data EEG asli, serta analisis pengaruh penambahan data sintetis terhadap performa klasifikasi. Penelitian ini menggunakan model \textit{Deep Neural Network} (DNN) dan \textit{Extreme Gradient Boosting} (XGBoost) sebagai model klasifikasi yang dibandingkan pada setiap skenario eksperimen.
 
 \subsection{Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}
+
+Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variational Autoencoder} (VAE) dalam mempelajari distribusi data EEG dan menghasilkan sinyal EEG sintetis yang memiliki karakteristik serupa dengan data asli. Evaluasi ini dilakukan sebagai tahap validasi awal untuk memastikan bahwa model VAE mampu merepresentasikan pola sinyal EEG pada masing-masing kelas dan kanal yang digunakan dalam penelitian.
+
+Pada eksperimen ini, kualitas data sintetis dianalisis menggunakan beberapa metrik evaluasi data generatif, yaitu \textit{Fréchet Inception Distance} (FID), \textit{Sliced Wasserstein Distance} (SWD), dan normalisasi \textit{Euclidean Distance} (ED). Selain evaluasi kuantitatif, dilakukan pula analisis visual pada domain waktu dan domain frekuensi untuk membandingkan karakteristik sinyal sintetis terhadap sinyal EEG asli.
+
+Eksperimen ini digunakan untuk menilai sejauh mana model VAE mampu mempertahankan karakteristik utama sinyal EEG serta menentukan kelayakan data sintetis yang dihasilkan untuk digunakan pada tahap augmentasi data dalam proses klasifikasi ASD dengan hasil evaluasi kualitas data sintetis untuk masing-masing kanal EEG pada kelas Normal dan ASD disajikan sebagai berikut.
+
 \begin{table}[H]
 \centering
-\footnotesize
 \caption{Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}
 \label{tab:normal_generation_results}
-\begin{tabular}{|c|c|c|c|}
-\hline
-Channel & ED Norm & FID & SWD \\
-\hline
-Fp1 & -0.148 & 91.313 & 0.264 \\
-\hline
-Fp2 & 0.019 & 60.794 & 0.213 \\
-\hline
-F3  & 0.086 & 109.476 & 0.199 \\
-\hline
-F4  & 0.037 & 86.644 & 0.172 \\
-\hline
-C3  & 0.127 & 110.533 & 0.184 \\
-\hline
-C4  & 0.058 & 95.488 & 0.145 \\
-\hline
-P3  & 0.049 & 129.378 & 0.132 \\
-\hline
-P4  & 0.145 & 132.878 & 0.147 \\
-\hline
-O1  & 0.183 & 115.336 & 0.202 \\
-\hline
-O2  & 0.222 & 118.257 & 0.186 \\
-\hline
-F7  & 0.260 & 121.811 & 0.181 \\
-\hline
-F8  & 0.271 & 114.876 & 0.169 \\
-\hline
-T3  & 0.193 & 152.974 & 0.136 \\
-\hline
-T4  & 0.393 & 180.492 & 0.233 \\
-\hline
-T5  & 0.588 & 170.312 & 0.213 \\
-\hline
-T6  & 0.531 & 164.081 & 0.235 \\
-\hline
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Channel} & \textbf{ED Norm} & \textbf{FID} & \textbf{SWD} \\
+\midrule
+Fp1 & -0.148 & 91.313  & 0.264 \\
+Fp2 & 0.019  & 60.794  & 0.213 \\
+F3  & 0.086  & 109.476 & 0.199 \\
+F4  & 0.037  & 86.644  & 0.172 \\
+C3  & 0.127  & 110.533 & 0.184 \\
+C4  & 0.058  & 95.488  & 0.145 \\
+P3  & 0.049  & 129.378 & 0.132 \\
+P4  & 0.145  & 132.878 & 0.147 \\
+O1  & 0.183  & 115.336 & 0.202 \\
+O2  & 0.222  & 118.257 & 0.186 \\
+F7  & 0.260  & 121.811 & 0.181 \\
+F8  & 0.271  & 114.876 & 0.169 \\
+T3  & 0.193  & 152.974 & 0.136 \\
+T4  & 0.393  & 180.492 & 0.233 \\
+T5  & 0.588  & 170.312 & 0.213 \\
+T6  & 0.531  & 164.081 & 0.235 \\
+\bottomrule
 \end{tabular}
-\end{table}
-\begin{table}[H]
+\end{table}\begin{table}[H]
 \centering
-\footnotesize
 \caption{Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}
 \label{tab:asd_generation_results}
-\begin{tabular}{|c|c|c|c|}
-\hline
-Channel & ED Norm & FID & SWD \\
-\hline
-Fp1 & 0.003 & 34.857 & 0.136 \\
-\hline
-Fp2 & 0.012 & 26.858 & 0.111 \\
-\hline
-F3  & 0.047 & 49.890 & 0.153 \\
-\hline
-F4  & 0.021 & 45.219 & 0.104 \\
-\hline
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Channel} & \textbf{ED Norm} & \textbf{FID} & \textbf{SWD} \\
+\midrule
+Fp1 & 0.003  & 34.857 & 0.136 \\
+Fp2 & 0.012  & 26.858 & 0.111 \\
+F3  & 0.047  & 49.890 & 0.153 \\
+F4  & 0.021  & 45.219 & 0.104 \\
 C3  & -0.020 & 42.832 & 0.109 \\
-\hline
-C4  & 0.014 & 49.008 & 0.118 \\
-\hline
+C4  & 0.014  & 49.008 & 0.118 \\
 P3  & -0.026 & 49.183 & 0.113 \\
-\hline
 P4  & -0.029 & 48.179 & 0.084 \\
-\hline
-O1  & 0.014 & 38.777 & 0.118 \\
-\hline
-O2  & 0.038 & 33.451 & 0.105 \\
-\hline
-F7  & 0.056 & 32.921 & 0.101 \\
-\hline
-F8  & 0.052 & 31.354 & 0.107 \\
-\hline
-T3  & 0.081 & 48.797 & 0.110 \\
-\hline
-T4  & 0.070 & 50.006 & 0.090 \\
-\hline
-T5  & 0.149 & 52.433 & 0.110 \\
-\hline
-T6  & 0.120 & 51.330 & 0.108 \\
-\hline
+O1  & 0.014  & 38.777 & 0.118 \\
+O2  & 0.038  & 33.451 & 0.105 \\
+F7  & 0.056  & 32.921 & 0.101 \\
+F8  & 0.052  & 31.354 & 0.107 \\
+T3  & 0.081  & 48.797 & 0.110 \\
+T4  & 0.070  & 50.006 & 0.090 \\
+T5  & 0.149  & 52.433 & 0.110 \\
+T6  & 0.120  & 51.330 & 0.108 \\
+\bottomrule
 \end{tabular}
 \end{table}
 Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variational Autoencoder} (VAE) dalam mempelajari distribusi sinyal EEG dan menghasilkan data sintetis yang menyerupai data asli pada masing-masing kanal EEG sebelum digunakan pada tahap klasifikasi ASD. Berdasarkan hasil evaluasi pada Tabel \ref{tab:normal_generation_results} dan Tabel \ref{tab:asd_generation_results}, model VAE mampu menghasilkan sinyal sintetis yang mempertahankan pola umum sinyal EEG asli pada kedua kelas data. 
@@ -273,8 +194,12 @@ Sebaliknya, beberapa kanal pada kelas Normal, khususnya kanal temporal seperti T
 Selain itu, pola yang konsisten juga terlihat pada visualisasi domain frekuensi. Berdasarkan grafik PSD, sinyal sintetis umumnya mampu mengikuti distribusi spektral utama dari sinyal EEG asli. Namun, hampir seluruh model menunjukkan peningkatan komponen frekuensi di atas 40 Hz yang tidak dominan pada data asli. Setelah penerapan \textit{low-pass filter} 40 Hz, distribusi spektral sinyal sintetis menjadi lebih mendekati data asli. Temuan ini menunjukkan bahwa model VAE berhasil mempertahankan karakteristik utama sinyal EEG, meskipun masih menghasilkan komponen frekuensi tinggi yang dapat diminimalkan melalui proses \textit{filtering} sinyal.
 
 Meskipun kualitas hasil generasi tidak sepenuhnya seragam pada seluruh kanal, hasil eksperimen menunjukkan bahwa model VAE tetap mampu mempertahankan karakteristik utama sinyal EEG pada domain waktu maupun domain frekuensi. Temuan ini menunjukkan bahwa pendekatan augmentasi berbasis model generatif memiliki potensi untuk meningkatkan jumlah dan variasi data EEG pada proses klasifikasi ASD.
+\subsection{Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}
+Eksperimen kedua bertujuan untuk mengevaluasi performa model klasifikasi menggunakan data EEG asli tanpa melibatkan data sintetis hasil augmentasi. Eksperimen ini dilakukan untuk memperoleh nilai performa dasar (\textit{baseline}) yang selanjutnya digunakan sebagai acuan dalam mengevaluasi pengaruh augmentasi data sintetis pada proses klasifikasi ASD.
 
-\subsection{Eksperimen 2: Evaluasi Model Klasifikasi Menggunakan Data EEG Asli}
+Pada eksperimen ini digunakan dua model klasifikasi, yaitu \textit{Deep Neural Network} (DNN) sebagai model pembanding berdasarkan penelitian rujukan dan \textit{Extreme Gradient Boosting} (XGBoost) sebagai model yang diusulkan. Seluruh proses pelatihan dan pengujian dilakukan menggunakan data EEG asli yang telah melalui tahap \textit{preprocessing} sebagaimana dijelaskan pada bab sebelumnya. Evaluasi performa dilakukan menggunakan metrik \textit{accuracy}, \textit{sensitivity}, \textit{specificity}, \textit{precision}, \textit{F1-score}, dan \textit{Area Under Curve} (AUC).
+
+Melalui eksperimen ini, perbedaan karakteristik performa antara model DNN dan XGBoost dapat dianalisis pada kondisi tanpa augmentasi data. Hasil yang diperoleh kemudian digunakan sebagai dasar pembanding untuk menilai sejauh mana penambahan data sintetis mampu meningkatkan performa dan kemampuan generalisasi masing-masing model klasifikasi. Hasil evaluasi eksperimen yang diperoleh disajikan sebagai berikut.
 
 \begin{table}[H]
 \centering
@@ -310,7 +235,14 @@ Perbedaan performa tersebut menunjukkan bahwa karakteristik data EEG pada peneli
 
 Secara keseluruhan, hasil eksperimen ini menunjukkan bahwa model DNN dan XGBoost memiliki karakteristik performa yang berbeda dalam melakukan klasifikasi sinyal EEG ASD menggunakan data asli. Oleh karena itu, kedua model selanjutnya digunakan pada eksperimen berikutnya untuk mengevaluasi bagaimana penggunaan data sintetis hasil augmentasi memengaruhi performa dan kemampuan generalisasi masing-masing model klasifikasi.
 
-\subsection{Eksperimen 3: Evaluasi Pengaruh Augmentasi Data EEG terhadap Performa Model Klasifikasi}
+\subsection{Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}
+
+Eksperimen ketiga bertujuan untuk mengevaluasi pengaruh penggunaan data sintetis hasil augmentasi \textit{Variational Autoencoder} (VAE) terhadap performa model klasifikasi EEG. Pada eksperimen ini, proses klasifikasi dilakukan menggunakan kombinasi data EEG asli dan data sintetis yang dihasilkan pada tahap augmentasi untuk memperkaya jumlah serta variasi data pelatihan.
+
+Sebagaimana pada eksperimen sebelumnya, dua model klasifikasi digunakan, yaitu \textit{Deep Neural Network} (DNN) dan \textit{Extreme Gradient Boosting} (XGBoost). Kedua model dilatih menggunakan dataset hasil kombinasi data EEG asli dan data sintetis, kemudian dievaluasi menggunakan metrik \textit{accuracy}, \textit{sensitivity}, \textit{specificity}, \textit{precision}, \textit{F1-score}, dan \textit{Area Under Curve} (AUC).
+
+Hasil yang diperoleh selanjutnya dibandingkan dengan hasil pada eksperimen sebelumnya yang hanya menggunakan data EEG asli. Perbandingan tersebut dilakukan untuk menganalisis sejauh mana data sintetis yang dihasilkan oleh model VAE mampu meningkatkan performa klasifikasi serta kemampuan generalisasi model dalam membedakan kelas ASD dan Normal. Selain itu, eksperimen ini juga digunakan untuk mengidentifikasi perbedaan respons antara model DNN dan XGBoost terhadap penambahan data hasil augmentasi. Hasil evaluasi eksperimen disajikan sebagai berikut.
+
 \begin{table}[H]
 \centering
 \caption{Perbandingan performa model DNN dan XGBoost dengan kombinasi data EEG asli dan sintetis}
@@ -346,6 +278,19 @@ Secara empiris, kondisi tersebut mengindikasikan bahwa model DNN lebih sering me
 Perbedaan respons kedua model terhadap augmentasi kemungkinan berkaitan dengan karakteristik arsitektur masing-masing model. Model XGBoost cenderung lebih robust terhadap perubahan distribusi data dan lebih efektif dalam memanfaatkan tambahan variasi fitur dari data sintetis. Sebaliknya, model DNN lebih sensitif terhadap kualitas dan distribusi data augmentasi, terutama ketika kualitas data sintetis antar kelas tidak sepenuhnya seimbang. Pada eksperimen sebelumnya, kualitas data sintetis pada kelas Normal menunjukkan deviasi distribusi yang lebih besar dibandingkan kelas ASD. Kondisi ini kemungkinan turut memengaruhi proses pembelajaran model DNN sehingga distribusi keputusan model menjadi kurang seimbang setelah augmentasi dilakukan.
 
 Meskipun demikian, hasil eksperimen menunjukkan bahwa augmentasi berbasis model generatif tetap memiliki potensi dalam meningkatkan performa klasifikasi EEG, terutama pada model berbasis \textit{gradient boosting} seperti XGBoost. Temuan ini juga menunjukkan bahwa efektivitas data sintetis sangat dipengaruhi oleh karakteristik model klasifikasi yang digunakan serta kualitas distribusi data sintetis yang dihasilkan oleh model augmentasi.
+
+
+% Eksperimen dilakukan sesuai dengan skenario pengujian yang telah dijelaskan pada bagian sebelumnya. Bagian ini menyajikan hasil eksperimen serta analisis terhadap performa model pada setiap skenario pengujian, meliputi proses augmentasi data menggunakan \textit{Variational Autoencoder} (VAE) dan proses klasifikasi EEG menggunakan model \textit{Deep Neural Network} (DNN) serta \textit{Extreme Gradient Boosting} (XGBoost). Untuk menjaga fokus pembahasan pada temuan utama penelitian, hanya hasil yang dianggap representatif yang disajikan pada bagian ini, sedangkan keseluruhan hasil eksperimen disertakan pada lampiran.
+
+% Hasil eksperimen menunjukkan bahwa penggunaan augmentasi data sintetis memberikan pengaruh yang berbeda terhadap masing-masing model klasifikasi. Berdasarkan hasil evaluasi kualitas data sintetis, model generatif mampu menghasilkan data EEG yang memiliki tingkat kemiripan tertentu terhadap distribusi data asli, meskipun kualitas hasil generasi berbeda pada masing-masing kelas data. Perbedaan tersebut menunjukkan bahwa kualitas data sintetis yang dihasilkan turut dipengaruhi oleh karakteristik dan kualitas distribusi data asli yang digunakan selama proses pelatihan model generatif sehingga kualitas distribusi data EEG tidak sepenuhnya seragam pada seluruh kelas data.
+
+% Pada tahap klasifikasi, model \textit{XGBoost} menunjukkan peningkatan performa yang konsisten setelah penambahan data hasil augmentasi. Hal ini mengindikasikan bahwa data sintetis yang dihasilkan masih mampu mempertahankan informasi diskriminatif yang relevan untuk membantu proses klasifikasi ASD. Sebaliknya, model \textit{Deep Neural Network} (DNN) menunjukkan perilaku yang berbeda setelah augmentasi dilakukan. Meskipun beberapa metrik seperti spesifisitas dan presisi mengalami peningkatan, sensitivitas model mengalami penurunan yang cukup signifikan. Hasil ini menunjukkan bahwa model DNN cenderung lebih sensitif terhadap perubahan distribusi data maupun kualitas data sintetis yang dihasilkan oleh model augmentasi.
+
+% Perbedaan performa antara kedua model klasifikasi tersebut menunjukkan bahwa efektivitas augmentasi data tidak hanya bergantung pada kualitas data sintetis yang dihasilkan, tetapi juga dipengaruhi oleh karakteristik dan mekanisme pembelajaran dari masing-masing model klasifikasi. Model berbasis \textit{tree boosting} seperti XGBoost cenderung menunjukkan performa yang lebih stabil terhadap variasi distribusi data, sedangkan model berbasis \textit{neural network} lebih sensitif terhadap perubahan distribusi maupun ketidakseimbangan karakteristik data hasil augmentasi.
+
+% Walaupun augmentasi data pada penelitian ini belum memberikan peningkatan performa yang konsisten pada seluruh model klasifikasi, hasil eksperimen menunjukkan bahwa pendekatan generatif dalam augmentasi memiliki potensi untuk meningkatkan kemampuan generalisasi model klasifikasi EEG pada kasus ASD. Pembahasan lebih mendalam mengenai hasil dari masing-masing eksperimen dijelaskan pada sub-bagian berikut.
+
+
 
 \section{Pembahasan}
 
