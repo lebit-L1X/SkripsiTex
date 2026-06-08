@@ -69,9 +69,10 @@
 \contentsline {subsection}{\numberline {4.3.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{53}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}{58}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}{60}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Pembahasan}{63}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Analisis Komparatif Keseluruhan}{63}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Keterbatasan Penelitian}{64}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.4}Diskusi}{62}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Analisis Komparatif terhadap Penelitian Terdahulu}{63}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Perbandingan dengan Penelitian Terdahulu}{63}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Implikasi dan Arah Pengembangan Penelitian}{64}{subsection.4.4.3}%
 \contentsline {chapter}{\numberline {5}\uppercase {Penutup}}{66}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Kesimpulan}{66}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Saran}{67}{section.5.2}%
