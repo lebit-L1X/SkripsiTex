@@ -18,8 +18,8 @@ Warning--empty journal in brain_imaging_asd_review
 Warning--empty journal in eeg_dataset_asd
 Warning--empty journal in eeg_autism_review
 Warning--empty journal in dl_eeg_review
-Warning--empty journal in eeg_limited_data
 Warning--empty journal in artifact_removal_eeg
+Warning--empty journal in eeg_limited_data
 Warning--empty journal in eeg_feature_review
 Warning--empty journal in gan_eeg_emotion
 Warning--empty journal in eeg_biophysics

@@ -72,14 +72,14 @@ R.~Lyu, ``Deep learning approaches for eeg-based healthcare applications: A
   comprehensive review,'' 2026, [Online]. Available:
   \url{https://doi.org/10.3389/fnhum.2025.1689073}.
 
+\bibitem{artifact_removal_eeg}
+X.~Jiang, G.~B. Bian, and Z.~Tian, ``Removal of artifacts from eeg signals: A
+  review,'' 2019, [Online]. Available: \url{https://doi.org/10.3390/s19050987}.
+
 \bibitem{eeg_limited_data}
 M.~Tabejamaat, H.~Mohammadzade, F.~Negin, and F.~Bremond, ``Eeg classification
   with limited data: A deep clustering approach,'' 2025, [Online]. Available:
   \url{https://doi.org/10.1016/j.patcog.2024.110934}.
-
-\bibitem{artifact_removal_eeg}
-X.~Jiang, G.~B. Bian, and Z.~Tian, ``Removal of artifacts from eeg signals: A
-  review,'' 2019, [Online]. Available: \url{https://doi.org/10.3390/s19050987}.
 
 \bibitem{eeg_augmentation_review}
 C.~Rommel, J.~Paillard, T.~Moreau, and A.~Gramfort, ``Data augmentation for
