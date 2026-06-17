@@ -218,27 +218,29 @@ Melalui eksperimen ini, perbedaan karakteristik performa antara model DNN dan XG
 
 \begin{table}[H]
 \centering
-\caption{Perbandingan performa model ANN dan XGBoost Dengan Data EEG Asli}
+\caption{Perbandingan performa model DNN dan XGBoost dengan data EEG asli}
 \label{tab:ann_xgb_comparison}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{lcc}
 \toprule
-\textbf{Metric} & \textbf{ANN} & \textbf{XGBoost} \\
+\textbf{Metrik} & \textbf{DNN} & \textbf{XGBoost} \\
 \midrule
-TP & $115.2 \pm 57.11$ & $141.1 \pm 1.43$ \\
-FP & $82.4 \pm 58.02$ & $3.0 \pm 1.37$ \\
-TN & $97.6 \pm 57.95$ & $139.9 \pm 1.46$ \\
-FN & $65.8 \pm 55.98$ & $4.1 \pm 1.52$ \\
+TP          & $115.2 \pm 57.11$ & $141.1 \pm 1.43$ \\
+FP          & $82.4 \pm 58.02$  & $3.0 \pm 1.37$ \\
+TN          & $97.6 \pm 57.95$  & $139.9 \pm 1.46$ \\
+FN          & $65.8 \pm 55.98$  & $4.1 \pm 1.52$ \\
 \midrule
-Precision & $0.5412 \pm 0.2384$ & $0.9786 \pm 0.0098$ \\
-Recall & $0.6347 \pm 0.3089$ & $0.9724 \pm 0.0101$ \\
 Sensitivity & $0.6347 \pm 0.3089$ & $0.9724 \pm 0.0101$ \\
 Specificity & $0.5422 \pm 0.2417$ & $0.9790 \pm 0.0093$ \\
-F1-Score & $0.5689 \pm 0.2423$ & $0.9751 \pm 0.0089$ \\
-AUC & $0.6204 \pm 0.1827$ & $0.9965 \pm 0.0025$ \\
+Precision   & $0.5412 \pm 0.2384$ & $0.9786 \pm 0.0098$ \\
+Accuracy    & $0.5893 \pm 0.1865$ & $0.9753 \pm 0.0097$ \\
+F1-Score    & $0.5689 \pm 0.2423$ & $0.9751 \pm 0.0089$ \\
+AUC         & $0.6204 \pm 0.1827$ & $0.9965 \pm 0.0025$ \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+
 Eksperimen melibatkan dua model klasifikasi, yaitu model \textit{Deep Neural Network} (DNN) sebagai model \textit{baseline} berdasarkan penelitian rujukan dan model \textit{Extreme Gradient Boosting} (XGBoost). Seluruh pengujian dilakukan menggunakan data EEG asli yang telah melalui tahap \textit{preprocessing} sebagaimana dijelaskan pada penelitian referensi. Evaluasi performa dilakukan menggunakan metrik akurasi, sensitivitas, spesifisitas, presisi, \textit{F1-score}, dan \textit{Area Under Curve} (AUC). Hasil eksperimen ditunjukkan pada \ref{tab:ann_xgb_comparison}.
 
 Berdasarkan hasil evaluasi, kedua model mampu melakukan klasifikasi sinyal EEG ASD dan Normal menggunakan data EEG asli. Namun, terdapat perbedaan performa yang cukup signifikan antara model DNN dan XGBoost. Model XGBoost secara konsisten menunjukkan performa yang lebih tinggi pada hampir seluruh metrik evaluasi dibandingkan model DNN. Nilai sensitivitas, spesifisitas, presisi, \textit{F1-score}, dan AUC yang diperoleh XGBoost menunjukkan bahwa model mampu melakukan pemisahan kelas dengan sangat baik dan stabil pada sebagian besar fold pengujian.

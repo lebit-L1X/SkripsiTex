@@ -11,6 +11,6 @@
 \contentsline {table}{\numberline {4.2}{\ignorespaces Spesifikasi Lingkungan Perangkat Lunak}}{48}{table.caption.32}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}}{53}{table.caption.33}%
 \contentsline {table}{\numberline {4.4}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}}{54}{table.caption.34}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Perbandingan performa model ANN dan XGBoost Dengan Data EEG Asli}}{58}{table.caption.39}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan data EEG asli}}{58}{table.caption.39}%
 \contentsline {table}{\numberline {4.6}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan kombinasi data EEG asli dan sintetis}}{60}{table.caption.40}%
 \addvspace {10\p@ }
