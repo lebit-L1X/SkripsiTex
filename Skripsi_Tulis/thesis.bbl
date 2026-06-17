@@ -190,6 +190,14 @@ A.~Vasarkar, ``Eeg data augmentation using variational autoencoder,'' [Online].
   Available:
   \url{https://github.com/arkanivasarkar/EEG-Data-Augmentation-using-Variational-Autoencoder}.
 
+\bibitem{chen2016xgboost}
+T.~Chen and C.~Guestrin, ``Xgboost: A scalable tree boosting system,'' 2016,
+  [Online]. Available: \url{https://arxiv.org/abs/1603.02754}.
+
+\bibitem{shwartz2022tabular}
+R.~Shwartz-Ziv and A.~Armon, ``Tabular data: Deep learning is not all you
+  need,'' 2022, [Online]. Available: \url{https://arxiv.org/abs/2106.03253}.
+
 \bibitem{kertapati2023}
 D.~T. Kertapati, ``Anak-anak luar biasa,'' 2023, [Online]. Available:
   \url{https://kemkes.go.id/app_asset/file_content_download/171090786265fa61d67ff2e9.83516065.pdf}.
