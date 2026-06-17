@@ -358,6 +358,8 @@ Dalam penelitian ini, proses generasi data sintetis dilakukan secara terpisah un
 Data sintetis yang dihasilkan selanjutnya digunakan sebagai bentuk \textit{data augmentation} dalam pipeline klasifikasi. Dengan menambahkan sampel sintetis ke dalam data \textit{training}, diharapkan model klasifikasi dapat meningkatkan kemampuan generalisasi, terutama dalam kondisi keterbatasan jumlah data asli.
 \subsection{Implementasi Model Klasifikasi}
 
+Pada bagian ini dijelaskan proses implementasi data EEG sintetis hasil augmentasi menggunakan Variational Autoencoder (VAE) ke dalam tahapan klasifikasi sesuai dengan metode yang digunakan pada penelitian acuan. Selain itu, bagian ini juga membahas konfigurasi dan parameter yang digunakan pada model klasifikasi, meliputi proses pembagian data, pemilihan fitur, serta pengaturan parameter pada algoritma Deep Neural Network (DNN) dan Extreme Gradient Boosting (XGBoost) yang digunakan untuk mengevaluasi pengaruh penambahan data sintetis terhadap performa klasifikasi ASD.
+
 \subsubsection{Integrasi Data Sintetis pada Model Klasifikasi}
 
 Berdasarkan diagram pada Gambar \ref{fig:flowchart_system}, proses dimulai dari dataset EEG mentah yang terlebih dahulu melalui tahap preprocessing meliputi segmentasi sinyal dengan overlap, \textit{bandpass filtering}, serta \textit{artifact rejection}. Tahap ini bertujuan untuk menghasilkan segmen EEG bersih yang digunakan sebagai data asli dalam proses klasifikasi.

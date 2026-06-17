@@ -353,7 +353,7 @@ Hasil penelitian menunjukkan bahwa kombinasi mRMR dan XGBoost mampu memberikan p
 \subsection{Metode Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}
 \label{Augmentasi Data pada Sinyal EEG Menggunakan Variational Autoencoder}
 
-Pada penelitian referensi \cite{gan_eeg_emotion}, digunakan pendekatan augmentasi data berbasis \textit{Variational Autoencoder} (VAE) untuk menghasilkan sinyal EEG sintetis pada tugas klasifikasi \textit{motor imagery}. Penelitian memanfaatkan BCI Competition IV Dataset 2a yang terdiri dari data EEG 22 kanal dari 9 subjek. Data EEG direpresentasikan dalam bentuk matriks dua dimensi untuk menyesuaikan penggunaan arsitektur berbasis \textit{2D Convolutional Neural Network} (2D CNN).
+Pada penelitian rujukan \cite{gan_eeg_emotion}, digunakan pendekatan augmentasi data berbasis \textit{Variational Autoencoder} (VAE) untuk menghasilkan sinyal EEG sintetis pada tugas klasifikasi \textit{motor imagery}. Penelitian memanfaatkan BCI Competition IV Dataset 2a yang terdiri dari data EEG 22 kanal dari 9 subjek. Data EEG direpresentasikan dalam bentuk matriks dua dimensi untuk menyesuaikan penggunaan arsitektur berbasis \textit{2D Convolutional Neural Network} (2D CNN).
 
 Model VAE terdiri dari komponen \textit{encoder} dan \textit{decoder} yang digunakan untuk mempelajari representasi laten dari sinyal EEG dan merekonstruksi kembali data sintetis yang menyerupai data asli. Untuk evaluasi klasifikasi, penelitian menggunakan arsitektur EEGNet dan membandingkan performa model yang dilatih menggunakan data asli dengan model yang dilatih menggunakan data hasil augmentasi.
 
