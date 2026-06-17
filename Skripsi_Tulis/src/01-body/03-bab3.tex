@@ -51,7 +51,7 @@ Untuk menjaga fokus penelitian, sistem yang dikembangkan memiliki beberapa batas
 
 Setelah kebutuhan fungsional sistem diuraikan, tahap selanjutnya adalah merancang arsitektur sistem sebagai representasi konseptual dari alur pemrosesan data yang akan diimplementasikan. Perancangan ini bertujuan untuk menggambarkan integrasi antar komponen dalam \textit{pipeline}, khususnya dalam menggabungkan proses augmentasi data berbasis \textit{Variational Autoencoder} (VAE) dengan \textit{pipeline} klasifikasi yang telah ditentukan.
 
-Pendekatan yang digunakan dalam penelitian ini mengadaptasi model EEG Data Augmentation using Variational Autoencoder \cite{vae_github} dengan melakukan penyesuaian dari implementasi berbasis representasi 2D menjadi pendekatan berbasis 1D Convolutional Neural Network (1D CNN), sehingga proses pelatihan model dilakukan pada setiap kanal EEG secara terpisah.
+Pendekatan yang digunakan dalam penelitian ini mengadaptasi model EEG Data Augmentation using Variational Autoencoder \cite{vae_github} dengan melakukan penyesuaian dari implementasi berbasis representasi 2D menjadi pendekatan berbasis 1D Convolutional Neural Network (1D CNN), sehingga proses \textit{training} model dilakukan pada setiap kanal EEG secara terpisah.
 
 \begin{figure}[H]
     \centering
@@ -146,13 +146,13 @@ Bagian ini menjelaskan bagaimana perancangan sistem yang telah dijabarkan sebelu
 \subsection{Teknologi dan Library}
 \label{Teknologi dan Library}
 
-Dalam penelitian ini, seluruh proses pengolahan data, pelatihan, dan evaluasi model dilakukan menggunakan bahasa pemrograman Python karena didukung oleh ekosistem \textit{library} yang luas untuk kebutuhan \textit{machine learning} dan pemrosesan sinyal. Untuk meningkatkan efisiensi komputasi, sistem memanfaatkan akselerasi GPU menggunakan CUDA Toolkit dari NVIDIA sehingga proses \textit{training} model dan operasi numerik berskala besar dapat dilakukan dengan lebih cepat.
+Dalam penelitian ini, seluruh proses pengolahan data, \textit{training}, dan evaluasi model dilakukan menggunakan bahasa pemrograman Python karena didukung oleh ekosistem \textit{library} yang luas untuk kebutuhan \textit{machine learning} dan pemrosesan sinyal. Untuk meningkatkan efisiensi komputasi, sistem memanfaatkan akselerasi GPU menggunakan CUDA Toolkit dari NVIDIA sehingga proses \textit{training} model dan operasi numerik berskala besar dapat dilakukan dengan lebih cepat.
 
 \textit{Library} utama yang digunakan meliputi NumPy, Pandas, SciPy, dan scikit-learn. NumPy digunakan untuk komputasi numerik berbasis array dan matriks, Pandas untuk pengelolaan dataset, SciPy untuk pemrosesan sinyal EEG, sedangkan scikit-learn digunakan pada tahap \textit{preprocessing}, ekstraksi fitur, seleksi fitur, dan evaluasi model.
 
 Pada tahap pemodelan, digunakan XGBoost dan \textit{Deep Neural Network} (DNN) sebagai model klasifikasi dalam penelitian ini. Implementasi model DNN serta model augmentasi \textit{Variational Autoencoder} (VAE) dilakukan menggunakan TensorFlow dan Keras dengan dukungan akselerasi GPU untuk proses augmentasi data, sedangkan implementasi XGBoost dilakukan menggunakan library \textit{scikit-learn} dan \textit{XGBoost}.
 
-Dalam implementasi \textit{pipeline} klasifikasi, SciPy digunakan untuk proses dekomposisi frekuensi dan pemrosesan sinyal, sementara NumPy dan Pandas digunakan untuk pengelolaan data serta perhitungan fitur statistik. Fitur yang dihasilkan kemudian diseleksi menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) sebelum digunakan dalam proses pelatihan dan evaluasi menggunakan model XGBoost dan DNN.
+Dalam implementasi \textit{pipeline} klasifikasi, SciPy digunakan untuk proses dekomposisi frekuensi dan pemrosesan sinyal, sementara NumPy dan Pandas digunakan untuk pengelolaan data serta perhitungan fitur statistik. Fitur yang dihasilkan kemudian diseleksi menggunakan metode \textit{minimum Redundancy Maximum Relevance} (mRMR) sebelum digunakan dalam proses \textit{training} dan evaluasi menggunakan model XGBoost dan DNN.
 
 \subsection{Implementasi Model Generatif Variational Autoencoder (VAE)}
 \label{Implementasi Model Generatif Variational Autoencoder (VAE)}
@@ -177,11 +177,11 @@ dirancang menggunakan beberapa lapisan \textit{Conv1D} untuk mengekstraksi pola 
 
 \textit{Encoder} menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15–25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling dilakukan melalui stride pada setiap lapisan konvolusi, sehingga menghasilkan reduksi dimensi bertahap dari 512 menjadi 64, yang membuat representasi semakin ringkas dan informatif.
 
-Setiap blok konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi aktivasi selama pelatihan, mempercepat konvergensi, serta mengurangi masalah internal covariate shift. Setelah normalisasi, digunakan fungsi aktivasi LeakyReLU dengan parameter 0.2, yang berarti gradien kecil sebesar 0.2 tetap dipertahankan untuk nilai negatif, sehingga mencegah masalah “dying ReLU” dan menjaga aliran gradien tetap stabil.
+Setiap blok konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi aktivasi selama \textit{training}, mempercepat konvergensi, serta mengurangi masalah internal covariate shift. Setelah normalisasi, digunakan fungsi aktivasi LeakyReLU dengan parameter 0.2, yang berarti gradien kecil sebesar 0.2 tetap dipertahankan untuk nilai negatif, sehingga mencegah masalah “dying ReLU” dan menjaga aliran gradien tetap stabil.
 
 Padding yang digunakan adalah “same”, yang menjaga ukuran temporal output tetap proporsional dengan input sebelum proses downsampling oleh stride dilakukan, sehingga informasi di tepi sinyal tetap dipertahankan secara optimal.
 
-Dimensi laten ditetapkan sebesar 16 sebagai kompromi antara kapasitas representasi dan stabilitas pelatihan, sehingga model mampu menangkap struktur penting data tanpa menyebabkan overfitting atau kehilangan informasi yang signifikan.
+Dimensi laten ditetapkan sebesar 16 sebagai kompromi antara kapasitas representasi dan stabilitas \textit{training}, sehingga model mampu menangkap struktur penting data tanpa menyebabkan overfitting atau kehilangan informasi yang signifikan.
 \begin{lstlisting}[
     style=modernpython,
     language=Python,
@@ -215,7 +215,7 @@ for each encoder block:
 
 Berdasarkan pseudocode pada Kode \ref{code:encoder-process}, setiap \textit{encoder block} memproses sinyal EEG melalui operasi konvolusi menggunakan sejumlah filter untuk mengekstraksi pola temporal dari sinyal input. Kernel konvolusi digeser sepanjang dimensi temporal sinyal untuk menghasilkan \textit{feature map} yang merepresentasikan karakteristik penting pada setiap rentang waktu.
 
-Setelah proses konvolusi, dilakukan reduksi dimensi temporal menggunakan \textit{stride} sebesar 2 sehingga ukuran representasi fitur menjadi lebih kecil pada setiap blok. Hasil konvolusi kemudian dinormalisasi menggunakan Batch Normalization sebelum diterapkan fungsi aktivasi LeakyReLU untuk menjaga stabilitas distribusi aktivasi dan mempertahankan aliran gradien selama pelatihan.
+Setelah proses konvolusi, dilakukan reduksi dimensi temporal menggunakan \textit{stride} sebesar 2 sehingga ukuran representasi fitur menjadi lebih kecil pada setiap blok. Hasil konvolusi kemudian dinormalisasi menggunakan Batch Normalization sebelum diterapkan fungsi aktivasi LeakyReLU untuk menjaga stabilitas distribusi aktivasi dan mempertahankan aliran gradien selama \textit{training}.
 
 
 \subsubsection{\textit{Reparameterization Layer}}
@@ -333,13 +333,13 @@ Hasil konvolusi pada setiap tahap kemudian dinormalisasi menggunakan Batch Norma
 
 Total loss diperoleh dengan menjumlahkan kedua komponen tersebut, kemudian dirata-ratakan terhadap batch dan ditambahkan sebagai \textit{custom loss} pada model.
 
-Pelatihan dilakukan menggunakan optimizer Adam dengan \textit{learning rate} 0.001, \textit{batch size} 32, dan maksimum 1000 epoch.
+\textit{training} dilakukan menggunakan optimizer Adam dengan \textit{learning rate} 0.001, \textit{batch size} 32, dan maksimum 1000 epoch.
 
 \subsubsection{Generasi Data Sintetis}
 
 Proses generasi data sintetis dilakukan melalui proses sampling pada ruang laten. Secara prinsip, karena distribusi laten telah dipaksa mendekati distribusi normal standar selama training, maka sampling dapat dilakukan dengan menghasilkan vektor acak dari distribusi Gaussian $\mathcal{N}(0,1)$ dengan dimensi yang sesuai (misalnya 16 dimensi laten). Proses sampling ini dapat dilakukan secara berulang sehingga model mampu menghasilkan jumlah sampel sintetis sesuai kebutuhan proses augmentasi.
 
-Vektor laten acak ini kemudian diberikan sebagai input ke bagian \textit{decoder} dari model. Decoder akan memetakan representasi laten tersebut kembali ke ruang data asli, sehingga menghasilkan sampel baru yang secara statistik menyerupai data pelatihan. Proses ini memungkinkan model untuk menghasilkan variasi data yang tidak identik dengan data asli, namun tetap mempertahankan karakteristik distribusinya.
+Vektor laten acak ini kemudian diberikan sebagai input ke bagian \textit{decoder} dari model. Decoder akan memetakan representasi laten tersebut kembali ke ruang data asli, sehingga menghasilkan sampel baru yang secara statistik menyerupai data \textit{training}. Proses ini memungkinkan model untuk menghasilkan variasi data yang tidak identik dengan data asli, namun tetap mempertahankan karakteristik distribusinya.
 
 \begin{figure}[H]
     \centering
@@ -355,7 +355,7 @@ Vektor laten acak ini kemudian diberikan sebagai input ke bagian \textit{decoder
 
 Dalam penelitian ini, proses generasi data sintetis dilakukan secara terpisah untuk setiap kanal EEG dan setiap kelas data. Dengan menggunakan 16 kanal EEG serta dua kategori kelas (\textit{normal} dan ASD), maka dibangun sebanyak 32 model VAE yang masing-masing dilatih secara spesifik terhadap distribusi data pada kanal dan kelas tertentu.
 
-Data sintetis yang dihasilkan selanjutnya digunakan sebagai bentuk \textit{data augmentation} dalam pipeline klasifikasi. Dengan menambahkan sampel sintetis ke dalam data pelatihan, diharapkan model klasifikasi dapat meningkatkan kemampuan generalisasi, terutama dalam kondisi keterbatasan jumlah data asli.
+Data sintetis yang dihasilkan selanjutnya digunakan sebagai bentuk \textit{data augmentation} dalam pipeline klasifikasi. Dengan menambahkan sampel sintetis ke dalam data \textit{training}, diharapkan model klasifikasi dapat meningkatkan kemampuan generalisasi, terutama dalam kondisi keterbatasan jumlah data asli.
 \subsection{Implementasi Model Klasifikasi}
 
 \subsubsection{Integrasi Data Sintetis pada Model Klasifikasi}
@@ -431,4 +431,4 @@ Model \textit{Deep Neural Network} (DNN) yang digunakan dalam penelitian ini mer
     \label{fig:dnn_architecture}
 \end{figure}
 
-Proses pelatihan model dilakukan menggunakan algoritma optimasi Adam dengan laju pembelajaran sebesar $10^{-3}$ dan \textit{loss function} \textit{binary crossentropy}. Model dilatih selama 100 \textit{epoch} dengan ukuran \textit{batch} sebesar 32, serta dilengkapi dengan mekanisme \textit{early stopping} dan \textit{model checkpoint} untuk mengurangi risiko \textit{overfitting} dan mempertahankan model dengan performa terbaik selama proses pelatihan.
+Proses \textit{training} model dilakukan menggunakan algoritma optimasi Adam dengan laju pembelajaran sebesar $10^{-3}$ dan \textit{loss function} \textit{binary crossentropy}. Model dilatih selama 100 \textit{epoch} dengan ukuran \textit{batch} sebesar 32, serta dilengkapi dengan mekanisme \textit{early stopping} dan \textit{model checkpoint} untuk mengurangi risiko \textit{overfitting} dan mempertahankan model dengan performa terbaik selama proses \textit{training}.

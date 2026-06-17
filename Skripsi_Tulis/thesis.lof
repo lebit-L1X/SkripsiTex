@@ -19,6 +19,8 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram Alur Integrasi Data Sintetis pada Proses Klasifikasi}}{44}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{46}{figure.caption.30}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sampel Sinyal EEG Sintetis}}{55}{figure.caption.35}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualisasi Domain Frekuensi Sampel Sinyal EEG Sintetis}}{55}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label Normal}}{55}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label ASD}}{55}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label Normal}}{56}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label ASD}}{56}{figure.caption.38}%
 \addvspace {10\p@ }
