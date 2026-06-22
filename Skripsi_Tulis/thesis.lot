@@ -6,12 +6,13 @@
 \contentsline {table}{\numberline {2.4}{\ignorespaces Metrik evaluasi data sintetis EEG}}{21}{table.caption.20}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Arsitektur Encoder VAE}}{37}{table.caption.26}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Konfigurasi Parameter \textit {XGBoost}}}{46}{table.caption.30}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Arsitektur Decoder VAE}}{41}{table.caption.29}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Konfigurasi Parameter \textit {XGBoost}}}{47}{table.caption.32}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Spesifikasi Perangkat Keras Eksperimen}}{48}{table.caption.32}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Spesifikasi Lingkungan Perangkat Lunak}}{49}{table.caption.33}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}}{55}{table.caption.34}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}}{56}{table.caption.35}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan data EEG asli}}{60}{table.caption.40}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan kombinasi data EEG asli dan sintetis}}{62}{table.caption.41}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Spesifikasi Perangkat Keras Eksperimen}}{49}{table.caption.34}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Spesifikasi Lingkungan Perangkat Lunak}}{50}{table.caption.35}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}}{56}{table.caption.36}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}}{57}{table.caption.37}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan data EEG asli}}{61}{table.caption.42}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan kombinasi data EEG asli dan sintetis}}{63}{table.caption.43}%
 \addvspace {10\p@ }

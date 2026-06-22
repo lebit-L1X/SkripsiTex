@@ -109,11 +109,11 @@ clip
 \label{fig:vae}
 \end{figure}
 
-Seperti ditunjukkan pada Gambar \ref{fig:vae}, model terdiri dari dua komponen utama, yaitu \textit{encoder} dan \textit{decoder}. Input berupa segmen sinyal EEG satu dimensi diproses oleh bagian \textit{encoder} menggunakan beberapa lapisan \textit{Conv1D} yang diikuti oleh \textit{batch normalization} dan fungsi aktivasi \textit{LeakyReLU}. Proses ini bertujuan untuk mengekstraksi representasi fitur berdimensi lebih rendah dari sinyal input. Representasi tersebut kemudian dipetakan ke dalam dua parameter distribusi laten, yaitu \textit{mean} ($z_{\mathrm{mean}}$) dan variansi logaritmik ($z_{\mathrm{log_var}}$). Selanjutnya dilakukan proses \textit{reparameterization} untuk menghasilkan vektor laten $z$, sehingga model dapat dilatih menggunakan mekanisme \textit{backpropagation} secara \textit{end-to-end}.
+Seperti ditunjukkan pada Gambar \ref{fig:vae}, model terdiri dari dua komponen utama, yaitu \textit{encoder} dan \textit{decoder}. Input berupa segmen sinyal EEG satu dimensi diproses oleh bagian \textit{encoder} menggunakan beberapa lapisan \textit{Conv1D} yang diikuti oleh \textit{batch normalization} dan fungsi aktivasi \textit{LeakyReLU}. Proses ini bertujuan untuk mengekstraksi representasi fitur berdimensi lebih rendah dari sinyal input. Representasi tersebut kemudian dipetakan ke dalam dua parameter distribusi laten, yaitu \textit{mean} ($z_{\mathrm{mean}}$) dan variansi logaritmik ($z_{\mathrm{log_var}}$). Selanjutnya dilakukan proses \textit{reparameterization} untuk menghasilkan vektor laten $z$, sehingga model dapat dilatih menggunakan mekanisme \textit{backpropagation} secara \textit{end-to-end}. Proses perhitungan parameter distribusi laten serta mekanisme \textit{reparameterization} yang digunakan untuk menghasilkan vektor laten $z$ dijelaskan lebih rinci ada Subbab \ref{subsubsec:reparameterization-layer} mengenai \textit{Reparameterization Layer}.
 
 Vektor laten yang dihasilkan kemudian digunakan sebagai input bagi bagian \textit{decoder} untuk merekonstruksi kembali sinyal EEG. Decoder terdiri dari beberapa lapisan \textit{upsampling} dan \textit{Conv1D} yang secara bertahap mengembalikan dimensi sinyal hingga sesuai dengan bentuk input awal. Setelah proses \textit{training}, model dimanfaatkan untuk menghasilkan data sintetis baru dengan melakukan \textit{sampling} acak pada ruang laten menggunakan distribusi normal standar. Vektor laten hasil \textit{sampling} tersebut diberikan ke \textit{decoder} untuk menghasilkan sinyal EEG sintetis yang tidak identik dengan data asli, namun tetap mempertahankan karakteristik distribusi statistiknya.
 
-Dalam proses \textit{training}, model dioptimalkan menggunakan kombinasi \textit{reconstruction loss} dan \textit{Kullback-Leibler} (KL) divergence. \textit{Reconstruction loss} digunakan untuk mengukur perbedaan antara sinyal input dan hasil rekonstruksi, sedangkan KL divergence berfungsi untuk menjaga distribusi ruang laten tetap mendekati distribusi normal standar. Kombinasi kedua komponen tersebut digunakan sebagai fungsi objektif dalam proses optimasi model.
+Dalam proses \textit{training}, model dioptimalkan menggunakan kombinasi \textit{reconstruction loss} dan \textit{Kullback-Leibler} (KL) divergence. \textit{Reconstruction loss} digunakan untuk mengukur perbedaan antara sinyal input dan hasil rekonstruksi, sedangkan KL divergence berfungsi untuk menjaga distribusi ruang laten tetap mendekati distribusi normal standar. Kombinasi kedua komponen tersebut digunakan sebagai fungsi objektif dalam proses optimasi model. Detail formulasi matematis, perhitungan masing-masing komponen \textit{loss}, serta mekanisme optimasi yang digunakan selama proses pelatihan dijelaskan lebih rinci pada Subbab \hyperref[subsubsec:loss-function-training]{3.3.2.4}  mengenai \textit{Loss Function} dan Proses \textit{Training}.
 \newpage
 \subsection{Arsitektur Model Klasifikasi}
 \label{Arsitektur Model Klasifikasi}
@@ -236,9 +236,9 @@ Output akhir berupa 16 nilai \textit{z\_mean} dan 16 nilai \textit{z\_latent} se
 \end{tabular}
 \end{table}
 
-\textit{Encoder} menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15–25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling dilakukan melalui stride pada setiap lapisan konvolusi, sehingga menghasilkan reduksi dimensi bertahap dari 512 menjadi 64, yang membuat representasi semakin ringkas dan informatif.
+\textit{Encoder} menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15–25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling dilakukan melalui stride pada setiap lapisan konvolusi, sehingga reduksi dimensi bertahap dari 512 menjadi 64  membuat representasi semakin ringkas dan informatif.
 
-Setiap blok konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi aktivasi selama \textit{training}, mempercepat konvergensi, serta mengurangi masalah internal covariate shift. Setelah normalisasi, digunakan fungsi aktivasi LeakyReLU dengan parameter 0.2, yang berarti gradien kecil sebesar 0.2 tetap dipertahankan untuk nilai negatif, sehingga mencegah masalah “dying ReLU” dan menjaga aliran gradien tetap stabil.
+Setiap blok konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi aktivasi selama \textit{training}, mempercepat konvergensi, serta mengurangi masalah internal covariate shift. Setelah normalisasi, digunakan fungsi aktivasi LeakyReLU dengan parameter 0.2, yang berarti gradien kecil sebesar 0.2 tetap dipertahankan untuk nilai negatif, sehingga menjaga aliran gradien tetap stabil.
 
 Padding yang digunakan adalah “same”, yang menjaga ukuran temporal output tetap proporsional dengan input sebelum proses downsampling oleh stride dilakukan, sehingga informasi di tepi sinyal tetap dipertahankan secara optimal.
 
@@ -280,6 +280,7 @@ Setelah proses konvolusi, dilakukan reduksi dimensi temporal menggunakan \textit
 
 
 \subsubsection{\textit{Reparameterization Layer}}
+\label{subsubsec:reparameterization-layer}
 \begin{figure}[H]
     \hspace*{0.5cm} 
     \includegraphics[
@@ -293,7 +294,7 @@ Setelah proses konvolusi, dilakukan reduksi dimensi temporal menggunakan \textit
 
 
 
-Lapisan Sampling menghasilkan vektor laten $z$ dengan menggabungkan dua parameter yang dipelajari oleh \textit{encoder}, yaitu $z_{\text{mean}}$ dan $z_{\text{log var}}$. Proses ini digunakan untuk membuat representasi laten bersifat probabilistik, sehingga model tidak hanya menghasilkan satu nilai tetap, tetapi sebuah distribusi.
+Lapisan Sampling menghasilkan vektor laten $z$ dengan menggabungkan dua parameter yang dipelajari oleh \textit{encoder}, yaitu $z_{\text{mean}}$ dan $z_{\text{log var}}$. Proses ini membuat representasi laten bersifat probabilistik, sehingga model tidak hanya menghasilkan satu nilai tetap, tetapi sebuah distribusi.
 
 Pada tahap ini digunakan variabel acak $\epsilon$ (\textit{epsilon}), yang diambil dari distribusi normal standar dengan mean 0 dan variansi 1. Noise ini berfungsi untuk memperkenalkan unsur \textit{stochastic} dalam proses \textit{sampling}, sehingga setiap \textit{forward pass} dapat menghasilkan representasi $z$ yang sedikit berbeda meskipun input sama.
 
@@ -302,10 +303,66 @@ Nilai $z$ dihitung menggunakan teknik \textit{reparameterization trick}, yaitu:
 z = z_{\text{mean}} + \exp(0.5 \cdot z_{\text{log var}}) \cdot \epsilon
 \]
 
-Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi dari distribusi yang dipelajari, sehingga noise $\epsilon$ diskalakan sesuai dengan tingkat ketidakpastian data. Pendekatan ini memungkinkan proses \textit{sampling} tetap dapat dioptimalkan menggunakan \textit{backpropagation}.
+Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi dari distribusi yang dipelajari, sehingga noise $\epsilon$ diskalakan dengan tingkat ketidakpastian data. Pendekatan ini memungkinkan proses \textit{sampling} tetap dapat dioptimalkan menggunakan \textit{backpropagation}.
 
 \subsubsection{Arsitektur Layer \textit{Decoder}}
+\textit{Layer decoder} dirancang untuk merekonstruksi kembali representasi laten menjadi sinyal EEG dengan dimensi yang sama seperti data input. Setiap \textit{layer} menggunakan mekanisme \textit{upsampling} melalui \textit{Conv1DTranspose} untuk meningkatkan dimensi temporal secara bertahap. Proses ini mengembalikan informasi yang telah dikompresi oleh \textit{encoder} dengan mempertahankan karakteristik pola temporal sinyal EEG.
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=0.6\textwidth,
+        trim=0cm 0cm 0cm 0cm,
+        clip
+    ]{assets/pdfs/decoder.pdf}
+    \caption{Diagram Aliran Layer \textit{Decoder} pada Model VAE}
+    \label{fig:vae_decoder}
+\end{figure}
 
+\begin{table}[H]
+\centering
+\caption{Arsitektur Decoder VAE}
+\label{tab:vae_decoder}
+\footnotesize
+\begin{tabular}{|c|c|c|p{7cm}|}
+\hline
+\textbf{Tahap} &
+\textbf{Nama Layer} &
+\textbf{Ukuran Data} &
+\textbf{Penjelasan Teknis} \\
+\hline
+
+Input &
+Latent Vector &
+\textbf{16} &
+Vektor laten 16-dimensi (hasil sampling). \\
+\hline
+
+L4 &
+Dense \& Reshape &
+\textbf{(64, 128)} &
+Ekspansi awal kembali ke dimensi fitur (64 length $\times$ 128 depth). \\
+\hline
+
+L5 (A) &
+Conv1DTranspose 1 &
+\textbf{(128, 64)} &
+64 kernel bekerja melakukan upsampling untuk memperpanjang durasi sinyal. \\
+\hline
+
+L5 (B) &
+Conv1DTranspose 2 &
+\textbf{(256, 32)} &
+32 kernel menyusun detail bentuk gelombang EEG. \\
+\hline
+
+Output &
+Reconstruction &
+\textbf{(512, 1)} &
+1 kernel terakhir menggabungkan semua fitur menjadi satu sinyal utuh. \\
+\hline
+
+\end{tabular}
+\end{table}
 \begin{lstlisting}[
     style=modernpython,
     language=Python,
@@ -386,6 +443,7 @@ generate reconstructed EEG signal
 Hasil konvolusi pada setiap tahap kemudian dinormalisasi menggunakan Batch Normalization sebelum diterapkan fungsi aktivasi untuk menjaga stabilitas distribusi aktivasi selama proses rekonstruksi. Pada tahap \textit{signal reconstruction}, dilakukan konvolusi akhir pada setiap posisi temporal \textit{feature map} untuk menghasilkan kembali sinyal EEG rekonstruksi dengan jumlah kanal yang sama seperti data input.
 
 \subsubsection{\textit{Loss Function} dan Proses Training}
+\label{subsubsec:loss-function-training}
 
 \textit{Reconstruction loss} dihitung menggunakan \textit{Mean Squared Error (MSE)} antara input dan output rekonstruksi. Sebelum perhitungan, kedua tensor diubah menjadi vektor satu dimensi (\textit{flatten}) untuk menyederhanakan komputasi. Nilai loss kemudian dikalikan dengan faktor 512 untuk menyesuaikan skala kontribusinya terhadap total loss, sehingga model lebih fokus dalam mempertahankan kemiripan antara data asli dan hasil rekonstruksi.
 

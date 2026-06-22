@@ -47,32 +47,32 @@
 \contentsline {subsubsection}{\numberline {3.3.2.1}Arsitektur \textit {Layer Encoder}}{37}{subsubsection.3.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.3.2.2}\textit {Reparameterization Layer}}{39}{subsubsection.3.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.3.2.3}Arsitektur Layer \textit {Decoder}}{40}{subsubsection.3.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.3.2.4}\textit {Loss Function} dan Proses Training}{41}{subsubsection.3.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.3.2.5}Generasi Data Sintetis}{42}{subsubsection.3.3.2.5}%
-\contentsline {subsection}{\numberline {3.3.3}Implementasi Model Klasifikasi}{43}{subsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.3.1}Integrasi Data Sintetis pada Model Klasifikasi}{44}{subsubsection.3.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.3.2}\textit {Minimum Redundancy Maximum Relevance} (\textit {mRMR})}{45}{subsubsection.3.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3.3}Model \textit {XGBoost}}{46}{subsubsection.3.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.3.4}Model \textit {Deep Neural Network}}{46}{subsubsection.3.3.3.4}%
-\contentsline {chapter}{\numberline {4}\uppercase {Eksperimen dan Analisis}}{48}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Lingkungan Training}{48}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Spesifikasi Perangkat Keras}{48}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Spesifikasi Perangkat Lunak}{49}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Standarisasi Pengujian Eksperimen}{50}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Konfigurasi Eksperimen}{50}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Konfigurasi Eksperimen Augmentasi}{50}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}Konfigurasi Eksperimen Klasifikasi}{51}{subsubsection.4.2.1.2}%
-\contentsline {subsection}{\numberline {4.2.2}Metrik Evaluasi}{52}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Metrik Evaluasi Eksperimen Augmentasi}{52}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Metrik Evaluasi Eksperimen Klasifikasi}{53}{subsubsection.4.2.2.2}%
-\contentsline {section}{\numberline {4.3}Eksperimen dan Analisis}{53}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{54}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}{59}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}{62}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Diskusi}{64}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Analisis Komparatif terhadap Penelitian Terdahulu}{64}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Implikasi dan Arah Pengembangan Penelitian}{66}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}\uppercase {Penutup}}{68}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{68}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{69}{section.5.2}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{71}{Item.50}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}\textit {Loss Function} dan Proses Training}{42}{subsubsection.3.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.3.2.5}Generasi Data Sintetis}{43}{subsubsection.3.3.2.5}%
+\contentsline {subsection}{\numberline {3.3.3}Implementasi Model Klasifikasi}{44}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}Integrasi Data Sintetis pada Model Klasifikasi}{45}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}\textit {Minimum Redundancy Maximum Relevance} (\textit {mRMR})}{46}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}Model \textit {XGBoost}}{47}{subsubsection.3.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.4}Model \textit {Deep Neural Network}}{47}{subsubsection.3.3.3.4}%
+\contentsline {chapter}{\numberline {4}\uppercase {Eksperimen dan Analisis}}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lingkungan Training}{49}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Spesifikasi Perangkat Keras}{49}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Spesifikasi Perangkat Lunak}{50}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Standarisasi Pengujian Eksperimen}{51}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Konfigurasi Eksperimen}{51}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Konfigurasi Eksperimen Augmentasi}{51}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Konfigurasi Eksperimen Klasifikasi}{52}{subsubsection.4.2.1.2}%
+\contentsline {subsection}{\numberline {4.2.2}Metrik Evaluasi}{53}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Metrik Evaluasi Eksperimen Augmentasi}{53}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Metrik Evaluasi Eksperimen Klasifikasi}{54}{subsubsection.4.2.2.2}%
+\contentsline {section}{\numberline {4.3}Eksperimen dan Analisis}{54}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Eksperimen 1: Evaluasi Kemampuan Model VAE dalam Generasi Sinyal EEG Sintetis}{55}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}{60}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Eksperimen 3: Evaluasi Model Klasifikasi Dengan Menggunakan Kombinasi Sinyal EEG Asli dan Sinyal EEG Sintetis}{63}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Diskusi}{65}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Analisis Komparatif terhadap Penelitian Terdahulu}{65}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Implikasi dan Arah Pengembangan Penelitian}{67}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}\uppercase {Penutup}}{69}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{69}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{70}{section.5.2}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{72}{Item.50}%
