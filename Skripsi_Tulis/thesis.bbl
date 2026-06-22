@@ -91,12 +91,6 @@ S.~Savadi, ``A comprehensive review of feature extraction and classification
   techniques in eeg signal analysis,'' 2025, [Online]. Available:
   \url{http://www.ijceronline.com/}.
 
-\bibitem{gan_eeg_emotion}
-G.~Bao, B.~Yan, L.~Tong, J.~Shu, L.~Wang, K.~Yang, and Y.~Zeng, ``Data
-  augmentation for eeg-based emotion recognition using generative adversarial
-  networks,'' 2021, [Online]. Available:
-  \url{https://doi.org/10.3389/fncom.2021.723843}.
-
 \bibitem{eeg_gan}
 K.~G. Hartmann, R.~T. Schirrmeister, and T.~Ball, ``Eeg-gan: Generative
   adversarial networks for electroencephalographic (eeg) brain signals,'' 2018,
@@ -175,6 +169,12 @@ Q.~Wen, L.~Sun, F.~Yang, X.~Song, J.~Gao, X.~Wang, and H.~Xu, ``Time series
 M.~Goyal and Q.~H. Mahmoud, ``A systematic review of synthetic data generation
   techniques using generative ai,'' 2024, [Online]. Available:
   \url{https://www.mdpi.com/2079-9292/13/17/3509}.
+
+\bibitem{gan_eeg_emotion}
+G.~Bao, B.~Yan, L.~Tong, J.~Shu, L.~Wang, K.~Yang, and Y.~Zeng, ``Data
+  augmentation for eeg-based emotion recognition using generative adversarial
+  networks,'' 2021, [Online]. Available:
+  \url{https://doi.org/10.3389/fncom.2021.723843}.
 
 \bibitem{cvae_gan_eeg}
 Y.~Yao, X.~Wang, X.~Hao, H.~Sun, R.~Dong, and Y.~Li, ``Trans-cvae-gan:

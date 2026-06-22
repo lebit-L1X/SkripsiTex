@@ -13,13 +13,17 @@ Bab ini akan dimulai dengan penjelasan Latar Belakang yang memberikan konteks pe
 
 Autism Spectrum Disorder (ASD) merupakan gangguan neurologis yang ditandai oleh hambatan dalam komunikasi dan interaksi sosial, serta pola perilaku yang terbatas dan berulang \cite{nih_autism}, \cite{dsm5}. Identifikasi dan intervensi dini menjadi faktor penting dalam membantu perkembangan individu dengan ASD, namun proses diagnosis masih menghadapi berbagai tantangan karena karakteristik gejala yang heterogen dan sering kali menyerupai gangguan perkembangan lainnya \cite{autism_diagnosis_challenges} \cite{10423494}. Kondisi tersebut mendorong berkembangnya pendekatan diagnosis berbasis biomarker yang lebih objektif dan konsisten.
 
-Salah satu pendekatan yang banyak diteliti adalah analisis electroencephalography (EEG) menggunakan metode machine learning. Dibandingkan dengan metode lainnya, EEG memiliki keunggulan karena bersifat non-invasif, relatif lebih murah, dan memiliki resolusi temporal yang tinggi \cite{brain_imaging_asd_review} \cite{eeg_dataset_asd}. Berbagai penelitian menunjukkan bahwa model machine learning mampu mengidentifikasi pola aktivitas otak yang berkaitan dengan ASD melalui sinyal EEG dengan performa klasifikasi yang cukup baik \cite{eeg_autism_review}. Penelitian rujukan \cite{paper_ref} mengusulkan pendekatan klasifikasi ASD berbasis EEG menggunakan kombinasi seleksi fitur minimum Redundancy Maximum Relevance (mRMR) dan algoritma XGBoost yang menunjukkan performa klasifikasi yang baik dan konsisten.
+Salah satu pendekatan yang banyak diteliti adalah analisis electroencephalography (EEG) menggunakan metode machine learning, dimana dalam metode ini model dilatih menggunakan data dari subjek yang telah memperoleh diagnosis klinis berdasarkan kriteria diagnostik yang digunakan oleh penyedia dataset. Model kemudian mempelajari pola EEG yang membedakan kelompok ASD dan kelompok kontrol berdasarkan label tersebut, sehingga karakteristik yang dipelajari diasumsikan berkaitan dengan ASD sesuai dengan definisi pada dataset. Oleh karena itu, model diasumsikan mempelajari karakteristik yang berkaitan dengan ASD sesuai definisi pada dataset. Dibandingkan dengan metode lainnya, EEG memiliki keunggulan karena bersifat non-invasif, relatif lebih murah, dan memiliki resolusi temporal yang tinggi \cite{brain_imaging_asd_review} \cite{eeg_dataset_asd}. 
 
-Meskipun demikian, pengembangan model klasifikasi EEG masih menghadapi berbagai tantangan, terutama terkait keterbatasan dataset EEG yang tersedia secara publik dan telah memiliki label klinis \cite{dl_eeg_review}. Proses akuisisi dan pelabelan data EEG umumnya membutuhkan biaya, waktu, serta keterlibatan tenaga ahli, sehingga jumlah data yang tersedia sering kali terbatas. Selain itu, data EEG memiliki variabilitas yang tinggi akibat perbedaan kondisi subjek, konfigurasi perekaman, serta keberadaan \textit{noise} dan artefak yang dapat memengaruhi kualitas sinyal \cite{artifact_removal_eeg}. Kondisi tersebut menyulitkan pengembangan model yang mampu mempelajari pola yang representatif dan melakukan generalisasi dengan baik terhadap data baru \cite{eeg_limited_data}.
+Berbagai penelitian menunjukkan bahwa model machine learning mampu mengidentifikasi pola aktivitas otak yang berkaitan dengan ASD melalui sinyal EEG dengan performa klasifikasi yang cukup baik \cite{eeg_autism_review}. Penelitian rujukan \cite{paper_ref} mengusulkan pendekatan klasifikasi ASD berbasis EEG menggunakan kombinasi seleksi fitur minimum Redundancy Maximum Relevance (mRMR) dan algoritma XGBoost yang menunjukkan performa klasifikasi yang baik dan konsisten.
+
+Meskipun demikian, pengembangan model klasifikasi EEG masih menghadapi berbagai tantangan, terutama terkait keterbatasan dataset EEG yang tersedia secara publik dan telah memiliki label klinis \cite{dl_eeg_review}. Kualitas dataset menjadi faktor yang sangat penting karena model klasifikasi EEG mempelajari pola sinyal berdasarkan label klinis yang diberikan pada dataset. Oleh karena itu, kualitas proses akuisisi, pelabelan, dan representativitas data akan secara langsung memengaruhi karakteristik yang dipelajari model serta validitas pola yang diasosiasikan dengan ASD. 
+
+Namun, proses akuisisi data EEG umumnya membutuhkan biaya, waktu, serta keterlibatan tenaga ahli, sehingga jumlah data yang tersedia sering kali terbatas. Selain itu, data EEG memiliki variabilitas yang tinggi akibat perbedaan kondisi subjek, konfigurasi perekaman, serta keberadaan \textit{noise} dan artefak yang dapat memengaruhi kualitas sinyal \cite{artifact_removal_eeg}.  Kondisi tersebut menyulitkan pengembangan model yang mampu mempelajari pola yang representatif dan melakukan generalisasi dengan baik terhadap data baru \cite{eeg_limited_data}.
 
 Salah satu pendekatan yang mulai banyak diteliti untuk mengatasi keterbatasan data EEG adalah penggunaan teknik \textit{data augmentation}. Teknik ini bertujuan untuk meningkatkan jumlah dan keragaman data \textit{training} secara artifisial tanpa memerlukan proses perekaman EEG tambahan. Beberapa penelitian menunjukkan bahwa penerapan \textit{data augmentation} pada data EEG berpotensi membantu meningkatkan performa model klasifikasi serta mengurangi risiko \textit{overfitting} pada kondisi dataset yang terbatas \cite{eeg_augmentation_review}. Namun, data sintetis yang dihasilkan perlu tetap mampu merepresentasikan karakteristik penting dari data EEG asli agar dapat memberikan manfaat terhadap performa dan kemampuan generalisasi model klasifikasi.
 
-Penerapan augmentasi pada data EEG memiliki tantangan tersendiri karena sinyal EEG merupakan data \textit{time series} multikanal yang bersifat non-stasioner dan memiliki rasio \textit{signal-to-noise} yang rendah \cite{eeg_feature_review}. Berbeda dengan berbagai jenis data multimedia lain seperti citra, audio, atau video yang umumnya memiliki pola representasi yang lebih stabil, manipulasi pada data EEG perlu dilakukan secara hati-hati karena perubahan pada sinyal dapat memengaruhi representasi aktivitas otak yang dianalisis. Pendekatan augmentasi data konvensional pada data \textit{time series} umumnya dilakukan melalui transformasi sederhana seperti penambahan \textit{noise}, pergeseran waktu, atau manipulasi amplitudo. Namun, pada data EEG, transformasi tersebut berpotensi mengubah karakteristik temporal dan spasial yang digunakan dalam proses analisis maupun klasifikasi sinyal \cite{gan_eeg_emotion}.
+Penerapan augmentasi pada data EEG memiliki tantangan tersendiri karena sinyal EEG merupakan data \textit{time series} multikanal yang bersifat non-stasioner dan memiliki rasio \textit{signal-to-noise} yang rendah \cite{eeg_feature_review}. Berbeda dengan berbagai jenis data multimedia lain seperti citra, audio, atau video yang umumnya memiliki pola representasi yang lebih stabil, manipulasi pada data EEG perlu dilakukan secara hati-hati karena perubahan pada sinyal dapat memengaruhi representasi aktivitas otak yang dianalisis. 
 
 Oleh karena itu, diperlukan pendekatan augmentasi yang mampu menghasilkan data EEG sintetis dengan tetap mempertahankan karakteristik penting dari data asli. Selain meningkatkan jumlah data, pendekatan tersebut juga diharapkan dapat menghasilkan variasi data yang representatif sehingga mampu mendukung peningkatan performa dan kemampuan generalisasi model klasifikasi EEG. Namun, kualitas data sintetis yang dihasilkan serta pengaruhnya terhadap performa klasifikasi masih perlu dikaji lebih lanjut, khususnya dalam konteks klasifikasi Autism Spectrum Disorder (ASD) berbasis EEG.
 
@@ -44,7 +48,7 @@ ini dirumuskan sebagai berikut:
 Selaras dengan rumusan masalah yang telah diuraikan, tujuan dari penelitian ini mencakup sebagai berikut:
 
 \begin{enumerate}
-    \item Menentukan pendekatan yang sesuai untuk menghasilkan data EEG sintetis yang representatif terhadap data EEG asli.
+    \item Mengembangkan pendekatan yang sesuai untuk menghasilkan data EEG sintetis yang representatif terhadap data EEG asli.
 
     \item Mengevaluasi sejauh mana data sintetis yang dihasilkan mampu mempertahankan karakteristik dan distribusi sinyal EEG asli.
 
@@ -58,10 +62,10 @@ Selaras dengan rumusan masalah yang telah diuraikan, tujuan dari penelitian ini 
 Berdasarkan latar belakang, rumusan masalah, dan tujuan penelitian yang telah diuraikan, penelitian ini diharapkan memberikan manfaat sebagai berikut:
 
 \begin{enumerate}
-    \item \textbf{Bagi Peneliti dan Pengembangan Metode:} \\
+    \item \text{Bagi Peneliti dan Pengembangan Metode:} \\
     Penelitian ini diharapkan dapat menjadi referensi dalam pengembangan dan pemanfaatan teknik \textit{data augmentation} pada sinyal EEG, serta membuka peluang bagi pengembangan metode klasifikasi dan diagnosis di masa depan yang mampu memanfaatkan data dalam jumlah yang lebih besar dan beragam, sehingga meningkatkan robustness dan kemampuan generalisasi model.
 
-    \item \textbf{Bagi Tenaga Medis dan Profesional Kesehatan:} \\
+    \item \text{Bagi Tenaga Medis dan Profesional Kesehatan:} \\
     Penelitian ini diharapkan dapat memberikan gambaran mengenai potensi pemanfaatan \textit{machine learning} dalam analisis data EEG pada studi Autism Spectrum Disorder (ASD), maupun untuk  sehingga dapat mendukung pemahaman dan penelitian lanjutan terkait pendekatan berbasis data dalam konteks klinis.
 \end{enumerate}
 
@@ -72,13 +76,13 @@ Berdasarkan latar belakang, rumusan masalah, dan tujuan penelitian yang telah di
 Agar penelitian ini tetap terfokus, maka ruang lingkup penelitian ditetapkan sebagai berikut:
 \begin{enumerate}
 
-\item \textbf{Dataset Penelitian:} Penelitian ini menggunakan dataset EEG yang sama dengan dataset pada penelitian rujukan \cite{paper_ref}\cite{eeg_dataset_asd}. Dataset tersebut digunakan sebagai dasar dalam proses \textit{training} model augmentasi maupun model klasifikasi sehingga hasil penelitian dapat dibandingkan secara relevan dengan penelitian sebelumnya.
+\item \text{Dataset Penelitian:} Penelitian ini menggunakan dataset EEG yang sama dengan dataset pada penelitian rujukan \cite{paper_ref}\cite{eeg_dataset_asd}. Dataset tersebut digunakan sebagai dasar dalam proses \textit{training} model augmentasi maupun model klasifikasi sehingga hasil penelitian dapat dibandingkan secara relevan dengan penelitian sebelumnya.
 
-\item \textbf{Metode Penelitian:} Tahapan \textit{preprocessing}, klasifikasi, dan evaluasi penelitian mengacu pada metode yang digunakan dalam penelitian rujukan \cite{paper_ref} dan \cite{eeg_gan}. Modifikasi yang dilakukan pada penelitian ini difokuskan pada penerapan metode \textit{data augmentation} berbasis \textit{Variational Autoencoder} (VAE) untuk menghasilkan data EEG sintetis.
+\item \text{Metode Penelitian:} Tahapan \textit{preprocessing}, klasifikasi, dan evaluasi penelitian mengacu pada metode yang digunakan dalam penelitian rujukan \cite{paper_ref} dan \cite{eeg_gan}. Modifikasi yang dilakukan pada penelitian ini difokuskan pada penerapan metode \textit{data augmentation} berbasis \textit{Variational Autoencoder} (VAE) untuk menghasilkan data EEG sintetis.
 
-\item \textbf{Hasil Akhir Penelitian:} Penelitian ini menghasilkan model \textit{data augmentation} EEG berbasis \textit{Variational Autoencoder} (VAE) untuk menghasilkan data EEG sintetis, serta mengevaluasi kualitas data yang dihasilkan dan pengaruhnya terhadap performa model klasifikasi.
+\item \text{Hasil Akhir Penelitian:} Penelitian ini menghasilkan model \textit{data augmentation} EEG berbasis \textit{Variational Autoencoder} (VAE) untuk menghasilkan data EEG sintetis, serta mengevaluasi kualitas data yang dihasilkan dan pengaruhnya terhadap performa model klasifikasi.
 
-\item \textbf{Batasan Penelitian:} Penelitian difokuskan pada analisis pengaruh penerapan \textit{data augmentation} EEG terhadap kualitas performa model klasifikasi. Penelitian ini tidak membahas aspek perangkat keras EEG, proses akuisisi data asli, maupun tahapan penghilangan \textit{noise} dan \textit{artifact removal} di luar prosedur \textit{preprocessing} yang telah ditetapkan pada penelitian rujukan.
+\item \text{Batasan Penelitian:} Penelitian difokuskan pada analisis pengaruh penerapan \textit{data augmentation} EEG terhadap kualitas performa model klasifikasi. Penelitian ini tidak membahas aspek perangkat keras EEG, proses akuisisi data asli, maupun tahapan penghilangan \textit{noise} dan \textit{artifact removal} di luar prosedur \textit{preprocessing} yang telah ditetapkan pada penelitian rujukan.
 \end{enumerate}
 %-----------------------------------------------------------------------------%
 \section{Sistematika Penulisan}
@@ -88,18 +92,18 @@ Laporan tesis ini disusun secara sistematis ke dalam lima bab utama, dengan rinc
 bagai berikut:
 
 \begin{enumerate}
-    \item \textbf{Bab 1: Pendahuluan.} 
+    \item \text{Bab 1: Pendahuluan.} 
     Bab ini menyajikan gambaran umum penelitian, meliputi latar belakang yang menjelaskan pentingnya analisis sinyal EEG dalam mendukung identifikasi Autism Spectrum Disorder (ASD), rumusan masalah yang menjadi dasar penelitian, tujuan yang ingin dicapai, manfaat penelitian, ruang lingkup penelitian, serta sistematika penulisan laporan ini.
     
-    \item \textbf{Bab 2: Tinjauan Pustaka.} 
+    \item \text{Bab 2: Tinjauan Pustaka.} 
     Bab ini menguraikan landasan teoretis yang mendukung penelitian, meliputi konsep dasar sinyal EEG, metode \textit{Minimum Redundancy Maximum Relevance} (mRMR) untuk seleksi fitur, implementasi \textit{machine learning}  dalam klasifikasi berdasarkan EEG, metode augmentasi data EEG, model \textit{Variational AutoEncoder}, metode evaluasi data hasil augmentasi, serta kajian terhadap penelitian-penelitian sebelumnya yang bersifat relevan.
     
-    \item \textbf{Bab 3: Metodologi Penelitian.} 
+    \item \text{Bab 3: Metodologi Penelitian.} 
     Bab ini menjelaskan metode yang digunakan dalam penelitian, mencakup deskripsi dataset EEG yang digunakan, tahapan pra-pemrosesan data, penerapan teknik \textit{data augmentation}, proses seleksi fitur menggunakan metode \textit{mRMR}, arsitektur model augmentasi berbasis \textit{VAE}, serta integrasi sinyal sintetis dalam proses \textit{training} model klasifikasi.
     
-    \item \textbf{Bab 4: Hasil dan Analisis.} 
+    \item \text{Bab 4: Hasil dan Analisis.} 
     Bab ini memaparkan hasil eksperimen yang diperoleh dari proses \textit{training} dan pengujian model. Analisis dilakukan berupa evaluasi data sintetis yang dihasilkan, serta membandingkan performa model pada skenario dengan dan tanpa penerapan \textit{data augmentasi}, serta mengevaluasi pengaruhnya terhadap kemampuan model dalam melakukan klasifikasi data EEG.
     
-    \item \textbf{Bab 5: Penutup.} 
+    \item \text{Bab 5: Penutup.} 
     Bab terakhir ini berisi kesimpulan dari hasil penelitian yang telah dilakukan serta saran untuk pengembangan penelitian selanjutnya terkait analisis dan klasifikasi data EEG menggunakan metode \textit{machine learning} .
 \end{enumerate}

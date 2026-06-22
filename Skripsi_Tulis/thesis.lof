@@ -14,13 +14,13 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram Model VAE untuk Augmentasi EEG}}{32}{figure.caption.23}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram Model Klasifikasi}}{34}{figure.caption.24}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{37}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{39}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran generasi data sintetis}}{42}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram Alur Integrasi Data Sintetis pada Proses Klasifikasi}}{44}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{46}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{39}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran generasi data sintetis}}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram Alur Integrasi Data Sintetis pada Proses Klasifikasi}}{45}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{47}{figure.caption.31}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label Normal}}{55}{figure.caption.35}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label ASD}}{55}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label Normal}}{56}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label ASD}}{56}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label Normal}}{57}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label ASD}}{57}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label Normal}}{58}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label ASD}}{58}{figure.caption.39}%
 \addvspace {10\p@ }

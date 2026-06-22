@@ -28,35 +28,32 @@ Arsitektur & x86\_64 \\
 \end{tabular}
 \end{table} 
 \subsection{Spesifikasi Perangkat Lunak}
-Untuk lingkungan perangkat lunak, sistem dibangun di atas Python 3.9 dengan memanfaatkan TensorFlow (v2.10.0) sebagai framework utama dalam implementasi model \textit{Variational Autoencoder} (VAE). Selain itu, Scikit-learn (v1.6.1), Feature-engine (v1.9.4), dan XGBoost (v2.1.4) digunakan dalam proses preprocessing, seleksi fitur, serta klasifikasi data EEG. Proses pengolahan sinyal dan ekstraksi fitur didukung oleh SciPy (v1.13.1), sedangkan pengolahan data numerik dan visualisasi dilakukan menggunakan NumPy (v1.23.5), Pandas (v2.3.3), dan Matplotlib (v3.7.3). Spesifikasi lengkap lingkungan perangkat lunak disajikan pada Tabel 4.2.
-\begin{table}[H]
+Untuk lingkungan perangkat lunak, sistem dibangun di atas Python 3.9 dengan memanfaatkan TensorFlow (v2.10.0) sebagai framework utama dalam implementasi model \textit{Variational Autoencoder} (VAE). Selain itu, Scikit-learn (v1.6.1), Feature-engine (v1.9.4), dan XGBoost (v2.1.4) digunakan dalam proses preprocessing, seleksi fitur, serta klasifikasi data EEG. Proses pengolahan sinyal dan ekstraksi fitur didukung oleh SciPy (v1.13.1), sedangkan pengolahan data numerik dan visualisasi dilakukan menggunakan NumPy (v1.23.5), Pandas (v2.3.3), dan Matplotlib (v3.7.3). Spesifikasi lengkap lingkungan perangkat lunak disajikan pada Tabel 4.2.\begin{table}[H]
 \centering
-\footnotesize
 \caption{Spesifikasi Lingkungan Perangkat Lunak}
 \label{tab:software-spec}
-\begin{tabular}{|c|c|}
+\footnotesize
+\begin{tabular}{|p{4.5cm}|c|p{7.5cm}|}
 \hline
-\textbf{Perangkat Lunak / Library} & \textbf{Versi} \\
+\textbf{Perangkat Lunak / Library} & \textbf{Versi} & \textbf{Peran dalam Arsitektur Sistem} \\
 \hline
-Sistem Operasi & Windows 11 (x86\_64) \\
+Python & 3.9.25 & Bahasa pemrograman utama yang digunakan untuk implementasi seluruh pipeline sistem. \\
 \hline
-Python & 3.9.25 \\
+TensorFlow & 2.10.0 & Implementasi dan pelatihan model VAE, termasuk encoder, decoder, dan proses optimisasi model. \\
 \hline
-TensorFlow & 2.10.0 \\
+Scikit-learn & 1.6.1 & Preprocessing data, seleksi fitur, pembagian data latih-uji, evaluasi model, serta utilitas machine learning lainnya. \\
 \hline
-Scikit-learn & 1.6.1 \\
+XGBoost & 2.1.4 & Algoritma klasifikasi untuk mendeteksi kondisi epilepsi berdasarkan fitur hasil ekstraksi dan rekonstruksi sinyal EEG. \\
 \hline
-XGBoost & 2.1.4 \\
+Feature-engine & 1.9.4 & Seleksi dan transformasi fitur pada tahap preprocessing sebelum proses klasifikasi. \\
 \hline
-Feature-engine & 1.9.4 \\
+SciPy & 1.13.1 & Pengolahan sinyal EEG dan perhitungan matematis yang mendukung ekstraksi fitur domain waktu maupun frekuensi. \\
 \hline
-SciPy & 1.13.1 \\
+NumPy & 1.23.5 & Operasi komputasi numerik, manipulasi array, dan representasi data EEG selama pemrosesan. \\
 \hline
-NumPy & 1.23.5 \\
+Pandas & 2.3.3 & Pengelolaan dataset, operasi data tabular, dan penyimpanan hasil preprocessing maupun ekstraksi fitur. \\
 \hline
-Pandas & 2.3.3 \\
-\hline
-Matplotlib & 3.7.3 \\
+Matplotlib & 3.7.3 & Visualisasi sinyal EEG, kurva pelatihan model, serta penyajian hasil eksperimen dan evaluasi. \\
 \hline
 \end{tabular}
 \end{table}
@@ -65,29 +62,31 @@ Matplotlib & 3.7.3 \\
 Bagian ini menjelaskan metrik evaluasi yang digunakan untuk menilai performa model klasifikasi serta kualitas data sintetis yang dihasilkan dalam eksperimen. Variabel kontrol diterapkan untuk menjaga konsistensi proses preprocessing, konfigurasi model, dan parameter \textit{training} pada seluruh skenario pengujian. Variabel bebas pada penelitian ini adalah penggunaan data sintetis hasil augmentasi berbasis \textit{Variational Autoencoder} (VAE), sedangkan variabel terikat berupa performa klasifikasi dan kualitas data sintetis yang dihasilkan.
 \subsection{Konfigurasi Eksperimen}
 
-Bagian ini menjelaskan konfigurasi eksperimen yang digunakan pada proses augmentasi data dan klasifikasi sinyal EEG. Konfigurasi eksperimen meliputi pengaturan dataset, parameter \textit{training} model, serta skenario pengujian yang digunakan selama penelitian untuk menjaga konsistensi dan validitas hasil eksperimen.
+Bagian ini menjelaskan konfigurasi eksperimen yang digunakan dalam penelitian. Konfigurasi tersebut mencakup pengaturan umum yang diterapkan untuk memastikan proses eksperimen berjalan secara konsisten dan hasil yang diperoleh dapat dievaluasi secara valid.
+
 \subsubsection{Konfigurasi Eksperimen Augmentasi}
+Berikut merupakan konfigurasi yang digunakan untuk eksperimen augmentasi sinyal EEG. Konfigurasi ini mencakup pengaturan dataset, parameter pelatihan model, serta skenario pengujian yang digunakan untuk menjaga konsistensi dan validitas hasil eksperimen.
 \begin{enumerate}
-\item \textbf{Dataset:}
+\item \text{Dataset:}
     Eksperimen augmentasi menggunakan dataset EEG ASD dari penelitian \cite{eeg_dataset_asd}. Data EEG asli digunakan sebagai data masukan untuk melatih model \textit{Variational Autoencoder} (VAE) dalam menghasilkan sinyal EEG sintetis. Sebelum digunakan pada proses \textit{training} model VAE, sinyal EEG melalui tahapan \textit{preprocessing} yang mengacu pada penelitian referensi \cite{paper_ref}, meliputi \textit{filtering}, segmentasi sinyal, serta proses pengurangan artefak untuk meningkatkan kualitas sinyal EEG. Pada eksperimen augmentasi, data EEG dipisahkan berdasarkan kanal dan kelas data (NORMAL dan ASD) sebelum proses \textit{training} model. Dengan demikian, proses augmentasi dilakukan pada 32 subset data yang berbeda yang merepresentasikan kombinasi setiap kanal dan kelas.
 
-    \item \textbf{Hyperparameter:}
+    \item \text{Hyperparameter:}
     \textit{training} model \textit{Variational Autoencoder} (VAE) dilakukan menggunakan ukuran \textit{batch} sebesar 32 selama 70 \textit{epoch}. Dimensi ruang laten (\textit{latent dimension}) yang digunakan sebesar 16 dengan optimizer \textit{Adam} menggunakan \textit{learning rate} sebesar $0.001$, $\beta_1 = 0.5$, dan $\beta_2 = 0.999$. Fungsi \textit{loss} menggunakan kombinasi \textit{Mean Squared Error} (MSE) dan \textit{Kullback-Leibler Divergence} dengan parameter $\beta = 0.5$. Pembagian data dilakukan menggunakan rasio 70\% data \textit{training}, 20\% data validasi, dan 10\% data \textit{testing}.
 
-    \item \textbf{Jumlah Pengulangan Eksperimen:}
+    \item \text{Jumlah Pengulangan Eksperimen:}
     Untuk menjamin reliabilitas hasil dan meminimalisir bias akibat inisialisasi acak, setiap eksperimen augmentasi dilakukan secara berulang dengan bobot awal model yang berbeda. Seluruh eksperimen dilakukan sebanyak lima kali pengulangan, kemudian hasil evaluasi akhir diperoleh melalui rata-rata dari seluruh pengulangan eksperimen. Pengulangan eksperimen dilakukan untuk memastikan stabilitas performa model \textit{VAE} dalam menghasilkan data EEG sintetis.
 \end{enumerate}
 
 \subsubsection{Konfigurasi Eksperimen Klasifikasi}
-
+Berikut merupakan konfigurasi yang digunakan untuk eksperimen klasifikasi sinyal EEG. Konfigurasi ini mencakup pengaturan dataset, parameter pelatihan model, serta skenario pengujian yang digunakan untuk menjaga konsistensi dan validitas hasil eksperimen.
 \begin{enumerate}
-    \item \textbf{Dataset:}
+    \item \text{Dataset:}
     Eksperimen klasifikasi menggunakan dua skenario dataset, yaitu dataset yang hanya terdiri dari data EEG asli (\textit{real data}) dan dataset hasil augmentasi yang merupakan kombinasi data EEG asli dengan data sintetis hasil generasi model \textit{VAE}. Data sintetis yang dihasilkan pada tahap augmentasi digabungkan kembali menjadi sinyal EEG multikanal, kemudian diproses menggunakan tahapan \textit{preprocessing} yang sama dengan data EEG asli sebagaimana dijelaskan pada penelitian referensi \cite{paper_ref} sebelum digunakan pada proses klasifikasi.
 
-    \item \textbf{Hyperparameter:}
+    \item \text{Hyperparameter:}
     Eksperimen klasifikasi menggunakan dua model, yaitu model \textit{Deep Neural Network} (DNN) sebagai model pembanding berdasarkan penelitian rujukan serta model \textit{Extreme Gradient Boosting} (XGBoost). Model DNN dilatih menggunakan optimizer Adam dengan \textit{learning rate} sebesar $10^{-3}$, \textit{batch size} 32, dan maksimum 100 epoch. Selain itu, digunakan mekanisme \textit{early stopping} dan \textit{model checkpoint} untuk mencegah \textit{overfitting} selama proses \textit{training}. Sementara itu, model XGBoost menggunakan konfigurasi default dari library XGBoost dengan fungsi evaluasi \textit{logloss} serta parameter bawaan library, termasuk jumlah \textit{estimators}. Proses evaluasi model dilakukan menggunakan metode \textit{10-fold Stratified Cross Validation}.
 
-   \item \textbf{Jumlah Pengulangan Eksperimen:} 
+   \item \text{Jumlah Pengulangan Eksperimen:} 
     Untuk menjamin reliabilitas hasil dan meminimalisir bias akibat pembagian data maupun inisialisasi model secara acak, setiap eksperimen klasifikasi dilakukan sebanyak lima kali pengulangan. Selain itu, proses evaluasi model dilakukan menggunakan metode \textit{10-fold Stratified Cross Validation}. Seluruh nilai evaluasi yang diperoleh disajikan dalam bentuk rata-rata (\textit{mean}) dan standar deviasi (\textit{standard deviation}) dari sepuluh fold pengujian. 
 \end{enumerate}
 
@@ -114,16 +113,15 @@ Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variatio
 Pada eksperimen ini, kualitas data sintetis dianalisis menggunakan beberapa metrik evaluasi data generatif, yaitu \textit{Fréchet Inception Distance} (FID), \textit{Sliced Wasserstein Distance} (SWD), dan normalisasi \textit{Euclidean Distance} (ED). Selain evaluasi kuantitatif, dilakukan pula analisis visual pada domain waktu dan domain frekuensi untuk membandingkan karakteristik sinyal sintetis terhadap sinyal EEG asli.
 
 Eksperimen ini digunakan untuk menilai sejauh mana model VAE mampu mempertahankan karakteristik utama sinyal EEG serta menentukan kelayakan data sintetis yang dihasilkan untuk digunakan pada tahap augmentasi data dalam proses klasifikasi ASD dengan hasil evaluasi kualitas data sintetis untuk masing-masing kanal EEG pada kelas Normal dan ASD disajikan sebagai berikut.
-
 \begin{table}[H]
 \centering
 \caption{Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}
 \label{tab:normal_generation_results}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{lccc}
-\toprule
+\begin{tabular}{|l|c|c|c|}
+\hline
 \textbf{Channel} & \textbf{ED Norm} & \textbf{FID} & \textbf{SWD} \\
-\midrule
+\hline
 Fp1 & -0.148 & 91.313  & 0.264 \\
 Fp2 & 0.019  & 60.794  & 0.213 \\
 F3  & 0.086  & 109.476 & 0.199 \\
@@ -140,17 +138,19 @@ T3  & 0.193  & 152.974 & 0.136 \\
 T4  & 0.393  & 180.492 & 0.233 \\
 T5  & 0.588  & 170.312 & 0.213 \\
 T6  & 0.531  & 164.081 & 0.235 \\
-\bottomrule
+\hline
 \end{tabular}
-\end{table}\begin{table}[H]
+\end{table}
+\begin{table}[H]
 \centering
 \caption{Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}
 \label{tab:asd_generation_results}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{lccc}
-\toprule
+
+\begin{tabular}{|l|c|c|c|}
+\hline
 \textbf{Channel} & \textbf{ED Norm} & \textbf{FID} & \textbf{SWD} \\
-\midrule
+\hline
 Fp1 & 0.003  & 34.857 & 0.136 \\
 Fp2 & 0.012  & 26.858 & 0.111 \\
 F3  & 0.047  & 49.890 & 0.153 \\
@@ -167,8 +167,9 @@ T3  & 0.081  & 48.797 & 0.110 \\
 T4  & 0.070  & 50.006 & 0.090 \\
 T5  & 0.149  & 52.433 & 0.110 \\
 T6  & 0.120  & 51.330 & 0.108 \\
-\bottomrule
+\hline
 \end{tabular}
+
 \end{table}
 Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variational Autoencoder} (VAE) dalam mempelajari distribusi sinyal EEG dan menghasilkan data sintetis yang menyerupai data asli pada masing-masing kanal EEG sebelum digunakan pada tahap klasifikasi ASD. Berdasarkan hasil evaluasi pada Tabel \ref{tab:normal_generation_results} dan Tabel \ref{tab:asd_generation_results}, model VAE mampu menghasilkan sinyal sintetis yang mempertahankan pola umum sinyal EEG asli pada kedua kelas data. 
 

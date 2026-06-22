@@ -142,12 +142,15 @@
 \makeatother
 
 % Pengaturan untuk Kode (mengikuti format Tabel)
-\captionsetup[listing]{
+
+
+\captionsetup[lstlisting]{
     font=footnotesize,
-    skip=15pt,  % Jarak 1.5 spasi antara caption dan bingkai kode
-    position=top,          % Posisi caption DI ATAS
+    skip=15pt,
+    position=top,
     justification=centering
 }
+
 
 %================ [END] Mengatur caption dalam dokumen ================%
 
@@ -217,7 +220,7 @@
 \usepackage[newfloat]{minted}
 \usepackage{caption}
 \usepackage{xcolor}
-\SetupFloatingEnvironment{listing}{name=\textbf{Kode}}
+\SetupFloatingEnvironment{listing}{name=\textbf{Algoritma}}
 \setminted{
 	style=pastie,
 	autogobble,
@@ -585,7 +588,9 @@
 % Perintah untuk singkatan dengan nomor halaman
 
 \usepackage{acronym}
-
+\AtBeginDocument{
+    \renewcommand{\lstlistingname}{Algoritma}
+}
 %% Perintah canggih
 %% 1. BUAT VARIABEL UNTUK LEBAR KOLOM "TAB"
 %\newlength{\abbrwidth}
