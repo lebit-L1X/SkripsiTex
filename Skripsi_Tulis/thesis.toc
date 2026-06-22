@@ -3,9 +3,9 @@
 \contentsline {chapter}{HALAMAN PERNYATAAN PENGGUNAAN KECERDASAN ARTIFISIAL}{iii}{figure.caption.3}%
 \contentsline {chapter}{HALAMAN PENGESAHAN}{iv}{figure.caption.3}%
 \contentsline {chapter}{\uppercase {Kata Pengantar}}{v}{figure.caption.3}%
-\contentsline {chapter}{HALAMAN PERNYATAAN PERSETUJUAN PUBLIKASI}{vii}{Item.8}%
-\contentsline {chapter}{ABSTRAK}{viii}{Item.8}%
-\contentsline {chapter}{ABSTRACT}{ix}{Item.8}%
+\contentsline {chapter}{HALAMAN PERNYATAAN PERSETUJUAN PUBLIKASI}{vii}{Item.7}%
+\contentsline {chapter}{ABSTRAK}{viii}{Item.7}%
+\contentsline {chapter}{ABSTRACT}{ix}{Item.7}%
 \contentsline {chapter}{\uppercase {Daftar Isi}}{x}{section*.4}%
 \contentsline {chapter}{\uppercase {Daftar Tabel}}{xiii}{section*.5}%
 \contentsline {chapter}{\uppercase {Daftar Gambar}}{xiv}{section*.6}%
@@ -75,4 +75,4 @@
 \contentsline {chapter}{\numberline {5}\uppercase {Penutup}}{69}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Kesimpulan}{69}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Saran}{70}{section.5.2}%
-\contentsline {chapter}{\uppercase {Daftar Referensi}}{72}{Item.50}%
+\contentsline {chapter}{\uppercase {Daftar Referensi}}{72}{Item.49}%

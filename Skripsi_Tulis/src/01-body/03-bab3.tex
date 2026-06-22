@@ -105,7 +105,7 @@ width=\textwidth,
 trim=0cm 0cm 3cm 0cm,
 clip
 ]{assets/pdfs/diagram_vae.pdf}
-\caption{Diagram Model VAE untuk Augmentasi EEG}
+\caption{Diagram model VAE untuk augmentasi EEG}
 \label{fig:vae}
 \end{figure}
 
@@ -128,7 +128,7 @@ Bagian ini menjelaskan model klasifikasi yang berfungsi untuk memanfaatkan data 
         trim=0cm 0cm 4cm 0cm,
         clip
     ]{assets/pdfs/flowchart_klasifikasi.pdf}
-    \caption{Diagram Model Klasifikasi}
+    \caption{Diagram model klasifikasi}
     \label{fig:vae}
 \end{figure}
 \newpage
@@ -174,11 +174,11 @@ Perancangan model generatif pada penelitian ini dilakukan menggunakan pendekatan
         trim=0cm 11.5cm 0cm 0cm,
         clip
     ]{assets/pdfs/Encoder.pdf}
-    \caption{Diagram Aliran Layer \textit{Encoder} pada Model VAE}
+    \caption{Diagram aliran \textit{layer encoder} pada model VAE}
     \label{fig:flowchart_system}
 \end{figure}\begin{table}[H]
 \centering
-\caption{Arsitektur Encoder VAE}
+\caption{Arsitektur \textit{encoder VAE}}
 \label{tab:vae_encoder}
 \footnotesize
 \renewcommand{\arraystretch}{0.95}
@@ -246,7 +246,7 @@ Dimensi laten ditetapkan sebesar 16 sebagai kompromi antara kapasitas representa
 \begin{lstlisting}[
     style=modernpython,
     language=Python,
-    caption={Pseudocode proses konvolusi pada encoder 1D CNN-VAE.},
+    caption={Algoritma proses konvolusi pada encoder model VAE},
     label={code:encoder-process}
 ]
 # ====================================
@@ -288,7 +288,7 @@ Setelah proses konvolusi, dilakukan reduksi dimensi temporal menggunakan \textit
         trim=0cm 21cm 0cm 0cm,
         clip
     ]{assets/pdfs/reparameterization.pdf}
-    \caption{Diagram aliran Reparameterization Layer}
+    \caption{Diagram aliran \textit{reparameterization layer}}
     \label{fig:flowchart_system}
 \end{figure}
 
@@ -314,13 +314,13 @@ Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi da
         trim=0cm 0cm 0cm 0cm,
         clip
     ]{assets/pdfs/decoder.pdf}
-    \caption{Diagram Aliran Layer \textit{Decoder} pada Model VAE}
+    \caption{Diagram aliran \textit{layer decoder} pada model VAE}
     \label{fig:vae_decoder}
 \end{figure}
 
 \begin{table}[H]
 \centering
-\caption{Arsitektur Decoder VAE}
+\caption{Arsitektur \textit{decoder VAE}}
 \label{tab:vae_decoder}
 \footnotesize
 \begin{tabular}{|c|c|c|p{7cm}|}
@@ -366,7 +366,7 @@ Reconstruction &
 \begin{lstlisting}[
     style=modernpython,
     language=Python,
-    caption={Pseudocode ekspansi representasi laten pada decoder 1D CNN-VAE.},
+    caption={Algoritma ekspansi representasi laten pada decoder model VAE.},
     label={code:latent-expansion}
 ]
 # ====================================
@@ -390,7 +390,7 @@ Berdasarkan algoritma \ref{code:latent-expansion}, proses decoder dimulai dengan
 \begin{lstlisting}[
     style=modernpython,
     language=Python,
-    caption={Pseudocode proses rekonstruksi sinyal pada decoder 1D CNN-VAE.},
+    caption={Algoritma proses rekonstruksi sinyal pada decoder model VAE.},
     label={code:decoder-process}
 ]
 # ====================================
@@ -425,7 +425,7 @@ Berdasarkan algoritma \ref{code:decoder-process}, setiap \textit{decoder block} 
 \begin{lstlisting}[
     style=modernpython,
     language=Python,
-    caption={Pseudocode proses rekonstruksi sinyal pada decoder 1D CNN-VAE.},
+    caption={Algoritma proses rekonstruksi sinyal pada decoder model VAE.},
     label={code:decoder-process}
 ]
 
@@ -493,7 +493,7 @@ Data sintetis yang dihasilkan kemudian digabungkan dengan data EEG asli sebagai 
         trim=0cm 1cm 0cm 0cm,
         clip
     ]{assets/pdfs/integration.pdf}
- \caption{Diagram Alur Integrasi Data Sintetis pada Proses Klasifikasi}
+ \caption{Diagram alur integrasi data sintetis pada proses klasifikasi}
     \label{fig:flowchart_system}
 \end{figure}
 \subsubsection{\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR})}
@@ -509,7 +509,7 @@ Model \textit{XGBoost} pada penelitian ini menggunakan konfigurasi parameter seb
 
 \begin{table}[h]
 \centering
-\caption{Konfigurasi Parameter \textit{XGBoost}}
+\caption{Konfigurasi parameter \textit{XGBoost}}
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Parameter} & \textbf{Nilai} \\

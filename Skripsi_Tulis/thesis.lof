@@ -1,23 +1,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistem Internasional 10--20 untuk Penempatan Elektroda EEG}}{8}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Pita Frekuensi EEG pada Rentang Frekuensi Tinggi dan Rendah}}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistem Internasional 10--20 untuk penempatan elektroda EEG}}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Pita Frekuensi EEG pada rentang frekuensi tinggi dan rendah}}{10}{figure.caption.11}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Ilustrasi pengaruh berbagai jenis filter terhadap sinyal EEG}}{11}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Bentuk-Bentuk Artefak pada Sinyal EEG}}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Bentuk-Bentuk artefak pada sinyal EEG}}{11}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustrasi \textit {U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD}}{14}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG}}{15}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi Metode Augmentasi pada Data \textit {Time-Series}}}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi metode augmentasi pada data \textit {time-series}}}{16}{figure.caption.16}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Arsitektur umum \textit {Variational Autoencoder} (VAE)}}{20}{figure.caption.19}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram aliran data pada sistem}}{29}{figure.caption.21}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{30}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram Model VAE untuk Augmentasi EEG}}{32}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram Model Klasifikasi}}{34}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram Aliran Layer \textit {Encoder} pada Model VAE}}{37}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran Reparameterization Layer}}{39}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram Aliran Layer \textit {Decoder} pada Model VAE}}{40}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram model VAE untuk augmentasi EEG}}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram model klasifikasi}}{34}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram aliran \textit {layer encoder} pada model VAE}}{37}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran \textit {reparameterization layer}}}{39}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran \textit {layer decoder} pada model VAE}}{40}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram aliran generasi data sintetis}}{44}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagram Alur Integrasi Data Sintetis pada Proses Klasifikasi}}{46}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagram alur integrasi data sintetis pada proses klasifikasi}}{46}{figure.caption.31}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{48}{figure.caption.33}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label Normal}}{58}{figure.caption.38}%

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1782162763.25307 "thesis.aux" "thesis.bbl" "thesis" 1782162771.87342 0
+["bibtex thesis"] 1782163460.83403 "thesis.aux" "thesis.bbl" "thesis" 1782163469.6382 0
   "./pustaka.bib" 1781696316 12606 a2283d4621900794825a50a66e2d4d08 ""
   "C:/Users/Wendy/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "thesis.aux" 1782162770 32617 ad4b37c90b682f5f71c5a62248740885 "pdflatex"
+  "thesis.aux" 1782163467 32761 3a6456007f088b9d698da1e320a0afdc "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1782162763.55981 "c:/Users/Wendy/Documents/College/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" "thesis.pdf" "thesis" 1782162771.87411 0
+["pdflatex"] 1782163461.16419 "c:/Users/Wendy/Documents/College/Skripsi/SkripsiTex/Skripsi_Tulis/thesis.tex" "thesis.pdf" "thesis" 1782163469.64027 0
   "C:/Users/Wendy/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771950667 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Wendy/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1769941181 13333861 7c51f79a864dce43060416066c7ebdaa ""
   "C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -382,22 +382,22 @@
   "src/00-front_matter/02-orisinalitas.tex" 1780328427 570 a81dfd56eec44f7c8420d82fbe7e6365 ""
   "src/00-front_matter/02-penggunaan AI.tex" 1780328671 754 75954452bdc7eed048e33e5653608613 ""
   "src/00-front_matter/03-pengesahan_sidang.tex" 1781691823 1073 d432f9b2b31c02da3246af6e8d1345a6 ""
-  "src/00-front_matter/04-pengantar.tex" 1781691884 1775 b4413763e5aa2188630bcc76061d2880 ""
+  "src/00-front_matter/04-pengantar.tex" 1782162948 1750 b50f352ca0176ed8980271b3d9af3717 ""
   "src/00-front_matter/05-persetujuan_publikasi.tex" 1773468223 1520 e147afdbba4c0d1e328399a04c390c93 ""
   "src/00-front_matter/06-abstrak.tex" 1781679598 2308 589165a04f92f3c96d3e595e4980445c ""
   "src/00-front_matter/07-abstract.tex" 1780369404 2299 25b4d09ba06b98545ba13c3e89b8f1eb ""
   "src/01-body/01-bab1.tex" 1782150483 13942 ee8eeeaf3185fe25eaf0993425d28c72 ""
-  "src/01-body/02-bab2.tex" 1782160787 39189 2930b8db232091c455989c73596df587 ""
-  "src/01-body/03-bab3.tex" 1782162754 38847 a68049d472d5f11f307a4791731ce91a ""
+  "src/01-body/02-bab2.tex" 1782163207 39310 808faea6edcadd1025169fab5b7f608d ""
+  "src/01-body/03-bab3.tex" 1782163451 38865 789ec5686338a76866f78209d6f2a737 ""
   "src/01-body/04-bab4.tex" 1782161271 43510 cb6205cd3fe49374d3ef9fa0f8a276fc ""
   "src/01-body/05-bab5.tex" 1781696644 5307 27fb228079b4da4da2f5ffc115987b94 ""
-  "thesis.aux" 1782162770 32617 ad4b37c90b682f5f71c5a62248740885 "pdflatex"
-  "thesis.bbl" 1782162763 11228 752a074f457fd3fba949116735aaf733 "bibtex thesis"
-  "thesis.lof" 1782162770 3076 e628081496665843f58056f72b16d076 "pdflatex"
-  "thesis.lot" 1782162770 1722 ff0e5c18b6d48f2e3e8b86f95a2900f0 "pdflatex"
-  "thesis.out" 1782162770 18598 b94caabba0c6fa5e18ba3d206a855dd5 "pdflatex"
+  "thesis.aux" 1782163467 32761 3a6456007f088b9d698da1e320a0afdc "pdflatex"
+  "thesis.bbl" 1782163461 11228 752a074f457fd3fba949116735aaf733 "bibtex thesis"
+  "thesis.lof" 1782163467 3086 8b1045f4bb149110d0a988fcf360c0e4 "pdflatex"
+  "thesis.lot" 1782163467 1791 041e6d85753bfb66e36b983d2679fbea "pdflatex"
+  "thesis.out" 1782163467 18598 e4e9b81caf996ee75b74f204b5409db8 "pdflatex"
   "thesis.tex" 1780327421 5470 37abc2af32b2fd890a6a56af12f06e60 ""
-  "thesis.toc" 1782162770 7562 d17eb178bdcf98353b9cdc1d94a0ebaf "pdflatex"
+  "thesis.toc" 1782163467 7562 0e61b9e655fd963a8d5c52be66464ef3 "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.lof"

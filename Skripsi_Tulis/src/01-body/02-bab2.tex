@@ -16,7 +16,7 @@ EEG biasanya direkam dalam bentuk sinyal multikanal yang diperoleh dari sejumlah
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{assets/pics/10_20_system.jpg}
-    \caption{Sistem Internasional 10--20 untuk Penempatan Elektroda EEG}
+    \caption{Sistem Internasional 10--20 untuk penempatan elektroda EEG}
     \label{fig:2.1}
 \end{figure}
 
@@ -45,7 +45,7 @@ Melalui analisis distribusi daya pada pita frekuensi, dapat dilakukan identifika
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{assets/pics/frequency_band.png}
-    \caption{Pita Frekuensi EEG pada Rentang Frekuensi Tinggi dan Rendah}
+    \caption{Pita Frekuensi EEG pada rentang frekuensi tinggi dan rendah}
     \label{fig:2.2}
 \end{figure}
  
@@ -68,7 +68,7 @@ Sinyal EEG dapat terkontaminasi oleh artefak non-neural yang berasal dari aktivi
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{assets/pics/artifact_eeg.png}
-    \caption{Bentuk-Bentuk Artefak pada Sinyal EEG}
+    \caption{Bentuk-Bentuk artefak pada sinyal EEG}
     \label{fig:2.3}
 \end{figure}
 
@@ -170,7 +170,7 @@ Pada sinyal \textit{time-series} seperti sinyal EEG, augmentasi konvensional umu
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{assets/pics/traditional_augmentation.png}
-    \caption{Ilustrasi Metode Augmentasi pada Data \textit{Time-Series}}
+    \caption{Ilustrasi metode augmentasi pada data \textit{time-series}}
     \label{fig:traditional_augmentation_example}
 \end{figure}
 
@@ -226,29 +226,29 @@ Data sintetis yang dihasilkan model generatif menjadi salah satu solusi terhadap
 
 Berbagai arsitektur model generatif telah dikembangkan dalam penelitian \textit{deep learning}. Beberapa pendekatan yang umum digunakan meliputi \textit{Generative Adversarial Networks} (GAN), \textit{Variational Autoencoders} (VAE), serta model berbasis difusi (\textit{diffusion models}). Masing-masing pendekatan memiliki mekanisme pembelajaran dan karakteristik yang berbeda dalam menghasilkan data sintetis.
 
-\begin{table}[H]
-\centering
-\footnotesize
-\caption{Perbandingan beberapa model generatif}
-\label{tab:generative_models}
-\begin{tabular}{|c|p{4cm}|p{5cm}|}
-\hline
-\textbf{Model} & \textbf{Karakteristik Utama} & \textbf{Kelebihan dan Keterbatasan} \\ \hline
+    \begin{table}[H]
+    \centering
+    \footnotesize
+\caption{Perbandingan karakteristik, kelebihan, dan keterbatasan beberapa model generatif utama}
+    \label{tab:generative_models}
+    \begin{tabular}{|c|p{4cm}|p{5cm}|}
+    \hline
+    \textbf{Model} & \textbf{Karakteristik Utama} & \textbf{Kelebihan dan Keterbatasan} \\ \hline
 
-GAN &
-Menggunakan mekanisme kompetitif antara generator dan discriminator untuk menghasilkan data sintetis. &
-Mampu menghasilkan data yang realistis, namun proses \textit{training} cenderung tidak stabil dan rentan terhadap \textit{mode collapse}. \\ \hline
+    GAN &
+    Menggunakan mekanisme kompetitif antara generator dan discriminator untuk menghasilkan data sintetis. &
+    Mampu menghasilkan data yang realistis, namun proses \textit{training} cenderung tidak stabil dan rentan terhadap \textit{mode collapse}. \\ \hline
 
-VAE &
-Mempelajari distribusi laten probabilistik melalui arsitektur encoder-decoder. &
-Memiliki proses \textit{training} yang lebih stabil dan mampu menghasilkan representasi laten yang terstruktur, namun kualitas data sintetis dapat lebih halus dibanding GAN. \\ \hline
+    VAE &
+    Mempelajari distribusi laten probabilistik melalui arsitektur encoder-decoder. &
+    Memiliki proses \textit{training} yang lebih stabil dan mampu menghasilkan representasi laten yang terstruktur, namun kualitas data sintetis dapat lebih halus dibanding GAN. \\ \hline
 
-Diffusion Model &
-Menghasilkan data melalui proses denoising bertahap dari distribusi acak. &
-Mampu menghasilkan kualitas data yang tinggi, namun memerlukan kompleksitas komputasi dan waktu \textit{training} yang lebih besar. \\ \hline
+    Diffusion Model &
+    Menghasilkan data melalui proses denoising bertahap dari distribusi acak. &
+    Mampu menghasilkan kualitas data yang tinggi, namun memerlukan kompleksitas komputasi dan waktu \textit{training} yang lebih besar. \\ \hline
 
-\end{tabular}
-\end{table}
+    \end{tabular}
+    \end{table}
 
 Dalam analisis sinyal EEG, model generatif digunakan untuk menghasilkan data sintetis yang mengikuti distribusi statistik data asli. Pendekatan ini memungkinkan model mempelajari struktur laten dari sinyal EEG sehingga data sintetis yang dihasilkan dapat mempertahankan karakteristik temporal maupun spasial yang penting dalam proses klasifikasi. Beberapa penelitian menunjukkan bahwa penggunaan data sintetis dari model generatif dapat membantu meningkatkan performa dan kemampuan generalisasi model klasifikasi EEG, terutama pada kondisi jumlah data \textit{training} yang terbatas \cite{gan_eeg_emotion}.
 
