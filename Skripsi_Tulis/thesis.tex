@@ -54,7 +54,7 @@
 % Load konfigurasi khusus untuk laporan yang sedang dibuat
 \input{settings}
 % Daftar istilah yang mungkin perlu ditandai 
-\input{istilah}
+
 
 % Awal bagian penulisan laporan
 \begin{document}
@@ -142,23 +142,29 @@
 \clearpage
 \phantomsection
 \listoffigures
+\clearpage
+\phantomsection
+\pdfbookmark[0]{Daftar Algoritma}{algorithms}
 \lstlistoflistings
+\clearpage
+\phantomsection
+\pdfbookmark[0]{Daftar Persamaan}{equations}
 \listofequations
 \clearpage
-%\phantomsection
-%\addcontentsline{toc}{chapter}{DAFTAR ISTILAH}
-%\printnomenclature%Jika diperlukan
-%\clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\listlistingname}
 \clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\listabbreviationname}
-%\listofabbreviation%Jika diperlukan
-%\printacronyms
-\chapter*{DAFTAR SINGKATAN}
+
+\chapter*{Daftar Singkatan}
 \input{singkatan}
 
+\cleardoublepage
+\phantomsection
+\pdfbookmark[0]{Daftar Istilah}{glossary}
+\chapter*{Daftar Istilah}
+\input{istilah}
 
 \clearpage
 \endgroup

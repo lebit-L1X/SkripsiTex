@@ -464,11 +464,11 @@ Pada bagian ini dijelaskan proses implementasi data EEG sintetis hasil augmentas
 
 \subsubsection{Integrasi Data Sintetis pada Model Klasifikasi}
 
-Berdasarkan diagram pada Gambar \ref{fig:flowchart_system}, proses dimulai dari dataset EEG mentah yang terlebih dahulu melalui tahap preprocessing meliputi segmentasi sinyal dengan overlap, \textit{bandpass filtering}, serta \textit{artifact rejection}. Tahap ini bertujuan untuk menghasilkan segmen EEG bersih yang digunakan sebagai data asli dalam proses klasifikasi.
-
-Pada cabang generasi data sintetis, sebanyak 32 model VAE independen digunakan untuk menghasilkan sinyal EEG sintetis berdasarkan kombinasi 16 kanal EEG dan dua kelas data (\textit{normal} dan ASD). Setiap model menghasilkan sinyal sintetis untuk satu kanal tertentu, kemudian seluruh kanal hasil generasi digabungkan kembali menjadi sampel EEG multikanal lengkap.
+Pada proses generasi data sintetis, sebanyak 32 model VAE independen digunakan untuk menghasilkan sinyal EEG sintetis berdasarkan kombinasi 16 kanal EEG dan dua kelas data (\textit{normal} dan ASD). Setiap model menghasilkan sinyal sintetis untuk satu kanal tertentu, kemudian seluruh kanal hasil generasi digabungkan kembali menjadi sampel EEG multikanal lengkap.
 
 Data sintetis yang dihasilkan kemudian digabungkan dengan data EEG asli sebagai bentuk data augmentation. Dataset gabungan selanjutnya melalui tahap feature extraction untuk memperoleh representasi yang lebih informatif dari sinyal EEG. Fitur yang dihasilkan kemudian digunakan sebagai input pada tahap klasifikasi untuk mempelajari pola dalam data dan menghasilkan prediksi sesuai dengan tujuan analisis.
+
+Sebagaimana yang ditunjukkan oleh diagram \ref{fig:flowchart_systemx} proses generasi data sintetis dilakukan secara terpisah untuk setiap kanal EEG dan setiap kelas data. Dengan menggunakan 16 kanal EEG serta dua kategori kelas (\textit{normal} dan ASD), maka dibangun sebanyak 32 model VAE yang masing-masing dilatih secara spesifik terhadap distribusi data pada kanal dan kelas tertentu. Terdapat perbedaan perlakuan data asli dan sintetis, yang dikarenakan model VAE dilatih menggunakan data yang telah melalui proses pra-pemrosesan. Oleh karena itu, data sintetis yang dihasilkan oleh model VAE dapat secara langsung menuju proses feature extraction sedangkan data asli perlu melalui proses pra-pemrosesan terlebih dahulu. Perbedaan perlakuan kedua jenis data terganbar pada diagram arsitektur klasifikasi \ref{fig:vae}.
 
 \begin{figure}[H]
     \centering
@@ -478,7 +478,7 @@ Data sintetis yang dihasilkan kemudian digabungkan dengan data EEG asli sebagai 
         clip
     ]{assets/pdfs/integration.pdf}
  \caption{Diagram alur integrasi data sintetis pada proses klasifikasi}
-    \label{fig:flowchart_system}
+    \label{fig:flowchart_systemx}
 \end{figure}
 \subsubsection{\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR})}
 
