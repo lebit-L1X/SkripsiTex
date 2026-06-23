@@ -13,6 +13,10 @@ Bagian ini menguraikan konsep-konsep teoretis yang menjadi dasar dalam penelitia
 Sinyal \textit{electroencephalogram} (EEG) dihasilkan oleh aktivitas listrik neuron di otak yang muncul akibat aktivitas sinaptik antar neuron, sehingga potensial listrik yang dihasilkan dapat dideteksi pada permukaan kepala menggunakan elektroda. Sinyal EEG direkam sebagai perubahan tegangan terhadap waktu dengan rentang frekuensi sekitar 0,5 hingga 100 Hz dan amplitudo yang relatif rendah, umumnya berada pada kisaran 10 hingga 100 mikrovolt. Selain memiliki resolusi temporal yang tinggi, sinyal EEG juga bersifat \textit{non-stationary}, sehingga karakteristik amplitudo dan distribusi frekuensinya dapat berubah secara dinamis seiring waktu akibat pengaruh kondisi fisiologis, tingkat kesadaran, maupun aktivitas kognitif. Aktivitas yang terekam mencerminkan berbagai proses otak, seperti fungsi kognitif, motorik, dan emosional, sehingga EEG banyak digunakan untuk mempelajari fungsi otak dan gangguan neurologis \cite{eeg_basics}.
 
 EEG biasanya direkam dalam bentuk sinyal multikanal yang diperoleh dari sejumlah elektroda yang ditempatkan pada berbagai lokasi di permukaan kulit kepala. Setiap kanal merepresentasikan satu jalur perekaman sinyal yang berasal dari pasangan elektroda atau dari elektroda terhadap referensi tertentu. Setiap elektroda menangkap aktivitas listrik dari wilayah otak yang berbeda, sehingga setiap kanal mengandung informasi yang merepresentasikan aktivitas saraf pada lokasi tertentu.\cite{eeg_feature_review}.
+
+
+Penempatan elektroda EEG umumnya mengikuti standar International \textit{10–20 System}, yaitu protokol yang distandarisasi oleh \textit{International Federation of Clinical Neurophysiology} (IFCN) untuk menentukan posisi elektroda pada permukaan kepala berdasarkan titik anatomi seperti nasion, inion, dan titik preauricular. Dalam sistem ini, setiap elektroda diberi kode huruf dan angka yang menunjukkan wilayah otak dan hemisfer terkait, seperti frontal (F), central (C), temporal (T), parietal (P), dan occipital (O), dengan angka ganjil untuk hemisfer kiri, angka genap untuk hemisfer kanan, serta ``z'' untuk posisi garis tengah kepala. Tata letak elektroda pada sistem ini ditunjukkan pada Gambar \ref{fig:2.1}. Standarisasi ini memungkinkan perekaman EEG dilakukan secara konsisten dan dapat dibandingkan antar subjek maupun antar penelitian\cite{eeg_biophysics}.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{assets/pics/10_20_system.jpg}
@@ -20,16 +24,15 @@ EEG biasanya direkam dalam bentuk sinyal multikanal yang diperoleh dari sejumlah
     \label{fig:2.1}
 \end{figure}
 
-Penempatan elektroda EEG umumnya mengikuti standar International \textit{10–20 System}, yaitu protokol yang distandarisasi oleh \textit{International Federation of Clinical Neurophysiology} (IFCN) untuk menentukan posisi elektroda pada permukaan kepala berdasarkan titik anatomi seperti nasion, inion, dan titik preauricular. Dalam sistem ini, setiap elektroda diberi kode huruf dan angka yang menunjukkan wilayah otak dan hemisfer terkait, seperti frontal (F), central (C), temporal (T), parietal (P), dan occipital (O), dengan angka ganjil untuk hemisfer kiri, angka genap untuk hemisfer kanan, serta ``z'' untuk posisi garis tengah kepala. Standarisasi ini memungkinkan perekaman EEG dilakukan secara konsisten dan dapat dibandingkan antar subjek maupun antar penelitian\cite{eeg_biophysics}.
-
 Dalam analisis sinyal EEG, aktivitas listrik otak yang terekam dapat dianalisis melalui dua domain utama, yaitu domain waktu dan domain frekuensi. Analisis dalam domain waktu dilakukan dengan mengamati karakteristik sinyal terhadap waktu, seperti amplitudo puncak, dan latensi. Sedangkan analisis dalam domain frekuensi bertujuan untuk mengidentifikasi kandungan spektral sinyal dengan memeriksa distribusi energi atau daya pada berbagai rentang frekuensi menggunakan metode transformasi spektral, seperti \textit{Fast Fourier Transform} (FFT) maupun teknik estimasi \textit{Power Spectral Density} (PSD) untuk mengidentifikasi aktivitas otak pada rentang frekuensi tertentu \cite{auditory_eeg}.
 
-Dalam analisis spektral EEG, sinyal umumnya dibagi ke dalam beberapa segmen waktu (\textit{epoch}) sebelum dihitung nilai \textit{Power Spectral Density} (PSD) untuk menggambarkan distribusi daya pada setiap frekuensi. Berdasarkan karakteristik fisiologis dan kognitifnya, sinyal EEG kemudian diklasifikasikan ke dalam beberapa pita frekuensi utama sebagai berikut.
+Dalam analisis spektral EEG, sinyal umumnya dibagi ke dalam beberapa segmen waktu (\textit{epoch}) sebelum dihitung nilai \textit{Power Spectral Density} (PSD) untuk menggambarkan distribusi daya pada setiap frekuensi. Berdasarkan karakteristik fisiologis dan kognitifnya, sinyal EEG kemudian diklasifikasikan ke dalam beberapa pita frekuensi utama seperti pada tabel \ref{tab:eeg_bands}.
 
 \begin{table}[H]
 \centering
 \footnotesize
 \caption{Pita frekuensi EEG dan karakteristiknya}
+\label{tab:eeg_bands}
 \begin{tabular}{|c|c|p{8cm}|}
 \hline
 \textbf{Pita} & \textbf{Frekuensi (Hz)} & \textbf{Karakteristik} \\ \hline
@@ -40,20 +43,20 @@ Beta & 13--30 & Berkaitan dengan aktivitas kognitif aktif seperti konsentrasi, p
 Gamma & >30 & Berhubungan dengan proses kognitif tingkat tinggi, termasuk perhatian, integrasi informasi sensorik, dan persepsi. \\ \hline
 \end{tabular}
 \end{table}
-Melalui analisis distribusi daya pada pita frekuensi, dapat dilakukan identifikasi pola aktivitas otak yang khas serta membandingkan karakteristik sinyal EEG pada berbagai kondisi fisiologis maupun gangguan neurologis tertentu. Representasi pita frekuensi EEG sering digunakan sebagai dasar dalam proses ekstraksi fitur pada analisis sinyal EEG, misalnya melalui perhitungan \textit{band power}, estimasi \textit{power spectral density} (PSD), maupun metode analisis spektral lainnya \cite{eeg_feature_review}.
+Melalui analisis distribusi daya pada pita frekuensi, dapat dilakukan identifikasi pola aktivitas otak yang khas serta membandingkan karakteristik sinyal EEG pada berbagai kondisi fisiologis maupun gangguan neurologis tertentu. Representasi pita frekuensi EEG sering digunakan sebagai dasar dalam proses ekstraksi fitur pada analisis sinyal EEG, misalnya melalui perhitungan \textit{band power}, estimasi \textit{power spectral density} (PSD), maupun metode analisis spektral lainnya \cite{eeg_feature_review}. Rentang pita frekuensi EEG beserta posisinya pada spektrum frekuensi rendah hingga tinggi ditunjukkan pada ilustrasi \ref{fig:2.2}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{assets/pics/frequency_band.png}
     \caption{Pita Frekuensi EEG pada rentang frekuensi tinggi dan rendah}
-    \label{fig:2.2}
+    \label{fig:2.2z}
 \end{figure}
  
 
 Sebelum dilakukan ekstraksi fitur dan klasifikasi, sinyal EEG umumnya melalui tahap \textit{preprocessing} untuk meningkatkan kualitas sinyal dan mengurangi gangguan yang tidak relevan. Tahapan ini biasanya meliputi \textit{filtering}, \textit{artifact removal}, \textit{baseline correction}, serta normalisasi atau standarisasi data \cite{eeg_feature_review}.
 
 
-\textit{Filtering} adalah proses penyaringan sinyal untuk menghilangkan komponen frekuensi yang tidak berkaitan dengan aktivitas saraf serta mengurangi gangguan dari lingkungan seperti interferensi listrik serta gangguan yang muncul akibat pergerakan elektroda dan perubahan impedansi kulit. \textit{Filtering} dilakukan dengan membatasi rentang frekuensi sinyal menggunakan filter tertentu. Umumnya, \textit{band-pass filter} digunakan untuk mempertahankan frekuensi aktivitas otak, serta \textit{notch filter} untuk mereduksi interferensi jaringan listrik. Filter tambahan seperti \textit{high-pass filter} juga dapat digunakan untuk menghilangkan \textit{drift} sinyal berfrekuensi sangat rendah, sedangkan \textit{low-pass filter} digunakan untuk mereduksi komponen \textit{noise} berfrekuensi tinggi. Pemilihan filter perlu dilakukan secara hati-hati untuk menghindari distorsi sinyal atau pergeseran fase sinyal \cite{eeg_feature_review}. Pengaruh penggunaan filter terhadap sinyal EEG dapat dilihat pada ilustrasi berikut.
+\textit{Filtering} adalah proses penyaringan sinyal untuk menghilangkan komponen frekuensi yang tidak berkaitan dengan aktivitas saraf serta mengurangi gangguan dari lingkungan seperti interferensi listrik serta gangguan yang muncul akibat pergerakan elektroda dan perubahan impedansi kulit. \textit{Filtering} dilakukan dengan membatasi rentang frekuensi sinyal menggunakan filter tertentu. Umumnya, \textit{band-pass filter} digunakan untuk mempertahankan frekuensi aktivitas otak, serta \textit{notch filter} untuk mereduksi interferensi jaringan listrik. Filter tambahan seperti \textit{high-pass filter} juga dapat digunakan untuk menghilangkan \textit{drift} sinyal berfrekuensi sangat rendah, sedangkan \textit{low-pass filter} digunakan untuk mereduksi komponen \textit{noise} berfrekuensi tinggi. Pemilihan filter perlu dilakukan secara hati-hati untuk menghindari distorsi sinyal atau pergeseran fase sinyal \cite{eeg_feature_review}. Pengaruh penggunaan filter terhadap sinyal EEG dapat dilihat pada ilustrasi \ref{fig:2.2}.
 
 
 \begin{figure}[H]
@@ -63,11 +66,11 @@ Sebelum dilakukan ekstraksi fitur dan klasifikasi, sinyal EEG umumnya melalui ta
     \label{fig:2.2}
 \end{figure}
 
-Sinyal EEG dapat terkontaminasi oleh artefak non-neural yang berasal dari aktivitas fisiologis maupun faktor eksternal. Artefak fisiologis umumnya disebabkan oleh kedipan mata dan pergerakan bola mata (\textit{electrooculogram}), aktivitas otot wajah dan kepala (\textit{electromyogram}), serta pergerakan tubuh selama proses perekaman, sedangkan artefak eksternal dapat berasal dari interferensi perangkat elektronik dan jaringan listrik. Keberadaan artefak dapat mempengaruhi kualitas sinyal dan berpotensi menurunkan akurasi analisis maupun kinerja sistem klasifikasi. Berbagai metode digunakan untuk mengurangi artefak pada sinyal EEG, seperti \textit{Blind Source Separation} (BSS),  \textit{Independent Component Analysis} (ICA), serta transformasi wavelet yang memungkinkan analisis pada domain waktu dan frekuensi untuk mendeteksi artefak \cite{eeg_feature_review}.
+Sinyal EEG dapat terkontaminasi oleh artefak non-neural yang berasal dari aktivitas fisiologis maupun faktor eksternal. Artefak fisiologis umumnya disebabkan oleh kedipan mata dan pergerakan bola mata (\textit{electrooculogram}) dan aktivitas otot wajah dan kepala (\textit{electromyogram}), sedangkan artefak eksternal dapat berasal dari interferensi perangkat elektronik dan jaringan listrik. Keberadaan artefak dapat mempengaruhi kualitas sinyal, sebagaimana yang terlihat pada \ref{fig:2.3}, sehingga berpotensi menurunkan akurasi analisis maupun kinerja sistem klasifikasi. Berbagai metode digunakan untuk mengurangi artefak pada sinyal EEG, seperti \textit{Blind Source Separation} (BSS), \textit{Independent Component Analysis} (ICA), serta transformasi wavelet yang memungkinkan analisis pada domain waktu dan frekuensi untuk mendeteksi artefak \cite{eeg_feature_review}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{assets/pics/artifact_eeg.png}
+    \includegraphics[width=0.6\textwidth]{assets/pics/artifact_eeg.png}
     \caption{Bentuk-Bentuk artefak pada sinyal EEG}
     \label{fig:2.3}
 \end{figure}
@@ -139,13 +142,13 @@ Kode \ref{code:mrmr-pseudocode} menjelaskan proses seleksi fitur menggunakan met
 
 Dalam analisis EEG, \textit{machine learning} digunakan untuk mengklasifikasikan pola aktivitas otak berdasarkan fitur yang diekstraksi dari sinyal EEG. Fitur tersebut dapat berasal dari domain waktu, domain frekuensi, maupun domain waktu-frekuensi, dan digunakan untuk merepresentasikan karakteristik aktivitas neural yang berkaitan dengan kondisi fisiologis atau neurologis tertentu \cite{ml_eeg_fnirs_review}. Pendekatan ini telah digunakan pada berbagai aplikasi seperti deteksi kejang epilepsi, sistem \textit{brain-computer interface} (BCI), serta identifikasi pola aktivitas otak pada \textit{Autism Spectrum Disorder} (ASD) \cite{asd_eeg_abnormalities}.
 
-Pada studi ASD, analisis EEG dalam domain frekuensi menjadi salah satu pendekatan yang umum digunakan karena aktivitas otak dapat direpresentasikan sebagai pola osilasi pada pita frekuensi tertentu \cite{eeg_asd_systematic}. Beberapa penelitian menunjukkan bahwa individu dengan ASD cenderung memiliki peningkatan daya pada pita delta, theta, beta, dan gamma, serta penurunan pada pita alpha. Pola ini dikenal sebagai \textit{U-shaped spectral profile} dan digunakan untuk merepresentasikan abnormalitas aktivitas neural pada ASD \cite{asd_eeg_abnormalities}.
+Pada studi ASD, analisis EEG dalam domain frekuensi menjadi salah satu pendekatan yang umum digunakan karena aktivitas otak dapat direpresentasikan sebagai pola osilasi pada pita frekuensi tertentu \cite{eeg_asd_systematic}. Beberapa penelitian menunjukkan bahwa individu dengan ASD cenderung memiliki peningkatan daya pada pita delta, theta, beta, dan gamma, serta penurunan pada pita alpha. Pola ini dikenal sebagai \textit{U-shaped spectral profile} dan digunakan untuk merepresentasikan abnormalitas aktivitas neural pada ASD sebagaimana diilustrasikan pada ilustrasi \ref{fig:ushape}. \cite{asd_eeg_abnormalities}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{assets/pics/ushaped.png}
     \caption{Ilustrasi \textit{U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD}
-    \label{fig:traditional_augmentation_example}
+    \label{fig:ushape}
 \end{figure}
 
 Berdasarkan fitur yang diperoleh, proses klasifikasi dilakukan menggunakan algoritma \textit{machine learning} untuk membangun model prediksi. Berbagai metode seperti \textit{support vector machine} (SVM), \textit{k-nearest neighbor} (KNN), dan \textit{random forest} telah banyak digunakan dalam klasifikasi EEG dan menunjukkan performa yang baik dalam mengenali pola aktivitas neural yang kompleks \cite{ml_eeg_fnirs_review}. Meskipun pendekatan \textit{deep learning} berkembang pesat, metode \textit{machine learning} konvensional masih relevan terutama pada kondisi data terbatas dan kebutuhan interpretabilitas model \cite{ml_eeg_classification}.
@@ -165,7 +168,7 @@ Performa model \textit{machine learning} sangat dipengaruhi oleh jumlah, kualita
 
 Untuk mengatasi permasalahan tersebut, berbagai penelitian mengusulkan penggunaan teknik \textit{data augmentation} untuk meningkatkan jumlah dan variasi data \textit{training} tanpa memerlukan proses perekaman tambahan \cite{eeg_augmentation_review}. Secara umum, \textit{data augmentation} bertujuan menghasilkan sampel data baru yang tetap mempertahankan karakteristik utama data asli sehingga model dapat mempelajari representasi pola yang lebih stabil.
 
-Pada sinyal \textit{time-series} seperti sinyal EEG, augmentasi konvensional umumnya dilakukan melalui manipulasi langsung terhadap sinyal dalam domain waktu maupun frekuensi \cite{traditional_timeseries_aug}. Pendekatan ini menghasilkan sampel baru dengan memodifikasi data asli menggunakan aturan transformasi tertentu tanpa mempelajari distribusi data secara eksplisit. Beberapa metode augmentasi yang umum digunakan pada data \textit{time-series} meliputi \textit{Flipping}, \textit{Down-sampling}, \textit{Adding Slope}, \textit{Amplitude Adjusted Fourier Transform (AAFT)}, \textit{Iterative Amplitude Adjusted Fourier Transform (IAAFT)}, \textit{Amplitude-Phase Perturbation (APP)}, dan \textit{Short-Time Fourier Transform (STFT)-based Augmentation}. Ilustrasi penerapan masing-masing metode ditunjukkan pada Gambar \ref{fig:traditional_augmentation_example}.
+Pada sinyal \textit{time-series} seperti sinyal EEG, augmentasi konvensional umumnya dilakukan melalui manipulasi langsung terhadap sinyal dalam domain waktu maupun frekuensi \cite{traditional_timeseries_aug}. Pendekatan ini menghasilkan sampel baru dengan memodifikasi data asli menggunakan aturan transformasi tertentu tanpa mempelajari distribusi data secara eksplisit. Beberapa metode augmentasi yang umum digunakan pada data \textit{time-series} meliputi \textit{Flipping}, \textit{Down-sampling}, \textit{Adding Slope}, \textit{Amplitude Adjusted Fourier Transform (AAFT)}, \textit{Iterative Amplitude Adjusted Fourier Transform (IAAFT)}, \textit{Amplitude-Phase Perturbation (APP)}, dan \textit{Short-Time Fourier Transform (STFT)-based Augmentation}. Ilustrasi penerapan masing-masing metode ditunjukkan pada gambar \ref{fig:traditional_augmentation_example} dengan detail implementasi yang disajikan pada tabel \ref{tab:traditional_augmentation_methods}.
 
 \begin{figure}[H]
     \centering
@@ -269,24 +272,27 @@ Salah satu model generatif yang banyak digunakan dalam augmentasi data EEG adala
 
 Arsitektur VAE terdiri atas dua komponen utama, yaitu \textit{encoder} dan \textit{decoder}, seperti yang diilustrasikan pada Gambar \ref{fig:vae_architecture}. \textit{Encoder} bertugas memetakan data input ke representasi laten berdimensi lebih rendah dalam bentuk parameter distribusi probabilistik, yaitu nilai rata-rata ($\mu$) dan variansi ($\sigma$). Representasi laten tersebut kemudian digunakan oleh \textit{decoder} untuk merekonstruksi kembali data sehingga menghasilkan output yang memiliki karakteristik serupa dengan data asli.
 
-Proses \textit{training} VAE dilakukan menggunakan fungsi objektif \textit{Evidence Lower Bound} (ELBO), yang terdiri atas dua komponen utama, yaitu \textit{reconstruction loss} dan \textit{Kullback--Leibler Divergence} (KL Divergence). \textit{Reconstruction loss} digunakan untuk mengukur kualitas hasil rekonstruksi data, sedangkan KL Divergence berfungsi menjaga distribusi laten agar tetap mendekati distribusi normal standar. Secara matematis, fungsi objektif VAE dapat dinyatakan sebagai berikut:
-\[
+Proses \textit{training} VAE dilakukan menggunakan fungsi objektif \textit{Evidence Lower Bound} (ELBO), yang terdiri atas dua komponen utama, yaitu \textit{reconstruction loss} dan \textit{Kullback--Leibler Divergence} (KL Divergence). \textit{Reconstruction loss} digunakan untuk mengukur kualitas hasil rekonstruksi data, sedangkan KL Divergence berfungsi menjaga distribusi laten agar tetap mendekati distribusi normal standar. Secara matematis, fungsi objektif VAE dirumuskan sebagaimana pada persamaan \ref{eq:elbo}:
+\begin{equation}
 \mathcal{L}(\theta, \phi; x) =
 \mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] -
 D_{KL}(q_{\phi}(z|x) \parallel p(z))
-\]
+\label{eq:elbo}
+\end{equation}
 di mana $q_{\phi}(z|x)$ merepresentasikan distribusi laten yang dihasilkan oleh \textit{encoder}, $p_{\theta}(x|z)$ merepresentasikan proses rekonstruksi oleh \textit{decoder}, dan $p(z)$ merupakan distribusi prior pada ruang laten. Komponen pertama pada persamaan tersebut merepresentasikan kualitas rekonstruksi data, sedangkan komponen kedua berfungsi sebagai regularisasi untuk menjaga struktur distribusi laten \cite{vae_original}.
 
-Proses \textit{sampling} pada ruang laten tidak dapat dilakukan secara langsung dalam proses \textit{training} menggunakan metode \textit{backpropagation}. Oleh karena itu, VAE menggunakan teknik yang dikenal sebagai \textit{reparameterization trick}. Melalui teknik ini, variabel laten $z$ dinyatakan sebagai:
-\[
+Proses \textit{sampling} pada ruang laten tidak dapat dilakukan secara langsung dalam proses \textit{training} menggunakan metode \textit{backpropagation}. Oleh karena itu, VAE menggunakan teknik yang dikenal sebagai \textit{reparameterization trick}. Melalui teknik ini, variabel laten $z$ dinyatakan sebagaimana yang terlihat pada persamaan \ref{eqz}. 
+\begin{equation}
 z = \mu + \sigma \cdot \epsilon
-\]
+\label{eqz}
+\end{equation}
+
 di mana $\epsilon$ merupakan variabel acak yang diambil dari distribusi normal standar $\mathcal{N}(0,1)$. Dengan pendekatan ini, proses \textit{sampling} dapat ditransformasikan menjadi operasi deterministik yang memungkinkan gradien tetap dapat dihitung selama proses \textit{training} neural network \cite{vae_original}.
 
 
 \subsection{Metode Evaluasi Data Sintetis Sinyal EEG}
 
-Evaluasi kualitas data sintetis diperlukan untuk menilai sejauh mana sinyal EEG yang dihasilkan model generatif mampu mempertahankan karakteristik data asli. Dalam penelitian referensi \cite{eeg_gan}, evaluasi dilakukan menggunakan beberapa metrik kuantitatif yang umum digunakan pada model generatif, yaitu, \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD).  
+Evaluasi kualitas data sintetis diperlukan untuk menilai sejauh mana sinyal EEG yang dihasilkan model generatif mampu mempertahankan karakteristik data asli. Dalam penelitian referensi \cite{eeg_gan}, evaluasi dilakukan menggunakan beberapa metrik kuantitatif yang umum digunakan pada model generatif, yaitu, \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD). Definisi, formulasi matematis, serta aspek kualitas data yang dievaluasi oleh masing-masing metrik dirangkum dalam tabel \ref{tab:evaluation_metrics}.
 
 \begin{table}[H]
 \centering

@@ -112,7 +112,7 @@ Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variatio
 
 Pada eksperimen ini, kualitas data sintetis dianalisis menggunakan beberapa metrik evaluasi data generatif, yaitu \textit{Fréchet Inception Distance} (FID), \textit{Sliced Wasserstein Distance} (SWD), dan normalisasi \textit{Euclidean Distance} (ED). Selain evaluasi kuantitatif, dilakukan pula analisis visual pada domain waktu dan domain frekuensi untuk membandingkan karakteristik sinyal sintetis terhadap sinyal EEG asli.
 
-Eksperimen ini digunakan untuk menilai sejauh mana model VAE mampu mempertahankan karakteristik utama sinyal EEG serta menentukan kelayakan data sintetis yang dihasilkan untuk digunakan pada tahap augmentasi data dalam proses klasifikasi ASD dengan hasil evaluasi kualitas data sintetis untuk masing-masing kanal EEG pada kelas Normal dan ASD disajikan sebagai berikut.
+Eksperimen ini digunakan untuk menilai sejauh mana model VAE mampu mempertahankan karakteristik utama sinyal EEG serta menentukan kelayakan data sintetis yang dihasilkan untuk digunakan pada tahap augmentasi data dalam proses klasifikasi ASD dengan hasil evaluasi kualitas data sintetis untuk masing-masing kanal EEG pada kelas Normal dan ASD disajikan pada tabel .
 \begin{table}[H]
 \centering
 \caption{Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}
@@ -200,7 +200,7 @@ Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variatio
 \end{figure}
 
 
-Karakteristik tersebut juga terlihat pada visualisasi domain waktu dan domain frekuensi, di mana sinyal sintetis mampu mengikuti pola amplitudo utama serta distribusi spektral frekuensi dominan dari sinyal asli.
+Karakteristik tersebut juga terlihat pada visualisasi domain waktu (gambar \ref{fig:time_domain1} dan gambar \ref{fig:time_domain2}) serta domain frekuensi (gambar \ref{fig:freq_domain1} dan gambar \ref{fig:freq_domain2}), di mana sinyal sintetis mampu mengikuti pola amplitudo utama serta distribusi spektral frekuensi dominan dari sinyal asli.
 
 Secara umum, kualitas data sintetis pada kelas ASD menunjukkan hasil yang lebih baik dan lebih stabil dibandingkan kelas Normal. Hal ini ditunjukkan oleh nilai \textit{Fréchet Inception Distance} (FID), \textit{Sliced Wasserstein Distance} (SWD), dan normalisasi \textit{Euclidean Distance} (ED) yang relatif lebih rendah pada sebagian besar kanal EEG kelas ASD. Kanal frontal seperti Fp2, F7, dan F8 pada kelas ASD menghasilkan nilai FID yang rendah, menunjukkan tingkat kemiripan distribusi yang tinggi terhadap data asli.
 

@@ -56,7 +56,7 @@ Pendekatan yang digunakan dalam penelitian ini mengadaptasi model EEG Data Augme
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.8\textwidth,
+        width=0.6\textwidth,
         trim=0cm 7.5cm 0cm 0cm,
         clip
     ]{assets/pdfs/flowchart_system.pdf}
@@ -106,10 +106,10 @@ trim=0cm 0cm 3cm 0cm,
 clip
 ]{assets/pdfs/diagram_vae.pdf}
 \caption{Diagram model VAE untuk augmentasi EEG}
-\label{fig:vae}
+\label{fig:vaex}
 \end{figure}
 
-Seperti ditunjukkan pada Gambar \ref{fig:vae}, model terdiri dari dua komponen utama, yaitu \textit{encoder} dan \textit{decoder}. Input berupa segmen sinyal EEG satu dimensi diproses oleh bagian \textit{encoder} menggunakan beberapa lapisan \textit{Conv1D} yang diikuti oleh \textit{batch normalization} dan fungsi aktivasi \textit{LeakyReLU}. Proses ini bertujuan untuk mengekstraksi representasi fitur berdimensi lebih rendah dari sinyal input. Representasi tersebut kemudian dipetakan ke dalam dua parameter distribusi laten, yaitu \textit{mean} ($z_{\mathrm{mean}}$) dan variansi logaritmik ($z_{\mathrm{log_var}}$). Selanjutnya dilakukan proses \textit{reparameterization} untuk menghasilkan vektor laten $z$, sehingga model dapat dilatih menggunakan mekanisme \textit{backpropagation} secara \textit{end-to-end}. Proses perhitungan parameter distribusi laten serta mekanisme \textit{reparameterization} yang digunakan untuk menghasilkan vektor laten $z$ dijelaskan lebih rinci ada Subbab \ref{subsubsec:reparameterization-layer} mengenai \textit{Reparameterization Layer}.
+Seperti ditunjukkan pada gambar \ref{fig:vaex}, model terdiri dari dua komponen utama, yaitu \textit{encoder} dan \textit{decoder}. Input berupa segmen sinyal EEG satu dimensi diproses oleh bagian \textit{encoder} menggunakan beberapa lapisan \textit{Conv1D} yang diikuti oleh \textit{batch normalization} dan fungsi aktivasi \textit{LeakyReLU}. Proses ini bertujuan untuk mengekstraksi representasi fitur berdimensi lebih rendah dari sinyal input. Representasi tersebut kemudian dipetakan ke dalam dua parameter distribusi laten, yaitu \textit{mean} ($z_{\mathrm{mean}}$) dan variansi logaritmik ($z_{\mathrm{log_var}}$). Selanjutnya dilakukan proses \textit{reparameterization} untuk menghasilkan vektor laten $z$, sehingga model dapat dilatih menggunakan mekanisme \textit{backpropagation} secara \textit{end-to-end}. Proses perhitungan parameter distribusi laten serta mekanisme \textit{reparameterization} yang digunakan untuk menghasilkan vektor laten $z$ dijelaskan lebih rinci ada Subbab \ref{subsubsec:reparameterization-layer} mengenai \textit{Reparameterization Layer}.
 
 Vektor laten yang dihasilkan kemudian digunakan sebagai input bagi bagian \textit{decoder} untuk merekonstruksi kembali sinyal EEG. Decoder terdiri dari beberapa lapisan \textit{upsampling} dan \textit{Conv1D} yang secara bertahap mengembalikan dimensi sinyal hingga sesuai dengan bentuk input awal. Setelah proses \textit{training}, model dimanfaatkan untuk menghasilkan data sintetis baru dengan melakukan \textit{sampling} acak pada ruang laten menggunakan distribusi normal standar. Vektor laten hasil \textit{sampling} tersebut diberikan ke \textit{decoder} untuk menghasilkan sinyal EEG sintetis yang tidak identik dengan data asli, namun tetap mempertahankan karakteristik distribusi statistiknya.
 
@@ -175,7 +175,7 @@ Perancangan model generatif pada penelitian ini dilakukan menggunakan pendekatan
         clip
     ]{assets/pdfs/Encoder.pdf}
     \caption{Diagram aliran \textit{layer encoder} pada model VAE}
-    \label{fig:flowchart_system}
+    \label{fig:flowchart_system_encoder}
 \end{figure}\begin{table}[H]
 \centering
 \caption{Arsitektur \textit{encoder VAE}}
@@ -236,7 +236,7 @@ Output akhir berupa 16 nilai \textit{z\_mean} dan 16 nilai \textit{z\_latent} se
 \end{tabular}
 \end{table}
 
-\textit{Encoder} menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15–25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling dilakukan melalui stride pada setiap lapisan konvolusi, sehingga reduksi dimensi bertahap dari 512 menjadi 64  membuat representasi semakin ringkas dan informatif.
+Sebagaimana ditunjukkan pada Gambar \ref{fig:flowchart_system_encoder} dan Tabel \ref{tab:vae_encoder}, arsitektur \textit{encoder} menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15–25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling dilakukan melalui stride pada setiap lapisan konvolusi, sehingga reduksi dimensi bertahap dari 512 menjadi 64  membuat representasi semakin ringkas dan informatif.
 
 Setiap blok konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi aktivasi selama \textit{training}, mempercepat konvergensi, serta mengurangi masalah internal covariate shift. Setelah normalisasi, digunakan fungsi aktivasi LeakyReLU dengan parameter 0.2, yang berarti gradien kecil sebesar 0.2 tetap dipertahankan untuk nilai negatif, sehingga menjaga aliran gradien tetap stabil.
 
@@ -280,6 +280,8 @@ Setelah proses konvolusi, dilakukan reduksi dimensi temporal menggunakan \textit
 
 
 \subsubsection{\textit{Reparameterization Layer}}
+
+Lapisan Sampling menghasilkan vektor laten $z$ dengan menggabungkan dua parameter yang dipelajari oleh \textit{encoder}, yaitu $z_{\text{mean}}$ dan $z_{\text{log var}}$. Proses ini membuat representasi laten bersifat probabilistik, sehingga model tidak hanya menghasilkan satu nilai tetap, tetapi sebuah distribusi.
 \label{subsubsec:reparameterization-layer}
 \begin{figure}[H]
     \hspace*{0.5cm} 
@@ -289,19 +291,16 @@ Setelah proses konvolusi, dilakukan reduksi dimensi temporal menggunakan \textit
         clip
     ]{assets/pdfs/reparameterization.pdf}
     \caption{Diagram aliran \textit{reparameterization layer}}
-    \label{fig:flowchart_system}
+    \label{fig:flowchart_system_reparameterization}
 \end{figure}
 
-
-
-Lapisan Sampling menghasilkan vektor laten $z$ dengan menggabungkan dua parameter yang dipelajari oleh \textit{encoder}, yaitu $z_{\text{mean}}$ dan $z_{\text{log var}}$. Proses ini membuat representasi laten bersifat probabilistik, sehingga model tidak hanya menghasilkan satu nilai tetap, tetapi sebuah distribusi.
-
-Pada tahap ini digunakan variabel acak $\epsilon$ (\textit{epsilon}), yang diambil dari distribusi normal standar dengan mean 0 dan variansi 1. Noise ini berfungsi untuk memperkenalkan unsur \textit{stochastic} dalam proses \textit{sampling}, sehingga setiap \textit{forward pass} dapat menghasilkan representasi $z$ yang sedikit berbeda meskipun input sama.
+Sebagaimana ditunjukkan pada Gambar \ref{fig:flowchart_system_reparameterization}, \textit{reparameterization layer}, pada tahap ini digunakan variabel acak $\epsilon$ (\textit{epsilon}), yang diambil dari distribusi normal standar dengan mean 0 dan variansi 1. Noise ini berfungsi untuk memperkenalkan unsur \textit{stochastic} dalam proses \textit{sampling}, sehingga setiap \textit{forward pass} dapat menghasilkan representasi $z$ yang sedikit berbeda meskipun input sama.
 
 Nilai $z$ dihitung menggunakan teknik \textit{reparameterization trick}, yaitu:
-\[
+\begin{equation}
 z = z_{\text{mean}} + \exp(0.5 \cdot z_{\text{log var}}) \cdot \epsilon
-\]
+\label{eq:reparameterization}
+\end{equation}
 
 Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi dari distribusi yang dipelajari, sehingga noise $\epsilon$ diskalakan dengan tingkat ketidakpastian data. Pendekatan ini memungkinkan proses \textit{sampling} tetap dapat dioptimalkan menggunakan \textit{backpropagation}.
 
@@ -363,6 +362,8 @@ Reconstruction &
 
 \end{tabular}
 \end{table}
+
+Sebagaimana ditunjukkan pada Gambar \ref{fig:vae_decoder} dan Tabel \ref{tab:vae_decoder}, \textit{decoder} bertugas merekonstruksi sinyal EEG dari representasi laten yang dihasilkan oleh proses \textit{encoding}. Arsitektur \textit{decoder} terdiri atas lapisan \textit{dense}, proses \textit{reshape}, serta beberapa blok \textit{Conv1DTranspose} yang secara bertahap mengembalikan dimensi data hingga menghasilkan sinyal EEG rekonstruksi dengan ukuran yang sama seperti data input.
 \begin{lstlisting}[
     style=modernpython,
     language=Python,
@@ -422,24 +423,6 @@ for each decoder block:
 
 Berdasarkan algoritma \ref{code:decoder-process}, setiap \textit{decoder block} meningkatkan dimensi temporal menggunakan proses \textit{upsampling} sebelum dilakukan operasi konvolusi untuk membentuk kembali pola temporal sinyal EEG. Kernel konvolusi digeser sepanjang \textit{feature map} untuk menghasilkan representasi sinyal yang semakin mendekati bentuk asli.
 
-\begin{lstlisting}[
-    style=modernpython,
-    language=Python,
-    caption={Algoritma proses rekonstruksi sinyal pada decoder model VAE.},
-    label={code:decoder-process}
-]
-
-# ====================================
-# Signal Reconstruction
-# ====================================
-
-for each temporal position in feature map:
-
-    apply final convolution operation
-
-generate reconstructed EEG signal
-\end{lstlisting}
-
 Hasil konvolusi pada setiap tahap kemudian dinormalisasi menggunakan Batch Normalization sebelum diterapkan fungsi aktivasi untuk menjaga stabilitas distribusi aktivasi selama proses rekonstruksi. Pada tahap \textit{signal reconstruction}, dilakukan konvolusi akhir pada setiap posisi temporal \textit{feature map} untuk menghasilkan kembali sinyal EEG rekonstruksi dengan jumlah kanal yang sama seperti data input.
 
 \subsubsection{\textit{Loss Function} dan Proses Training}
@@ -468,10 +451,10 @@ Vektor laten acak ini kemudian diberikan sebagai input ke bagian \textit{decoder
         clip
     ]{assets/pdfs/flowchart_augment.pdf}
  \caption{Diagram aliran generasi data sintetis}
-    \label{fig:flowchart_system}
+    \label{fig:flowchart_systemx}
 \end{figure}
 
-Dalam penelitian ini, proses generasi data sintetis dilakukan secara terpisah untuk setiap kanal EEG dan setiap kelas data. Dengan menggunakan 16 kanal EEG serta dua kategori kelas (\textit{normal} dan ASD), maka dibangun sebanyak 32 model VAE yang masing-masing dilatih secara spesifik terhadap distribusi data pada kanal dan kelas tertentu.
+Sebagaimana yang ditunjukkan oleh diagram \ref{fig:flowchart_systemx} proses generasi data sintetis dilakukan secara terpisah untuk setiap kanal EEG dan setiap kelas data. Dengan menggunakan 16 kanal EEG serta dua kategori kelas (\textit{normal} dan ASD), maka dibangun sebanyak 32 model VAE yang masing-masing dilatih secara spesifik terhadap distribusi data pada kanal dan kelas tertentu.
 
 Data sintetis yang dihasilkan selanjutnya digunakan sebagai bentuk \textit{data augmentation} dalam pipeline klasifikasi. Dengan menambahkan sampel sintetis ke dalam data \textit{training}, diharapkan model klasifikasi dapat meningkatkan kemampuan generalisasi, terutama dalam kondisi keterbatasan jumlah data asli.
 \subsection{Implementasi Model Klasifikasi}
@@ -505,11 +488,12 @@ Fitur yang digunakan berasal dari kombinasi kanal EEG dan jenis fitur hasil ekst
 \subsubsection{Model \textit{XGBoost}}
 
 
-Model \textit{XGBoost} pada penelitian ini menggunakan konfigurasi parameter sebagaimana ditunjukkan pada tabel di atas. Parameter tersebut digunakan dalam proses \textit{training} model untuk menghasilkan prediksi pada data uji.
+Model \textit{XGBoost} pada penelitian ini menggunakan konfigurasi hyperparameter sebagaimana  dalam proses \textit{training} model untuk menghasilkan prediksi pada data uji. Konfigurasi hyperparameter XGBoost yang digunakan dalam penelitian ditunjukkan pada Tabel \ref{tab:xgboost_hyperparameter}.
 
 \begin{table}[h]
 \centering
-\caption{Konfigurasi parameter \textit{XGBoost}}
+\caption{Konfigurasi hyperparameter \textit{XGBoost}}
+\label{tab:xgboost_hyperparameter}
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Parameter} & \textbf{Nilai} \\
@@ -539,7 +523,7 @@ Pembagian data dilakukan menggunakan \textit{train\_test\_split} dengan paramete
 
 \subsubsection{Model \textit{Deep Neural Network}}
 
-Model \textit{Deep Neural Network} (DNN) yang digunakan dalam penelitian ini merupakan model \textit{feedforward neural network} sederhana yang terdiri dari tiga lapisan utama, yaitu lapisan input, satu \textit{hidden layer}, dan lapisan output. \textit{Hidden layer} terdiri dari 5 neuron dengan fungsi aktivasi \textit{log-sigmoid} yang digunakan untuk memperkenalkan non-linearitas serta membatasi output neuron pada rentang (0,1). Lapisan output menggunakan fungsi aktivasi \textit{softmax} yang menghasilkan distribusi probabilitas untuk masing-masing kelas sesuai dengan jumlah kelas (\textit{n\_classes}).
+Sebagaimana ditunjukkan pada Gambar \ref{fig:dnn_architecture}, model \textit{Deep Neural Network} (DNN) yang digunakan dalam penelitian ini merupakan model \textit{feedforward neural network} sederhana yang terdiri dari tiga lapisan utama, yaitu lapisan input, satu \textit{hidden layer}, dan lapisan output. \textit{Hidden layer} terdiri dari 5 neuron dengan fungsi aktivasi \textit{log-sigmoid} yang digunakan untuk memperkenalkan non-linearitas serta membatasi output neuron pada rentang (0,1). Lapisan output menggunakan fungsi aktivasi \textit{softmax} yang menghasilkan distribusi probabilitas untuk masing-masing kelas sesuai dengan jumlah kelas (\textit{n\_classes}).
 
 \begin{figure}[H]
     \centering 
