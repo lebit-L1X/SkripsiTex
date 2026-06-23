@@ -9,8 +9,8 @@
 \contentsline {chapter}{\uppercase {Daftar Isi}}{x}{section*.4}%
 \contentsline {chapter}{\uppercase {Daftar Tabel}}{xiii}{section*.5}%
 \contentsline {chapter}{\uppercase {Daftar Gambar}}{xiv}{section*.6}%
-\contentsline {chapter}{\uppercase {Daftar Kode Program}}{xv}{section*.7}%
-\contentsline {chapter}{\uppercase {Daftar Singkatan}}{xv}{section*.8}%
+\contentsline {chapter}{\uppercase {Daftar Algoritma}}{xvii}{section*.7}%
+\contentsline {chapter}{\uppercase {Daftar Singkatan}}{xvii}{section*.8}%
 \contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Rumusan Masalah}{3}{section.1.2}%

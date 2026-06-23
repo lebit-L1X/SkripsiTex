@@ -84,8 +84,8 @@ Dalam aplikasi klasifikasi \textit{machine learning}, \textit{feature selection}
 Secara umum, tujuan \textit{feature selection} dapat diformulasikan sebagai proses optimasi untuk mencari himpunan fitur $S \subseteq X$ dengan $|S| = m$ yang memaksimalkan ketergantungan terhadap kelas target. Ketergantungan ini seringkali diukur menggunakan \textit{mutual information} $I(S; c)$, sehingga permasalahan dapat dinyatakan sebagai:
 \begin{equation}
 \max_{S \subseteq X, |S| = m} I(S; c)
+\addcontentsline{equ}{equations}{\protect\numberline{\theequation}Optimasi Informasi Mutu}
 \end{equation}
-
 Penggunaan seluruh fitur tidak selalu menghasilkan performa optimal karena adanya redundansi antar fitur. Fitur dengan korelasi tinggi cenderung memberikan informasi yang berulang, sehingga diperlukan metode \textit{feature selection} yang mempertimbangkan relevansi terhadap target sekaligus meminimalkan redundansi.
 
 \textit{Minimum Redundancy Maximum Relevance} (mRMR) merupakan teknik seleksi fitur berbasis teori informasi yang memilih subset fitur dengan relevansi tinggi terhadap target dan redundansi rendah antar fitur.  Pendekatan ini efektif dalam mengurangi dimensi data tanpa mengorbankan informasi penting, sehingga meningkatkan efisiensi komputasi dan kemampuan generalisasi model \cite{sleep_apnea_eeg}\cite{tsmrmr_sleep}. Proses pemilihan fitur pada metode mRMR dilakukan secara iteratif dengan mengevaluasi keseimbangan antara relevansi fitur terhadap kelas target dan redundansi antar fitur yang telah dipilih sebelumnya. 
@@ -278,6 +278,7 @@ Proses \textit{training} VAE dilakukan menggunakan fungsi objektif \textit{Evide
 \mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x|z)] -
 D_{KL}(q_{\phi}(z|x) \parallel p(z))
 \label{eq:elbo}
+\addcontentsline{equ}{equations}{\protect\numberline{\theequation}Evidence Lower Bound (ELBO)}
 \end{equation}
 di mana $q_{\phi}(z|x)$ merepresentasikan distribusi laten yang dihasilkan oleh \textit{encoder}, $p_{\theta}(x|z)$ merepresentasikan proses rekonstruksi oleh \textit{decoder}, dan $p(z)$ merupakan distribusi prior pada ruang laten. Komponen pertama pada persamaan tersebut merepresentasikan kualitas rekonstruksi data, sedangkan komponen kedua berfungsi sebagai regularisasi untuk menjaga struktur distribusi laten \cite{vae_original}.
 
@@ -285,6 +286,7 @@ Proses \textit{sampling} pada ruang laten tidak dapat dilakukan secara langsung 
 \begin{equation}
 z = \mu + \sigma \cdot \epsilon
 \label{eqz}
+\addcontentsline{equ}{equations}{\protect\numberline{\theequation}Metode Reparameterization}
 \end{equation}
 
 di mana $\epsilon$ merupakan variabel acak yang diambil dari distribusi normal standar $\mathcal{N}(0,1)$. Dengan pendekatan ini, proses \textit{sampling} dapat ditransformasikan menjadi operasi deterministik yang memungkinkan gradien tetap dapat dihitung selama proses \textit{training} neural network \cite{vae_original}.

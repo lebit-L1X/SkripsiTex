@@ -300,6 +300,7 @@ Nilai $z$ dihitung menggunakan teknik \textit{reparameterization trick}, yaitu:
 \begin{equation}
 z = z_{\text{mean}} + \exp(0.5 \cdot z_{\text{log var}}) \cdot \epsilon
 \label{eq:reparameterization}
+\addcontentsline{equ}{equations}{\protect\numberline{\theequation}Implementasi Reparameterization Trick}
 \end{equation}
 
 Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi dari distribusi yang dipelajari, sehingga noise $\epsilon$ diskalakan dengan tingkat ketidakpastian data. Pendekatan ini memungkinkan proses \textit{sampling} tetap dapat dioptimalkan menggunakan \textit{backpropagation}.

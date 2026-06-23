@@ -44,6 +44,10 @@
     framexleftmargin=1.2em
 }
 
+\usepackage{tocloft}
+
+\newlistof{equations}{equ}{Daftar Persamaan}
+
 % Daftar pemenggalan suku kata dan istilah dalam LaTeX
 \input{_internals/hype.indonesia}
 
@@ -138,6 +142,8 @@
 \clearpage
 \phantomsection
 \listoffigures
+\lstlistoflistings
+\listofequations
 \clearpage
 %\phantomsection
 %\addcontentsline{toc}{chapter}{DAFTAR ISTILAH}

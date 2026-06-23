@@ -653,6 +653,14 @@ INPUT .\thesis.lof
 INPUT .\thesis.lof
 INPUT thesis.lof
 OUTPUT thesis.lof
+INPUT .\thesis.lol
+INPUT .\thesis.lol
+INPUT thesis.lol
+OUTPUT thesis.lol
+INPUT .\thesis.equ
+INPUT .\thesis.equ
+INPUT thesis.equ
+OUTPUT thesis.equ
 INPUT .\singkatan.tex
 INPUT .\singkatan.tex
 INPUT .\singkatan.tex

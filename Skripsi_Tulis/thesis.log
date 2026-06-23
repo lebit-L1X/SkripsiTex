@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  23 JUN 2026 16:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  23 JUN 2026 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1283,6 +1283,13 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
+\c@equations=\count487
+\cftbeforeequationsskip=\skip292
+\cftequationsindent=\skip293
+\cftequationsnumwidth=\skip294
+\c@equdepth=\count488
+\cftbeforeequtitleskip=\skip295
+\cftafterequtitleskip=\skip296
 (_internals/hype.indonesia.tex) (settings.tex) (istilah.tex) (thesis.aux
 
 LaTeX Warning: Label `fig:flowchart_system' multiply defined.
@@ -1293,45 +1300,45 @@ LaTeX Warning: Label `fig:flowchart_system' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 56.
-LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 60.
+LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line 60.
  (C:\Users\Wendy\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-Package hyperref Info: Link coloring OFF on input line 56.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+Package hyperref Info: Link coloring OFF on input line 60.
  (thesis.out) (thesis.out)
 \@outlinefile=\write6
 \openout6 = `thesis.out'.
 
  (C:\Users\Wendy\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count487
+\scratchcounter=\count489
 \scratchdimen=\dimen353
 \scratchbox=\box154
-\nofMPsegments=\count488
-\nofMParguments=\count489
+\nofMPsegments=\count490
+\nofMParguments=\count491
 \everyMPshowfont=\toks61
-\MPscratchCnt=\count490
+\MPscratchCnt=\count492
 \MPscratchDim=\dimen354
-\MPnumerator=\count491
-\makeMPintoPDFobject=\count492
+\MPnumerator=\count493
+\makeMPintoPDFobject=\count494
 \everyMPtoPDFconversion=\toks62
 ) (C:\Users\Wendy\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1381,11 +1388,11 @@ Package newfloat Info: Trying Plan B...
 Package newfloat Info: `float' package detected.
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 56.
+ on input line 60.
 
-\c@lstlisting=\count493
+\c@lstlisting=\count495
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 56.
+(tocbasic)             because of missing \bbl@set@language on input line 60.
 (_internals/sampul.tex
 Package epstopdf Info: Source file: <_internals/makara.eps>
 (epstopdf)                    date: 2026-03-14 13:03:43
@@ -1490,7 +1497,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 ])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 96.
+(hyperref)                removing `\uppercase' on input line 100.
 
 (src/00-front_matter/04-pengantar.tex
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
@@ -1542,7 +1549,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 ])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 134.
+(hyperref)                removing `\uppercase' on input line 138.
 
 (thesis.toc
 
@@ -1571,7 +1578,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 137.
+(hyperref)                removing `\uppercase' on input line 141.
 
 (thesis.lot)
 \tf@lot=\write8
@@ -1589,7 +1596,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 140.
+(hyperref)                removing `\uppercase' on input line 144.
 
 (thesis.lof)
 \tf@lof=\write9
@@ -1604,123 +1611,147 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 [14
 
 
+] (thesis.lol)
+\tf@lol=\write10
+\openout10 = `thesis.lol'.
+
+
+
+Package fancyhdr Warning: \footskip is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.49998pt}.
+
+[15
+
+] (thesis.equ)
+\tf@equ=\write11
+\openout11 = `thesis.equ'.
+
+
+
+Package fancyhdr Warning: \footskip is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.49998pt}.
+
+[16
+
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 147.
+(hyperref)                removing `\uppercase' on input line 153.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 150.
+(hyperref)                removing `\uppercase' on input line 156.
 
 (singkatan.tex
 
-LaTeX Warning: Hyper reference `acro:ASD' on page xv undefined on input line 2.
+LaTeX Warning: Hyper reference `acro:ASD' on page xvii undefined on input line 2.
 
 
-LaTeX Warning: Hyper reference `acro:ASD' on page xv undefined on input line 2.
+LaTeX Warning: Hyper reference `acro:ASD' on page xvii undefined on input line 2.
 
 
-LaTeX Warning: Hyper reference `acro:BCI' on page xv undefined on input line 3.
+LaTeX Warning: Hyper reference `acro:BCI' on page xvii undefined on input line 3.
 
 
-LaTeX Warning: Hyper reference `acro:BCI' on page xv undefined on input line 3.
+LaTeX Warning: Hyper reference `acro:BCI' on page xvii undefined on input line 3.
 
 
-LaTeX Warning: Hyper reference `acro:CNN' on page xv undefined on input line 4.
+LaTeX Warning: Hyper reference `acro:CNN' on page xvii undefined on input line 4.
 
 
-LaTeX Warning: Hyper reference `acro:CNN' on page xv undefined on input line 4.
+LaTeX Warning: Hyper reference `acro:CNN' on page xvii undefined on input line 4.
 
 
-LaTeX Warning: Hyper reference `acro:DWT' on page xv undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:DWT' on page xvii undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:DWT' on page xv undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:DWT' on page xvii undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:EEG' on page xv undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:EEG' on page xvii undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:EEG' on page xv undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:EEG' on page xvii undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:ELBO' on page xv undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:ELBO' on page xvii undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:ELBO' on page xv undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:ELBO' on page xvii undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:EMG' on page xv undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:EMG' on page xvii undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:EMG' on page xv undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:EMG' on page xvii undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:EOG' on page xv undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:EOG' on page xvii undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:EOG' on page xv undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:EOG' on page xvii undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:FFT' on page xv undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:FFT' on page xvii undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:FFT' on page xv undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:FFT' on page xvii undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:GAN' on page xv undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:GAN' on page xvii undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:GAN' on page xv undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:GAN' on page xvii undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:ICA' on page xv undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:ICA' on page xvii undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:ICA' on page xv undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:ICA' on page xvii undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:kNN' on page xv undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:kNN' on page xvii undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:kNN' on page xv undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:kNN' on page xvii undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:KL' on page xv undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:KL' on page xvii undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:KL' on page xv undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:KL' on page xvii undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:mRMR' on page xv undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:mRMR' on page xvii undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:mRMR' on page xv undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:mRMR' on page xvii undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:PSD' on page xv undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:PSD' on page xvii undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:PSD' on page xv undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:PSD' on page xvii undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:SNR' on page xv undefined on input line 17.
+LaTeX Warning: Hyper reference `acro:SNR' on page xvii undefined on input line 17.
 
 
-LaTeX Warning: Hyper reference `acro:SNR' on page xv undefined on input line 17.
+LaTeX Warning: Hyper reference `acro:SNR' on page xvii undefined on input line 17.
 
 
-LaTeX Warning: Hyper reference `acro:SVM' on page xv undefined on input line 18.
+LaTeX Warning: Hyper reference `acro:SVM' on page xvii undefined on input line 18.
 
 
-LaTeX Warning: Hyper reference `acro:SVM' on page xv undefined on input line 18.
+LaTeX Warning: Hyper reference `acro:SVM' on page xvii undefined on input line 18.
 
 
-LaTeX Warning: Hyper reference `acro:VAE' on page xv undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:VAE' on page xvii undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `acro:VAE' on page xv undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:VAE' on page xvii undefined on input line 19.
 
 )
 
@@ -1728,7 +1759,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[15
+[17
 
 
 
@@ -1811,7 +1842,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 [7
 
 ]
-<assets/pics/10_20_system.jpg, id=791, 441.90094pt x 377.91188pt>
+<assets/pics/10_20_system.jpg, id=824, 441.90094pt x 377.91188pt>
 File: assets/pics/10_20_system.jpg Graphic file (type jpg)
 <use assets/pics/10_20_system.jpg>
 Package pdftex.def Info: assets/pics/10_20_system.jpg  used on input line 22.
@@ -1844,12 +1875,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [9]
-<assets/pics/frequency_band.png, id=807, 269.89328pt x 276.9284pt>
+<assets/pics/frequency_band.png, id=839, 269.89328pt x 276.9284pt>
 File: assets/pics/frequency_band.png Graphic file (type png)
 <use assets/pics/frequency_band.png>
 Package pdftex.def Info: assets/pics/frequency_band.png  used on input line 50.
 (pdftex.def)             Requested size: 256.07741pt x 262.76779pt.
-<assets/pics/four_major_filters.png, id=811, 1674.255pt x 860.21375pt>
+<assets/pics/four_major_filters.png, id=843, 1674.255pt x 860.21375pt>
 File: assets/pics/four_major_filters.png Graphic file (type png)
 <use assets/pics/four_major_filters.png>
 Package pdftex.def Info: assets/pics/four_major_filters.png  used on input line 64.
@@ -1863,7 +1894,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [10 <./assets/pics/frequency_band.png>]
-<assets/pics/artifact_eeg.png, id=818, 284.7438pt x 116.1138pt>
+<assets/pics/artifact_eeg.png, id=850, 284.7438pt x 116.1138pt>
 File: assets/pics/artifact_eeg.png Graphic file (type png)
 <use assets/pics/artifact_eeg.png>
 Package pdftex.def Info: assets/pics/artifact_eeg.png  used on input line 73.
@@ -1895,7 +1926,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [13]
-<assets/pics/ushaped.png, id=888, 309.40594pt x 214.55156pt>
+<assets/pics/ushaped.png, id=919, 309.40594pt x 214.55156pt>
 File: assets/pics/ushaped.png Graphic file (type png)
 <use assets/pics/ushaped.png>
 Package pdftex.def Info: assets/pics/ushaped.png  used on input line 149.
@@ -1909,7 +1940,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [14 <./assets/pics/ushaped.png>]
-<assets/pics/general_pipeline.png, id=900, 853.1875pt x 335.2525pt>
+<assets/pics/general_pipeline.png, id=931, 853.1875pt x 335.2525pt>
 File: assets/pics/general_pipeline.png Graphic file (type png)
 <use assets/pics/general_pipeline.png>
 Package pdftex.def Info: assets/pics/general_pipeline.png  used on input line 158.
@@ -1923,7 +1954,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [15 <./assets/pics/general_pipeline.png>]
-<assets/pics/traditional_augmentation.png, id=915, 645.91313pt x 441.90094pt>
+<assets/pics/traditional_augmentation.png, id=945, 645.91313pt x 441.90094pt>
 File: assets/pics/traditional_augmentation.png Graphic file (type png)
 <use assets/pics/traditional_augmentation.png>
 Package pdftex.def Info: assets/pics/traditional_augmentation.png  used on input line 175.
@@ -2032,7 +2063,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [20]
-<assets/pics/vae-architecture.png, id=948, 99.7326pt x 26.7399pt>
+<assets/pics/vae-architecture.png, id=979, 99.7326pt x 26.7399pt>
 File: assets/pics/vae-architecture.png Graphic file (type png)
 <use assets/pics/vae-architecture.png>
 Package pdftex.def Info: assets/pics/vae-architecture.png  used on input line 267.
@@ -2046,12 +2077,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [21 <./assets/pics/vae-architecture.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
 []|\T1/ptm/m/n/10 Mengukur ke-samaan dis-tribusi
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 338--338
+Underfull \hbox (badness 1789) in paragraph at lines 340--340
 \T1/ptm/m/n/10 global melalui proyeksi satu di-
  []
 
@@ -2071,7 +2102,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [23]
-Underfull \hbox (badness 4713) in paragraph at lines 355--356
+Underfull \hbox (badness 4713) in paragraph at lines 357--358
 []\T1/ptm/m/n/12 Penelitian meng-gu-nakan metode \T1/ptm/m/it/12 min-i-mum Re-dun-dancy Max-i-mum Rel-e-vance
  []
 
@@ -2130,7 +2161,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [29]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_system.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_system.pdf, id=1013, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_system.pdf, id=1041, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_system.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_system.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_system.pdf  used on input line 62.
@@ -2145,7 +2176,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [30]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_preprocessing.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_preprocessing.pdf, id=1025, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_preprocessing.pdf, id=1053, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_preprocessing.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_preprocessing.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_preprocessing.pdf  used on input line 81.
@@ -2172,7 +2203,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/diagram_vae.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/diagram_vae.pdf, id=1057, 614.295pt x 794.97pt>
+<assets/pdfs/diagram_vae.pdf, id=1086, 614.295pt x 794.97pt>
 File: assets/pdfs/diagram_vae.pdf Graphic file (type pdf)
 <use assets/pdfs/diagram_vae.pdf>
 Package pdftex.def Info: assets/pdfs/diagram_vae.pdf  used on input line 107.
@@ -2208,7 +2239,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [35]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_klasifikasi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_klasifikasi.pdf, id=1090, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_klasifikasi.pdf, id=1118, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_klasifikasi.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_klasifikasi.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_klasifikasi.pdf  used on input line 130.
@@ -2244,7 +2275,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [38]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/Encoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/Encoder.pdf, id=1114, 614.295pt x 794.97pt>
+<assets/pdfs/Encoder.pdf, id=1143, 614.295pt x 794.97pt>
 File: assets/pdfs/Encoder.pdf Graphic file (type pdf)
 <use assets/pdfs/Encoder.pdf>
 Package pdftex.def Info: assets/pdfs/Encoder.pdf  used on input line 176.
@@ -2272,7 +2303,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [40]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/reparameterization.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/reparameterization.pdf, id=1161, 614.295pt x 794.97pt>
+<assets/pdfs/reparameterization.pdf, id=1188, 614.295pt x 794.97pt>
 File: assets/pdfs/reparameterization.pdf Graphic file (type pdf)
 <use assets/pdfs/reparameterization.pdf>
 Package pdftex.def Info: assets/pdfs/reparameterization.pdf  used on input line 292.
@@ -2287,18 +2318,18 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [41 <./assets/pdfs/reparameterization.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/decoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/decoder.pdf, id=1179, 614.295pt x 794.97pt>
+<assets/pdfs/decoder.pdf, id=1206, 614.295pt x 794.97pt>
 File: assets/pdfs/decoder.pdf Graphic file (type pdf)
 <use assets/pdfs/decoder.pdf>
-Package pdftex.def Info: assets/pdfs/decoder.pdf  used on input line 315.
+Package pdftex.def Info: assets/pdfs/decoder.pdf  used on input line 316.
 (pdftex.def)             Requested size: 256.07741pt x 331.39842pt.
 
-Underfull \hbox (badness 1147) in paragraph at lines 354--355
+Underfull \hbox (badness 1147) in paragraph at lines 355--356
 []|\T1/ptm/m/n/10 32 ker-nel menyusun de-tail ben-tuk gelom-bang
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 360--361
+Underfull \hbox (badness 1292) in paragraph at lines 361--362
 []|\T1/ptm/m/n/10 1 ker-nel ter-akhir meng-gabungkan se-mua fi-tur
  []
 
@@ -2310,7 +2341,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [42 <./assets/pdfs/decoder.pdf>]
-Underfull \hbox (badness 1331) in paragraph at lines 366--372
+Underfull \hbox (badness 1331) in paragraph at lines 367--373
 \T1/ptm/m/n/12 struksi sinyal EEG dari rep-re-sen-tasi laten yang di-hasilkan oleh proses \T1/ptm/m/it/12 en-cod-ing\T1/ptm/m/n/12 .
  []
 
@@ -2332,13 +2363,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [44]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_augment.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_augment.pdf, id=1248, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_augment.pdf, id=1273, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_augment.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_augment.pdf>
-Package pdftex.def Info: assets/pdfs/flowchart_augment.pdf  used on input line 452.
+Package pdftex.def Info: assets/pdfs/flowchart_augment.pdf  used on input line 453.
 (pdftex.def)             Requested size: 512.14832pt x 354.4219pt.
 
-Overfull \hbox (130.31612pt too wide) in paragraph at lines 447--453
+Overfull \hbox (130.31612pt too wide) in paragraph at lines 448--454
  []|  [] 
  []
 
@@ -2360,10 +2391,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [46 <./assets/pdfs/flowchart_augment.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/integration.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/integration.pdf, id=1271, 614.295pt x 794.97pt>
+<assets/pdfs/integration.pdf, id=1295, 614.295pt x 794.97pt>
 File: assets/pdfs/integration.pdf Graphic file (type pdf)
 <use assets/pdfs/integration.pdf>
-Package pdftex.def Info: assets/pdfs/integration.pdf  used on input line 478.
+Package pdftex.def Info: assets/pdfs/integration.pdf  used on input line 479.
 (pdftex.def)             Requested size: 341.43437pt x 426.042pt.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -2381,12 +2412,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [48 <./assets/pdfs/integration.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 522--523
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
 []\T1/ptm/m/n/12 Pembagian data di-lakukan meng-gu-nakan \T1/ptm/m/it/12 train_test_split \T1/ptm/m/n/12 de-ngan pa-ram-e-ter
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 522--523
+Underfull \hbox (badness 1331) in paragraph at lines 523--524
 \T1/ptm/m/it/12 test_size=0.2\T1/ptm/m/n/12 , \T1/ptm/m/it/12 strat-ify=y_enc\T1/ptm/m/n/12 , dan \T1/ptm/m/it/12 ran-dom_state=42\T1/ptm/m/n/12 . Model ke-mu-dian di-lakukan
  []
 
@@ -2400,10 +2431,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [49]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/dnn.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/dnn.pdf, id=1298, 614.295pt x 794.97pt>
+<assets/pdfs/dnn.pdf, id=1323, 614.295pt x 794.97pt>
 File: assets/pdfs/dnn.pdf Graphic file (type pdf)
 <use assets/pdfs/dnn.pdf>
-Package pdftex.def Info: assets/pdfs/dnn.pdf  used on input line 534.
+Package pdftex.def Info: assets/pdfs/dnn.pdf  used on input line 535.
 (pdftex.def)             Requested size: 426.79135pt x 236.03366pt.
 ) (src/01-body/04-bab4.tex
 
@@ -2493,12 +2524,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [58]
-<assets/pics/time_domain1.png, id=1361, 1293.633pt x 852.786pt>
+<assets/pics/time_domain1.png, id=1385, 1293.633pt x 852.786pt>
 File: assets/pics/time_domain1.png Graphic file (type png)
 <use assets/pics/time_domain1.png>
 Package pdftex.def Info: assets/pics/time_domain1.png  used on input line 178.
 (pdftex.def)             Requested size: 384.1096pt x 253.20926pt.
-<assets/pics/time_domain2.png, id=1362, 1293.633pt x 852.786pt>
+<assets/pics/time_domain2.png, id=1386, 1293.633pt x 852.786pt>
 File: assets/pics/time_domain2.png Graphic file (type png)
 <use assets/pics/time_domain2.png>
 Package pdftex.def Info: assets/pics/time_domain2.png  used on input line 184.
@@ -2512,12 +2543,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [59]
-<assets/pics/freq_domain1.png, id=1367, 1293.633pt x 852.786pt>
+<assets/pics/freq_domain1.png, id=1391, 1293.633pt x 852.786pt>
 File: assets/pics/freq_domain1.png Graphic file (type png)
 <use assets/pics/freq_domain1.png>
 Package pdftex.def Info: assets/pics/freq_domain1.png  used on input line 191.
 (pdftex.def)             Requested size: 384.1096pt x 253.20926pt.
-<assets/pics/freq_domain2.png, id=1368, 1293.633pt x 852.786pt>
+<assets/pics/freq_domain2.png, id=1392, 1293.633pt x 852.786pt>
 File: assets/pics/freq_domain2.png Graphic file (type png)
 <use assets/pics/freq_domain2.png>
 Package pdftex.def Info: assets/pics/freq_domain2.png  used on input line 197.
@@ -2693,7 +2724,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [78]
-runsystem(latexminted cleantemp  --timestamp 20260623162203 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260623164901 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -2708,20 +2739,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E4E9B81CAF996EE75B74F204B5409DB8;18598.
+(rerunfilecheck)             Checksum: E4BE096A2AF88471063FB27FD46FC6AC;18580.
  ) 
 Here is how much of TeX's memory you used:
- 50727 strings out of 467866
- 1171031 string characters out of 5418326
- 2195552 words of memory out of 5000000
- 78137 multiletter control sequences out of 15000+600000
+ 50784 strings out of 467866
+ 1172015 string characters out of 5418326
+ 2196354 words of memory out of 5000000
+ 78186 multiletter control sequences out of 15000+600000
  707912 words of font info for 167 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
  125i,15n,130p,1893b,2208s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (94 pages, 4653802 bytes).
+Output written on thesis.pdf (96 pages, 4659418 bytes).
 PDF statistics:
- 1686 PDF objects out of 1728 (max. 8388607)
- 411 named destinations out of 1000 (max. 500000)
+ 1710 PDF objects out of 1728 (max. 8388607)
+ 413 named destinations out of 1000 (max. 500000)
  908 words of extra memory for PDF output out of 10000 (max. 10000000)
 

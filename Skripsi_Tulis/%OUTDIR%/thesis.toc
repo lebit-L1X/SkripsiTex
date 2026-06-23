@@ -11,7 +11,7 @@
 \contentsline {chapter}{\uppercase {Daftar Gambar}}{xii}{section*.6}%
 \contentsline {chapter}{DAFTAR PERSAMAAN}{xiii}{section*.7}%
 \contentsline {chapter}{DAFTAR NOTASI}{xiv}{section*.8}%
-\contentsline {chapter}{\uppercase {Daftar Kode Program}}{xv}{section*.9}%
+\contentsline {chapter}{\uppercase {Daftar Algoritma}}{xv}{section*.9}%
 \contentsline {chapter}{\uppercase {Daftar Singkatan}}{xvi}{section*.10}%
 \contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
