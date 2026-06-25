@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  25 JUN 2026 11:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  25 JUN 2026 11:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2224,7 +2224,7 @@ pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_preprocessing.pdf): PDF i
 File: assets/pdfs/flowchart_preprocessing.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_preprocessing.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_preprocessing.pdf  used on input line 81.
-(pdftex.def)             Requested size: 277.41176pt x 330.73866pt.
+(pdftex.def)             Requested size: 277.41176pt x 301.18546pt.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2247,7 +2247,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/diagram_vae.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/diagram_vae.pdf, id=1142, 614.295pt x 794.97pt>
+<assets/pdfs/diagram_vae.pdf, id=1148, 614.295pt x 794.97pt>
 File: assets/pdfs/diagram_vae.pdf Graphic file (type pdf)
 <use assets/pdfs/diagram_vae.pdf>
 Package pdftex.def Info: assets/pdfs/diagram_vae.pdf  used on input line 107.
@@ -2286,7 +2286,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [35]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_klasifikasi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_klasifikasi.pdf, id=1174, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_klasifikasi.pdf, id=1180, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_klasifikasi.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_klasifikasi.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_klasifikasi.pdf  used on input line 130.
@@ -2322,7 +2322,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [38]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/Encoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/Encoder.pdf, id=1198, 614.295pt x 794.97pt>
+<assets/pdfs/Encoder.pdf, id=1204, 614.295pt x 794.97pt>
 File: assets/pdfs/Encoder.pdf Graphic file (type pdf)
 <use assets/pdfs/Encoder.pdf>
 Package pdftex.def Info: assets/pdfs/Encoder.pdf  used on input line 176.
@@ -2350,7 +2350,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [40]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/reparameterization.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/reparameterization.pdf, id=1243, 614.295pt x 794.97pt>
+<assets/pdfs/reparameterization.pdf, id=1249, 614.295pt x 794.97pt>
 File: assets/pdfs/reparameterization.pdf Graphic file (type pdf)
 <use assets/pdfs/reparameterization.pdf>
 Package pdftex.def Info: assets/pdfs/reparameterization.pdf  used on input line 292.
@@ -2365,7 +2365,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [41 <./assets/pdfs/reparameterization.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/decoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/decoder.pdf, id=1262, 614.295pt x 794.97pt>
+<assets/pdfs/decoder.pdf, id=1268, 614.295pt x 794.97pt>
 File: assets/pdfs/decoder.pdf Graphic file (type pdf)
 <use assets/pdfs/decoder.pdf>
 Package pdftex.def Info: assets/pdfs/decoder.pdf  used on input line 316.
@@ -2418,11 +2418,11 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [45]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_augment.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_augment.pdf, id=1336, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_augment.pdf, id=1342, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_augment.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_augment.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_augment.pdf  used on input line 487.
-(pdftex.def)             Requested size: 512.14832pt x 354.4219pt.
+(pdftex.def)             Requested size: 512.14832pt x 496.76pt.
 
 Overfull \hbox (130.31612pt too wide) in paragraph at lines 482--488
  []|  [] 
@@ -2445,13 +2445,6 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [47 <./assets/pdfs/flowchart_augment.pdf>]
 
-pdfTeX warning: pdflatex (file ./assets/pdfs/integration.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/integration.pdf, id=1360, 614.295pt x 794.97pt>
-File: assets/pdfs/integration.pdf Graphic file (type pdf)
-<use assets/pdfs/integration.pdf>
-Package pdftex.def Info: assets/pdfs/integration.pdf  used on input line 513.
-(pdftex.def)             Requested size: 341.43437pt x 426.042pt.
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2459,6 +2452,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [48]
+
+pdfTeX warning: pdflatex (file ./assets/pdfs/integration.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/pdfs/integration.pdf, id=1376, 614.295pt x 794.97pt>
+File: assets/pdfs/integration.pdf Graphic file (type pdf)
+<use assets/pdfs/integration.pdf>
+Package pdftex.def Info: assets/pdfs/integration.pdf  used on input line 513.
+(pdftex.def)             Requested size: 341.43437pt x 426.042pt.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2486,7 +2486,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [50]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/dnn.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/dnn.pdf, id=1387, 614.295pt x 794.97pt>
+<assets/pdfs/dnn.pdf, id=1399, 614.295pt x 794.97pt>
 File: assets/pdfs/dnn.pdf Graphic file (type pdf)
 <use assets/pdfs/dnn.pdf>
 Package pdftex.def Info: assets/pdfs/dnn.pdf  used on input line 569.
@@ -2579,12 +2579,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [59]
-<assets/pics/time_domain1.png, id=1450, 1293.633pt x 852.786pt>
+<assets/pics/time_domain1.png, id=1462, 1293.633pt x 852.786pt>
 File: assets/pics/time_domain1.png Graphic file (type png)
 <use assets/pics/time_domain1.png>
 Package pdftex.def Info: assets/pics/time_domain1.png  used on input line 178.
 (pdftex.def)             Requested size: 384.1096pt x 253.20926pt.
-<assets/pics/time_domain2.png, id=1451, 1293.633pt x 852.786pt>
+<assets/pics/time_domain2.png, id=1463, 1293.633pt x 852.786pt>
 File: assets/pics/time_domain2.png Graphic file (type png)
 <use assets/pics/time_domain2.png>
 Package pdftex.def Info: assets/pics/time_domain2.png  used on input line 184.
@@ -2598,12 +2598,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [60]
-<assets/pics/freq_domain1.png, id=1456, 1293.633pt x 852.786pt>
+<assets/pics/freq_domain1.png, id=1468, 1293.633pt x 852.786pt>
 File: assets/pics/freq_domain1.png Graphic file (type png)
 <use assets/pics/freq_domain1.png>
 Package pdftex.def Info: assets/pics/freq_domain1.png  used on input line 191.
 (pdftex.def)             Requested size: 384.1096pt x 253.20926pt.
-<assets/pics/freq_domain2.png, id=1457, 1293.633pt x 852.786pt>
+<assets/pics/freq_domain2.png, id=1469, 1293.633pt x 852.786pt>
 File: assets/pics/freq_domain2.png Graphic file (type png)
 <use assets/pics/freq_domain2.png>
 Package pdftex.def Info: assets/pics/freq_domain2.png  used on input line 197.
@@ -2779,7 +2779,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [79]
-runsystem(latexminted cleantemp  --timestamp 20260625110735 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260625113952 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -2799,15 +2799,15 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  50840 strings out of 467866
  1172769 string characters out of 5418326
- 2196043 words of memory out of 5000000
+ 2196039 words of memory out of 5000000
  78225 multiletter control sequences out of 15000+600000
  708691 words of font info for 170 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
  125i,15n,130p,1893b,2372s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (99 pages, 4682155 bytes).
+Output written on thesis.pdf (99 pages, 4766620 bytes).
 PDF statistics:
- 1778 PDF objects out of 2073 (max. 8388607)
+ 1790 PDF objects out of 2073 (max. 8388607)
  427 named destinations out of 1000 (max. 500000)
  932 words of extra memory for PDF output out of 10000 (max. 10000000)
 

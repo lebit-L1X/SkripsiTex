@@ -60,7 +60,7 @@ Pendekatan yang digunakan dalam penelitian ini mengadaptasi model EEG Data Augme
         trim=0cm 7.5cm 0cm 0cm,
         clip
     ]{assets/pdfs/flowchart_system.pdf}
-    \caption{Diagram aliran data pada sistem}
+    \caption{Pipeline klasifikasi EEG dengan augmentasi data berbasis VAE}
     \label{fig:flowchart_system}
 \end{figure}
 
@@ -76,7 +76,7 @@ Tahap pra-pemrosesan dalam pengolahan sinyal EEG untuk memastikan bahwa data yan
     \hspace*{3.1cm} 
     \includegraphics[
         width=0.65\textwidth,
-        trim=0cm 1cm 0cm 1.2cm,
+        trim=0cm 3.5cm 0cm 1cm,
         clip
     ]{assets/pdfs/flowchart_preprocessing.pdf}
     \caption{Diagram aliran proses prapemrosesan sistem}
@@ -314,7 +314,7 @@ Faktor $\exp(0.5 \cdot z_{\text{log var}})$ merepresentasikan standar deviasi da
         trim=0cm 0cm 0cm 0cm,
         clip
     ]{assets/pdfs/decoder.pdf}
-    \caption{Diagram aliran \textit{layer decoder} pada model VAE}
+    \caption{Arsitektur \textit{layer decoder} pada model VAE}
     \label{fig:vae_decoder}
 \end{figure}
 
@@ -482,7 +482,7 @@ Vektor laten acak ini kemudian diberikan sebagai input ke bagian \textit{decoder
     \hspace*{1.5cm} 
     \includegraphics[
         width=1.2\textwidth,
-        trim=0cm 1cm 0cm 12cm,
+        trim=0cm 0cm 0cm 7cm,
         clip
     ]{assets/pdfs/flowchart_augment.pdf}
  \caption{Diagram aliran generasi data sintetis}
