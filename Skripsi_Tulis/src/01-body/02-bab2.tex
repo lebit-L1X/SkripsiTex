@@ -62,7 +62,7 @@ Sebelum dilakukan ekstraksi fitur dan klasifikasi, sinyal EEG umumnya melalui ta
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{assets/pics/four_major_filters.png}
+    \includegraphics[width=0.8\textwidth]{assets/pics/four_major_filters.png}
     \caption{Ilustrasi pengaruh berbagai jenis filter terhadap sinyal EEG.
     Sumber: \href{https://edurev.in/t/122506/filter-characteristics-of-linear-systems}{EduRev, Filter Characteristics of Linear Systems}.}
     \label{fig:2.2}
@@ -157,7 +157,7 @@ Pada studi ASD, analisis EEG dalam domain frekuensi menjadi salah satu pendekata
 Berdasarkan fitur yang diperoleh, proses klasifikasi dilakukan menggunakan algoritma \textit{machine learning} untuk membangun model prediksi. Berbagai metode seperti \textit{support vector machine} (SVM), \textit{k-nearest neighbor} (KNN), dan \textit{random forest} telah banyak digunakan dalam klasifikasi EEG dan menunjukkan performa yang baik dalam mengenali pola aktivitas neural yang kompleks \cite{ml_eeg_fnirs_review}. Meskipun pendekatan \textit{deep learning} berkembang pesat, metode \textit{machine learning} konvensional masih relevan terutama pada kondisi data terbatas dan kebutuhan interpretabilitas model \cite{ml_eeg_classification}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{assets/pics/general_pipeline.png}
+    \includegraphics[width=0.7\textwidth]{assets/pics/general_pipeline.png}
     \caption{Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG.
     Sumber: \href{https://doi.org/10.3233/SHTI210538}{Mortaga et al. (2021)}}
     \label{fig:pipeline_asd_classification}
@@ -175,7 +175,7 @@ Pada sinyal \textit{time-series} seperti sinyal EEG, augmentasi konvensional umu
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{assets/pics/traditional_augmentation.png}
+    \includegraphics[width=0.8\textwidth]{assets/pics/traditional_augmentation.png}
     \caption{Ilustrasi metode augmentasi pada data \textit{time-series}.
     Sumber: \href{https://doi.org/10.1109/ICCCNT61001.2024.10724162}{Rongali et al. (2024)}}
     \label{fig:traditional_augmentation_example}
@@ -210,11 +210,11 @@ Menghasilkan sinyal surrogate yang lebih akurat dalam mempertahankan distribusi 
 
 \textit{APP} &
 $X'(f)=A(f)e^{j(\phi(f)+\Delta\phi)}$ &
-Menambahkan perturbasi pada amplitudo atau fase di domain frekuensi untuk menciptakan variasi sinyal yang realistis. \\ \hline
+Menambahkan perturbasi amplitudo atau fase di domain frekuensi untuk menciptakan variasi sinyal yang realistis. \\ \hline
 
 \textit{STFT-based Augmentation} &
 $X'(m,\omega)=\mathrm{Aug}(X(m,\omega))$ &
-Melakukan augmentasi pada representasi waktu-frekuensi sehingga karakteristik lokal sinyal dapat dimodifikasi tanpa mengubah struktur global secara signifikan. \\ \hline
+Melakukan augmentasi representasi waktu-frekuensi sehingga karakteristik lokal dimodifikasi tanpa mengubah struktur global secara signifikan. \\ \hline
 
 \end{tabular}
 \end{table}

@@ -1,21 +1,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Pita frekuensi EEG dan karakteristiknya. Sumber: Savadi \cite {savadi2025eeg}}}{9}{table.caption.13}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Metode augmentasi pada data \textit {time-series}. Sumber: \href {https://doi.org/10.1109/ICCCNT61001.2024.10724162}{Rongali et al. (2024)}}}{18}{table.caption.20}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Perbandingan karakteristik, kelebihan, dan keterbatasan beberapa model generatif utama. Sumber: \href {https://www.mdpi.com/2079-9292/15/6/1293}{Singh et al. (2025)}}}{20}{table.caption.21}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Metrik evaluasi data sintetis EEG. Sumber: \href {https://doi.org/10.48550/arXiv.1806.01875}{Hartmann et al. (2018)}}}{23}{table.caption.23}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Metode augmentasi pada data \textit {time-series}. Sumber: \href {https://doi.org/10.1109/ICCCNT61001.2024.10724162}{Rongali et al. (2024)}}}{17}{table.caption.20}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Perbandingan karakteristik, kelebihan, dan keterbatasan beberapa model generatif utama. Sumber: \href {https://www.mdpi.com/2079-9292/15/6/1293}{Singh et al. (2025)}}}{19}{table.caption.21}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Metrik evaluasi data sintetis EEG. Sumber: \href {https://doi.org/10.48550/arXiv.1806.01875}{Hartmann et al. (2018)}}}{22}{table.caption.23}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Arsitektur \textit {encoder VAE}}}{40}{table.caption.29}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Arsitektur \textit {decoder VAE}}}{44}{table.caption.32}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Konfigurasi hyperparameter \textit {XGBoost}}}{51}{table.caption.35}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Arsitektur \textit {encoder VAE}}}{39}{table.caption.29}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Arsitektur \textit {decoder VAE}}}{43}{table.caption.32}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Konfigurasi hyperparameter \textit {XGBoost}}}{50}{table.caption.35}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Spesifikasi Perangkat Keras Eksperimen}}{53}{table.caption.37}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Spesifikasi Lingkungan Perangkat Lunak}}{54}{table.caption.38}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}}{60}{table.caption.39}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}}{61}{table.caption.40}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Perbandingan fitur statistik data EEG asli antara kelas Normal dan ASD}}{65}{table.caption.45}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Perbandingan fitur statistik data EEG sintetis antara kelas Normal dan ASD}}{65}{table.caption.46}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Perbandingan fitur statistik data EEG asli dan sintetis}}{66}{table.caption.47}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan data EEG asli}}{68}{table.caption.48}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan kombinasi data EEG asli dan sintetis}}{70}{table.caption.49}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Spesifikasi Perangkat Keras Eksperimen}}{52}{table.caption.37}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Spesifikasi Lingkungan Perangkat Lunak}}{53}{table.caption.38}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas Normal}}{59}{table.caption.39}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Hasil Evaluasi Kualitas Data Sintetis EEG pada Kelas ASD}}{60}{table.caption.40}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Perbandingan fitur statistik data EEG asli antara kelas Normal dan ASD}}{64}{table.caption.45}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Perbandingan fitur statistik data EEG sintetis antara kelas Normal dan ASD}}{64}{table.caption.46}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Perbandingan fitur statistik data EEG asli dan sintetis}}{65}{table.caption.47}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan data EEG asli}}{67}{table.caption.48}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Perbandingan performa model DNN dan XGBoost dengan kombinasi data EEG asli dan sintetis}}{69}{table.caption.49}%
 \addvspace {10\p@ }

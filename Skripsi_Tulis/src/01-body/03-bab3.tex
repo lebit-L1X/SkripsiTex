@@ -56,7 +56,7 @@ Pendekatan yang digunakan dalam penelitian ini mengadaptasi model EEG Data Augme
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.6\textwidth,
+        width=0.5\textwidth,
         trim=0cm 7.5cm 0cm 0cm,
         clip
     ]{assets/pdfs/flowchart_system.pdf}
@@ -116,7 +116,7 @@ clip
 Proses perhitungan parameter distribusi laten serta mekanisme \textit{reparameterization} yang digunakan untuk menghasilkan vektor laten $z$ dijelaskan lebih rinci pada Subbab \ref{subsubsec:reparameterization-layer} mengenai \textit{Reparameterization Layer}.
 
 Dalam proses \textit{training}, model dioptimalkan menggunakan fungsi objektif \textit{Evidence Lower Bound} (ELBO), yang terdiri atas dua komponen utama, yaitu \textit{reconstruction loss} dan \textit{Kullback-Leibler} (KL) divergence. \textit{Reconstruction loss} digunakan untuk mengukur kemampuan \textit{decoder} dalam merekonstruksi sinyal EEG sehingga mendekati sinyal input asli. Sementara itu, KL divergence berfungsi sebagai regularisasi yang mendorong distribusi laten yang dihasilkan \textit{encoder}, yang direpresentasikan oleh $z_{\mathrm{mean}}$ dan $z_{\mathrm{log_var}}$, agar tetap mendekati distribusi normal standar. Ruang laten yang terstruktur memungkinkan model tidak hanya merepresentasikan karakteristik data EEG secara efektif, tetapi juga menghasilkan sampel sintetis baru yang realistis melalui proses \textit{sampling}. Detail formulasi matematis, perhitungan masing-masing komponen \textit{loss}, serta mekanisme optimasi yang digunakan selama proses pelatihan dijelaskan lebih rinci pada Subbab \hyperref[subsubsec:loss-function-training]{3.3.2.4} mengenai \textit{Loss Function} dan Proses \textit{Training}.
-\newpage
+
 \subsection{Arsitektur Model Klasifikasi}
 \label{Arsitektur Model Klasifikasi}
 Bagian ini menjelaskan model klasifikasi yang berfungsi untuk memanfaatkan data EEG, baik asli dan sintetis untuk melakukan proses klasifikasi ASD. Model ini dirancang sebagai sebuah alur pemrosesan bertahap yang mengubah sinyal menjadi representasi fitur yang lebih informatif hingga menghasilkan keluaran kelas.
@@ -125,7 +125,7 @@ Bagian ini menjelaskan model klasifikasi yang berfungsi untuk memanfaatkan data 
     \centering
     \hspace*{4.5cm}
     \includegraphics[
-        width=0.75
+        width=0.9
         \textwidth,
         trim=0cm 0cm 4cm 0cm,
         clip
@@ -238,7 +238,7 @@ Output akhir berupa 16 nilai \textit{z\_mean} dan 16 nilai \textit{z\_latent} se
 \end{tabular}
 \end{table}
 
-Sebagaimana ditunjukkan pada Gambar \ref{fig:flowchart_system_encoder} dan Tabel \ref{tab:vae_encoder}, arsitektur \textit{encoder} menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15–25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling dilakukan melalui stride pada setiap lapisan konvolusi, sehingga reduksi dimensi bertahap dari 512 menjadi 64  membuat representasi semakin ringkas dan informatif.
+Sebagaimana ditunjukkan pada Gambar \ref{fig:flowchart_system_encoder} dan Tabel \ref{tab:vae_encoder}, arsitektur \textit{encoder} menggunakan tiga blok konvolusi dengan jumlah filter 32, 64, dan 128. Ukuran kernel yang relatif besar (15–25) dipilih untuk menangkap pola temporal EEG yang memiliki karakteristik frekuensi rendah hingga menengah. Proses downsampling dilakukan melalui stride pada setiap lapisan konvolusi, sehingga representasi semakin ringkas dan informatif.
 
 Setiap blok konvolusi diikuti oleh Batch Normalization untuk menstabilkan distribusi aktivasi selama \textit{training}, mempercepat konvergensi, serta mengurangi masalah internal covariate shift. Setelah normalisasi, digunakan fungsi aktivasi LeakyReLU dengan parameter 0.2, yang berarti gradien kecil sebesar 0.2 tetap dipertahankan untuk nilai negatif, sehingga menjaga aliran gradien tetap stabil.
 
