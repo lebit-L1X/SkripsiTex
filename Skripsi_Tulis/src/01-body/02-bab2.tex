@@ -32,7 +32,7 @@ Dalam analisis spektral EEG, sinyal umumnya dibagi ke dalam beberapa segmen wakt
 \begin{table}[H]
 \centering
 \footnotesize
-\caption{Pita frekuensi EEG dan karakteristiknya}
+\caption{Pita frekuensi EEG dan karakteristiknya. Sumber: Savadi \cite{savadi2025eeg}}
 \label{tab:eeg_bands}
 \begin{tabular}{|c|c|p{8cm}|}
 \hline
@@ -138,7 +138,7 @@ def mrmr_feature_selection(X, c, m):
     return S
 \end{lstlisting}
 
-Kode \ref{code:mrmr-pseudocode} menjelaskan proses seleksi fitur menggunakan metode \textit{Minimum Redundancy Maximum Relevance} (mRMR). Algoritma dimulai dengan memilih fitur yang memiliki nilai \textit{mutual information} tertinggi terhadap kelas target sebagai fitur awal. Selanjutnya, fitur lain dipilih secara iteratif berdasarkan nilai \textit{mRMR score}, yaitu selisih antara relevansi fitur terhadap target dan redundansinya terhadap fitur yang dipilih sebelumnya. Proses ini dilakukan hingga jumlah fitur terpilih mencapai jumlah yang diinginkan.
+Algoritma \ref{code:mrmr-pseudocode} menjelaskan proses seleksi fitur menggunakan metode \textit{Minimum Redundancy Maximum Relevance} (mRMR). Algoritma dimulai dengan memilih fitur yang memiliki nilai \textit{mutual information} tertinggi terhadap kelas target sebagai fitur awal. Selanjutnya, fitur lain dipilih secara iteratif berdasarkan nilai \textit{mRMR score}, yaitu selisih antara relevansi fitur terhadap target dan redundansinya terhadap fitur yang dipilih sebelumnya. Proses ini dilakukan hingga jumlah fitur terpilih mencapai jumlah yang diinginkan.
 
 \subsection{Machine Learning untuk Klasifikasi ASD Berdasarkan Sinyal EEG}
 \label{Klasifikasi Sinyal EEG dengan Machine Learning}
@@ -180,16 +180,14 @@ Pada sinyal \textit{time-series} seperti sinyal EEG, augmentasi konvensional umu
     Sumber: \href{https://doi.org/10.1109/ICCCNT61001.2024.10724162}{Rongali et al. (2024)}}
     \label{fig:traditional_augmentation_example}
 \end{figure}
-
 \begin{table}[H]
 \centering
 \footnotesize
-\caption{Metode augmentasi pada data \textit{time-series}}
+\caption{Metode augmentasi pada data \textit{time-series}. Sumber: \href{https://doi.org/10.1109/ICCCNT61001.2024.10724162}{Rongali et al. (2024)}}
 \label{tab:traditional_augmentation_methods}
 \begin{tabular}{|c|c|p{6cm}|}
 \hline
 \textbf{Metode} & \textbf{Formula} & \textbf{Pengaruh terhadap Data} \\ \hline
-
 \textit{Flipping} &
 $x'(t) = -x(t)$ &
 Membalik amplitudo sinyal terhadap sumbu horizontal sehingga pola temporal tetap terjaga tetapi orientasi sinyal berubah. \\ \hline
@@ -236,7 +234,7 @@ Berbagai arsitektur model generatif telah dikembangkan dalam penelitian \textit{
     \begin{table}[H]
     \centering
     \footnotesize
-\caption{Perbandingan karakteristik, kelebihan, dan keterbatasan beberapa model generatif utama}
+\caption{Perbandingan karakteristik, kelebihan, dan keterbatasan beberapa model generatif utama. Sumber: \href{https://www.mdpi.com/2079-9292/15/6/1293}{Singh et al. (2025)}}
     \label{tab:generative_models}
     \begin{tabular}{|c|p{4cm}|p{5cm}|}
     \hline
@@ -296,14 +294,14 @@ z = \mu + \sigma \cdot \epsilon
 di mana $\epsilon$ merupakan variabel acak yang diambil dari distribusi normal standar $\mathcal{N}(0,1)$. Dengan pendekatan ini, proses \textit{sampling} dapat ditransformasikan menjadi operasi deterministik yang memungkinkan gradien tetap dapat dihitung selama proses \textit{training} neural network \cite{vae_original}.
 
 
-\subsection{Metode Evaluasi Data Sintetis Sinyal EEG}
+\subsection{Metode Evaluasi Data EEG Sintetis Model Generatif}
 
 Evaluasi kualitas data sintetis diperlukan untuk menilai sejauh mana sinyal EEG yang dihasilkan model generatif mampu mempertahankan karakteristik data asli. Dalam penelitian referensi \cite{eeg_gan}, evaluasi dilakukan menggunakan beberapa metrik kuantitatif yang umum digunakan pada model generatif, yaitu, \textit{Frechet Inception Distance} (FID), \textit{Euclidean Distance} (ED), dan \textit{Sliced Wasserstein Distance} (SWD). Definisi, formulasi matematis, serta aspek kualitas data yang dievaluasi oleh masing-masing metrik dirangkum dalam tabel \ref{tab:evaluation_metrics}.
 
 \begin{table}[H]
 \centering
 \footnotesize
-\caption{Metrik evaluasi data sintetis EEG}
+\caption{Metrik evaluasi data sintetis EEG. Sumber: \href{https://doi.org/10.48550/arXiv.1806.01875}{Hartmann et al. (2018)}}
 \label{tab:evaluation_metrics}
 \renewcommand{\arraystretch}{1.5}
 \resizebox{\textwidth}{!}{

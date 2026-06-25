@@ -84,7 +84,7 @@ Berikut merupakan konfigurasi yang digunakan untuk eksperimen klasifikasi sinyal
     Eksperimen klasifikasi menggunakan dua skenario dataset, yaitu dataset yang hanya terdiri dari data EEG asli (\textit{real data}) dan dataset hasil augmentasi yang merupakan kombinasi data EEG asli dengan data sintetis hasil generasi model \textit{VAE}. Data sintetis yang dihasilkan pada tahap augmentasi digabungkan kembali menjadi sinyal EEG multikanal, kemudian diproses menggunakan tahapan \textit{preprocessing} yang sama dengan data EEG asli sebagaimana dijelaskan pada penelitian referensi \cite{paper_ref} sebelum digunakan pada proses klasifikasi.
 
     \item \text{Hyperparameter:}
-    Eksperimen klasifikasi menggunakan dua model, yaitu model \textit{Deep Neural Network} (DNN) sebagai model pembanding berdasarkan penelitian rujukan serta model \textit{Extreme Gradient Boosting} (XGBoost). Model DNN dilatih menggunakan optimizer Adam dengan \textit{learning rate} sebesar $10^{-3}$, \textit{batch size} 32, dan maksimum 100 epoch. Selain itu, digunakan mekanisme \textit{early stopping} dan \textit{model checkpoint} untuk mencegah \textit{overfitting} selama proses \textit{training}. Sementara itu, model XGBoost menggunakan konfigurasi default dari library XGBoost dengan fungsi evaluasi \textit{logloss} serta parameter bawaan library, termasuk jumlah \textit{estimators}. Proses evaluasi model dilakukan menggunakan metode \textit{10-fold Stratified Cross Validation}.
+    Eksperimen klasifikasi menggunakan dua model, yaitu model \textit{Deep Neural Network} (DNN) sebagai model pembanding berdasarkan penelitian rujukan serta model \textit{Extreme Gradient Boosting} (XGBoost). Model DNN dilatih menggunakan optimizer Adam dengan \textit{learning rate} sebesar $10^{-3}$, \textit{batch size} 32, dan maksimum 100 epoch. Selain itu, digunakan mekanisme \textit{early stopping} dan \textit{model checkpoint} untuk mencegah \textit{overfitting} selama proses \textit{training}. Sementara itu, model XGBoost menggunakan konfigurasi default dari library XGBoost dengan fungsi evaluasi \textit{logloss} serta parameter bawaan library, termasuk jumlah \textit{estimators}.
 
    \item \text{Jumlah Pengulangan Eksperimen:} 
     Untuk menjamin reliabilitas hasil dan meminimalisir bias akibat pembagian data maupun inisialisasi model secara acak, setiap eksperimen klasifikasi dilakukan sebanyak lima kali pengulangan. Selain itu, proses evaluasi model dilakukan menggunakan metode \textit{10-fold Stratified Cross Validation}. Seluruh nilai evaluasi yang diperoleh disajikan dalam bentuk rata-rata (\textit{mean}) dan standar deviasi (\textit{standard deviation}) dari sepuluh fold pengujian. 
@@ -110,7 +110,7 @@ Bagian ini menyajikan rangkaian eksperimen yang dilakukan untuk mengevaluasi efe
 
 Eksperimen pertama bertujuan untuk mengevaluasi kemampuan model \textit{Variational Autoencoder} (VAE) dalam mempelajari distribusi data EEG dan menghasilkan sinyal EEG sintetis yang memiliki karakteristik serupa dengan data asli. Evaluasi ini dilakukan sebagai tahap validasi awal untuk memastikan bahwa model VAE mampu merepresentasikan pola sinyal EEG pada masing-masing kelas dan kanal yang digunakan dalam penelitian.
 
-Pada eksperimen ini, kualitas data sintetis dianalisis menggunakan beberapa metrik evaluasi data generatif, yaitu \textit{Fréchet Inception Distance} (FID), \textit{Sliced Wasserstein Distance} (SWD), dan normalisasi \textit{Euclidean Distance} (ED). Selain evaluasi kuantitatif, dilakukan pula analisis visual pada domain waktu dan domain frekuensi untuk membandingkan karakteristik sinyal sintetis terhadap sinyal EEG asli.
+Pada eksperimen ini, kualitas data sintetis dianalisis menggunakan beberapa metrik evaluasi data generatif, yaitu \textit{Fréchet Inception Distance} (FID), \textit{Sliced Wasserstein Distance} (SWD), dan normalisasi \textit{Euclidean Distance} (ED). Selain evaluasi kuantitatif, dilakukan pula analisis visual pada domain waktu dan domain frekuensi untuk membandingkan karakteristik sinyal sintetis terhadap sinyal EEG asli. Untuk melengkapi evaluasi tersebut, dilakukan juga analisis terhadap beberapa fitur statistik sinyal yang digunakan pada proses klasifikasi, meliputi \textit{mean}, \textit{standard deviation}, \textit{variance}, \textit{skewness}, \textit{kurtosis}, \textit{amplitude}, \textit{energy}, \textit{RMS}, \textit{entropy}, dan \textit{power}, untuk menilai sejauh mana data sintetis mampu mempertahankan karakteristik distribusi statistik yang terdapat pada data EEG asli.
 
 Eksperimen ini digunakan untuk menilai sejauh mana model VAE mampu mempertahankan karakteristik utama sinyal EEG serta menentukan kelayakan data sintetis yang dihasilkan untuk digunakan pada tahap augmentasi data dalam proses klasifikasi ASD dengan hasil evaluasi kualitas data sintetis untuk masing-masing kanal EEG pada kelas Normal dan ASD disajikan pada tabel .
 \begin{table}[H]
@@ -208,7 +208,85 @@ Sebaliknya, beberapa kanal pada kelas Normal, khususnya kanal temporal seperti T
 
 Selain itu, pola yang konsisten juga terlihat pada visualisasi domain frekuensi. Berdasarkan grafik PSD, sinyal sintetis umumnya mampu mengikuti distribusi spektral utama dari sinyal EEG asli. Namun, hampir seluruh model menunjukkan peningkatan komponen frekuensi di atas 40 Hz yang tidak dominan pada data asli. Setelah penerapan \textit{low-pass filter} 40 Hz, distribusi spektral sinyal sintetis menjadi lebih mendekati data asli. Temuan ini menunjukkan bahwa model VAE berhasil mempertahankan karakteristik utama sinyal EEG, meskipun masih menghasilkan komponen frekuensi tinggi yang dapat diminimalkan melalui proses \textit{filtering} sinyal.
 
-Meskipun kualitas hasil generasi tidak sepenuhnya seragam pada seluruh kanal, hasil eksperimen menunjukkan bahwa model VAE tetap mampu mempertahankan karakteristik utama sinyal EEG pada domain waktu maupun domain frekuensi. Temuan ini menunjukkan bahwa pendekatan augmentasi berbasis model generatif memiliki potensi untuk meningkatkan jumlah dan variasi data EEG pada proses klasifikasi ASD.
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Perbandingan fitur statistik data EEG asli antara kelas Normal dan ASD}
+\label{tab:real_normal_vs_asd}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Fitur} & \textbf{Normal Mean} & \textbf{Normal SD} & \textbf{ASD Mean} & \textbf{ASD SD} \\
+\hline
+Mean      & -0.0000 & 0.0000 & 0.0000 & 0.0000 \\
+Std       & 1.0000 & 0.0000 & 1.0000 & 0.0000 \\
+Variance  & 1.0000 & 0.0000 & 1.0000 & 0.0000 \\
+Skewness  & -0.0275 & 0.2359 & -0.0627 & 0.3986 \\
+Kurtosis  & -0.2080 & 0.6270 & 0.1878 & 1.1175 \\
+Amplitude & 1.0000 & 0.0000 & 1.0000 & 0.0000 \\
+Energy    & 512.0000 & 0.0000 & 512.0000 & 0.0000 \\
+RMS       & 3.5451 & 0.1043 & 3.5077 & 0.1353 \\
+Entropy   & 1.0000 & 0.0000 & 1.0000 & 0.0000 \\
+Power     & 0.9689 & 0.0966 & 1.0016 & 0.1550 \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Perbandingan fitur statistik data EEG sintetis antara kelas Normal dan ASD}
+\label{tab:synthetic_normal_vs_asd}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Fitur} & \textbf{Normal Mean} & \textbf{Normal SD} & \textbf{ASD Mean} & \textbf{ASD SD} \\
+\hline
+Mean      & -0.0013 & 0.0267 & -0.0018 & 0.0256 \\
+Std       & 0.8646 & 0.1005 & 0.9140 & 0.0759 \\
+Variance  & 0.7576 & 0.1713 & 0.8411 & 0.1396 \\
+Skewness  & -0.0157 & 0.2309 & -0.0337 & 0.2921 \\
+Kurtosis  & -0.0688 & 0.4051 & -0.0405 & 0.4657 \\
+Amplitude & 0.8650 & 0.1004 & 0.9144 & 0.0759 \\
+Energy    & 388.2769 & 87.6532 & 431.0034 & 71.5142 \\
+RMS       & 3.5352 & 0.0884 & 3.5491 & 0.0906 \\
+Entropy   & 0.7576 & 0.1713 & 0.8411 & 0.1396 \\
+Power     & 0.7535 & 0.1925 & 0.8394 & 0.1854 \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Perbandingan fitur statistik data EEG asli dan sintetis}
+\label{tab:real_vs_synthetic}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Fitur} & \textbf{Real Mean} & \textbf{Real SD} & \textbf{Synthetic Mean} & \textbf{Synthetic SD} \\
+\hline
+Mean      & 0.0000 & 0.0000 & -0.0015 & 0.0261 \\
+Std       & 1.0000 & 0.0000 & 0.8893 & 0.0924 \\
+Variance  & 1.0000 & 0.0000 & 0.7994 & 0.1617 \\
+Skewness  & -0.0544 & 0.3669 & -0.0247 & 0.2634 \\
+Kurtosis  & 0.0939 & 1.0363 & -0.0546 & 0.4366 \\
+Amplitude & 1.0000 & 0.0000 & 0.8897 & 0.0923 \\
+Energy    & 512.0000 & 0.0000 & 409.6401 & 82.7897 \\
+RMS       & 3.5166 & 0.1296 & 3.5422 & 0.0897 \\
+Entropy   & 1.0000 & 0.0000 & 0.7994 & 0.1617 \\
+Power     & 0.9939 & 0.1439 & 0.7965 & 0.1938 \\
+\hline
+\end{tabular}
+\end{table}
+
+Selain evaluasi menggunakan metrik generatif dan analisa visual, dilakukan pula analisis terhadap beberapa fitur statistik untuk membandingkan karakteristik data EEG asli dan data EEG sintetis yang dihasilkan oleh model VAE. Hasil perbandingan disajikan pada Tabel \ref{tab:real_normal_vs_asd}, Tabel \ref{tab:synthetic_normal_vs_asd}, dan Tabel \ref{tab:real_vs_synthetic}.
+
+Berdasarkan Tabel \ref{tab:real_normal_vs_asd}, terdapat perbedaan karakteristik statistik antara kelompok Normal dan ASD pada data asli. Kelompok ASD menunjukkan nilai \textit{skewness} dan \textit{kurtosis} yang lebih tinggi dibandingkan kelompok Normal, mengindikasikan distribusi amplitudo sinyal yang lebih asimetris dan memiliki puncak distribusi yang lebih tajam. Selain itu, nilai \textit{power} rata-rata pada kelompok ASD juga sedikit lebih tinggi dibandingkan kelompok Normal.
+
+Karakteristik tersebut secara umum masih dapat dipertahankan pada data sintetis yang dihasilkan VAE sebagaimana ditunjukkan pada Tabel \ref{tab:synthetic_normal_vs_asd}. Nilai \textit{skewness}, \textit{kurtosis}, \textit{entropy}, dan \textit{power} pada data sintetis tetap menunjukkan pola perbedaan yang konsisten antara kelas Normal dan ASD. Hal ini menunjukkan bahwa model VAE tidak hanya mempelajari bentuk sinyal secara visual, tetapi juga mampu mempertahankan sebagian karakteristik statistik yang membedakan kedua kelas.
+
+Perbandingan antara seluruh data asli dan data sintetis pada Tabel \ref{tab:real_vs_synthetic} menunjukkan bahwa sebagian besar fitur statistik memiliki kecenderungan yang serupa. Nilai rata-rata (\textit{mean}) kedua kelompok tetap berada di sekitar nol, sedangkan nilai \textit{skewness} dan \textit{kurtosis} sintetis masih berada pada rentang yang sebanding dengan data asli. Nilai \textit{entropy} rata-rata juga relatif dekat yang menunjukkan tingkat kompleksitas sinyal yang tetap terjaga.
+
+Terdapat beberapa perbedaan yang menunjukkan adanya efek \textit{smoothing} pada proses generasi data. Nilai \textit{standard deviation}, \textit{variance}, \textit{amplitude}, \textit{energy}, dan \textit{power} pada data sintetis cenderung lebih rendah dibandingkan data asli. Penurunan ini mengindikasikan bahwa model VAE menghasilkan sinyal yang lebih teratur dan memiliki variasi amplitudo yang lebih kecil dibandingkan data asli. Fenomena tersebut juga sejalan dengan karakteristik umum VAE yang mempelajari representasi laten terstruktur melalui regularisasi \textit{Kullback-Leibler divergence}, sehingga distribusi hasil generasi cenderung lebih halus dibandingkan distribusi data asli.
+
+Secara keseluruhan, hasil analisis statistik menunjukkan bahwa data sintetis yang dihasilkan mampu mempertahankan karakteristik utama sinyal EEG asli baik pada tingkat distribusi maupun pola perbedaan antar kelas. Meskipun terdapat penurunan pada beberapa ukuran dispersi seperti \textit{variance}, \textit{energy}, dan \textit{power}, perbedaan tersebut masih berada dalam rentang yang dapat diterima untuk tujuan augmentasi data, sehingga data sintetis yang dihasilkan dinilai cukup representatif untuk digunakan pada tahap klasifikasi ASD.
+
 
 \subsection{Eksperimen 2: Evaluasi Model Klasifikasi Dengan Hanya Menggunakan Sinya EEG Asli}
 Eksperimen kedua bertujuan untuk mengevaluasi performa model klasifikasi menggunakan data EEG asli tanpa melibatkan data sintetis hasil augmentasi. Eksperimen ini dilakukan untuk memperoleh nilai performa dasar (\textit{baseline}) yang selanjutnya digunakan sebagai acuan dalam mengevaluasi pengaruh augmentasi data sintetis pada proses klasifikasi ASD.
@@ -321,7 +399,7 @@ Selain membandingkan performa model klasifikasi, penelitian ini juga memperluas 
 
 Namun demikian, manfaat augmentasi tidak muncul secara konsisten pada seluruh model klasifikasi. Pada model DNN, meskipun nilai presisi meningkat dari 0.5412 menjadi 0.9054, nilai sensitivitas menurun dari 0.6347 menjadi 0.2379 dan \textit{F1-score} menurun dari 0.5689 menjadi 0.3141. Analisis matriks konfusi menunjukkan bahwa jumlah \textit{false positive} menurun secara signifikan dari 82.4 menjadi 8.76, tetapi jumlah \textit{false negative} meningkat dari 65.8 menjadi 214.06. Kondisi ini menunjukkan bahwa setelah augmentasi dilakukan, model DNN menjadi lebih cenderung memprediksi kelas Normal sehingga kemampuan mendeteksi ASD menurun.
 
-Perbedaan tersebut kemungkinan berkaitan dengan kualitas data sintetis yang dihasilkan. Pada eksperimen sebelumnya, data sintetis kelas ASD memiliki nilai ED, FID, dan SWD yang lebih rendah dibanding pada kelas Normal, sehingga didapatkan bahwa distribusi data sintetis masih memiliki perbedaan yang lebih besar terhadap data asli. Temuan ini mengindikasikan bahwa kualitas data sintetis yang dihasilkan VAE tidak selalu sama untuk setiap kelas dan turut dipengaruhi oleh karakteristik data asli yang digunakan sebagai sumber pembelajaran.
+Perbedaan tersebut kemungkinan berkaitan dengan kualitas data sintetis yang dihasilkan. Pada eksperimen sebelumnya, data sintetis kelas ASD memiliki nilai ED, FID, dan SWD yang lebih rendah dibandingkan kelas Normal, yang menunjukkan bahwa distribusi data sintetis masih memiliki perbedaan yang lebih besar terhadap data asli. Hasil analisis statistik menunjukkan bahwa sinyal ASD memiliki distribusi yang lebih kompleks, ditandai oleh nilai skewness dan kurtosis yang lebih tinggi. Karakteristik tersebut dapat menyebabkan model VAE lebih sulit mempelajari distribusi data ASD secara optimal. Temuan ini mengindikasikan bahwa kualitas data sintetis yang dihasilkan VAE tidak selalu sama untuk setiap kelas dan turut dipengaruhi oleh karakteristik data asli yang digunakan sebagai sumber pembelajaran.
 
 Selain itu, respons terhadap data sintetis juga dipengaruhi oleh karakteristik model klasifikasi. XGBoost tetap menunjukkan peningkatan performa setelah augmentasi, sedangkan DNN mengalami penurunan sensitivitas yang cukup besar. Hal ini sejalan dengan karakteristik XGBoost yang relatif lebih robust terhadap variasi data pada dataset berukuran terbatas \cite{chen2016xgboost}. Pada penelitian ini, proses klasifikasi dilakukan menggunakan fitur-fitur hasil ekstraksi yang telah diseleksi menggunakan metode mRMR, sehingga menghasilkan representasi fitur yang lebih relevan dan minim redundansi. Representasi semacam ini umumnya sesuai dengan karakteristik model berbasis \textit{tree ensemble}, yang diketahui mampu memanfaatkan hubungan antar fitur secara efektif \cite{shwartz2022tabular}. Sebaliknya, DNN cenderung lebih sensitif terhadap kualitas data dan pergeseran distribusi data pelatihan. Hal tersebut tercermin pada hasil eksperimen, di mana model DNN mengalami penurunan sensitivitas dan \textit{F1-score} setelah augmentasi dilakukan, sedangkan model XGBoost tetap menunjukkan peningkatan performa pada hampir seluruh metrik evaluasi.
 
@@ -343,6 +421,6 @@ Hasil penelitian ini menunjukkan beberapa peluang pengembangan untuk diteliti le
 
 Selain itu, hasil eksperimen menunjukkan bahwa peningkatan kualitas distribusi data sintetis tidak selalu berbanding lurus dengan peningkatan performa seluruh model klasifikasi. Pada penelitian ini, model XGBoost mampu memanfaatkan data sintetis secara efektif, sedangkan model DNN menunjukkan respons yang berbeda terhadap penambahan data hasil augmentasi. Temuan tersebut menunjukkan bahwa interaksi antara karakteristik data sintetis dan mekanisme pembelajaran model klasifikasi masih memerlukan kajian yang lebih mendalam.
 
-Dari sisi evaluasi, hasil penelitian juga menunjukkan bahwa metrik distribusi seperti FID, SWD, dan normalisasi ED mampu memberikan indikasi kemiripan antara data sintetis dan data asli. Namun demikian, hubungan antara nilai metrik tersebut dengan manfaat praktis data sintetis terhadap performa klasifikasi masih belum sepenuhnya dipahami. Kondisi ini membuka peluang untuk mengembangkan pendekatan evaluasi yang mampu menghubungkan kualitas generasi dengan kegunaan data sintetis pada tugas klasifikasi EEG secara lebih langsung.
+Dari sisi evaluasi, hasil penelitian juga menunjukkan bahwa metrik distribusi seperti FID, SWD, normalisasi ED, maupun perbandingan pilihan fitur mampu memberikan indikasi kemiripan antara data sintetis dan data asli. Namun demikian, hubungan antara nilai metrik tersebut dengan manfaat praktis data sintetis terhadap performa klasifikasi masih belum sepenuhnya dipahami. Kondisi ini membuka peluang untuk mengembangkan pendekatan evaluasi yang mampu menghubungkan kualitas generasi dengan kegunaan data sintetis pada tugas klasifikasi EEG secara lebih langsung.
 
 Penelitian ini juga menunjukkan bahwa augmentasi berbasis VAE memiliki potensi untuk mendukung pengembangan sistem klasifikasi ASD berbasis EEG. Meskipun demikian, ruang pengembangan masih terbuka untuk mengeksplorasi pendekatan generatif yang lebih beragam serta memahami kondisi-kondisi tertentu di mana augmentasi dapat memberikan manfaat yang optimal terhadap proses klasifikasi.

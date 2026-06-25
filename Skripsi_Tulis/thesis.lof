@@ -11,17 +11,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Pipeline klasifikasi EEG dengan augmentasi data berbasis VAE}}{31}{figure.caption.24}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{32}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Arsitektur Variational Autoencoder (VAE) untuk augmentasi data EEG}}{34}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Pipeline model klasifikasi}}{36}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Arsitektur \textit {layer encoder} pada model VAE}}{39}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Arsitektur reparameterization layer pada model VAE}}{41}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Arsitektur \textit {layer decoder} pada model VAE}}{42}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram aliran generasi data sintetis}}{47}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Pipeline integrasi data sintetis pada proses klasifikasi}}{49}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{51}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Arsitektur Variational Autoencoder (VAE) untuk augmentasi data EEG}}{35}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Pipeline model klasifikasi}}{37}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Arsitektur \textit {layer encoder} pada model VAE}}{40}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Arsitektur reparameterization layer pada model VAE}}{42}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Arsitektur \textit {layer decoder} pada model VAE}}{43}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram aliran generasi data sintetis}}{48}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pipeline integrasi data sintetis pada proses klasifikasi}}{50}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{52}{figure.caption.36}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label Normal}}{61}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label ASD}}{61}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label Normal}}{62}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label ASD}}{62}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label Normal}}{62}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label ASD}}{62}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label Normal}}{63}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label ASD}}{63}{figure.caption.44}%
 \addvspace {10\p@ }
