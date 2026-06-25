@@ -16,11 +16,12 @@ EEG biasanya direkam dalam bentuk sinyal multikanal yang diperoleh dari sejumlah
 
 
 Penempatan elektroda EEG umumnya mengikuti standar International \textit{10–20 System}, yaitu protokol yang distandarisasi oleh \textit{International Federation of Clinical Neurophysiology} (IFCN) untuk menentukan posisi elektroda pada permukaan kepala berdasarkan titik anatomi seperti nasion, inion, dan titik preauricular. Dalam sistem ini, setiap elektroda diberi kode huruf dan angka yang menunjukkan wilayah otak dan hemisfer terkait, seperti frontal (F), central (C), temporal (T), parietal (P), dan occipital (O), dengan angka ganjil untuk hemisfer kiri, angka genap untuk hemisfer kanan, serta ``z'' untuk posisi garis tengah kepala. Tata letak elektroda pada sistem ini ditunjukkan pada Gambar \ref{fig:2.1}. Standarisasi ini memungkinkan perekaman EEG dilakukan secara konsisten dan dapat dibandingkan antar subjek maupun antar penelitian\cite{eeg_biophysics}.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{assets/pics/10_20_system.jpg}
-    \caption{Sistem Internasional 10--20 untuk penempatan elektroda EEG}
+    \caption[Sistem Internasional 10--20 untuk penempatan elektroda EEG]
+    {Sistem Internasional 10--20 untuk penempatan elektroda EEG.
+    Sumber: \href{https://www.researchgate.net/publication/387894679_Differences_in_Word-_and_Picture-Based_Visual_Memory_Affect_Memory_Performance}{Matsuo et al. (2025)}}
     \label{fig:2.1}
 \end{figure}
 
@@ -44,11 +45,11 @@ Gamma & >30 & Berhubungan dengan proses kognitif tingkat tinggi, termasuk perhat
 \end{tabular}
 \end{table}
 Melalui analisis distribusi daya pada pita frekuensi, dapat dilakukan identifikasi pola aktivitas otak yang khas serta membandingkan karakteristik sinyal EEG pada berbagai kondisi fisiologis maupun gangguan neurologis tertentu. Representasi pita frekuensi EEG sering digunakan sebagai dasar dalam proses ekstraksi fitur pada analisis sinyal EEG, misalnya melalui perhitungan \textit{band power}, estimasi \textit{power spectral density} (PSD), maupun metode analisis spektral lainnya \cite{eeg_feature_review}. Rentang pita frekuensi EEG beserta posisinya pada spektrum frekuensi rendah hingga tinggi ditunjukkan pada ilustrasi \ref{fig:2.2}.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{assets/pics/frequency_band.png}
-    \caption{Pita Frekuensi EEG pada rentang frekuensi tinggi dan rendah}
+    \caption{Pita frekuensi EEG pada rentang frekuensi tinggi dan rendah.
+    Sumber: \href{https://doi.org/10.3390/ani12202857}{Kumar et al. (2022)}}
     \label{fig:2.2z}
 \end{figure}
  
@@ -62,7 +63,8 @@ Sebelum dilakukan ekstraksi fitur dan klasifikasi, sinyal EEG umumnya melalui ta
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{assets/pics/four_major_filters.png}
-    \caption{Ilustrasi pengaruh berbagai jenis filter terhadap sinyal EEG}
+    \caption{Ilustrasi pengaruh berbagai jenis filter terhadap sinyal EEG.
+    Sumber: \href{https://edurev.in/t/122506/filter-characteristics-of-linear-systems}{EduRev, Filter Characteristics of Linear Systems}.}
     \label{fig:2.2}
 \end{figure}
 
@@ -71,7 +73,8 @@ Sinyal EEG dapat terkontaminasi oleh artefak non-neural yang berasal dari aktivi
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{assets/pics/artifact_eeg.png}
-    \caption{Bentuk-Bentuk artefak pada sinyal EEG}
+    \caption{Bentuk-bentuk artefak pada sinyal EEG.
+    Sumber: \href{https://doi.org/10.5772/68023}{Kanoga dan Mitsukura (2017)}}
     \label{fig:2.3}
 \end{figure}
 
@@ -143,20 +146,20 @@ Kode \ref{code:mrmr-pseudocode} menjelaskan proses seleksi fitur menggunakan met
 Dalam analisis EEG, \textit{machine learning} digunakan untuk mengklasifikasikan pola aktivitas otak berdasarkan fitur yang diekstraksi dari sinyal EEG. Fitur tersebut dapat berasal dari domain waktu, domain frekuensi, maupun domain waktu-frekuensi, dan digunakan untuk merepresentasikan karakteristik aktivitas neural yang berkaitan dengan kondisi fisiologis atau neurologis tertentu \cite{ml_eeg_fnirs_review}. Pendekatan ini telah digunakan pada berbagai aplikasi seperti deteksi kejang epilepsi, sistem \textit{brain-computer interface} (BCI), serta identifikasi pola aktivitas otak pada \textit{Autism Spectrum Disorder} (ASD) \cite{asd_eeg_abnormalities}.
 
 Pada studi ASD, analisis EEG dalam domain frekuensi menjadi salah satu pendekatan yang umum digunakan karena aktivitas otak dapat direpresentasikan sebagai pola osilasi pada pita frekuensi tertentu \cite{eeg_asd_systematic}. Beberapa penelitian menunjukkan bahwa individu dengan ASD cenderung memiliki peningkatan daya pada pita delta, theta, beta, dan gamma, serta penurunan pada pita alpha. Pola ini dikenal sebagai \textit{U-shaped spectral profile} dan digunakan untuk merepresentasikan abnormalitas aktivitas neural pada ASD sebagaimana diilustrasikan pada ilustrasi \ref{fig:ushape}. \cite{asd_eeg_abnormalities}.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{assets/pics/ushaped.png}
-    \caption{Ilustrasi \textit{U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD}
+    \caption{Ilustrasi \textit{U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD.
+    Sumber: \href{https://doi.org/10.1186/1866-1955-5-24}{Wang et al. (2013)}}
     \label{fig:ushape}
 \end{figure}
 
 Berdasarkan fitur yang diperoleh, proses klasifikasi dilakukan menggunakan algoritma \textit{machine learning} untuk membangun model prediksi. Berbagai metode seperti \textit{support vector machine} (SVM), \textit{k-nearest neighbor} (KNN), dan \textit{random forest} telah banyak digunakan dalam klasifikasi EEG dan menunjukkan performa yang baik dalam mengenali pola aktivitas neural yang kompleks \cite{ml_eeg_fnirs_review}. Meskipun pendekatan \textit{deep learning} berkembang pesat, metode \textit{machine learning} konvensional masih relevan terutama pada kondisi data terbatas dan kebutuhan interpretabilitas model \cite{ml_eeg_classification}.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{assets/pics/general_pipeline.png}
-  \caption{Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG}
+    \caption{Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG.
+    Sumber: \href{https://doi.org/10.3233/SHTI210538}{Mortaga et al. (2021)}}
     \label{fig:pipeline_asd_classification}
 \end{figure}
 
@@ -173,7 +176,8 @@ Pada sinyal \textit{time-series} seperti sinyal EEG, augmentasi konvensional umu
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{assets/pics/traditional_augmentation.png}
-    \caption{Ilustrasi metode augmentasi pada data \textit{time-series}}
+    \caption{Ilustrasi metode augmentasi pada data \textit{time-series}.
+    Sumber: \href{https://doi.org/10.1109/ICCCNT61001.2024.10724162}{Rongali et al. (2024)}}
     \label{fig:traditional_augmentation_example}
 \end{figure}
 
@@ -265,10 +269,10 @@ Salah satu model generatif yang banyak digunakan dalam augmentasi data EEG adala
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{assets/pics/vae-architecture.png}
-    \caption{Arsitektur umum \textit{Variational Autoencoder} (VAE)}
+    \caption{Arsitektur umum \textit{Variational Autoencoder} (VAE).
+    Sumber: \href{https://doi.org/10.3390/app15115897}{Montes (2025)}}
     \label{fig:vae_architecture}
 \end{figure}
-
 
 Arsitektur VAE terdiri atas dua komponen utama, yaitu \textit{encoder} dan \textit{decoder}, seperti yang diilustrasikan pada Gambar \ref{fig:vae_architecture}. \textit{Encoder} bertugas memetakan data input ke representasi laten berdimensi lebih rendah dalam bentuk parameter distribusi probabilistik, yaitu nilai rata-rata ($\mu$) dan variansi ($\sigma$). Representasi laten tersebut kemudian digunakan oleh \textit{decoder} untuk merekonstruksi kembali data sehingga menghasilkan output yang memiliki karakteristik serupa dengan data asli.
 

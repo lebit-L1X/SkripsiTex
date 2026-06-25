@@ -105,7 +105,7 @@ width=\textwidth,
 trim=0cm 0cm 3cm 0cm,
 clip
 ]{assets/pdfs/diagram_vae.pdf}
-\caption{Diagram model VAE untuk augmentasi EEG}
+\caption{Arsitektur Variational Autoencoder (VAE) untuk augmentasi data EEG}
 \label{fig:vaex}
 \end{figure}
 
@@ -113,7 +113,7 @@ Seperti ditunjukkan pada gambar \ref{fig:vaex}, model terdiri dari dua komponen 
 
 Vektor laten yang dihasilkan kemudian digunakan sebagai input bagi bagian \textit{decoder} untuk merekonstruksi kembali sinyal EEG. Decoder terdiri dari beberapa lapisan \textit{upsampling} dan \textit{Conv1D} yang secara bertahap mengembalikan dimensi sinyal hingga sesuai dengan bentuk input awal. Setelah proses \textit{training}, model dimanfaatkan untuk menghasilkan data sintetis baru dengan melakukan \textit{sampling} acak pada ruang laten menggunakan distribusi normal standar. Vektor laten hasil \textit{sampling} tersebut diberikan ke \textit{decoder} untuk menghasilkan sinyal EEG sintetis yang tidak identik dengan data asli, namun tetap mempertahankan karakteristik distribusi statistiknya.
 
-Dalam proses \textit{training}, model dioptimalkan menggunakan kombinasi \textit{reconstruction loss} dan \textit{Kullback-Leibler} (KL) divergence. \textit{Reconstruction loss} digunakan untuk mengukur perbedaan antara sinyal input dan hasil rekonstruksi, sedangkan KL divergence berfungsi untuk menjaga distribusi ruang laten tetap mendekati distribusi normal standar. Kombinasi kedua komponen tersebut digunakan sebagai fungsi objektif dalam proses optimasi model. Detail formulasi matematis, perhitungan masing-masing komponen \textit{loss}, serta mekanisme optimasi yang digunakan selama proses pelatihan dijelaskan lebih rinci pada Subbab \hyperref[subsubsec:loss-function-training]{3.3.2.4}  mengenai \textit{Loss Function} dan Proses \textit{Training}.
+Dalam proses \textit{training}, model dioptimalkan menggunakan fungsi objektif \textit{Evidence Lower Bound} (ELBO), yang terdiri atas dua komponen utama, yaitu \textit{reconstruction loss} dan \textit{Kullback-Leibler} (KL) divergence. \textit{Reconstruction loss} digunakan untuk mengukur kemampuan \textit{decoder} dalam merekonstruksi sinyal EEG sehingga mendekati sinyal input asli. Sementara itu, KL divergence berfungsi sebagai regularisasi yang mendorong distribusi laten yang dihasilkan \textit{encoder}, yang direpresentasikan oleh $z_{\mathrm{mean}}$ dan $z_{\mathrm{log_var}}$, agar tetap mendekati distribusi normal standar. Ruang laten yang terstruktur memungkinkan model tidak hanya merepresentasikan karakteristik data EEG secara efektif, tetapi juga menghasilkan sampel sintetis baru yang realistis melalui proses \textit{sampling}. Detail formulasi matematis, perhitungan masing-masing komponen \textit{loss}, serta mekanisme optimasi yang digunakan selama proses pelatihan dijelaskan lebih rinci pada Subbab \hyperref[subsubsec]{3.3.2.4} mengenai \textit{Loss Function} dan Proses \textit{Training}.
 \newpage
 \subsection{Arsitektur Model Klasifikasi}
 \label{Arsitektur Model Klasifikasi}
@@ -128,7 +128,7 @@ Bagian ini menjelaskan model klasifikasi yang berfungsi untuk memanfaatkan data 
         trim=0cm 0cm 4cm 0cm,
         clip
     ]{assets/pdfs/flowchart_klasifikasi.pdf}
-    \caption{Diagram model klasifikasi}
+    \caption{Pipeline model klasifikasi}
     \label{fig:vae}
 \end{figure}
 \newpage
@@ -174,7 +174,7 @@ Perancangan model generatif pada penelitian ini dilakukan menggunakan pendekatan
         trim=0cm 11.5cm 0cm 0cm,
         clip
     ]{assets/pdfs/Encoder.pdf}
-    \caption{Diagram aliran \textit{layer encoder} pada model VAE}
+    \caption{Arsitektur \textit{layer encoder} pada model VAE}
     \label{fig:flowchart_system_encoder}
 \end{figure}\begin{table}[H]
 \centering
@@ -290,7 +290,7 @@ Lapisan Sampling menghasilkan vektor laten $z$ dengan menggabungkan dua paramete
         trim=0cm 21cm 0cm 0cm,
         clip
     ]{assets/pdfs/reparameterization.pdf}
-    \caption{Diagram aliran \textit{reparameterization layer}}
+ \caption{Arsitektur reparameterization layer pada model VAE}
     \label{fig:flowchart_system_reparameterization}
 \end{figure}
 
@@ -428,14 +428,48 @@ Hasil konvolusi pada setiap tahap kemudian dinormalisasi menggunakan Batch Norma
 
 \subsubsection{\textit{Loss Function} dan Proses Training}
 \label{subsubsec:loss-function-training}
+\textit{Reconstruction loss} digunakan untuk mengukur tingkat kemiripan antara sinyal EEG input dan hasil rekonstruksi yang dihasilkan oleh \textit{decoder}. Pada penelitian ini, \textit{reconstruction loss} dihitung menggunakan \textit{Mean Squared Error} (MSE) setelah tensor input dan output rekonstruksi diubah menjadi vektor satu dimensi (\textit{flatten}). Secara matematis, nilai MSE dapat dinyatakan sebagai:
 
-\textit{Reconstruction loss} dihitung menggunakan \textit{Mean Squared Error (MSE)} antara input dan output rekonstruksi. Sebelum perhitungan, kedua tensor diubah menjadi vektor satu dimensi (\textit{flatten}) untuk menyederhanakan komputasi. Nilai loss kemudian dikalikan dengan faktor 512 untuk menyesuaikan skala kontribusinya terhadap total loss, sehingga model lebih fokus dalam mempertahankan kemiripan antara data asli dan hasil rekonstruksi.
+\begin{equation}
+L_{\mathrm{rec}} =
+\frac{1}{N}
+\sum_{i=1}^{N}
+(x_i-\hat{x}_i)^2
+\end{equation}
 
-\textit{KL divergence} digunakan untuk mengukur perbedaan antara distribusi laten yang dipelajari dengan distribusi normal standar $\mathcal{N}(0,1)$. Perhitungan dilakukan menggunakan parameter $\mu$ (\textit{z\_mean}) dan $\log \sigma^2$ (\textit{z\_log\_var}), kemudian dijumlahkan pada setiap dimensi laten dan dikalikan dengan faktor $-0.5$. Komponen ini berfungsi sebagai regularisasi agar ruang laten tetap terstruktur dan tidak menyimpang.
+dengan $x_i$ menyatakan nilai sinyal asli pada elemen ke-$i$, $\hat{x}_i$ menyatakan nilai hasil rekonstruksi, dan $N$ merupakan jumlah elemen dalam satu sampel. Untuk menyesuaikan skala kontribusinya terhadap fungsi objektif total, nilai \textit{reconstruction loss} dikalikan dengan faktor 512 sehingga diperoleh:
 
-Total loss diperoleh dengan menjumlahkan kedua komponen tersebut, kemudian dirata-ratakan terhadap batch dan ditambahkan sebagai \textit{custom loss} pada model.
+\begin{equation}
+L_{\mathrm{rec}}^{*}=512 \times L_{\mathrm{rec}}
+\end{equation}
 
-\textit{Training} dilakukan menggunakan optimizer Adam dengan \textit{learning rate} 0.001, \textit{batch size} 32, dan maksimum 1000 epoch.
+\textit{KL divergence} berfungsi sebagai komponen regularisasi yang mengarahkan distribusi laten yang dihasilkan oleh \textit{encoder} agar mendekati distribusi normal standar $\mathcal{N}(0,1)$. Pada model VAE, \textit{encoder} tidak secara langsung menghasilkan vektor laten $z$, melainkan menghasilkan parameter distribusi laten berupa nilai rata-rata $\mu$ (\textit{z\_mean}) dan log-variansi $\log \sigma^2$ (\textit{z\_log\_var}). Berdasarkan kedua parameter tersebut, nilai \textit{KL divergence} dihitung untuk mengukur seberapa jauh distribusi laten yang dipelajari model menyimpang dari distribusi normal standar. Nilai \textit{KL divergence} dirumuskan sebagai:
+
+
+\begin{equation}
+L_{\mathrm{KL}}
+=
+-\frac{1}{2}
+\sum_{j=1}^{d}
+\left(
+1 + \log \sigma_j^2
+- \mu_j^2
+- \sigma_j^2
+\right)
+\end{equation}
+
+dengan $d$ menyatakan dimensi ruang laten. Komponen ini berfungsi sebagai regularisasi yang mendorong distribusi laten tetap mendekati distribusi normal standar sehingga ruang laten menjadi lebih terstruktur dan dapat digunakan untuk proses generasi data sintetis.
+
+Fungsi objektif yang dioptimalkan selama proses pelatihan merupakan penjumlahan dari kedua komponen tersebut, yang secara ekuivalen merepresentasikan proses maksimalisasi \textit{Evidence Lower Bound} (ELBO). Total loss dirumuskan sebagai:
+
+\begin{equation}
+L_{\mathrm{total}} = L_{\mathrm{rec}}^{*} + L_{\mathrm{KL}}
+\end{equation}
+
+Nilai \textit{loss} kemudian dirata-ratakan terhadap seluruh sampel dalam satu \textit{batch} dan ditambahkan sebagai \textit{custom loss} pada model. Dengan formulasi ini, model didorong untuk menghasilkan rekonstruksi yang akurat sekaligus mempertahankan distribusi ruang laten yang teratur.
+
+Proses \textit{training} dilakukan menggunakan optimizer Adam dengan \textit{learning rate} sebesar 0{,}001, \textit{batch size} 32, dan maksimum 1000 \textit{epoch}. Selama pelatihan, parameter model diperbarui secara iteratif untuk meminimalkan fungsi objektif sehingga diperoleh representasi laten yang mampu merekonstruksi sinyal EEG dengan baik sekaligus mendukung proses generasi data sintetis.
+
 
 \subsubsection{Generasi Data Sintetis}
 
@@ -477,7 +511,7 @@ Sebagaimana yang ditunjukkan oleh diagram \ref{fig:flowchart_systemx} proses gen
         trim=0cm 1cm 0cm 0cm,
         clip
     ]{assets/pdfs/integration.pdf}
- \caption{Diagram alur integrasi data sintetis pada proses klasifikasi}
+ \caption{Pipeline integrasi data sintetis pada proses klasifikasi}
     \label{fig:flowchart_systemx}
 \end{figure}
 \subsubsection{\textit{Minimum Redundancy Maximum Relevance} (\textit{mRMR})}

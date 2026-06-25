@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  24 JUN 2026 01:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.1)  25 JUN 2026 11:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1886,10 +1886,10 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 [7
 
 ]
-<assets/pics/10_20_system.jpg, id=849, 441.90094pt x 377.91188pt>
+<assets/pics/10_20_system.jpg, id=864, 441.90094pt x 377.91188pt>
 File: assets/pics/10_20_system.jpg Graphic file (type jpg)
 <use assets/pics/10_20_system.jpg>
-Package pdftex.def Info: assets/pics/10_20_system.jpg  used on input line 22.
+Package pdftex.def Info: assets/pics/10_20_system.jpg  used on input line 21.
 (pdftex.def)             Requested size: 256.07741pt x 219.0045pt.
 
 
@@ -1901,16 +1901,21 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [8 <./assets/pics/10_20_system.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 
-Underfull \hbox (badness 2495) in paragraph at lines 43--43
+Underfull \hbox (badness 2495) in paragraph at lines 44--44
 []|\T1/ptm/m/n/10 Berhubungan de-ngan proses kog-ni-tif tingkat tinggi,
  []
 
+<assets/pics/frequency_band.png, id=876, 269.89328pt x 276.9284pt>
+File: assets/pics/frequency_band.png Graphic file (type png)
+<use assets/pics/frequency_band.png>
+Package pdftex.def Info: assets/pics/frequency_band.png  used on input line 50.
+(pdftex.def)             Requested size: 256.07741pt x 262.76779pt.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1919,15 +1924,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [9]
-<assets/pics/frequency_band.png, id=864, 269.89328pt x 276.9284pt>
-File: assets/pics/frequency_band.png Graphic file (type png)
-<use assets/pics/frequency_band.png>
-Package pdftex.def Info: assets/pics/frequency_band.png  used on input line 50.
-(pdftex.def)             Requested size: 256.07741pt x 262.76779pt.
-<assets/pics/four_major_filters.png, id=868, 1674.255pt x 860.21375pt>
+<assets/pics/four_major_filters.png, id=887, 1674.255pt x 860.21375pt>
 File: assets/pics/four_major_filters.png Graphic file (type png)
 <use assets/pics/four_major_filters.png>
-Package pdftex.def Info: assets/pics/four_major_filters.png  used on input line 64.
+Package pdftex.def Info: assets/pics/four_major_filters.png  used on input line 65.
 (pdftex.def)             Requested size: 426.79135pt x 219.2794pt.
 
 
@@ -1938,10 +1938,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [10 <./assets/pics/frequency_band.png>]
-<assets/pics/artifact_eeg.png, id=875, 284.7438pt x 116.1138pt>
+<assets/pics/artifact_eeg.png, id=896, 284.7438pt x 116.1138pt>
 File: assets/pics/artifact_eeg.png Graphic file (type png)
 <use assets/pics/artifact_eeg.png>
-Package pdftex.def Info: assets/pics/artifact_eeg.png  used on input line 73.
+Package pdftex.def Info: assets/pics/artifact_eeg.png  used on input line 75.
 (pdftex.def)             Requested size: 256.07741pt x 104.43234pt.
 
 
@@ -1951,7 +1951,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[11 <./assets/pics/four_major_filters.png> <./assets/pics/artifact_eeg.png>]
+[11 <./assets/pics/four_major_filters.png>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1959,7 +1959,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[12] (C:\Users\Wendy\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[12 <./assets/pics/artifact_eeg.png>] (C:\Users\Wendy\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 
@@ -1970,10 +1970,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [13]
-<assets/pics/ushaped.png, id=943, 309.40594pt x 214.55156pt>
+<assets/pics/ushaped.png, id=965, 309.40594pt x 214.55156pt>
 File: assets/pics/ushaped.png Graphic file (type png)
 <use assets/pics/ushaped.png>
-Package pdftex.def Info: assets/pics/ushaped.png  used on input line 149.
+Package pdftex.def Info: assets/pics/ushaped.png  used on input line 151.
 (pdftex.def)             Requested size: 213.39568pt x 147.9818pt.
 
 
@@ -1983,11 +1983,11 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[14 <./assets/pics/ushaped.png>]
-<assets/pics/general_pipeline.png, id=955, 853.1875pt x 335.2525pt>
+[14]
+<assets/pics/general_pipeline.png, id=980, 853.1875pt x 335.2525pt>
 File: assets/pics/general_pipeline.png Graphic file (type png)
 <use assets/pics/general_pipeline.png>
-Package pdftex.def Info: assets/pics/general_pipeline.png  used on input line 158.
+Package pdftex.def Info: assets/pics/general_pipeline.png  used on input line 160.
 (pdftex.def)             Requested size: 341.43437pt x 134.16512pt.
 
 
@@ -1997,11 +1997,11 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[15 <./assets/pics/general_pipeline.png>]
-<assets/pics/traditional_augmentation.png, id=969, 645.91313pt x 441.90094pt>
+[15 <./assets/pics/ushaped.png> <./assets/pics/general_pipeline.png>]
+<assets/pics/traditional_augmentation.png, id=996, 645.91313pt x 441.90094pt>
 File: assets/pics/traditional_augmentation.png Graphic file (type png)
 <use assets/pics/traditional_augmentation.png>
-Package pdftex.def Info: assets/pics/traditional_augmentation.png  used on input line 175.
+Package pdftex.def Info: assets/pics/traditional_augmentation.png  used on input line 178.
 (pdftex.def)             Requested size: 426.79135pt x 291.98592pt.
 
 
@@ -2012,32 +2012,32 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 191--191
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
 []|\T1/ptm/m/n/10 Membalik am-pli-tudo sinyal ter-hadap
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 191--191
+Underfull \hbox (badness 2088) in paragraph at lines 195--195
 \T1/ptm/m/n/10 ral tetap ter-jaga tetapi ori-en-tasi sinyal
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 199--199
+Underfull \hbox (badness 2875) in paragraph at lines 203--203
 \T1/ptm/m/n/10 tuk men-sim-u-lasikan pe-ruba-han grad-ual
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 207--207
+Underfull \hbox (badness 3199) in paragraph at lines 211--211
 \T1/ptm/m/n/10 am-pli-tudo dan spek-trum daya diband-
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 215--215
+Underfull \hbox (badness 5008) in paragraph at lines 219--219
 []|\T1/ptm/m/n/10 Melakukan aug-men-tasi pada rep-re-sen-
  []
 
 
-Underfull \hbox (badness 5592) in paragraph at lines 215--215
+Underfull \hbox (badness 5592) in paragraph at lines 219--219
 \T1/ptm/m/n/10 meng-u-bah struk-tur global se-cara sig-
  []
 
@@ -2057,37 +2057,37 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []|\T1/ptm/m/n/10 Menggunakan mekanisme
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \T1/ptm/m/n/10 dan dis-crim-i-na-tor un-tuk
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--246
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
 []|\T1/ptm/m/n/10 Mempelajari dis-tribusi
  []
 
 
-Underfull \hbox (badness 2529) in paragraph at lines 246--246
+Underfull \hbox (badness 2529) in paragraph at lines 250--250
 \T1/ptm/m/n/10 laten prob-a-bilis-tik melalui
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 247--247
+Underfull \hbox (badness 2460) in paragraph at lines 251--251
 \T1/ptm/m/n/10 sta-bil dan mampu meng-hasilkan
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 250--250
+Underfull \hbox (badness 3635) in paragraph at lines 254--254
 \T1/ptm/m/n/10 proses de-nois-ing berta-hap
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 251--251
+Underfull \hbox (badness 1590) in paragraph at lines 255--255
 \T1/ptm/m/n/10 yang tinggi, na-mun memer-lukan
  []
 
@@ -2107,10 +2107,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [20]
-<assets/pics/vae-architecture.png, id=1003, 99.7326pt x 26.7399pt>
+<assets/pics/vae-architecture.png, id=1033, 99.7326pt x 26.7399pt>
 File: assets/pics/vae-architecture.png Graphic file (type png)
 <use assets/pics/vae-architecture.png>
-Package pdftex.def Info: assets/pics/vae-architecture.png  used on input line 267.
+Package pdftex.def Info: assets/pics/vae-architecture.png  used on input line 271.
 (pdftex.def)             Requested size: 341.43437pt x 91.55621pt.
 
 
@@ -2121,12 +2121,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [21 <./assets/pics/vae-architecture.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
 []|\T1/ptm/m/n/10 Mengukur ke-samaan dis-tribusi
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 340--340
+Underfull \hbox (badness 1789) in paragraph at lines 344--344
 \T1/ptm/m/n/10 global melalui proyeksi satu di-
  []
 
@@ -2146,7 +2146,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [23]
-Underfull \hbox (badness 4713) in paragraph at lines 357--358
+Underfull \hbox (badness 4713) in paragraph at lines 361--362
 []\T1/ptm/m/n/12 Penelitian meng-gu-nakan metode \T1/ptm/m/it/12 min-i-mum Re-dun-dancy Max-i-mum Rel-e-vance
  []
 
@@ -2205,7 +2205,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [29]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_system.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_system.pdf, id=1066, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_system.pdf, id=1098, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_system.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_system.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_system.pdf  used on input line 62.
@@ -2220,7 +2220,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [30]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_preprocessing.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_preprocessing.pdf, id=1078, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_preprocessing.pdf, id=1110, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_preprocessing.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_preprocessing.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_preprocessing.pdf  used on input line 81.
@@ -2247,7 +2247,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/diagram_vae.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/diagram_vae.pdf, id=1110, 614.295pt x 794.97pt>
+<assets/pdfs/diagram_vae.pdf, id=1142, 614.295pt x 794.97pt>
 File: assets/pdfs/diagram_vae.pdf Graphic file (type pdf)
 <use assets/pdfs/diagram_vae.pdf>
 Package pdftex.def Info: assets/pdfs/diagram_vae.pdf  used on input line 107.
@@ -2274,6 +2274,9 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [34 <./assets/pdfs/diagram_vae.pdf>]
 
+LaTeX Warning: Hyper reference `subsubsec' on page 35 undefined on input line 116.
+
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2283,7 +2286,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [35]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_klasifikasi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_klasifikasi.pdf, id=1143, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_klasifikasi.pdf, id=1174, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_klasifikasi.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_klasifikasi.pdf>
 Package pdftex.def Info: assets/pdfs/flowchart_klasifikasi.pdf  used on input line 130.
@@ -2319,7 +2322,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [38]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/Encoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/Encoder.pdf, id=1167, 614.295pt x 794.97pt>
+<assets/pdfs/Encoder.pdf, id=1198, 614.295pt x 794.97pt>
 File: assets/pdfs/Encoder.pdf Graphic file (type pdf)
 <use assets/pdfs/Encoder.pdf>
 Package pdftex.def Info: assets/pdfs/Encoder.pdf  used on input line 176.
@@ -2347,7 +2350,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [40]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/reparameterization.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/reparameterization.pdf, id=1212, 614.295pt x 794.97pt>
+<assets/pdfs/reparameterization.pdf, id=1243, 614.295pt x 794.97pt>
 File: assets/pdfs/reparameterization.pdf Graphic file (type pdf)
 <use assets/pdfs/reparameterization.pdf>
 Package pdftex.def Info: assets/pdfs/reparameterization.pdf  used on input line 292.
@@ -2362,7 +2365,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 [41 <./assets/pdfs/reparameterization.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/decoder.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/decoder.pdf, id=1231, 614.295pt x 794.97pt>
+<assets/pdfs/decoder.pdf, id=1262, 614.295pt x 794.97pt>
 File: assets/pdfs/decoder.pdf Graphic file (type pdf)
 <use assets/pdfs/decoder.pdf>
 Package pdftex.def Info: assets/pdfs/decoder.pdf  used on input line 316.
@@ -2406,14 +2409,22 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [44]
 
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[45]
+
 pdfTeX warning: pdflatex (file ./assets/pdfs/flowchart_augment.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/flowchart_augment.pdf, id=1297, 614.295pt x 794.97pt>
+<assets/pdfs/flowchart_augment.pdf, id=1336, 614.295pt x 794.97pt>
 File: assets/pdfs/flowchart_augment.pdf Graphic file (type pdf)
 <use assets/pdfs/flowchart_augment.pdf>
-Package pdftex.def Info: assets/pdfs/flowchart_augment.pdf  used on input line 453.
+Package pdftex.def Info: assets/pdfs/flowchart_augment.pdf  used on input line 487.
 (pdftex.def)             Requested size: 512.14832pt x 354.4219pt.
 
-Overfull \hbox (130.31612pt too wide) in paragraph at lines 448--454
+Overfull \hbox (130.31612pt too wide) in paragraph at lines 482--488
  []|  [] 
  []
 
@@ -2424,7 +2435,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[45]
+[46]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2432,13 +2443,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[46 <./assets/pdfs/flowchart_augment.pdf>]
+[47 <./assets/pdfs/flowchart_augment.pdf>]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/integration.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/integration.pdf, id=1320, 614.295pt x 794.97pt>
+<assets/pdfs/integration.pdf, id=1360, 614.295pt x 794.97pt>
 File: assets/pdfs/integration.pdf Graphic file (type pdf)
 <use assets/pdfs/integration.pdf>
-Package pdftex.def Info: assets/pdfs/integration.pdf  used on input line 479.
+Package pdftex.def Info: assets/pdfs/integration.pdf  used on input line 513.
 (pdftex.def)             Requested size: 341.43437pt x 426.042pt.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -2447,7 +2458,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[47]
+[48]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2455,13 +2466,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[48 <./assets/pdfs/integration.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
+[49 <./assets/pdfs/integration.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 []\T1/ptm/m/n/12 Pembagian data di-lakukan meng-gu-nakan \T1/ptm/m/it/12 train_test_split \T1/ptm/m/n/12 de-ngan pa-ram-e-ter
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 523--524
+Underfull \hbox (badness 1331) in paragraph at lines 557--558
 \T1/ptm/m/it/12 test_size=0.2\T1/ptm/m/n/12 , \T1/ptm/m/it/12 strat-ify=y_enc\T1/ptm/m/n/12 , dan \T1/ptm/m/it/12 ran-dom_state=42\T1/ptm/m/n/12 . Model ke-mu-dian di-lakukan
  []
 
@@ -2472,13 +2483,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[49]
+[50]
 
 pdfTeX warning: pdflatex (file ./assets/pdfs/dnn.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<assets/pdfs/dnn.pdf, id=1348, 614.295pt x 794.97pt>
+<assets/pdfs/dnn.pdf, id=1387, 614.295pt x 794.97pt>
 File: assets/pdfs/dnn.pdf Graphic file (type pdf)
 <use assets/pdfs/dnn.pdf>
-Package pdftex.def Info: assets/pdfs/dnn.pdf  used on input line 535.
+Package pdftex.def Info: assets/pdfs/dnn.pdf  used on input line 569.
 (pdftex.def)             Requested size: 426.79135pt x 236.03366pt.
 ) (src/01-body/04-bab4.tex
 
@@ -2488,7 +2499,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[50 <./assets/pdfs/dnn.pdf>]
+[51 <./assets/pdfs/dnn.pdf>]
 BAB 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2509,17 +2520,9 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[51
+[52
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[52]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2568,12 +2571,20 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
 [58]
-<assets/pics/time_domain1.png, id=1410, 1293.633pt x 852.786pt>
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[59]
+<assets/pics/time_domain1.png, id=1450, 1293.633pt x 852.786pt>
 File: assets/pics/time_domain1.png Graphic file (type png)
 <use assets/pics/time_domain1.png>
 Package pdftex.def Info: assets/pics/time_domain1.png  used on input line 178.
 (pdftex.def)             Requested size: 384.1096pt x 253.20926pt.
-<assets/pics/time_domain2.png, id=1411, 1293.633pt x 852.786pt>
+<assets/pics/time_domain2.png, id=1451, 1293.633pt x 852.786pt>
 File: assets/pics/time_domain2.png Graphic file (type png)
 <use assets/pics/time_domain2.png>
 Package pdftex.def Info: assets/pics/time_domain2.png  used on input line 184.
@@ -2586,13 +2597,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[59]
-<assets/pics/freq_domain1.png, id=1417, 1293.633pt x 852.786pt>
+[60]
+<assets/pics/freq_domain1.png, id=1456, 1293.633pt x 852.786pt>
 File: assets/pics/freq_domain1.png Graphic file (type png)
 <use assets/pics/freq_domain1.png>
 Package pdftex.def Info: assets/pics/freq_domain1.png  used on input line 191.
 (pdftex.def)             Requested size: 384.1096pt x 253.20926pt.
-<assets/pics/freq_domain2.png, id=1418, 1293.633pt x 852.786pt>
+<assets/pics/freq_domain2.png, id=1457, 1293.633pt x 852.786pt>
 File: assets/pics/freq_domain2.png Graphic file (type png)
 <use assets/pics/freq_domain2.png>
 Package pdftex.def Info: assets/pics/freq_domain2.png  used on input line 197.
@@ -2605,7 +2616,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[60 <./assets/pics/time_domain1.png> <./assets/pics/time_domain2.png>]
+[61 <./assets/pics/time_domain1.png> <./assets/pics/time_domain2.png>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2613,15 +2624,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[61 <./assets/pics/freq_domain1.png> <./assets/pics/freq_domain2.png>]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
-
-[62]
+[62 <./assets/pics/freq_domain1.png> <./assets/pics/freq_domain2.png>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2677,7 +2680,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[69]) (src/01-body/05-bab5.tex
+[69]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2685,7 +2688,15 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[70]
+[70]) (src/01-body/05-bab5.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[71]
 BAB 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2696,7 +2707,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[71
+[72
 
 ]
 
@@ -2706,7 +2717,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[72]) (thesis.bbl
+[73]) (thesis.bbl
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2714,7 +2725,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[73]
+[74]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
@@ -2724,7 +2735,7 @@ Package fancyhdr Warning: \footskip is too small (14.22636pt):
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.49998pt}.
 
-[74
+[75
 
 ]
 
@@ -2734,7 +2745,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[75]
+[76]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2742,7 +2753,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[76]
+[77]
 Underfull \hbox (badness 10000) in paragraph at lines 189--192
 []\T1/ptm/m/n/12 A. Vasarkar, ``Eeg data aug-men-ta-tion us-ing vari-a-tional au-toen-
  []
@@ -2759,7 +2770,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[77])
+[78])
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2767,8 +2778,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[78]
-runsystem(latexminted cleantemp  --timestamp 20260624015144 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
+[79]
+runsystem(latexminted cleantemp  --timestamp 20260625110735 2EF71E68B4AD97F630480BCEBC1842FB)...disabled (restricted).
 
  (thesis.aux)
  ***********
@@ -2786,17 +2797,17 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: B3698F57899C66EB8274B89F11CB2722;18958.
  ) 
 Here is how much of TeX's memory you used:
- 50831 strings out of 467866
- 1172688 string characters out of 5418326
- 2197326 words of memory out of 5000000
- 78224 multiletter control sequences out of 15000+600000
- 707912 words of font info for 167 fonts, out of 8000000 for 9000
+ 50840 strings out of 467866
+ 1172769 string characters out of 5418326
+ 2196043 words of memory out of 5000000
+ 78225 multiletter control sequences out of 15000+600000
+ 708691 words of font info for 170 fonts, out of 8000000 for 9000
  1258 hyphenation exceptions out of 8191
- 125i,15n,130p,1893b,2208s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,15n,130p,1893b,2372s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Wendy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on thesis.pdf (98 pages, 4669898 bytes).
+Output written on thesis.pdf (99 pages, 4682155 bytes).
 PDF statistics:
- 1738 PDF objects out of 2073 (max. 8388607)
- 422 named destinations out of 1000 (max. 500000)
+ 1778 PDF objects out of 2073 (max. 8388607)
+ 427 named destinations out of 1000 (max. 500000)
  932 words of extra memory for PDF output out of 10000 (max. 10000000)
 

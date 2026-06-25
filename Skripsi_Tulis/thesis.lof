@@ -1,27 +1,27 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Sistem Internasional 10--20 untuk penempatan elektroda EEG}}{8}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Pita Frekuensi EEG pada rentang frekuensi tinggi dan rendah}}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Ilustrasi pengaruh berbagai jenis filter terhadap sinyal EEG}}{11}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Bentuk-Bentuk artefak pada sinyal EEG}}{11}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustrasi \textit {U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD}}{14}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG}}{15}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi metode augmentasi pada data \textit {time-series}}}{17}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Arsitektur umum \textit {Variational Autoencoder} (VAE)}}{21}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Pita frekuensi EEG pada rentang frekuensi tinggi dan rendah. Sumber: \href {https://doi.org/10.3390/ani12202857}{Kumar et al. (2022)}}}{10}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ilustrasi pengaruh berbagai jenis filter terhadap sinyal EEG. Sumber: \href {https://edurev.in/t/122506/filter-characteristics-of-linear-systems}{EduRev, Filter Characteristics of Linear Systems}.}}{11}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Bentuk-bentuk artefak pada sinyal EEG. Sumber: \href {https://doi.org/10.5772/68023}{Kanoga dan Mitsukura (2017)}}}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustrasi \textit {U-shaped spectral profile} yang ditemukan pada pita frekuensi penderita ASD. Sumber: \href {https://doi.org/10.1186/1866-1955-5-24}{Wang et al. (2013)}}}{15}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Ilustrasi umum pipeline klasifikasi ASD berbasis sinyal EEG. Sumber: \href {https://doi.org/10.3233/SHTI210538}{Mortaga et al. (2021)}}}{15}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi metode augmentasi pada data \textit {time-series}. Sumber: \href {https://doi.org/10.1109/ICCCNT61001.2024.10724162}{Rongali et al. (2024)}}}{17}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Arsitektur umum \textit {Variational Autoencoder} (VAE). Sumber: \href {https://doi.org/10.3390/app15115897}{Montes (2025)}}}{21}{figure.caption.22}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram aliran data pada sistem}}{31}{figure.caption.24}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{32}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram model VAE untuk augmentasi EEG}}{34}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram model klasifikasi}}{36}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagram aliran \textit {layer encoder} pada model VAE}}{39}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram aliran \textit {reparameterization layer}}}{41}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Arsitektur Variational Autoencoder (VAE) untuk augmentasi data EEG}}{34}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Pipeline model klasifikasi}}{36}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Arsitektur \textit {layer encoder} pada model VAE}}{39}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Arsitektur reparameterization layer pada model VAE}}{41}{figure.caption.30}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram aliran \textit {layer decoder} pada model VAE}}{42}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram aliran generasi data sintetis}}{46}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagram alur integrasi data sintetis pada proses klasifikasi}}{48}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{50}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagram aliran generasi data sintetis}}{47}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pipeline integrasi data sintetis pada proses klasifikasi}}{49}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Arsitektur model \textit {Deep Neural Network} (DNN) yang digunakan dalam penelitian}}{51}{figure.caption.36}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label Normal}}{60}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label ASD}}{60}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label Normal}}{61}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label ASD}}{61}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label Normal}}{61}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualisasi Domain Waktu Sinyal EEG Sintetis Label ASD}}{61}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label Normal}}{62}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualisasi Domain Frekuensi Sinyal EEG Sintetis Label ASD}}{62}{figure.caption.44}%
 \addvspace {10\p@ }
