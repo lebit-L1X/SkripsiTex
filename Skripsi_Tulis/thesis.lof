@@ -11,7 +11,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Pipeline klasifikasi EEG dengan augmentasi data berbasis VAE}}{30}{figure.caption.24}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram aliran proses prapemrosesan sistem}}{31}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Arsitektur Variational Autoencoder (VAE) untuk augmentasi data EEG}}{34}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Rancangan arsitektur Variational Autoencoder (VAE) untuk augmentasi data EEG}}{34}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Pipeline model klasifikasi}}{36}{figure.caption.27}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Arsitektur \textit {layer encoder} pada model VAE}}{39}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Arsitektur reparameterization layer pada model VAE}}{41}{figure.caption.30}%
